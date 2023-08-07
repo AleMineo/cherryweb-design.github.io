@@ -350,23 +350,23 @@ section#policy {
 	justify-content: space-between;
 }
 .skill1 span {
-	background: #ffcc00;
+	background: #845EC2;
 	width: 100%;
 }
 .skill2 span {
-	background: #00ff66;
+	background: ##D65DB1;
 	width: 100%;
 }
 .skill3 span {
-	background: #ff0066;
+	background: ##FF6F91;
 	width: 93%;
 }
 .skill4 span {
-	background: #9900ff;
+	background: ##FF9671;
 	width: 90%;
 }
 .skill5 span {
-	background: #00ccff;
+	background: ##FFC75F;
 	width: 80%;
 }
 .skill6 span {
