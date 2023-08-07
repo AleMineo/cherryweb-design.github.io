@@ -631,6 +631,7 @@ section#policy {
 	color: #fff;
 	font-size: 0.75rem;
 	margin-bottom: 10px;
+	cursor: default;
 }
 .hidden {
 	display: none !important;
