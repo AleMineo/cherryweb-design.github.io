@@ -269,32 +269,32 @@ section#policy {
 	font-size: 115%;
 }
 #nav_about {
-	background: #ff0066 url(../imgs/layout/ico_home.png) center left no-repeat
+	background: #ff0066 url(../imgs/layout/ico_home.webp) center left no-repeat
 }
 #nav_about:hover {
 	margin-left: -150px;
-	background: #999999 url(../imgs/layout/ico_home.png) center left no-repeat
+	background: #999999 url(../imgs/layout/ico_home.webp) center left no-repeat
 }
 #nav_portfolio {
-	background: #9900ff url(../imgs/layout/ico_portfolio.png) center left no-repeat
+	background: #9900ff url(../imgs/layout/ico_portfolio.webp) center left no-repeat
 }
 #nav_portfolio:hover {
 	margin-left: -150px;
-	background: #999999 url(../imgs/layout/ico_portfolio.png) center left no-repeat
+	background: #999999 url(../imgs/layout/ico_portfolio.webp) center left no-repeat
 }
 #nav_contacts {
-	background: #00ccff url(../imgs/layout/ico_contacts.png) center left no-repeat
+	background: #00ccff url(../imgs/layout/ico_contacts.webp) center left no-repeat
 }
 #nav_contacts:hover {
 	margin-left: -150px;
-	background: #999999 url(../imgs/layout/ico_contacts.png) center left no-repeat
+	background: #999999 url(../imgs/layout/ico_contacts.webp) center left no-repeat
 }
 #nav_curiosities {
-	background: #ffcc00 url(../imgs/layout/ico_curiosities.png) center left no-repeat
+	background: #ffcc00 url(../imgs/layout/ico_curiosities.webp) center left no-repeat
 }
 #nav_curiosities:hover {
 	margin-left: -150px;
-	background: #999999 url(../imgs/layout/ico_curiosities.png) center left no-repeat
+	background: #999999 url(../imgs/layout/ico_curiosities.webp) center left no-repeat
 }
 /* ------------------------------------------------------------------------------*/
 /* ------------------------------------SKILLS------------------------------------*/
@@ -697,16 +697,16 @@ background: @include background-image(linear-gradient(top, rgba(229,229,229,1) 0
 	margin-bottom: 15px;
 }
 label#name_label {
-	background: #ff0066 url(../imgs/layout/ico_name.png) center left no-repeat
+	background: #ff0066 url(../imgs/layout/ico_name.webp) center left no-repeat
 }
 label#mail_label {
-	background: #ff0066 url(../imgs/layout/ico_mail.png) center left no-repeat
+	background: #ff0066 url(../imgs/layout/ico_mail.webp) center left no-repeat
 }
 label#subject_label {
-	background: #ff0066 url(../imgs/layout/ico_check.png) center left no-repeat
+	background: #ff0066 url(../imgs/layout/ico_check.webp) center left no-repeat
 }
 label#comment_label {
-	background: #ff0066 url(../imgs/layout/ico_comment.png) center left no-repeat
+	background: #ff0066 url(../imgs/layout/ico_comment.webp) center left no-repeat
 }
 #contact-form textarea {
 	width: 100%;
@@ -754,7 +754,7 @@ input:focus, textarea:focus {
 	margin: 4% auto 0;
 	padding: 3% 0;
 	float: left;
-	background: url(../imgs/layout/bg_footer.jpg) top center no-repeat;
+	background: url(../imgs/layout/bg_footer.webp) top center no-repeat;
 	background-size: cover;
 	color: #fff
 }
@@ -820,26 +820,26 @@ input:focus, textarea:focus {
 	color: #fff;
 	font-family: Anton, Arial, sans-serif;
 	padding: 0 0 15px 0;
-	background: url(../imgs/layout/bg-h3-footer.png) bottom left repeat-x;
+	background: url(../imgs/layout/bg-h3-footer.webp) bottom left repeat-x;
 	margin-bottom: 4%;
 	font-size: 2rem
 }
 #footer a {
 }
 ul.dot li {
-	background: url(../imgs/layout/world.png) left center no-repeat;
+	background: url(../imgs/layout/world.webp) left center no-repeat;
 	line-height: 1em;
 	padding-left: 20px !important;
 }
 #curiosities:before {
-	background: url(../imgs/layout/footer-divider.png) top center no-repeat;
+	background: url(../imgs/layout/footer-divider.webp) top center no-repeat;
 	padding: 30px 0 30px;
 	display: block;
 	width: 100%;
 	content: "";
 }
 #credits:before {
-	background: url(../imgs/layout/credit-divider.png) top center no-repeat;
+	background: url(../imgs/layout/credit-divider.webp) top center no-repeat;
 	padding: 30px 0 30px;
 	display: block;
 	width: 100%;
