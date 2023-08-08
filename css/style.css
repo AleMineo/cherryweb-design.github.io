@@ -751,7 +751,7 @@ input:focus, textarea:focus {
 
 #footer {
 	width: 100%;
-	margin: 4% auto 0;
+	margin: 0 auto 0;
 	padding: 3% 0;
 	float: left;
 	background: url(../imgs/layout/bg_footer.webp) top center no-repeat;
