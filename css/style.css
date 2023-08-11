@@ -1448,6 +1448,7 @@ ul.dot li {
     margin-right: 0 !important;
 	}
 
-	#curiosities:before {
+	#header{
+		margin-bottom: 0;
 	}
 }
