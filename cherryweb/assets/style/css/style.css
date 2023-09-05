@@ -202,6 +202,8 @@ h6 {
   clear: both;
   text-align: left;
   font-weight: 400;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 h1 {
@@ -220,6 +222,12 @@ h1 + h3 {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 45px;
+  padding: 0 60px;
+}
+@media (min-width: 992px) {
+  h1 + h3 {
+    padding: 0 15px;
+  }
 }
 
 h2 {
@@ -374,13 +382,18 @@ p {
 }
 
 header {
-  height: 100vh;
+  height: auto;
   width: 100%;
   margin: 0;
   display: flex;
   align-items: center;
   top: 0;
   z-index: 0;
+}
+@media (min-width: 1024px) {
+  header {
+    height: 100vh;
+  }
 }
 header::before {
   position: fixed;
@@ -401,14 +414,20 @@ header #header {
   align-items: center;
   justify-content: center;
   gap: 50px;
-  height: 90vh;
+  height: auto;
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 920px) {
+@media (min-width: 900px) {
   header #header {
+    align-items: flex-start;
     flex-direction: row;
     padding: 45px 15px 15px;
+  }
+}
+@media (min-width: 1024px) {
+  header #header {
+    align-items: center;
   }
 }
 header #header li#animation {
@@ -429,12 +448,20 @@ header #header li#description {
   align-items: flex-start;
   justify-content: flex-start;
   gap: 20px;
-  margin-right: 50px;
+}
+@media (min-width: 661px) {
+  header #header li#description {
+    margin-right: 50px;
+  }
 }
 header #header li#description h1,
 header #header li#description h3 {
   text-align: left;
   margin-bottom: 0;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0;
+  margin-right: 0;
 }
 header #header li#description .social {
   display: flex;
@@ -485,7 +512,7 @@ header #header li#description .social {
 /* ---------------------------------- NAVMENU -----------------------------------*/
 /* ------------------------------------------------------------------------------*/
 #nav {
-  position: relative;
+  position: fixed;
   width: 310px;
   margin: 0 auto;
   text-align: center;
@@ -496,7 +523,7 @@ header #header li#description .social {
   -moz-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
 }
-@media (min-width: 660px) {
+@media (min-width: 661px) {
   #nav {
     left: auto;
     position: fixed;
@@ -552,7 +579,8 @@ header #header li#description .social {
 .container {
   max-width: 1500px;
   margin: 0 auto;
-  width: 96%;
+  width: 100%;
+  padding: 0 60px;
   position: relative;
 }
 
@@ -561,7 +589,7 @@ header #header li#description .social {
 /* ------------------------------------------------------------------------------*/
 #skills {
   padding-bottom: 25px;
-  width: 96%;
+  width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -657,8 +685,8 @@ header #header li#description .social {
 #portfolio #sortable-portfolio #options {
   max-width: 1500px;
   margin: 0 auto;
-  margin-bottom: 25px;
   box-sizing: border-box;
+  padding-bottom: 15px;
   width: 100%;
   text-align: center;
 }
@@ -666,7 +694,6 @@ header #header li#description .social {
   width: auto;
   text-align: center;
   padding: 0;
-  color: #EA1C8B;
 }
 #portfolio #sortable-portfolio #options .portfolio-list {
   color: #EA1C8B;
@@ -679,7 +706,7 @@ header #header li#description .social {
   flex-wrap: wrap;
 }
 #portfolio #sortable-portfolio #options .portfolio-list li {
-  padding: 0 2% 0 0;
+  padding: 0 2% 2% 0;
 }
 #portfolio #sortable-portfolio #options .portfolio-list li a:hover {
   color: #EA1C8B !important;
@@ -882,7 +909,7 @@ header #header li#description .social {
   font-size: 2rem;
 }
 #footer #footer-container {
-  width: 100%;
+  width: 80%;
   max-width: 1500px;
   margin: 0 auto;
   display: flex;
@@ -1026,13 +1053,16 @@ ul.dot.dot-url li:before {
   }
 }
 #portfolio,
-#hobbies {
+#hobbies,
+#footer-container {
   width: 100%;
 }
 #portfolio .isotope,
 #portfolio .hobbies-gallery,
 #hobbies .isotope,
-#hobbies .hobbies-gallery {
+#hobbies .hobbies-gallery,
+#footer-container .isotope,
+#footer-container .hobbies-gallery {
   min-width: 300px;
   max-width: 300px;
   margin: 0 auto !important;
@@ -1041,7 +1071,9 @@ ul.dot.dot-url li:before {
   #portfolio .isotope,
   #portfolio .hobbies-gallery,
   #hobbies .isotope,
-  #hobbies .hobbies-gallery {
+  #hobbies .hobbies-gallery,
+  #footer-container .isotope,
+  #footer-container .hobbies-gallery {
     min-width: 600px;
     max-width: 600px;
   }
@@ -1050,7 +1082,9 @@ ul.dot.dot-url li:before {
   #portfolio .isotope,
   #portfolio .hobbies-gallery,
   #hobbies .isotope,
-  #hobbies .hobbies-gallery {
+  #hobbies .hobbies-gallery,
+  #footer-container .isotope,
+  #footer-container .hobbies-gallery {
     min-width: 900px;
     max-width: 900px;
   }
@@ -1059,7 +1093,9 @@ ul.dot.dot-url li:before {
   #portfolio .isotope,
   #portfolio .hobbies-gallery,
   #hobbies .isotope,
-  #hobbies .hobbies-gallery {
+  #hobbies .hobbies-gallery,
+  #footer-container .isotope,
+  #footer-container .hobbies-gallery {
     min-width: 1200px;
     max-width: 1200px;
   }
@@ -1068,7 +1104,9 @@ ul.dot.dot-url li:before {
   #portfolio .isotope,
   #portfolio .hobbies-gallery,
   #hobbies .isotope,
-  #hobbies .hobbies-gallery {
+  #hobbies .hobbies-gallery,
+  #footer-container .isotope,
+  #footer-container .hobbies-gallery {
     min-width: 1500px;
     max-width: 1500px;
   }
@@ -1119,10 +1157,12 @@ ul.dot.dot-url li:before {
   opacity: 1;
 }
 #skills li.animation.active:first-child {
+  margin-left: 10%;
   transition-delay: 0s;
 }
 #skills li.animation.active:last-child {
   transition-delay: 0.4s;
+  margin-right: 10%;
 }
 
 /*# sourceMappingURL=style.css.map */
