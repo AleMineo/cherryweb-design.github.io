@@ -413,7 +413,7 @@ header #header {
   margin-bottom: 50px;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 0;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -423,6 +423,7 @@ header #header {
     align-items: flex-start;
     flex-direction: row;
     padding: 45px 15px 15px;
+    gap: 50px;
   }
 }
 @media (min-width: 1024px) {
