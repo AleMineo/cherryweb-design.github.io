@@ -116,12 +116,30 @@ section {
   display: block;
 }
 
+html {
+  overflow-y: scroll;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
 body {
   line-height: normal;
   font-family: "League Spartan", sans-serif;
-  background: #ffffff;
+  background: #fafafa;
   font-size: 16px;
   font-weight: 300;
+  color: #444;
+}
+body::after {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  content: "";
+  opacity: 0.2;
+  background: url(../../images/layout/top-view-desk-concept-with-pink-background-_1_.webp) center center no-repeat;
+  background-size: cover;
 }
 
 p {
@@ -140,7 +158,7 @@ ul {
 a {
   cursor: pointer;
   text-decoration: none;
-  color: #ffffff;
+  color: #fafafa;
   outline: none !important;
   background: #EA1C8B;
   padding: 4px 4px 2px;
@@ -151,7 +169,7 @@ a:has(img, svg) {
 }
 
 a:hover {
-  background: #ffffff;
+  background: #fafafa;
   color: #EA1C8B;
 }
 
@@ -209,7 +227,7 @@ h6 {
 h1 {
   font-family: Anton, Arial, sans serif;
   font-size: 52px;
-  color: #222222;
+  color: #444;
   text-align: center;
   margin-bottom: 15px;
 }
@@ -244,13 +262,6 @@ h3 {
   padding: 0 0 20px 0;
   margin: 0;
   font-weight: 300;
-}
-
-html {
-  overflow-y: scroll;
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
 }
 
 a:focus {
@@ -387,22 +398,14 @@ header {
   display: flex;
   align-items: center;
   top: 0;
-  z-index: 0;
+  position: relative;
+  z-index: 1;
+  background-color: #fafafa;
 }
 @media (min-width: 768px) {
   header {
     height: 100vh;
   }
-}
-header::before {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  content: "";
-  opacity: 0.2;
-  background: url(../../images/layout/top-view-desk-concept-with-pink-background-_1_.webp) center center no-repeat;
-  background-size: cover;
 }
 header #header {
   position: relative;
@@ -432,6 +435,7 @@ header #header {
 }
 header #header li#animation {
   text-align: center;
+  opacity: 0.7;
 }
 header #header li#animation img {
   max-height: 250px;
@@ -485,13 +489,13 @@ header #header li#description .social {
 }
 #policy h2 {
   color: #EA1C8B;
-  text-shadow: 0 1px #ffffff;
+  text-shadow: 0 1px #fafafa;
 }
 
 #impliedsubmit,
 #explicitsubmit {
   background: #6f006d;
-  color: #ffffff;
+  color: #fafafa;
   border-radius: 5px;
   box-shadow: 0px 2px 0px #28162b;
   font-weight: bold;
@@ -549,7 +553,7 @@ header #header li#description .social {
   padding: 0px 0px 0px 17px;
   font-family: Anton, Arial, sans serif;
   font-weight: 400;
-  color: #ffffff;
+  color: #fafafa;
   text-align: left;
   font-size: 1.8rem;
   border-radius: 50px 0 0 50px;
@@ -598,6 +602,8 @@ header #header li#description .social {
   height: 100vh;
   display: flex;
   align-items: center;
+  max-width: 1800px;
+  margin: 0 auto;
 }
 #skills ul {
   gap: 25px;
@@ -608,20 +614,15 @@ header #header li#description .social {
   border-radius: 12px;
   overflow: hidden;
   position: relative;
-  color: #ffffff;
+  color: #fafafa;
   padding: 35px;
   flex-basis: 276px;
   min-width: 276px;
 }
-@media (min-width: 920px) {
-  #skills ul li {
-    flex: 1;
-  }
-}
 #skills ul li h2::after {
   position: absolute;
   content: "";
-  background-color: #ffffff;
+  background-color: #fafafa;
   width: 50px;
   height: 2px;
   left: 35px;
@@ -652,10 +653,40 @@ header #header li#description .social {
 }
 #skills ul li .pills span {
   color: #EA1C8B;
-  background: #ffffff;
+  background: #fafafa;
   padding: 8px 25px;
   border-radius: 50px;
   white-space: nowrap;
+}
+#skills ul li.animation {
+  transition: all ease-in-out 0.2s;
+  opacity: 0;
+  transform: scale(0.5);
+}
+#skills ul li.animation.active {
+  animation-duration: 1s;
+  transition-delay: 0.2s;
+  transform: scale(1);
+  opacity: 1;
+}
+#skills ul li.animation.active:first-child {
+  transition-delay: 0s;
+}
+#skills ul li.animation.active:last-child {
+  transition-delay: 0.4s;
+}
+@media (min-width: 920px) {
+  #skills ul li {
+    flex: 1;
+  }
+}
+@media (max-width: 1800px) {
+  #skills ul li:first-child {
+    margin-left: 10%;
+  }
+  #skills ul li:last-child {
+    margin-right: 10%;
+  }
 }
 #skills h2 {
   max-width: 1500px;
@@ -680,7 +711,7 @@ header #header li#description .social {
 #portfolio {
   margin: 0 auto;
   text-align: center;
-  background-color: #ffffff;
+  background-color: #fafafa;
   position: relative;
 }
 #portfolio #sortable-portfolio {
@@ -823,7 +854,7 @@ header #header li#description .social {
   margin: 0;
   position: relative !important;
   padding: 0;
-  color: #ffffff;
+  color: #fafafa;
   letter-spacing: 0;
   padding-bottom: 8px;
   display: block;
@@ -838,7 +869,7 @@ header #header li#description .social {
   border-radius: 2px;
   display: block;
   background: #EA1C8B;
-  color: #ffffff;
+  color: #fafafa;
   margin-bottom: 10px;
 }
 .grid figcaption a.no-more {
@@ -847,7 +878,7 @@ header #header li#description .social {
   border-radius: 2px;
   display: block;
   opacity: 0.7;
-  color: #ffffff;
+  color: #fafafa;
   font-size: 0.75rem;
   margin-bottom: 10px;
   cursor: not-allowed;
@@ -885,7 +916,7 @@ header #header li#description .social {
 /* ------------------------------------------------------------------------------*/
 #contacts {
   position: relative;
-  max-width: 800px;
+  max-width: 1200px;
   width: 96%;
 }
 
@@ -894,19 +925,20 @@ header #header li#description .social {
 /* ------------------------------------------------------------------------------*/
 #footer {
   position: relative;
+  z-index: 1;
   width: 100%;
   margin: 0 auto 0;
   padding: 3% 0;
   background: url(../../images/layout/bg.gif) top center;
-  color: #ffffff;
+  color: #fafafa;
 }
 #footer h2 {
-  border-bottom: #ffffff dotted 1px;
+  border-bottom: #fafafa dotted 1px;
   margin-bottom: 20px;
   padding-bottom: 10px;
 }
 #footer h3 {
-  color: #ffffff;
+  color: #fafafa;
   font-family: Anton, Arial, sans-serif;
   padding: 0 0 15px 0;
   background: url(../../images/layout/bg-h3-footer.gif) bottom left repeat-x;
@@ -932,7 +964,7 @@ header #header li#description .social {
   width: 100%;
   margin: 0 auto;
   text-align: left;
-  color: #ffffff;
+  color: #fafafa;
   font-size: 1em;
   line-height: 2em;
 }
@@ -965,7 +997,7 @@ header #header li#description .social {
   margin-right: 1%;
 }
 #footer #credits {
-  color: #ffffff;
+  color: #fafafa;
   text-align: center;
   margin: 0 auto;
   width: 100%;
@@ -1046,9 +1078,11 @@ ul.dot.dot-url li:before {
   #nav li a:hover {
     margin: 0;
   }
+
   #nav a:hover {
     margin-left: 0px;
   }
+
   .sticky {
     position: fixed !important;
     top: 0;
@@ -1074,46 +1108,46 @@ ul.dot.dot-url li:before {
 }
 @media (min-width: 660px) {
   #portfolio .isotope,
-  #portfolio .hobbies-gallery,
-  #hobbies .isotope,
-  #hobbies .hobbies-gallery,
-  #footer-container .isotope,
-  #footer-container .hobbies-gallery {
+#portfolio .hobbies-gallery,
+#hobbies .isotope,
+#hobbies .hobbies-gallery,
+#footer-container .isotope,
+#footer-container .hobbies-gallery {
     min-width: 600px;
     max-width: 600px;
   }
 }
 @media (min-width: 960px) {
   #portfolio .isotope,
-  #portfolio .hobbies-gallery,
-  #hobbies .isotope,
-  #hobbies .hobbies-gallery,
-  #footer-container .isotope,
-  #footer-container .hobbies-gallery {
+#portfolio .hobbies-gallery,
+#hobbies .isotope,
+#hobbies .hobbies-gallery,
+#footer-container .isotope,
+#footer-container .hobbies-gallery {
     min-width: 900px;
     max-width: 900px;
   }
 }
 @media (min-width: 1280px) {
   #portfolio .isotope,
-  #portfolio .hobbies-gallery,
-  #hobbies .isotope,
-  #hobbies .hobbies-gallery,
-  #footer-container .isotope,
-  #footer-container .hobbies-gallery {
+#portfolio .hobbies-gallery,
+#hobbies .isotope,
+#hobbies .hobbies-gallery,
+#footer-container .isotope,
+#footer-container .hobbies-gallery {
     min-width: 1200px;
     max-width: 1200px;
   }
 }
 @media (min-width: 1560px) {
   #portfolio .isotope,
-  #portfolio .hobbies-gallery,
-  #hobbies .isotope,
-  #hobbies .hobbies-gallery,
-  #footer-container .isotope,
-  #footer-container .hobbies-gallery {
+#portfolio .hobbies-gallery,
+#hobbies .isotope,
+#hobbies .hobbies-gallery,
+#footer-container .isotope,
+#footer-container .hobbies-gallery {
     min-width: 1500px;
-    max-width: 1500px;
+    max-width: 1800px;
   }
 }
 
@@ -1149,25 +1183,6 @@ ul.dot.dot-url li:before {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
   }
-}
-#skills li.animation {
-  transition: all ease-in-out 0.2s;
-  opacity: 0;
-  transform: scale(0.5);
-}
-#skills li.animation.active {
-  animation-duration: 1s;
-  transition-delay: 0.2s;
-  transform: scale(1);
-  opacity: 1;
-}
-#skills li.animation.active:first-child {
-  margin-left: 10%;
-  transition-delay: 0s;
-}
-#skills li.animation.active:last-child {
-  transition-delay: 0.4s;
-  margin-right: 10%;
 }
 
 /*# sourceMappingURL=style.css.map */
