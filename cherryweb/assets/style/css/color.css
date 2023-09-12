@@ -3,15 +3,6 @@
 /* -----------------------------------VARIABLES-----------------------------------*/
 /* ------------------------------------------------------------------------------*/
 /* LIFE IN COLOR */
-header {
-  position: relative;
-  z-index: 0;
-}
-@media (min-width: 768px) {
-  header {
-    position: fixed;
-  }
-}
 header h1, header h3 {
   color: #fafafa;
 }
@@ -50,28 +41,6 @@ header::after {
     opacity: 1;
   }
 }
-#about {
-  background: #fafafa;
-}
-@media (min-width: 768px) {
-  #about {
-    margin-top: 100vh !important;
-  }
-}
-#about:after {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  content: "";
-  opacity: 0.2;
-  background: url(../../images/layout/top-view-desk-concept-with-pink-background-_1_.webp) center center no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  z-index: -1;
-}
-
 #contacts {
   background: #fafafa;
 }
