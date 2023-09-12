@@ -227,10 +227,15 @@ h6 {
 
 h1 {
   font-family: Anton, Arial, sans serif;
-  font-size: 52px;
+  font-size: 2.65rem;
   color: #444;
   text-align: center;
   margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3.3rem;
+  }
 }
 h1 span {
   color: #EA1C8B;
@@ -249,11 +254,16 @@ h1 + h3 {
 }
 
 h2 {
-  font-size: 2rem;
-  line-height: 36px;
+  font-size: 1.65rem;
+  line-height: 30px;
   font-family: Anton, Arial, sans serif;
   padding: 0 0 20px 0;
   margin: 0;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
 }
 
 h3 {
@@ -969,7 +979,7 @@ header #header li#description .social {
   z-index: 1;
   width: 100%;
   margin: 0 auto 0;
-  padding: 3% 0;
+  padding: 80px 0;
   background: url(../../images/layout/bg.gif) top center;
   color: #fafafa;
 }
@@ -984,7 +994,12 @@ header #header li#description .social {
   padding: 0 0 15px 0;
   background: url(../../images/layout/bg-h3-footer.gif) bottom left repeat-x;
   margin-bottom: 4%;
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+  #footer h3 {
+    font-size: 2rem;
+  }
 }
 #footer p {
   font-size: 1rem;
@@ -1065,7 +1080,8 @@ ul.dot {
 ul.dot + a {
   background-color: transparent;
   border-top: rgba(255, 255, 255, 0.2) solid 1px;
-  margin-top: 25px;
+  margin-top: 15px;
+  margin-bottom: 25px;
   color: #EA1C8B;
 }
 ul.dot li {
