@@ -13,10 +13,11 @@ $palette-3:#0083DF;
 $palette-4:#008DBE;
 $palette-5:#008F8B;
 $white:#ffffff;
-$text-color:#222222;
+$text-color:#444;
 $grey-1:#222222;
 $grey-2:#333333;
 $light-grey:#D3D3D3;
+$fake-white:#fafafa;
 
 $border-radius_base:12px;
 
@@ -135,12 +136,32 @@ section {
     display: block;
 }
 
+html {
+    overflow-y: scroll;
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
 body {
     line-height: normal;
     font-family: 'League Spartan', sans-serif;
-    background: $white;
+    background: $fake-white;
     font-size: 16px;
     font-weight: 300;
+    color: $text-color;
+
+    &::after {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        content: '';
+        opacity: 0.20;
+        background: url(../../images/layout/top-view-desk-concept-with-pink-background-_1_.webp) center center no-repeat;
+        background-size: cover;
+        z-index: -1;
+    }
 }
 
 p {
@@ -159,7 +180,7 @@ ul {
 a {
     cursor: pointer;
     text-decoration: none;
-    color: $white;
+    color: $fake-white;
     outline: none !important;
     background: $primary;
     padding: 4px 4px 2px;
@@ -172,7 +193,7 @@ a {
 }
 
 a:hover {
-    background: $white;
+    background: $fake-white;
     color: $primary;
 }
 
@@ -245,7 +266,6 @@ h1 {
         margin: 0 auto;
         text-align: center;
         margin-bottom: 45px;
-        padding: 0 60px;
 
         @media (min-width: 992px){
             padding: 0 15px;
@@ -268,13 +288,6 @@ h3 {
     padding: 0 0 20px 0;
     margin: 0;
     font-weight: 300;
-}
-
-html {
-    overflow-y: scroll;
-    font-size: 100%;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
 }
 
 a:focus {
@@ -377,7 +390,7 @@ p {
 /* ------------------------------------------------------------------------------*/
 
 .btn {
-    padding: 17px 20px;
+    padding: 17px 20px 14px;
     border-radius: 50px;
     text-transform: uppercase;
     font-weight: 600;
@@ -417,21 +430,13 @@ header {
     display: flex;
     align-items: center;
     top: 0;
-    z-index: 0;
+    position: relative;
+    z-index: 1;
+    background-color: $fake-white;
+    
 
-    @media (min-width: 1024px){
+    @media (min-width: 768px){
         height: 100vh;
-    }
-
-    &::before {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        content: '';
-        opacity: 0.20;
-        background: url(../../images/layout/top-view-desk-concept-with-pink-background-_1_.webp) center center no-repeat;
-        background-size: cover;
     }
 
     #header {
@@ -461,13 +466,14 @@ header {
         li {
             &#animation {
                 text-align: center;
+                opacity: .7;
 
                 img {
                     max-height: 250px;
                     margin: 0 auto;
 
                     @media (min-width: 920px) {
-                        max-height: 505px;
+                        max-height: 350px;
                     }
                 }
             }
@@ -519,14 +525,14 @@ header {
 
     h2 {
         color: $primary;
-        text-shadow: 0 1px $white;
+        text-shadow: 0 1px $fake-white;
     }
 }
 
 #impliedsubmit,
 #explicitsubmit {
     background: #6f006d;
-    color: $white;
+    color: $fake-white;
     border-radius: 5px;
     box-shadow: 0px 2px 0px #28162b;
     font-weight: bold;
@@ -585,10 +591,11 @@ header {
             padding: 0px 0px 0px 17px;
             font-family: Anton, Arial, sans serif;
             font-weight: 400;
-            color: $white;
+            color: $fake-white;
             text-align: left;
             font-size: 1.8rem;
             border-radius: 50px 0 0 50px;
+            border: solid 1px rgba(0,0,0,.2);
             @extend .transition-base;
 
             &:first-letter {
@@ -626,8 +633,12 @@ header {
     max-width: 1500px;
     margin: 0 auto;
     width: 100%;
-    padding: 0 60px;
+    padding: 0 25px;
     position: relative;
+    @media (min-width: 661px) {
+        padding: 0 60px;
+    }
+
 }
 
 /* ------------------------------------------------------------------------------*/
@@ -639,6 +650,8 @@ header {
     height: 100vh;
     display: flex;
     align-items: center;
+    max-width: 1800px;
+    margin: 0 auto;
 
     ul {
         gap: 25px;
@@ -649,20 +662,16 @@ header {
             border-radius: $border-radius_base;
             overflow: hidden;
             position: relative;
-            color: $white;
+            color: $fake-white;
             padding: 35px;
             flex-basis: 276px;
             min-width: 276px;
-
-            @media (min-width: 920px) {
-                flex: 1;
-            }
 
             h2 {
                 &::after {
                     position: absolute;
                     content: "";
-                    background-color: $white;
+                    background-color: $fake-white;
                     width: 50px;
                     height: 2px;
                     left: 35px;
@@ -690,7 +699,7 @@ header {
 
             &:last-child {
                 &::after {
-                    opacity: .65;
+                    opacity: .70;
                 }
             }
 
@@ -702,10 +711,43 @@ header {
 
                 span {
                     color: $primary;
-                    background: $white;
+                    background: $fake-white;
                     padding: 8px 25px;
                     border-radius: 50px;
                     white-space: nowrap;
+                }
+            }
+
+            &.animation {
+                transition: all ease-in-out .2s;
+                opacity: 0;
+                transform: scale(0.5);
+    
+                &.active {
+                    animation-duration: 1s;
+                    transition-delay: 0.2s;
+                    transform: scale(1);
+                    opacity: 1;
+    
+                    &:first-child {
+                        transition-delay: 0s;
+                    }
+    
+                    &:last-child {
+                        transition-delay: .4s;
+                    }
+                }
+            }       
+            
+            @media (min-width: 920px) {
+                flex: 1;}
+
+            @media (max-width: 1800px) {
+                &:first-child{
+                    margin-left: 10%;
+                }
+                &:last-child{
+                    margin-right: 10%;
                 }
             }
         }
@@ -736,7 +778,7 @@ header {
 #portfolio {
     margin: 0 auto;
     text-align: center;
-    background-color: $white;
+    background-color: $fake-white;
     position: relative;
 
     #sortable-portfolio {
@@ -908,7 +950,7 @@ header {
             margin: 0;
             position: relative !important;
             padding: 0;
-            color: $white;
+            color: $fake-white;
             letter-spacing: 0;
             padding-bottom: 8px;
             display: block;
@@ -925,7 +967,7 @@ header {
             border-radius: 2px;
             display: block;
             background: $primary;
-            color: $white;
+            color: $fake-white;
             margin-bottom: 10px;
 
             &.no-more {
@@ -934,7 +976,7 @@ header {
                 border-radius: 2px;
                 display: block;
                 opacity: 0.7;
-                color: $white;
+                color: $fake-white;
                 font-size: 0.75rem;
                 margin-bottom: 10px;
                 cursor: not-allowed;
@@ -979,8 +1021,11 @@ header {
 
 #contacts {
     position: relative;
-    max-width: 800px;
-    width: 96%;
+    
+    .contacts{
+        max-width: 1200px;
+        width: 96%;
+    }
 }
 
 /* ------------------------------------------------------------------------------*/
@@ -989,20 +1034,21 @@ header {
 
 #footer {
     position: relative;
+    z-index: 1;
     width: 100%;
     margin: 0 auto 0;
     padding: 3% 0;
     background: url(../../images/layout/bg.gif) top center;
-    color: $white;
+    color: $fake-white;
 
     h2 {
-        border-bottom: $white dotted 1px;
+        border-bottom: $fake-white dotted 1px;
         margin-bottom: 20px;
         padding-bottom: 10px;
     }
 
     h3 {
-        color: $white;
+        color: $fake-white;
         font-family: Anton, Arial, sans-serif;
         padding: 0 0 15px 0;
         background: url(../../images/layout/bg-h3-footer.gif) bottom left repeat-x;
@@ -1028,7 +1074,7 @@ header {
             width: 100%;
             margin: 0 auto;
             text-align: left;
-            color: $white;
+            color: $fake-white;
             font-size: 1em;
             line-height: 2em;
             @extend .transition-base;
@@ -1067,7 +1113,7 @@ header {
     }
 
     #credits {
-        color: $white;
+        color: $fake-white;
         text-align: center;
         margin: 0 auto;
         width: 100%;
@@ -1223,7 +1269,7 @@ ul {
 
         @media (min-width: 1560px) {
             min-width: 1500px;
-            max-width: 1500px;
+            max-width: 1800px;
         }
     }
 
@@ -1278,29 +1324,93 @@ ul {
     }
 }
 
-#skills {
-    li {
-        &.animation {
-            transition: all ease-in-out .2s;
-            opacity: 0;
-            transform: scale(0.5);
+#myButton{
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 50px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  min-width: 140px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
 
-            &.active {
-                animation-duration: 1s;
-                transition-delay: 0.2s;
-                transform: scale(1);
-                opacity: 1;
+.button-63:active,
+.button-63:hover {
+  outline: 0;
+}
 
-                &:first-child {
-                    margin-left: 10%;
-                    transition-delay: 0s;
-                }
+@media (min-width: 768px) {
+  .button-63 {
+    font-size: 24px;
+    min-width: 196px;
+  }
 
-                &:last-child {
-                    transition-delay: .4s;
-                    margin-right: 10%;
-                }
-            }
-        }
+}
+
+.glow-on-hover {
+    transition: all ease-in-out .2s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+
+    &:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 50px;
     }
+
+    &:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+        left: 0;
+        top: 0;
+        border-radius: 50px;
+    }
+
+    span{
+        &.show{display: none;}
+        &.hide{display: block;}
+    }
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
 }
