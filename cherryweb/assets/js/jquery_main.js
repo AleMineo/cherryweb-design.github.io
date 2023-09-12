@@ -1,8 +1,4 @@
 // JavaScript Document
-
-
-
-
 //animation scrolling
 $(document).ready(function () {
   $(".ease-scroll").click(function (event) {
@@ -13,7 +9,6 @@ $(document).ready(function () {
     }, 1000, 'easeOutQuad');
   });
 });
-
 
 var stickyNavTop = $('#nav').offset().top;
 
@@ -32,7 +27,6 @@ stickyNav();
 $(window).scroll(function () {
   stickyNav();
 });
-
 
 //portfolio isotope
 $(function () {
@@ -116,47 +110,7 @@ $('.dot').readmore({
   speed: 500
 });
 
-// Using $(document).ready never hurts
-$(document).ready(function () {
 
-  // Cookie setting script wrapper
-  var cookieScripts = function () {
-    // Internal javascript called
-    console.log("Running");
-
-
-  }
-
-  /* Call cookiesDirective, overriding any default params
-  
-  	*** These are the defaults ***
-  		explicitConsent: true,
-  		position: 'top',
-  		duration: 10,
-  		limit: 0,
-  		message: null,				
-  		cookieScripts: null,
-  		privacyPolicyUri: 'privacy.html',
-  		scriptWrapper: function(){},	
-  		fontFamily: 'helvetica',
-  		fontColor: '#FFFFFF',
-  		fontSize: '13px',
-  		backgroundColor: '#000000',
-  		backgroundOpacity: '80',
-  		linkColor: '#CA0000'
-  		
-  */
-
-  $.cookiesDirective({
-    privacyPolicyUri: 'privacy-policy.html',
-    explicitConsent: false,
-    position: 'top',
-    scriptWrapper: cookieScripts,
-    cookieScripts: 'Google Analytics, Shinystat, Google ADsense ',
-    backgroundColor: '#cc0099',
-    linkColor: '#ffffff'
-  });
-});
 
 $(document).ready(function () {
   $("#myButton").click(function () {
