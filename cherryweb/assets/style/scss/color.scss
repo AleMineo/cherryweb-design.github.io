@@ -21,9 +21,6 @@ $fake-white:#fafafa;
 /* LIFE IN COLOR */
 
 header{
-    position: fixed;
-    z-index: 0;
-
     h1, h3{
         color: $fake-white;
     }
@@ -73,25 +70,6 @@ header{
 @keyframes fade-in {
     0% { opacity: 0; }
     100% { opacity: 1; }
-}
-
-#about{
-    margin-top: 100vh !important;
-    background: $fake-white;
-
-        &:after{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        content: "";
-        opacity: 0.2;
-        background: url(../../images/layout/top-view-desk-concept-with-pink-background-_1_.webp) center center no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        z-index: -1;
-        }
 }
 
 #contacts{
