@@ -140,6 +140,7 @@ body::after {
   opacity: 0.2;
   background: url(../../images/layout/top-view-desk-concept-with-pink-background-_1_.webp) center center no-repeat;
   background-size: cover;
+  z-index: -1;
 }
 
 p {
@@ -362,7 +363,7 @@ p {
 /* -----------------------------------MAIN-----------------------------------*/
 /* ------------------------------------------------------------------------------*/
 .btn {
-  padding: 17px 20px;
+  padding: 17px 20px 14px;
   border-radius: 50px;
   text-transform: uppercase;
   font-weight: 600;
@@ -443,7 +444,7 @@ header #header li#animation img {
 }
 @media (min-width: 920px) {
   header #header li#animation img {
-    max-height: 505px;
+    max-height: 350px;
   }
 }
 header #header li#description {
@@ -557,6 +558,7 @@ header #header li#description .social {
   text-align: left;
   font-size: 1.8rem;
   border-radius: 50px 0 0 50px;
+  border: solid 1px rgba(0, 0, 0, 0.2);
 }
 #nav li a:first-letter {
   font-size: 115%;
@@ -643,7 +645,7 @@ header #header li#description .social {
   opacity: 1;
 }
 #skills ul li:last-child::after {
-  opacity: 0.65;
+  opacity: 0.7;
 }
 #skills ul li .pills {
   display: flex;
@@ -916,6 +918,8 @@ header #header li#description .social {
 /* ------------------------------------------------------------------------------*/
 #contacts {
   position: relative;
+}
+#contacts .contacts {
   max-width: 1200px;
   width: 96%;
 }
@@ -1182,6 +1186,99 @@ ul.dot.dot-url li:before {
     opacity: 1;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
+  }
+}
+#myButton {
+  align-items: center;
+  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+  border: 0;
+  border-radius: 50px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  min-width: 140px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-63:active,
+.button-63:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-63 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+.glow-on-hover {
+  transition: all ease-in-out 0.2s;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 50px;
+}
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+  left: 0;
+  top: 0;
+  border-radius: 50px;
+}
+.glow-on-hover span.show {
+  display: none;
+}
+.glow-on-hover span.hide {
+  display: block;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
   }
 }
 
