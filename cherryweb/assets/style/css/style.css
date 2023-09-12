@@ -413,6 +413,25 @@ header {
   z-index: 1;
   background-color: #fafafa;
 }
+header::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: "";
+  z-index: 0;
+  background-image: #fafafa;
+  animation: fade-in 0.2s;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media (min-width: 768px) {
   header {
     position: fixed;
@@ -430,8 +449,9 @@ header #header {
   height: auto;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
-@media (min-width: 900px) {
+@media (min-width: 920px) {
   header #header {
     align-items: flex-start;
     flex-direction: row;
@@ -446,18 +466,26 @@ header #header {
 }
 header #header li#animation {
   text-align: center;
-  opacity: 0.7;
+  opacity: 0;
   height: 0;
-  width: 0;
-  overflow: hidden;
+  margin-bottom: 30px;
+}
+@media (min-width: 920px) {
+  header #header li#animation {
+    height: auto;
+    position: absolute;
+    left: 27px;
+    top: 50px;
+  }
 }
 header #header li#animation img {
   max-height: 250px;
   margin: 0 auto;
+  filter: invert(1);
 }
 @media (min-width: 920px) {
   header #header li#animation img {
-    max-height: 350px;
+    max-height: 300px;
   }
 }
 header #header li#description {
@@ -467,9 +495,10 @@ header #header li#description {
   justify-content: flex-start;
   gap: 20px;
 }
-@media (min-width: 661px) {
+@media (min-width: 920px) {
   header #header li#description {
-    margin-right: 50px;
+    margin-right: 100px;
+    margin-left: 300px;
   }
 }
 header #header li#description h1,
@@ -484,46 +513,6 @@ header #header li#description h3 {
 header #header li#description .social {
   display: flex;
   gap: 20px;
-}
-
-/* ------------------------------------------------------------------------------*/
-/* ------------------------------- POLICY BANNER --------------------------------*/
-/* ------------------------------------------------------------------------------*/
-#policy {
-  float: none;
-  background: url(../../images/layout/bg-pag.gif);
-  width: 100%;
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 25px;
-  margin-bottom: -4%;
-}
-#policy h3::first-letter {
-  font-size: 100%;
-}
-#policy h2 {
-  color: #EA1C8B;
-  text-shadow: 0 1px #fafafa;
-}
-
-#impliedsubmit,
-#explicitsubmit {
-  background: #6f006d;
-  color: #fafafa;
-  border-radius: 5px;
-  box-shadow: 0px 2px 0px #28162b;
-  font-weight: bold;
-  border: none;
-  padding: 8px 20px;
-  display: block;
-  margin: 0 auto;
-  margin-top: 15px;
-  margin-bottom: 25px;
-  cursor: pointer;
-}
-
-#eantics {
-  line-height: 18px;
 }
 
 /* ------------------------------------------------------------------------------*/
@@ -656,6 +645,9 @@ header #header li#description .social {
   flex-basis: 276px;
   min-width: 276px;
 }
+#skills ul li h2 {
+  margin-bottom: 15px;
+}
 #skills ul li h2::after {
   position: absolute;
   content: "";
@@ -672,15 +664,15 @@ header #header li#description .social {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #EA1C8B;
-  opacity: 0.85;
+  background-color: #ec3d9b;
+  opacity: 1;
   z-index: -1;
 }
 #skills ul li:first-child::after {
-  opacity: 1;
+  background-color: #EA1C8B;
 }
 #skills ul li:last-child::after {
-  opacity: 0.7;
+  background-color: #ef5dab;
 }
 #skills ul li .pills {
   display: flex;
@@ -691,7 +683,7 @@ header #header li#description .social {
 #skills ul li .pills span {
   color: #EA1C8B;
   background: #fafafa;
-  padding: 8px 25px;
+  padding: 12px 20px 8px;
   border-radius: 50px;
   white-space: nowrap;
 }
@@ -1278,13 +1270,14 @@ ul.dot.dot-url li:before {
   }
 }
 .glow-on-hover {
-  transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.1s;
   border: none;
   outline: none;
   cursor: pointer;
   position: relative;
   z-index: 0;
   border-radius: 10px;
+  width: 220px;
 }
 .glow-on-hover:before {
   content: "";
