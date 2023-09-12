@@ -20,6 +20,7 @@ header ul li#animation {
   width: auto !important;
   height: auto !important;
   overflow: visible;
+  margin-top: 30px;
 }
 header::after {
   position: absolute;
