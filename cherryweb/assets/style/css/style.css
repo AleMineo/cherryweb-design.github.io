@@ -986,6 +986,9 @@ header #header li#description .social {
   margin-bottom: 4%;
   font-size: 2rem;
 }
+#footer p {
+  font-size: 1rem;
+}
 #footer #footer-container {
   width: 80%;
   max-width: 1500px;
@@ -1006,7 +1009,7 @@ header #header li#description .social {
   margin: 0 auto;
   text-align: left;
   color: #fafafa;
-  font-size: 1em;
+  font-size: 1rem;
   line-height: 2em;
 }
 @media (min-width: 500px) {
