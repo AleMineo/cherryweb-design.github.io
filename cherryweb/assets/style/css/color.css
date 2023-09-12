@@ -4,8 +4,13 @@
 /* ------------------------------------------------------------------------------*/
 /* LIFE IN COLOR */
 header {
-  position: fixed;
+  position: relative;
   z-index: 0;
+}
+@media (min-width: 768px) {
+  header {
+    position: fixed;
+  }
 }
 header h1, header h3 {
   color: #fafafa;
@@ -46,8 +51,12 @@ header::after {
   }
 }
 #about {
-  margin-top: 100vh !important;
   background: #fafafa;
+}
+@media (min-width: 768px) {
+  #about {
+    margin-top: 100vh !important;
+  }
 }
 #about:after {
   position: absolute;
