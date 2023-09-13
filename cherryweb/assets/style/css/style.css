@@ -13,6 +13,16 @@
   -webkit-transition: all 0.25s ease-in-out;
 }
 
+.margin-h-auto, #portfolio .isotope,
+#portfolio .hobbies-gallery,
+#hobbies .isotope,
+#hobbies .hobbies-gallery,
+#footer-container .isotope,
+#footer-container .hobbies-gallery, #load-more, #wrapper section {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
 /* ------------------------------------------------------------------------------*/
 /* -----------------------------------NORMALIZZAZIONE-----------------------------------*/
 /* ------------------------------------------------------------------------------*/
@@ -246,6 +256,8 @@ h1 + h3 {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 45px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 @media (min-width: 992px) {
   h1 + h3 {
@@ -395,8 +407,6 @@ p {
   text-align: center;
   padding: 0;
   margin: 0;
-  margin-left: auto;
-  margin-right: auto;
   padding: 5rem 0;
   position: relative;
   z-index: 1;
@@ -849,6 +859,7 @@ header #header li#description .social a:hover {
   overflow: hidden;
   position: relative;
   padding: 4px;
+  float: left;
 }
 .element > div {
   border-radius: 12px;
@@ -871,6 +882,9 @@ header #header li#description .social a:hover {
   transition: none;
 }
 
+.grid {
+  margin-bottom: 25px;
+}
 .grid figure img {
   width: 100%;
   margin: 0 auto;
@@ -925,9 +939,14 @@ header #header li#description .social a:hover {
   margin-bottom: 20px;
 }
 
-.hidden {
+.no-show, .hidden {
   display: none !important;
   visibility: hidden !important;
+}
+
+#load-more {
+  display: block;
+  width: 150px;
 }
 
 /* ------------------------------------------------------------------------------*/
@@ -1163,7 +1182,6 @@ ul.dot.dot-url li:before {
 #footer-container .hobbies-gallery {
   min-width: 300px;
   max-width: 300px;
-  margin: 0 auto !important;
 }
 @media (min-width: 660px) {
   #portfolio .isotope,
