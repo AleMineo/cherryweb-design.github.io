@@ -43,13 +43,15 @@ $(document).ready(function() {
     }
   });
 
+
   // bind filter button click
-  $('#filters').on('click', 'button', function() {
+  $('#filters').on('click', 'a', function() {
     var filterValue = $(this).attr('data-filter');
     $container.isotope({
       filter: filterValue
     });
   });
+
 
   // change is-checked class on buttons
   $('.button-group').each(function(i, buttonGroup) {
