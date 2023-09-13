@@ -514,6 +514,11 @@ header #header li#description .social {
   display: flex;
   gap: 20px;
 }
+header #header li#description .social a:hover {
+  background-color: transparent;
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
 
 /* ------------------------------------------------------------------------------*/
 /* ---------------------------------- NAVMENU -----------------------------------*/
@@ -1201,6 +1206,17 @@ ul.dot.dot-url li:before {
 #footer-container .isotope,
 #footer-container .hobbies-gallery {
     min-width: 1500px;
+    max-width: 1500px;
+  }
+}
+@media (min-width: 1875px) {
+  #portfolio .isotope,
+#portfolio .hobbies-gallery,
+#hobbies .isotope,
+#hobbies .hobbies-gallery,
+#footer-container .isotope,
+#footer-container .hobbies-gallery {
+    min-width: 1800px;
     max-width: 1800px;
   }
 }

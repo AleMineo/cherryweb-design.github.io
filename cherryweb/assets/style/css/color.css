@@ -19,6 +19,9 @@ header ul li#animation {
   overflow: visible;
   margin-top: 10px;
 }
+header ul li#description svg {
+  filter: invert(1);
+}
 header::after {
   background-image: -webkit-gradient(linear, left bottom, right top, from(#6d327c), color-stop(#485DA6), color-stop(#00a1ba));
   background-image: -webkit-linear-gradient(left bottom, #6d327c, #485DA6, #00a1ba);
