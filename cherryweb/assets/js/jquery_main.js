@@ -28,37 +28,15 @@ $(window).scroll(function () {
   stickyNav();
 });
 
-// init Isotope
-var $grid = $('.grid').isotope({
-  itemSelector: '.element',
-  layoutMode: 'fitRows',
-  getSortData: {
-    category: '[data-category]'
-  },
-  filter:'.web'
-});
 
-// bind filter button click
-$('#filters').on( 'click', 'a', function() {
-  var filterValue = $( this ).attr('data-filter');
-  $grid.isotope({ filter: filterValue });
-});
 
-// change is-checked class on buttons
-$('.button-group').each( function( i, buttonGroup ) {
-  var $buttonGroup = $( buttonGroup );
-  $buttonGroup.on( 'click', 'a', function() {
-    $buttonGroup.find('.selected').removeClass('selected');
-    $( this ).addClass('selected');
-  });
-});
-//fine portfolio isotope
+// external js: isotope.pkgd.js
 
 $(document).ready(function() {
 
   // init Isotope
   var $container = $('.isotope').isotope({
-    itemSelector: '.element-item',
+    itemSelector: '.element',
     layoutMode: 'fitRows',
     getSortData: {
       category: '[data-category]'
@@ -73,12 +51,23 @@ $(document).ready(function() {
     });
   });
 
+  // change is-checked class on buttons
+  $('.button-group').each(function(i, buttonGroup) {
+    var $buttonGroup = $(buttonGroup);
+    $buttonGroup.on('click', 'a', function() {
+      $buttonGroup.find('.selected').removeClass('selected');
+      $(this).addClass('selected');
+    });
+  });
+
   //****************************
   // Isotope Load more button
   //****************************
   var initShow = 6; //number of items loaded on init & onclick load more button
   var counter = initShow; //counter for load more button
   var iso = $container.data('isotope'); // get Isotope instance
+
+  console.log(iso)
 
   loadMore(initShow); //execute function onload
 
