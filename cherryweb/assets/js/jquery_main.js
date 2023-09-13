@@ -28,50 +28,103 @@ $(window).scroll(function () {
   stickyNav();
 });
 
-//portfolio isotope
-$(function () {
+// init Isotope
+var $grid = $('.grid').isotope({
+  itemSelector: '.element',
+  layoutMode: 'fitRows',
+  getSortData: {
+    category: '[data-category]'
+  },
+  filter:'.web'
+});
 
-  var $container = $('#container');
+// bind filter button click
+$('#filters').on( 'click', 'a', function() {
+  var filterValue = $( this ).attr('data-filter');
+  $grid.isotope({ filter: filterValue });
+});
 
-  $container.isotope({
-    itemSelector: '.element'
+// change is-checked class on buttons
+$('.button-group').each( function( i, buttonGroup ) {
+  var $buttonGroup = $( buttonGroup );
+  $buttonGroup.on( 'click', 'a', function() {
+    $buttonGroup.find('.selected').removeClass('selected');
+    $( this ).addClass('selected');
   });
-
-
-  var $optionSets = $('#options .option-set'),
-    $optionLinks = $optionSets.find('a');
-
-  $optionLinks.click(function () {
-    var $this = $(this);
-    // don't proceed if already selected
-    if ($this.hasClass('selected')) {
-      return false;
-    }
-    var $optionSet = $this.parents('.option-set');
-    $optionSet.find('.selected').removeClass('selected');
-    $this.addClass('selected');
-
-    // make option object dynamically, i.e. { filter: '.my-filter-class' }
-    var options = {},
-      key = $optionSet.attr('data-option-key'),
-      value = $this.attr('data-option-value');
-    // parse 'false' as false boolean
-    value = value === 'false' ? false : value;
-    options[key] = value;
-    if (key === 'layoutMode' && typeof changeLayoutMode === 'function') {
-      // changes in layout modes need extra logic
-      changeLayoutMode($this, options)
-    } else {
-      // otherwise, apply new options
-      $container.isotope(options);
-    }
-
-    return false;
-  });
-
-
 });
 //fine portfolio isotope
+
+$(document).ready(function() {
+
+  // init Isotope
+  var $container = $('.isotope').isotope({
+    itemSelector: '.element-item',
+    layoutMode: 'fitRows',
+    getSortData: {
+      category: '[data-category]'
+    }
+  });
+
+  // bind filter button click
+  $('#filters').on('click', 'button', function() {
+    var filterValue = $(this).attr('data-filter');
+    $container.isotope({
+      filter: filterValue
+    });
+  });
+
+  //****************************
+  // Isotope Load more button
+  //****************************
+  var initShow = 6; //number of items loaded on init & onclick load more button
+  var counter = initShow; //counter for load more button
+  var iso = $container.data('isotope'); // get Isotope instance
+
+  loadMore(initShow); //execute function onload
+
+  function loadMore(toShow) {
+    $container.find(".hidden").removeClass("hidden");
+
+    var hiddenElems = iso.filteredItems.slice(toShow, iso.filteredItems.length).map(function(item) {
+      return item.element;
+    });
+    
+    $(hiddenElems).addClass('hidden');
+    $container.isotope('layout');
+
+    //when no more to load, hide show more button
+    if (hiddenElems.length == 0) {
+      jQuery("#load-more").hide();
+    } else {
+      jQuery("#load-more").show();
+    };
+
+  }
+
+  //append load more button
+  $container.after('<a id="load-more" class="button btn btn-primary ease-scroll hover-effect"> Load More</a>');
+
+  //when load more button clicked
+  $("#load-more").click(function() {
+    if ($('#filters').data('clicked')) {
+      //when filter button clicked, set initial value for counter
+      counter = initShow;
+      $('#filters').data('clicked', false);
+    } else {
+      counter = counter;
+    };
+
+    counter = counter + initShow;
+
+    loadMore(counter);
+  });
+
+  //when filter button clicked
+  $("#filters").click(function() {
+    $(this).data('clicked', true);
+    loadMore(initShow);
+  });  
+});
 
 //animation for page elements
 function reveal() {
@@ -110,8 +163,6 @@ $('.dot').readmore({
   speed: 500
 });
 
-
-
 $(document).ready(function () {
   $("#myButton").click(function () {
     if ($("link[href*=color]").length) {
@@ -125,3 +176,55 @@ $(document).ready(function () {
   });
 
 });
+
+var initShow = 3; //number of items loaded on init & onclick load more button
+  var counter = initShow; //counter for load more button
+  var iso = $container.data('isotope'); // get Isotope instance
+
+  loadMore(initShow); //execute function onload
+
+  function loadMore(toShow) {
+    $container.find(".hidden").removeClass("hidden");
+
+    var hiddenElems = iso.filteredItems.slice(toShow, iso.filteredItems.length).map(function(item) {
+      return item.element;
+    });
+    $(hiddenElems).addClass('hidden');
+    $container.isotope('layout');
+
+    //when no more to load, hide show more button
+    if (hiddenElems.length == 0) {
+      jQuery("#load-more").hide();
+    } else {
+      jQuery("#load-more").show();
+    };
+
+  }
+
+  //append load more button
+  $container.after('<button id="load-more"> Load More</button>');
+
+  //when load more button clicked
+  $("#load-more").click(function() {
+    if ($('#filters').data('clicked')) {
+      //when filter button clicked, set initial value for counter
+      counter = initShow;
+      $('#filters').data('clicked', false);
+    } else {
+      counter = counter;
+    };
+
+    counter = counter + initShow;
+
+    loadMore(counter);
+  });
+
+  //when filter button clicked
+  $("#filters").click(function() {
+    $(this).data('clicked', true);
+
+    loadMore(initShow);
+  });
+
+  
+  
