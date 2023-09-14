@@ -783,11 +783,21 @@ header #header li#description .social a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2%;
+  gap: 3%;
   flex-wrap: wrap;
 }
+@media (min-width: 768px) {
+  #portfolio #sortable-portfolio #options .portfolio-list {
+    gap: 4%;
+  }
+}
 #portfolio #sortable-portfolio #options .portfolio-list li {
-  padding: 0 2% 2% 0;
+  padding: 0 0 4% 0;
+}
+@media (min-width: 768px) {
+  #portfolio #sortable-portfolio #options .portfolio-list li {
+    padding: 0 0 2% 0;
+  }
 }
 #portfolio #sortable-portfolio #options .portfolio-list li a:hover {
   color: #EA1C8B !important;
