@@ -14,11 +14,11 @@
 }
 
 .margin-h-auto, #portfolio .isotope,
-#portfolio .hobbies-gallery,
+#portfolio .hobbiesGallery,
 #hobbies .isotope,
-#hobbies .hobbies-gallery,
+#hobbies .hobbiesGallery,
 #footer-container .isotope,
-#footer-container .hobbies-gallery, #load-more, #wrapper section {
+#footer-container .hobbiesGallery, #load-more, #wrapper section {
   margin-right: auto !important;
   margin-left: auto !important;
 }
@@ -1101,6 +1101,7 @@ ul.dot + a {
   margin-top: 15px;
   margin-bottom: 25px;
   color: #EA1C8B;
+  display: block;
 }
 ul.dot li {
   line-height: 1.25rem;
@@ -1175,65 +1176,66 @@ ul.dot.dot-url li:before {
   width: 100%;
 }
 #portfolio .isotope,
-#portfolio .hobbies-gallery,
+#portfolio .hobbiesGallery,
 #hobbies .isotope,
-#hobbies .hobbies-gallery,
+#hobbies .hobbiesGallery,
 #footer-container .isotope,
-#footer-container .hobbies-gallery {
+#footer-container .hobbiesGallery {
+  overflow: hidden;
   min-width: 300px;
   max-width: 300px;
 }
 @media (min-width: 660px) {
   #portfolio .isotope,
-#portfolio .hobbies-gallery,
+#portfolio .hobbiesGallery,
 #hobbies .isotope,
-#hobbies .hobbies-gallery,
+#hobbies .hobbiesGallery,
 #footer-container .isotope,
-#footer-container .hobbies-gallery {
+#footer-container .hobbiesGallery {
     min-width: 600px;
     max-width: 600px;
   }
 }
 @media (min-width: 960px) {
   #portfolio .isotope,
-#portfolio .hobbies-gallery,
+#portfolio .hobbiesGallery,
 #hobbies .isotope,
-#hobbies .hobbies-gallery,
+#hobbies .hobbiesGallery,
 #footer-container .isotope,
-#footer-container .hobbies-gallery {
+#footer-container .hobbiesGallery {
     min-width: 900px;
     max-width: 900px;
   }
 }
 @media (min-width: 1280px) {
   #portfolio .isotope,
-#portfolio .hobbies-gallery,
+#portfolio .hobbiesGallery,
 #hobbies .isotope,
-#hobbies .hobbies-gallery,
+#hobbies .hobbiesGallery,
 #footer-container .isotope,
-#footer-container .hobbies-gallery {
+#footer-container .hobbiesGallery {
     min-width: 1200px;
     max-width: 1200px;
   }
 }
 @media (min-width: 1560px) {
   #portfolio .isotope,
-#portfolio .hobbies-gallery,
+#portfolio .hobbiesGallery,
 #hobbies .isotope,
-#hobbies .hobbies-gallery,
+#hobbies .hobbiesGallery,
 #footer-container .isotope,
-#footer-container .hobbies-gallery {
+#footer-container .hobbiesGallery {
     min-width: 1500px;
     max-width: 1500px;
   }
 }
 @media (min-width: 1875px) {
   #portfolio .isotope,
-#portfolio .hobbies-gallery,
+#portfolio .hobbiesGallery,
 #hobbies .isotope,
-#hobbies .hobbies-gallery,
+#hobbies .hobbiesGallery,
 #footer-container .isotope,
-#footer-container .hobbies-gallery {
+#footer-container .hobbiesGallery {
     min-width: 1800px;
     max-width: 1800px;
   }
