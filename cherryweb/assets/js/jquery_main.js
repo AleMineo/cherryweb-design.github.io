@@ -38,6 +38,7 @@ $(document).ready(function() {
   var $portfolioContainer = $('#portfolio .isotope').isotope({
     itemSelector: '.element',
     layoutMode: 'fitRows',
+    filter: '.web',
     getSortData: {
       category: '[data-category]'
     }
@@ -49,10 +50,9 @@ $(document).ready(function() {
   })
 
   var initShow = isMobile ? 2 : 6; //number of items loaded on init & onclick load more button
-  var counter = initShow; //counter for load more button
 
-  loadMore(counter, $portfolioContainer)
-  loadMore(counter, $hobbiesContainer)
+  loadMore(initShow, $portfolioContainer)
+  loadMore(initShow, $hobbiesContainer)
 
   function loadMore(toShow, $container) {
     const iso = $container.data('isotope')
@@ -61,6 +61,7 @@ $(document).ready(function() {
     var hiddenElems = iso.filteredItems.slice(toShow, iso.filteredItems.length).map(function(item) {
       return item.element;
     });
+    // console.log(iso.filteredItems, hiddenElems, toShow)
     $(hiddenElems).addClass('hidden');
     $container.isotope('layout');
 
@@ -75,37 +76,30 @@ $(document).ready(function() {
 
   $portfolioContainer.after('<a class="button btn btn-primary ease-scroll hover-effect load-more"> Load More</a>');
   $hobbiesContainer.after('<a class="button btn btn-primary ease-scroll hover-effect load-more"> Load More</a>');
-
+  
   //when load more button clicked
   $(".load-more").click(function() {
+    var isotope = $(this).parent().children(".isotope").data('isotope')
+    var counter = $(this).parent().children(".isotope").children(`.element:not(.hidden)${isotope.options.filter || ''}`).length + initShow
     if ($('#filters').data('clicked')) {
       //when filter button clicked, set initial value for counter
       counter = initShow;
       $('#filters').data('clicked', false);
-    } else {
-      counter = counter;
-    };
-
-    counter = counter + initShow;
+    }
   
     loadMore(counter, $(this).parent().children('.isotope'));
-  });
-
-  //when filter button clicked
-  $("#filters").click(function() {
-    $(this).data('clicked', true);
-
-    loadMore(initShow, $(this).parent().parent().children('.isotope'));
   });
 
   // bind filter button click
   $('#filters a').on('click', function() {
     var filterValue = $(this).attr('data-filter');
     var $container = $(this).parent().parent().parent().parent().children('.isotope')
+    $container.children('.element').addClass('hidden')
 
     $container.isotope({
       filter: filterValue
     });
+    loadMore(initShow, $container);
   });
 
 
