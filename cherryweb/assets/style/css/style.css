@@ -701,6 +701,7 @@ header #header li#description .social a:hover {
   padding: 12px 20px 8px;
   border-radius: 50px;
   white-space: nowrap;
+  font-weight: 500;
 }
 #skills ul li.animation {
   transition: all ease-in-out 0.2s;
