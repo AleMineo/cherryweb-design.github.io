@@ -18,7 +18,7 @@
 #hobbies .isotope,
 #hobbies .hobbiesGallery,
 #footer-container .isotope,
-#footer-container .hobbiesGallery, #load-more, #wrapper section {
+#footer-container .hobbiesGallery, .load-more, #wrapper section {
   margin-right: auto !important;
   margin-left: auto !important;
 }
@@ -945,7 +945,7 @@ header #header li#description .social a:hover {
   visibility: hidden !important;
 }
 
-#load-more {
+.load-more {
   display: block;
   width: 150px;
 }
