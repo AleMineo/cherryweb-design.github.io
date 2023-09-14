@@ -155,3 +155,17 @@ $('.dot').readmore({
 $('.dot').readmore({
   speed: 500
 });
+
+$(document).ready(function () {
+  $("#myButton").click(function () {
+    if ($("link[href*=color]").length) {
+      $("link[href*=color]").remove();
+    } else {
+      var ls = document.createElement('link');
+      ls.rel = "stylesheet";
+      ls.href = "assets/style/css/color.css";
+      document.getElementsByTagName('head')[0].appendChild(ls);
+    }
+  });
+
+});
