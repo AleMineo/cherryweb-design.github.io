@@ -7,7 +7,7 @@
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.1);
 }
 
-.transition-base, #footer #footer-container > li, #nav li a, header #header li, a {
+.transition-base, ul.dot, #footer #footer-container > li, #nav li a, header #header li, a {
   transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
