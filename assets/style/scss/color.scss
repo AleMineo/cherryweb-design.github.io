@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ------------------------------------------------------------------------------*/
+/* -----------------------------------VARIABLES-----------------------------------*/
+/* ------------------------------------------------------------------------------*/
+$primary:#EA1C8B;
+$secondary:#755B77;
+$light-primary:#FBECFC;
+$palette-1:#B04DBA;
+$palette-2:#4F6FDF;
+$palette-3:#0083DF;
+$palette-4:#008DBE;
+$palette-5:#008F8B;
+$white:#ffffff;
+$text-color:#444;
+$grey-1:#222222;
+$grey-2:#333333;
+$light-grey:#D3D3D3;
+$fake-white:#fafafa;
+/* LIFE IN COLOR */
+
+header{
+    h1, h3{
+        color: $fake-white;
+    }
+
+    h1{
+        span{
+            color: $fake-white;
+        }
+    }
+
+    h3{
+        strong{
+            
+        }
+    }
+
+    img{
+        filter: invert(1)
+    }
+
+    ul{
+        z-index: 1;
+        
+        li{
+            &#animation{
+                opacity: 1 !important;
+            }
+        }
+    }
+
+    &::after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: "";
+    z-index: 0;
+    background-image: -webkit-gradient(linear, left bottom, right top, from(#6d327c), color-stop(#485DA6), color-stop(#00a1ba));
+    background-image: -webkit-linear-gradient(left bottom, #6d327c, #485DA6, #00a1ba);
+    background-image: -o-linear-gradient(left bottom, #6d327c, #485DA6, #00a1ba);
+    background-image: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba);
+    animation: fade-in .2s;
+    }
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#contacts{
+    background: $fake-white;
+    &::after{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        content: "";
+        opacity: 0.2;
+        background: url(../../images/layout/top-view-desk-concept-with-pink-background-_1_.webp) center center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        z-index: -1;
+    }
+}
+
+.glow-on-hover{
+    span{
+        &.show{display: block;}
+        &.hide{display: none;}
+    }
+}
