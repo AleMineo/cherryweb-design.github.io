@@ -10,107 +10,89 @@ $(document).ready(function () {
   });
 });
 
-var stickyNavTop = $('#nav').offset().top;
-
-var stickyNav = function () {
-  var scrollTop = $(window).scrollTop();
-
-  if (scrollTop > stickyNavTop) {
-    $('#nav').addClass('sticky');
-  } else {
-    $('#nav').removeClass('sticky');
-  }
-};
-
-stickyNav();
-
-$(window).scroll(function () {
-  stickyNav();
-});
-
-
-
 // external js: isotope.pkgd.js
 
 $(document).ready(function() {
-  var isMobile =  /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 
-  var $portfolioContainer = $('#portfolio .isotope').isotope({
+  // init Isotope
+  var $container = $('.isotope').isotope({
     itemSelector: '.element',
     layoutMode: 'fitRows',
     filter: '.web',
     getSortData: {
       category: '[data-category]'
     }
-  })
+  });
 
-  var $hobbiesContainer = $('#hobbies .isotope').isotope({
-    itemSelector: '.element',
-    layoutMode: 'fitRows'
-  })
+  // bind filter button click
+  $('#filters').on('click', 'a', function() {
+    var filterValue = $(this).attr('data-filter');
+    $container.isotope({
+      filter: filterValue
+    });
+  });
 
-  var initShow = isMobile ? 2 : 6; //number of items loaded on init & onclick load more button
+  // change is-checked class on buttons
+  $('.button-group').each(function(i, buttonGroup) {
+    var $buttonGroup = $(buttonGroup);
+    $buttonGroup.on('click', 'buttoan', function() {
+      $buttonGroup.find('.selected').removeClass('selected');
+      $(this).addClass('selected');
+    });
+  });
+ 
+  //****************************
+  // Isotope Load more button
+  //****************************
+  var initShow = 3; //number of items loaded on init & onclick load more button
+  var counter = initShow; //counter for load more button
+  var iso = $container.data('isotope'); // get Isotope instance
 
-  loadMore(initShow, $portfolioContainer)
-  loadMore(initShow, $hobbiesContainer)
+  loadMore(initShow); //execute function onload
 
-  function loadMore(toShow, $container) {
-    const iso = $container.data('isotope')
+  function loadMore(toShow) {
     $container.find(".hidden").removeClass("hidden");
 
     var hiddenElems = iso.filteredItems.slice(toShow, iso.filteredItems.length).map(function(item) {
       return item.element;
     });
-    // console.log(iso.filteredItems, hiddenElems, toShow)
     $(hiddenElems).addClass('hidden');
     $container.isotope('layout');
 
     //when no more to load, hide show more button
     if (hiddenElems.length == 0) {
-      $container.parent().children(".load-more").hide()
+      jQuery("#load-more").hide();
     } else {
-      $container.parent().children(".load-more").show()
+      jQuery("#load-more").show();
     };
 
   }
 
-  $portfolioContainer.after('<a class="button btn btn-primary ease-scroll hover-effect load-more"> Load More</a>');
-  $hobbiesContainer.after('<a class="button btn btn-primary ease-scroll hover-effect load-more"> Load More</a>');
-  
+  //append load more button
+  $container.after('<button id="load-more"> Load More</button>');
+
   //when load more button clicked
-  $(".load-more").click(function() {
-    var isotope = $(this).parent().children(".isotope").data('isotope')
-    var counter = $(this).parent().children(".isotope").children(`.element:not(.hidden)${isotope.options.filter || ''}`).length + initShow
+  $("#load-more").click(function() {
     if ($('#filters').data('clicked')) {
       //when filter button clicked, set initial value for counter
       counter = initShow;
       $('#filters').data('clicked', false);
-    }
-  
-    loadMore(counter, $(this).parent().children('.isotope'));
+    } else {
+      counter = counter;
+    };
+
+    counter = counter + initShow;
+
+    loadMore(counter);
   });
 
-  // bind filter button click
-  $('#filters a').on('click', function() {
-    var filterValue = $(this).attr('data-filter');
-    var $container = $(this).parent().parent().parent().parent().children('.isotope')
-    $container.children('.element').addClass('hidden')
+  //when filter button clicked
+  $("#filters").click(function() {
+    $(this).data('clicked', true);
 
-    $container.isotope({
-      filter: filterValue
-    });
-    loadMore(initShow, $container);
+    loadMore(initShow);
   });
 
-
-  // change is-checked class on buttons
-  $('.button-group').each(function(i, buttonGroup) {
-    var $buttonGroup = $(buttonGroup);
-    $buttonGroup.on('click', 'a', function() {
-      $buttonGroup.find('.selected').removeClass('selected');
-      $(this).addClass('selected');
-    });
-  });
 });
 
 //animation for page elements
@@ -133,7 +115,7 @@ function reveal() {
 window.addEventListener("scroll", reveal);
 
 $('.dot').readmore({
-  moreLink: '<a href="#">Usage, examples, and options</a>',
+  moreLink: '<a href="#">Read more</a>',
   collapsedHeight: 170,
   afterToggle: function (trigger, element, expanded) {
     if (!expanded) { // The "Close" link was clicked
@@ -146,9 +128,21 @@ $('.dot').readmore({
   }
 });
 
-$('.dot').readmore({
-  speed: 500
+$('.hobbiesGallery').readmore({
+  moreLink: '<a href="#" class="button btn btn-primary ease-scroll hover-effect load-more"> Load More</a>',
+  lessLink: '<a href="#" class="button btn btn-primary ease-scroll hover-effect load-more">Load less</a>',
+  collapsedHeight: 300,
+  afterToggle: function (trigger, element, expanded) {
+    if (!expanded) { // The "Close" link was clicked
+      $('html, body').animate({
+        scrollTop: element.offset().top
+      }, {
+        duration: 100
+      });
+    }
+  }
 });
+
 
 $(document).ready(function () {
   $("#myButton").click(function () {
