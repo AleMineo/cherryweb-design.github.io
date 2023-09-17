@@ -4,16 +4,19 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <title>&laquo; Cherry UX/UI design &raquo; Alessandra Mineo :: UX/UI designer :: graphic designer :: illustrator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&laquo; Cherry UX/UI design &raquo; Alessandra Mineo :: UX/UI designer :: graphic designer :: illustrator
+  </title>
   <meta name='description'
     content='Alessandra Mineo, italian web and graphic designer. Skills: Photoshop, vector, Dreamweaver, Indesign, Acrobat, Wordpress, CSS3, HTML5, jQuery. ' />
   <link rel="icon" href="favicon.png" type="image/png" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <link href='http://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/jquery-rebox.css" type="text/css" media="screen" title="prettyPhoto main stylesheet"
-    charset="utf-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=League+Spartan:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/andreknieriem/simplelightbox@master/dist/simple-lightbox.min.css?v2.13.0">
   <script>
     document.createElement('header');
     document.createElement('footer');
@@ -22,74 +25,124 @@
     document.createElement('nav');
     document.createElement('article');
   </script>
-  <script src="js/modernizr.custom.js"></script>
-  <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
-  <link rel="stylesheet" type="text/css" href="css/style_hover_portfolio.css" />
+  <script src="assets/js/modernizr.custom.js"></script>
+  <link href="assets/style/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="assets/style/css/style_hover_portfolio.css" />
   <!--[if IE]>
 <link href="css/ie.css" rel="stylesheet" type="text/css" media="screen" />
 <![endif]-->
 </head>
 
 <body id="top">
+  <nav>
+    <ul id="nav">
+      <li><a href="#top" id="nav_about" class="about active ease-scroll"><svg xmlns="http://www.w3.org/2000/svg"
+            width="30" height="30" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+            <path
+              d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+          </svg> About</a></li>
+      <li><a href="#skills" id="nav_skills" class="skills ease-scroll"><svg xmlns="http://www.w3.org/2000/svg"
+            width="30" height="30" fill="currentColor" class="bi bi-tools" viewBox="0 0 16 16">
+            <path
+              d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0Zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708ZM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11Z" />
+          </svg>Skills</a></li>
+      <li><a href="#portfolio" id="nav_portfolio" class="portfolio ease-scroll"><svg xmlns="http://www.w3.org/2000/svg"
+            width="30" height="30" fill="currentColor" class="bi bi-file-richtext" viewBox="0 0 16 16">
+            <path
+              d="M7 4.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0zm-.861 1.542 1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V7.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V7s1.54-1.274 1.639-1.208zM5 9a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1H5z" />
+            <path
+              d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z" />
+          </svg>Portfolio</a></li>
+      <li><a href="#hobbies" id="nav_hobbies" class="hobbies ease-scroll"><svg xmlns="http://www.w3.org/2000/svg"
+            width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+            <path
+              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+          </svg>Hobbies</a></li>
+      <li><a href="#contacts" id="nav_contacts" class="contacts ease-scroll"><svg xmlns="http://www.w3.org/2000/svg"
+            width="30" height="30" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+            <path
+              d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+          </svg>Contacts</a></li>
+    </ul>
+  </nav>
   <div id="wrapper">
     <header id="top">
       <ul id="header">
-        <li id="logo"><a href="#top"><img src="imgs/layout/cherrywebdesign_logo.webp" alt="Cherry WebDesign" /></a></li>
-        <li id="description"><img src="imgs/layout/cherrywebdesign_description.webp" alt="Cherry WebDesign" /></li>
+        <li id="animation"><img width="100%" height="100%" src="assets/images/layout/icon_alessandra_trasp.gif"
+            alt="Cherry WebDesign" /></li>
+        <li id="description">
+          <h1>Hi, I'm <span>Alessandra!</span></h1>
+          <h3>I'm a <strong>UX/UI designer</strong> who loves blending creativity with user-centered design.
+            <br>I create seamless <strong>digital experiences</strong>, from <strong>wireframes</strong> to captivating
+            <strong>interfaces</strong>, to <strong>HTLM/Scss coding</strong>, all while keeping empathy in mind. 
+            
+          
+            <span class="social"> Find me on socials: 
+              <a href="https://www.linkedin.com/in/alessandramineo/" target="_blank" title="LinkedIn profile" alt="LinkedIn profile"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#EA1C8B" class="bi bi-linkedin"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                </svg></a>
+              <a href="https://www.instagram.com/hellolen" target="_blank" title="Instagram profile" alt="Instagram profile"><svg xmlns="http://www.w3.org/2000/svg"
+                  width="32" height="32" fill="#EA1C8B" class="bi bi-instagram" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                </svg></a>
+            </span>
+          </h3>
+          <a id="myButton" class="button btn btn-primary hover-effect glow-on-hover"><span class="hide">Put colors in my life!</span><span class="show">My eyes are bleeding! Go back!</span></a>
+          <a class="button btn btn-primary ease-scroll hover-effect" href="#portfolio">Check my works</a>
+        </li>
       </ul>
-      <nav>
-        <ul id="nav">
-          <li><a href="#top" id="nav_about" class="about active">About</a></li>
-          <li><a href="#portfolio" id="nav_portfolio" class="portfolio">Portfolio</a></li>
-          <li><a href="#contacts" id="nav_contacts" class="contacts">Contacts</a></li>
-          <li><a href="#curiosities" id="nav_curiosities" class="curiosities">Curiosities</a></li>
-        </ul>
-      </nav>
     </header>
     <section id="about" data-full="true" class="slide" name="about">
       <div id="skills" class="clearfix">
-        <h2> My skills</h2>
-        <div class="centertxt">
-          <div class="myStat" data-dimension="230" data-text="100%" data-info="HTML5+CSS3" data-fontsize="38"
-            data-percent="100" data-fgcolor="#845EC2"></div>
-          <div class="myStat" data-dimension="230" data-text="100%" data-info="UX/UI design" data-fontsize="38"
-            data-percent="100" data-fgcolor="#D65DB1"></div>
-          <div class="myStat" data-dimension="230" data-text="93%" data-info="Adobe CC" data-fontsize="38"
-            data-percent="93" data-fgcolor="#FF6F91"></div>
-          <div class="myStat" data-dimension="230" data-text="90%" data-info="Prototyping" data-fontsize="38"
-            data-percent="90" data-fgcolor="#FF9671"></div>
-          <div class="myStat" data-dimension="230" data-text="80%" data-info="Offline" data-fontsize="38"
-            data-percent="80" data-fgcolor="#FFC75F"></div>
-        </div>
-        <div class="only_mobile">
-          <div class="skill1"><span>HTML5+CSS3</span></div>
-          <div class="skill2"><span>UX/UI design</span></div>
-          <div class="skill4"><span>Adobe CC</span></div>
-          <div class="skill5"><span>Prototyping</span></div>
-          <div class="skill6"><span>Offline</span></div>
-        </div>
+        <ul>
+          <li class="animation">
+            <h2>Hard Skills</h2>
+            <div class="pills"><span>UX/UI</span><span>User Flow</span><span>Prototyping</span><span>Wireframing</span><span>Information
+                Architecture</span><span>HTML5/Scss coding</span><span>CMSs</span><span>Visual Design</span></div>
+          </li>
+          <li class="animation">
+            <h2>Soft Skills</h2>
+            <div class="pills"><span>Team Work</span><span>Problem Solving</span><span>Time
+                Management</span><span>Flexibility</span><span>Communication</span><span>Proactivity</span><span>Creativity</span></div>
+
+          </li>
+          <li class="animation">
+            <h2>Tools</h2>
+            <div class="pills"><span>Adobe CC suite</span><span>Figma</span><span>Visual Studio Code</span><span>Google
+                Workspace</span><span>Jira</span><span>Git</span><span>Miro</span><span>Freehand drawing</span></div>
+
+          </li>
+        </ul>
       </div>
     </section>
     <section id="portfolio" data-full="true" class="slide" name="portfolio">
       <div id="sortable-portfolio">
-        <div id="options" class="clearfix">
-          <h2> Some works</h2>
-          <ul id="filters" class="option-set clearfix portfolio-list" data-option-key="filter">
-            <li><a href="#filter" data-option-value="*" class="selected">{ show all }</a></li>
-            <li><a href="#filter" data-option-value=".web">{ UX/UI design }</a></li>
-            <li><a href="#filter" data-option-value=".app">{ app }</a></li>
-            <li><a href="#filter" data-option-value=".graphic">{ graphic design }</a></li>
-            <li><a href="#filter" data-option-value=".logo">{ logo design }</a></li>
-            <li><a href="#filter" data-option-value=".wordpress">{ wordpress }</a></li>
-            <li><a href="#filter" data-option-value=".vector">{ vector }</a></li>
-            <li><a href="#filter" data-option-value=".photo">{ photography }</a></li>
+        <div id="options" class="clearfix text-center">
+          <h1>Portfolio</h1>
+          <h3>I have worked in various environments, both large companies and small startups, gaining a significant
+            amount of experience and constantly learning something new! I have consistently aimed to stay updated,
+            acquiring new skills whenever I found them valuable or it was required.</h3>
+
+          <ul id="filters" class="option-set clearfix portfolio-list button-group">
+            <li><a href="#filter" class="selected button" data-filter=".web">{ UX/UI design }</a></li>
+            <li><a href="#filter" class="button" data-filter=".graphic">{ graphic design }</a></li>
+            <li><a href="#filter" class="button" data-filter=".logo">{ logo design }</a></li>
+            <li><a href="#filter" class="button" data-filter=".wordpress">{ wordpress }</a></li>
+            <li><a href="#filter" class="button" data-filter=".photo">{ photography }</a></li>
+            
+            <li><a href="#filter" class="button" data-filter=".old">{ old }</a></li>
           </ul>
         </div>
         <!-- #options -->
 
-        <div id="container" class="clearfix grid cs-style-4">
+        <div id="container" class="clearfix grid isotope portfolio">
           <figure class="element web" data-category="web">
-            <div><img src="imgs/portfolio/econeth/econeth_thumb.webp" alt="Econeth"></div>
+            <div><img width="100%" height="100%" src="assets/images/portfolio/econeth/econeth_thumb.webp" alt="Econeth">
+            </div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>Econeth - crowfunding platform</h3>
                 <span>UX/UI design &amp; HTML5/SCSS coding</span>
@@ -102,126 +155,8 @@
             </figcaption>
           </figure>
 
-          <figure class="element photo" data-category="photography">
-            <div><img src="imgs/portfolio/newyork/2022/newyork_thumb.webp" alt="New York"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <h3>New York</h3>
-                <span>Travel Photography</span>
-                <a href="imgs/portfolio/newyork/2022/newyork_01.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="popup">Gallery</a>
-                <a href="imgs/portfolio/newyork/2022/newyork_02.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_03.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_04.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_05.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_06.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_07.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_08.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_09.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_10.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_11.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_12.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_13.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_14.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_15.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_16.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_17.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_18.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_19.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_20.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_21.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_22.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_23.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_24.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_25.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_26.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_27.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_28.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_29.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_30.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_31.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_32.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_33.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_34.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_35.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_36.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2022/newyork_37.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                  <a href="imgs/portfolio/newyork/2022/newyork_38.webp" rel="prettyPhoto[New York Travel Report]"
-                    title="New York Travel Report" class="hidden popup"></a>
-              </span>
-            </figcaption>
-          </figure>
-
-          <figure class="element photo" data-category="photography">
-            <div><img src="imgs/portfolio/miami/miami_thumb.webp" alt="Miami"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <h3>Miami</h3>
-                <span>Travel Photography</span>
-                <a href="imgs/portfolio/miami/miami_01.webp" rel="prettyPhoto[Miami Travel Report]"
-                  title="Miami Travel Report" class="popup">Gallery</a>
-                <a href="imgs/portfolio/miami/miami_02.webp" rel="prettyPhoto[Miami Travel Report]"
-                  title="Miami Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/miami/miami_03.webp" rel="prettyPhoto[Miami Travel Report]"
-                  title="Miami Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/miami/miami_04.webp" rel="prettyPhoto[Miami Travel Report]"
-                  title="Miami Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/miami/miami_05.webp" rel="prettyPhoto[Miami Travel Report]"
-                  title="Miami Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/miami/miami_06.webp" rel="prettyPhoto[Miami Travel Report]"
-                  title="Miami Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/miami/miami_07.webp" rel="prettyPhoto[Miami Travel Report]"
-                  title="Miami Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/miami/miami_08.webp" rel="prettyPhoto[Miami Travel Report]"
-                  title="Miami Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/miami/miami_09.webp" rel="prettyPhoto[Miami Travel Report]"
-                  title="Miami Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/miami/miami_10.webp" rel="prettyPhoto[Miami Travel Report]"
-                  title="Miami Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/miami/miami_11.webp" rel="prettyPhoto[Miami Travel Report]"
-                  title="Miami Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/miami/miami_12.webp" rel="prettyPhoto[Miami Travel Report]"
-                  title="Miami Travel Report" class="hidden popup"></a>
-              </span>
-            </figcaption>
-          </figure>
-
           <figure class="element web" data-category="web">
-            <div><img src="imgs/portfolio/fuix/fuix_thumb.webp" alt="Fuix"></div>
+            <div><img width="100%" height="100%" src="assets/images/portfolio/fuix/fuix_thumb.webp" alt="Fuix"></div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>Fuix</h3>
                 <span>UX/UI design &amp; HTML5/SCSS coding</span>
@@ -232,135 +167,9 @@
             </figcaption>
           </figure>
 
-
-          <figure class="element photo" data-category="photography">
-            <div><img src="imgs/portfolio/london/london_thumb.webp" alt="London"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <h3>London</h3>
-                <span>Travel Photography</span>
-                <a href="imgs/portfolio/london/london_01.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="popup">Gallery</a>
-                <a href="imgs/portfolio/london/london_02.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_03.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_04.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_05.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_06.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_07.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_08.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_09.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_10.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_11.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_12.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_13.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_14.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_15.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_16.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_17.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_18.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_19.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_20.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_21.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_22.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_23.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_24.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_26.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_26.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_27.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_28.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_29.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_30.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_31.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/london/london_32.webp" rel="prettyPhoto[London Travel Report]"
-                  title="London Travel Report" class="hidden popup"></a>
-              </span>
-            </figcaption>
-          </figure>
-
-          <figure class="element photo" data-category="photography">
-            <div><img src="imgs/portfolio/thailand/thailand_thumb.webp" alt="Thailand"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <h3>Thailand</h3>
-                <span>Travel Photography</span>
-                <a href="imgs/portfolio/thailand/thailand_01.webp" rel="prettyPhoto[Thailand Travel Report]"
-                  title="Thailand Travel Report" class="popup">Gallery</a>
-                <a href="imgs/portfolio/thailand/thailand_02.webp" rel="prettyPhoto[Thailand Travel Report]"
-                  title="Thailand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/thailand/thailand_03.webp" rel="prettyPhoto[Thailand Travel Report]"
-                  title="Thailand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/thailand/thailand_04.webp" rel="prettyPhoto[Thailand Travel Report]"
-                  title="Thailand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/thailand/thailand_05.webp" rel="prettyPhoto[Thailand Travel Report]"
-                  title="Thailand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/thailand/thailand_06.webp" rel="prettyPhoto[Thailand Travel Report]"
-                  title="Thailand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/thailand/thailand_07.webp" rel="prettyPhoto[Thailand Travel Report]"
-                  title="Thailand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/thailand/thailand_08.webp" rel="prettyPhoto[Thailand Travel Report]"
-                  title="Thailand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/thailand/thailand_09.webp" rel="prettyPhoto[Thailand Travel Report]"
-                  title="Thailand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/thailand/thailand_10.webp" rel="prettyPhoto[Thailand Travel Report]"
-                  title="Thailand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/thailand/thailand_11.webp" rel="prettyPhoto[Thailand Travel Report]"
-                  title="Thailand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/thailand/thailand_12.webp" rel="prettyPhoto[Thailand Travel Report]"
-                  title="Thailand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/thailand/thailand_13.webp" rel="prettyPhoto[Thailand Travel Report]"
-                  title="Thailand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/thailand/thailand_14.webp" rel="prettyPhoto[Thailand Travel Report]"
-                  title="Thailand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/thailand/thailand_15.webp" rel="prettyPhoto[Thailand Travel Report]"
-                  title="Thailand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/thailand/thailand_16.webp" rel="prettyPhoto[Thailand Travel Report]"
-                  title="Thailand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/thailand/thailand_17.webp" rel="prettyPhoto[Thailand Travel Report]"
-                  title="Thailand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/thailand/thailand_18.webp" rel="prettyPhoto[Thailand Travel Report]"
-                  title="Thailand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/thailand/thailand_19.webp" rel="prettyPhoto[Thailand Travel Report]"
-                  title="Thailand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/thailand/thailand_20.webp" rel="prettyPhoto[Thailand Travel Report]"
-                  title="Thailand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/thailand/thailand_21.webp" rel="prettyPhoto[Thailand Travel Report]"
-                  title="Thailand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/thailand/thailand_22.webp" rel="prettyPhoto[Thailand Travel Report]"
-                  title="Thailand Travel Report" class="hidden popup"></a>
-              </span>
-            </figcaption>
-          </figure>
-
           <figure class="element web" data-category="web">
-            <div><img src="imgs/portfolio/adalot/adalot_thumb.webp" alt="Adalot"></div>
+            <div><img width="100%" height="100%" src="assets/images/portfolio/adalot/adalot_thumb.webp" alt="Adalot">
+            </div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>Adalot</h3>
                 <span>UX/UI design &amp; HTML5/SCSS coding</span>
@@ -372,21 +181,22 @@
           </figure>
 
           <figure class="element web logo" data-category="web">
-            <div><img src="imgs/portfolio/libes/libes_thumb.webp" alt="Libes"></div>
+            <div><img width="100%" height="100%" src="assets/images/portfolio/libes/libes_thumb.webp" alt="Libes"></div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>Libes</h3>
                 <span>UX/UI design &amp; HTML5/SCSS coding</span>
                 <a href="https://libes.net/" title="Libes website" target="_blank">Website</a>
                 <a href="https://invis.io/HJ13B8U36NEG#/463981171_Libes-Home-Page" title="Prototype"
                   target="_blank">Prototype</a>
-                <a href="imgs/portfolio/libes/libes_logo.webp" rel="prettyPhoto[Libes logo]" title="Libes logo"
+                <a href="assets/images/portfolio/libes/libes_logo.webp" rel="prettyPhoto[Libes logo]" title="Libes logo"
                   class="popup">Logo</a>
               </span>
             </figcaption>
           </figure>
 
           <figure class="element web" data-category="web">
-            <div><img src="imgs/portfolio/yummo/yummo_thumb.webp" alt="Yummo food delivery concept"></div>
+            <div><img width="100%" height="100%" src="assets/images/portfolio/yummo/yummo_thumb.webp"
+                alt="Yummo food delivery concept"></div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>Concept fot Yummo food delivery</h3>
                 <span>UX/UI design</span>
@@ -395,957 +205,1054 @@
             </figcaption>
           </figure>
 
-          <figure class="element photo" data-category="photography">
-            <div><img src="imgs/portfolio/urbex/urbex_thumb.webp" alt="Urbex"></div>
+          <figure class="element web" data-category="web">
+            <div><img width="100%" height="100%" src="assets/images/portfolio/satan_thumb.webp" alt="Satan jr videogame">
+            </div>
             <figcaption> <span class="figcaption-wrap">
-                <h3>Urbex</h3>
-                <span>Travel Photography</span>
-                <a href="imgs/portfolio/urbex/urbex_01.webp" rel="prettyPhoto[Urbex Travel Report]"
-                  title="Urbex Travel Report" class="popup">Gallery</a>
-                <a href="imgs/portfolio/urbex/urbex_02.webp" rel="prettyPhoto[Urbex Travel Report]"
-                  title="Urbex Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/urbex/urbex_03.webp" rel="prettyPhoto[Urbex Travel Report]"
-                  title="Urbex Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/urbex/urbex_04.webp" rel="prettyPhoto[Urbex Travel Report]"
-                  title="Urbex Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/urbex/urbex_05.webp" rel="prettyPhoto[Urbex Travel Report]"
-                  title="Urbex Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/urbex/urbex_06.webp" rel="prettyPhoto[Urbex Travel Report]"
-                  title="Urbex Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/urbex/urbex_07.webp" rel="prettyPhoto[Urbex Travel Report]"
-                  title="Urbex Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/urbex/urbex_08.webp" rel="prettyPhoto[Urbex Travel Report]"
-                  title="Urbex Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/urbex/urbex_09.webp" rel="prettyPhoto[Urbex Travel Report]"
-                  title="Urbex Travel Report" class="hidden popup"></a>
+                <h3>Satan jr videogame</h3>
+                <span>UX/UI design &amp; HTML5/SCSS coding</span>
+                <a href="https://www.satanjr.it/" title="Satan jr website" target="_blank">Website</a>
+              </span>
+            </figcaption>
+          </figure>
+
+          <figure class="element web" data-category="web">
+            <div><img width="100%" height="100%" src="assets/images/portfolio/scritto_thumb.webp" alt="Scritto">
+            </div>
+            <figcaption> <span class="figcaption-wrap">
+                <h3>Scritto</h3>
+                <span>UX/UI design &amp; HTML5/SCSS coding</span>
+                <a href="https://www.scritto.it/" title="Satan jr website" target="_blank">Website</a>
               </span>
             </figcaption>
           </figure>
 
           <figure class="element web logo" data-category="web">
-            <div><img src="imgs/portfolio/mioassicuratore/mioassicuratore_thumb.webp" alt="Mio Assicuratore"></div>
+            <div><img width="auto" height="auto"
+                src="assets/images/portfolio/mioassicuratore/mioassicuratore_thumb.webp" alt="Mio Assicuratore">
+            </div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>MioAssicuratore</h3>
                 <span>UX/UI design &amp; HTML5/SCSS & PHP coding</span>
                 <a href="http://www.mioassicuratore.it/" title="MioAssicuratore website" target="_blank">Website</a>
-                <a title="MioAssicuratore Admin Area" target="_blank" class="no-more">Admin Area no more online</a>
-                <a href="imgs/portfolio/mioassicuratore/logo.webp" rel="prettyPhoto[MioAssicuratore logo]"
+                <a title="MioAssicuratore Admin Area" target="_blank" class="no-more" tabindex="-1">Admin Area no more online</a>
+                <a href="assets/images/portfolio/mioassicuratore/logo.webp" rel="prettyPhoto[MioAssicuratore logo]"
                   title="Mio Assicuratore logo" class="popup">Logo Restyle</a>
               </span>
             </figcaption>
           </figure>
 
-          <figure class="element vector" data-category="vector_altran_01">
-            <div><img src="imgs/portfolio/vector/vector_thumb.webp" alt="New York"></div>
+          <figure class="element graphic" data-category="vector">
+            <div><img width="100%" height="100%" src="assets/images/portfolio/vector/vector_thumb.webp" alt="Vector Illustrations">
+            </div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>Vector</h3>
                 <span>Vector Illustrations</span>
-                <a href="imgs/portfolio/vector/vector_01.webp" rel="prettyPhoto[Vector Illustrationz]"
-                  title="Vector Illustrationz" class="popup">Graphics</a>
-                <a href="imgs/portfolio/vector/vector_02.webp" rel="prettyPhoto[Vector Illustrationz]"
-                  title="Vector Illustrationz" class="hidden popup">Vector Illustrations</a>
-                <a href="imgs/portfolio/vector/vector_03.webp" rel="prettyPhoto[Vector Illustrationz]"
-                  title="Vector Illustrationz" class="hidden popup">Vector Illustrations</a>
-                <a href="imgs/portfolio/vector/vector_04.webp" rel="prettyPhoto[Vector Illustrationz]"
-                  title="Vector Illustrationz" class="hidden popup">Vector Illustrations</a>
-                <a href="imgs/portfolio/vector/vector_05.webp" rel="prettyPhoto[Vector Illustrationz]"
-                  title="Vector Illustrationz" class="hidden popup">Vector Illustrations</a>
-                <a href="imgs/portfolio/vector/vector_06.webp" rel="prettyPhoto[Vector Illustrationz]"
-                  title="Vector Illustrationz" class="hidden popup">Vector Illustrations</a>
-              </span>
-            </figcaption>
-          </figure>
-
-          <figure class="element photo" data-category="photography">
-            <div><img src="imgs/portfolio/newyork/2019/new-york_thumb.webp" alt="New York"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <h3>New York</h3>
-                <span>Travel Photography</span>
-                <a href="imgs/portfolio/newyork/2019/new-york_01.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="popup">Gallery</a>
-                <a href="imgs/portfolio/newyork/2019/new-york_02.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2019/new-york_03.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2019/new-york_04.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2019/new-york_05.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2019/new-york_06.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2019/new-york_07.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2019/new-york_08.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2019/new-york_09.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2019/new-york_10.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2019/new-york_11.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2019/new-york_12.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newyork/2019/new-york_13.webp" rel="prettyPhoto[New York Travel Report]"
-                  title="New York Travel Report" class="hidden popup"></a>
-              </span>
-            </figcaption>
-          </figure>
-
-          <figure class="element photo" data-category="photography">
-            <div><img src="imgs/portfolio/japan/japan-thumb.webp" alt="Japan"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <h3>Japan</h3>
-                <span>Travel Photography</span>
-                <a href="imgs/portfolio/japan/japan_01.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="popup">Gallery</a>
-                <a href="imgs/portfolio/japan/japan_02.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_03.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_04.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_05.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_06.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_07.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_08.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_09.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_10.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_11.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_12.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_13.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_14.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_15.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_16.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_17.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_18.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_19.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_20.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_21.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_22.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_23.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_24.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_25.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_26.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_27.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_27.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_28.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_30.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_30.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/japan/japan_31.webp" rel="prettyPhoto[Japan Travel Report]"
-                  title="Japan Travel Report" class="hidden popup"></a>
-              </span>
-            </figcaption>
-          </figure>
-
-          <figure class="element vector" data-category="vector">
-            <div><img src="imgs/portfolio/cherryweb-bv/cherryweb-bv_thumb.webp" alt="Cherry UX/UI design"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <h3>CherryWebDesign</h3>
-                <span>Business Card</span>
-                <a href="imgs/portfolio/cherryweb-bv/cherryweb-bv_01.webp"
-                  rel="prettyPhoto[CherryWebDesign Business Card]" title="CherryWebDesign Business Card"
-                  class="popup">Graphics</a>
-                <a href="imgs/portfolio/cherryweb-bv/cherryweb-bv_02.webp"
-                  rel="prettyPhoto[CherryWebDesign Business Card]" title="CherryWebDesign Business Card"
-                  class="hidden popup"></a>
-                <a href="imgs/portfolio/cherryweb-bv/cherryweb-bv_03.webp"
-                  rel="prettyPhoto[CherryWebDesign Business Card]" title="CherryWebDesign Business Card"
-                  class="hidden popup"></a>
+                <a href="assets/images/portfolio/vector/vector_01.webp" rel="prettyPhoto[Vector Illustrations]"
+                  title="Vector Illustrations" class="popup">Illustrations</a>
+                <a href="assets/images/portfolio/vector/vector_02.webp" rel="prettyPhoto[Vector Illustrations]"
+                  title="Vector Illustrations" class="no-show popup">Vector Illustrations</a>
+                <a href="assets/images/portfolio/vector/vector_03.webp" rel="prettyPhoto[Vector Illustrations]"
+                  title="Vector Illustrations" class="no-show popup">Vector Illustrations</a>
+                <a href="assets/images/portfolio/vector/vector_04.webp" rel="prettyPhoto[Vector Illustrations]"
+                  title="Vector Illustrations" class="no-show popup">Vector Illustrations</a>
+                <a href="assets/images/portfolio/vector/vector_05.webp" rel="prettyPhoto[Vector Illustrations]"
+                  title="Vector Illustrations" class="no-show popup">Vector Illustrations</a>
+                <a href="assets/images/portfolio/vector/vector_06.webp" rel="prettyPhoto[Vector Illustrations]"
+                  title="Vector Illustrations" class="no-show popup">Vector Illustrations</a>
               </span>
             </figcaption>
           </figure>
 
           <figure class="element wordpress" data-category="wordpress">
-            <div><img src="imgs/portfolio/tokyotiger_thumb.webp" alt="Tokyo Tiger website"></div>
+            <div><img width="100%" height="100%" src="assets/images/portfolio/tokyotiger_thumb.webp"
+                alt="Tokyo Tiger website"></div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>Tokyo Tiger</h3>
                 <span>Wordpress Customization</span>
-                <a href="http://www.tokyotiger.it/" target="_blank" title="Tokyo Tiger website"
-                  class="popup">Website</a>
+                <a href="http://www.tokyotiger.it/" target="_blank" title="Tokyo Tiger website">Website</a>
               </span>
             </figcaption>
           </figure>
 
           <figure class="element photo" data-category="photography">
-            <div><img src="imgs/portfolio/pcc18/pcc18_thumb.webp" alt="Palermo Comic Convention 2018"></div>
+            <div><img width="100%" height="100%" src="assets/images/portfolio/pcc18/pcc18_thumb.webp"
+                alt="Palermo Comic Convention 2018"></div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>PCC 2018</h3>
                 <span>Event Photography</span>
-                <a href="imgs/portfolio/pcc18/tom-hopper-01.webp"
+                <a href="assets/images/portfolio/pcc18/tom-hopper-01.webp"
                   rel="prettyPhoto[Palermo Comic Convention 2018 Report - Tom Hopper]"
                   title="Palermo Comic Convention 2018 Report - Tom Hopper" class="popup">Gallery</a>
-                <a href="imgs/portfolio/pcc18/tom-hopper-02.webp"
+                <a href="assets/images/portfolio/pcc18/tom-hopper-02.webp"
                   rel="prettyPhoto[Palermo Comic Convention 2018 Report - Tom Hopper]"
-                  title="Palermo Comic Convention 2018 Report - Tom Hopper" class="hidden popup"></a>
-                <a href="imgs/portfolio/pcc18/tom-hopper-03.webp"
+                  title="Palermo Comic Convention 2018 Report - Tom Hopper" class="no-show popup"></a>
+                <a href="assets/images/portfolio/pcc18/tom-hopper-03.webp"
                   rel="prettyPhoto[Palermo Comic Convention 2018 Report - Tom Hopper]"
-                  title="Palermo Comic Convention 2018 Report - Tom Hopper" class="hidden popup"></a>
-                <a href="imgs/portfolio/pcc18/tom-hopper-04.webp"
+                  title="Palermo Comic Convention 2018 Report - Tom Hopper" class="no-show popup"></a>
+                <a href="assets/images/portfolio/pcc18/tom-hopper-04.webp"
                   rel="prettyPhoto[Palermo Comic Convention 2018 Report - Tom Hopper]"
-                  title="Palermo Comic Convention 2018 Report - Tom Hopper" class="hidden popup"></a>
-                <a href="imgs/portfolio/pcc18/tom-hopper-05.webp"
+                  title="Palermo Comic Convention 2018 Report - Tom Hopper" class="no-show popup"></a>
+                <a href="assets/images/portfolio/pcc18/tom-hopper-05.webp"
                   rel="prettyPhoto[Palermo Comic Convention 2018 Report - Tom Hopper]"
-                  title="Palermo Comic Convention 2018 Report - Tom Hopper" class="hidden popup"></a>
-                <a href="imgs/portfolio/pcc18/tom-hopper-06.webp"
+                  title="Palermo Comic Convention 2018 Report - Tom Hopper" class="no-show popup"></a>
+                <a href="assets/images/portfolio/pcc18/tom-hopper-06.webp"
                   rel="prettyPhoto[Palermo Comic Convention 2018 Report - Tom Hopper]"
-                  title="Palermo Comic Convention 2018 Report - Tom Hopper" class="hidden popup"></a>
-                <a href="imgs/portfolio/pcc18/tom-hopper-07.webp"
+                  title="Palermo Comic Convention 2018 Report - Tom Hopper" class="no-show popup"></a>
+                <a href="assets/images/portfolio/pcc18/tom-hopper-07.webp"
                   rel="prettyPhoto[Palermo Comic Convention 2018 Report - Tom Hopper]"
-                  title="Palermo Comic Convention 2018 Report - Tom Hopper" class="hidden popup"></a>
-                <a href="imgs/portfolio/pcc18/tom-hopper-08.webp"
+                  title="Palermo Comic Convention 2018 Report - Tom Hopper" class="no-show popup"></a>
+                <a href="assets/images/portfolio/pcc18/tom-hopper-08.webp"
                   rel="prettyPhoto[Palermo Comic Convention 2018 Report - Tom Hopper]"
-                  title="Palermo Comic Convention 2018 Report - Tom Hopper" class="hidden popup"></a>
-                <a href="imgs/portfolio/pcc18/giorgio-vanni_01.webp"
+                  title="Palermo Comic Convention 2018 Report - Tom Hopper" class="no-show popup"></a>
+                <a href="assets/images/portfolio/pcc18/giorgio-vanni_01.webp"
                   rel="prettyPhoto[Palermo Comic Convention 2018 Report - Giorgio Vanni]"
-                  title="Palermo Comic Convention 2018 Report - Giorgio Vanni" class="hidden popup"></a>
-                <a href="imgs/portfolio/pcc18/giorgio-vanni_02.webp"
+                  title="Palermo Comic Convention 2018 Report - Giorgio Vanni" class="no-show popup"></a>
+                <a href="assets/images/portfolio/pcc18/giorgio-vanni_02.webp"
                   rel="prettyPhoto[Palermo Comic Convention 2018 Report - Giorgio Vanni]"
-                  title="Palermo Comic Convention 2018 Report - Giorgio Vanni" class="hidden popup"></a>
-                <a href="imgs/portfolio/pcc18/giorgio-vanni_03.webp"
+                  title="Palermo Comic Convention 2018 Report - Giorgio Vanni" class="no-show popup"></a>
+                <a href="assets/images/portfolio/pcc18/giorgio-vanni_03.webp"
                   rel="prettyPhoto[Palermo Comic Convention 2018 Report - Giorgio Vanni]"
-                  title="Palermo Comic Convention 2018 Report - Giorgio Vanni" class="hidden popup"></a>
-                <a href="imgs/portfolio/pcc18/giorgio-vanni_04.webp"
+                  title="Palermo Comic Convention 2018 Report - Giorgio Vanni" class="no-show popup"></a>
+                <a href="assets/images/portfolio/pcc18/giorgio-vanni_04.webp"
                   rel="prettyPhoto[Palermo Comic Convention 2018 Report - Giorgio Vanni]"
-                  title="Palermo Comic Convention 2018 Report - Giorgio Vanni" class="hidden popup"></a>
-                <a href="imgs/portfolio/pcc18/giorgio-vanni_05.webp"
+                  title="Palermo Comic Convention 2018 Report - Giorgio Vanni" class="no-show popup"></a>
+                <a href="assets/images/portfolio/pcc18/giorgio-vanni_05.webp"
                   rel="prettyPhoto[Palermo Comic Convention 2018 Report - Giorgio Vanni]"
-                  title="Palermo Comic Convention 2018 Report - Giorgio Vanni" class="hidden popup"></a>
-                <a href="imgs/portfolio/pcc18/pcc18-01.webp" rel="prettyPhoto[Palermo Comic Convention 2018 Report]"
-                  title="Palermo Comic Convention 2018 Report" class="hidden popup"></a>
+                  title="Palermo Comic Convention 2018 Report - Giorgio Vanni" class="no-show popup"></a>
+                <a href="assets/images/portfolio/pcc18/pcc18-01.webp"
+                  rel="prettyPhoto[Palermo Comic Convention 2018 Report]" title="Palermo Comic Convention 2018 Report"
+                  class="no-show popup"></a>
 
               </span>
             </figcaption>
           </figure>
 
           <figure class="element logo" data-category="logo">
-            <div><img src="imgs/portfolio/urbantrio_thumb.webp" alt="UrbanTrio"></div>
+            <div><img width="100%" height="100%" src="assets/images/portfolio/urbantrio_thumb.webp" alt="UrbanTrio">
+            </div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>Urban Trio</h3>
                 <span>Logo design</span>
-                <a href="imgs/portfolio/urbantrio_logo.webp" rel="prettyPhoto[UrbanTrio]" title="UrbanTrio LOGO"
-                  class="popup">Logo</a>
+                <a href="assets/images/portfolio/urbantrio_logo.webp" rel="prettyPhoto[UrbanTrio]"
+                  title="UrbanTrio LOGO" class="popup">Logo</a>
               </span>
             </figcaption>
           </figure>
 
           <figure class="element web wordpress" data-category="wordpress">
-            <div><img src="imgs/portfolio/sunsetpoints/sunsetpoints_thumb.webp" alt="SunsetPoints"></div>
+            <div><img width="100%" height="100%" src="assets/images/portfolio/sunsetpoints/sunsetpoints_thumb.webp"
+                alt="SunsetPoints"></div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>SunsetPoints website</h3>
                 <span>Wordpress customization</span>
-                <a title="SunsetPoints website" disabled target="_blank" class="no-more">Website no more online</a>
-                <a href="imgs/portfolio/sunsetpoints/sunsetpoints_homepage.webp" rel="prettyPhoto[SunsetPoints website]"
-                  title="SunsetPoints website" class="popup">Desktop Mockup</a>
-                <a href="imgs/portfolio/sunsetpoints/sunsetpoints_team.webp" rel="prettyPhoto[SunsetPoints website]"
-                  title="SunsetPoints website" class="hidden popup"></a>
-                <a href="imgs/portfolio/sunsetpoints/sunsetpoints_travel.webp" rel="prettyPhoto[SunsetPoints website]"
-                  title="SunsetPoints website" class="hidden popup"></a>
-                <a href="imgs/portfolio/sunsetpoints/sunsetpoints_retreat.webp" rel="prettyPhoto[SunsetPoints website]"
-                  title="SunsetPoints website" class="hidden popup"></a>
-                <a href="imgs/portfolio/sunsetpoints/sunsetpoints_faq.webp" rel="prettyPhoto[SunsetPoints website]"
-                  title="SunsetPoints website" class="hidden popup"></a>
+                <a title="SunsetPoints website" disabled target="_blank" class="no-more" tabindex="-1">Website no more online</a>
+                <a href="https://www.figma.com/proto/a8cECADY5i2Aaiuu2sANJs/Cherryweb-portfolio?type=design&node-id=14-174&t=KCSQlTJzAMyU8FdG-1&scaling=scale-down&page-id=14%3A30&starting-point-node-id=14%3A174&mode=design"
+                  target="_blank" title="SunsetPoints website">Desktop Mockup</a>
               </span>
             </figcaption>
           </figure>
 
           <figure class="element photo" data-category="photography">
-            <div><img src="imgs/portfolio/australia/australia_thumb.webp" alt="Australia"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <h3>Australia</h3>
-                <span>Travel Photography</span>
-                <a href="imgs/portfolio/australia/australia_01.webp" rel="prettyPhoto[Australia Travel Report]"
-                  title="Australia Travel Report" class="popup">Gallery</a>
-                <a href="imgs/portfolio/australia/australia_02.webp" rel="prettyPhoto[Australia Travel Report]"
-                  title="Australia Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/australia/australia_03.webp" rel="prettyPhoto[Australia Travel Report]"
-                  title="Australia Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/australia/australia_04.webp" rel="prettyPhoto[Australia Travel Report]"
-                  title="Australia Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/australia/australia_05.webp" rel="prettyPhoto[Australia Travel Report]"
-                  title="Australia Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/australia/australia_06.webp" rel="prettyPhoto[Australia Travel Report]"
-                  title="Australia Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/australia/australia_07.webp" rel="prettyPhoto[Australia Travel Report]"
-                  title="Australia Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/australia/australia_08.webp" rel="prettyPhoto[Australia Travel Report]"
-                  title="Australia Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/australia/australia_09.webp" rel="prettyPhoto[Australia Travel Report]"
-                  title="Australia Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/australia/australia_10.webp" rel="prettyPhoto[Australia Travel Report]"
-                  title="Australia Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/australia/australia_11.webp" rel="prettyPhoto[Australia Travel Report]"
-                  title="Australia Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/australia/australia_12.webp" rel="prettyPhoto[Australia Travel Report]"
-                  title="Australia Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/australia/australia_13.webp" rel="prettyPhoto[Australia Travel Report]"
-                  title="Australia Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/australia/australia_14.webp" rel="prettyPhoto[Australia Travel Report]"
-                  title="Australia Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/australia/australia_15.webp" rel="prettyPhoto[Australia Travel Report]"
-                  title="Australia Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/australia/australia_16.webp" rel="prettyPhoto[Australia Travel Report]"
-                  title="Australia Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/australia/australia_17.webp" rel="prettyPhoto[Australia Travel Report]"
-                  title="Australia Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/australia/australia_18.webp" rel="prettyPhoto[Australia Travel Report]"
-                  title="Australia Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/australia/australia_19.webp" rel="prettyPhoto[Australia Travel Report]"
-                  title="Australia Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/australia/australia_20.webp" rel="prettyPhoto[Australia Travel Report]"
-                  title="Australia Travel Report" class="hidden popup"></a>
-              </span>
-            </figcaption>
-          </figure>
-
-          <figure class="element photo" data-category="photography">
-            <div><img src="imgs/portfolio/newzealand/newzealand_thumb.webp" alt="New Zealand"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <h3>New Zealand</h3>
-                <span>Travel Photography</span>
-                <a href="imgs/portfolio/newzealand/new-zealand_01.webp" rel="prettyPhoto[New Zealand Travel Report]"
-                  title="New Zealand Travel Report" class="popup">Gallery</a>
-                <a href="imgs/portfolio/newzealand/new-zealand_02.webp" rel="prettyPhoto[New Zealand Travel Report]"
-                  title="New Zealand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newzealand/new-zealand_03.webp" rel="prettyPhoto[New Zealand Travel Report]"
-                  title="New Zealand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newzealand/new-zealand_04.webp" rel="prettyPhoto[New Zealand Travel Report]"
-                  title="New Zealand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newzealand/new-zealand_05.webp" rel="prettyPhoto[New Zealand Travel Report]"
-                  title="New Zealand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newzealand/new-zealand_06.webp" rel="prettyPhoto[New Zealand Travel Report]"
-                  title="New Zealand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newzealand/new-zealand_07.webp" rel="prettyPhoto[New Zealand Travel Report]"
-                  title="New Zealand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newzealand/new-zealand_08.webp" rel="prettyPhoto[New Zealand Travel Report]"
-                  title="New Zealand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newzealand/new-zealand_09.webp" rel="prettyPhoto[New Zealand Travel Report]"
-                  title="New Zealand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newzealand/new-zealand_10.webp" rel="prettyPhoto[New Zealand Travel Report]"
-                  title="New Zealand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newzealand/new-zealand_11.webp" rel="prettyPhoto[New Zealand Travel Report]"
-                  title="New Zealand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newzealand/new-zealand_12.webp" rel="prettyPhoto[New Zealand Travel Report]"
-                  title="New Zealand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newzealand/new-zealand_13.webp" rel="prettyPhoto[New Zealand Travel Report]"
-                  title="New Zealand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newzealand/new-zealand_14.webp" rel="prettyPhoto[New Zealand Travel Report]"
-                  title="New Zealand Travel Report" class="hidden popup"></a>
-                <a href="imgs/portfolio/newzealand/new-zealand_15.webp" rel="prettyPhoto[New Zealand Travel Report]"
-                  title="New Zealand Travel Report" class="hidden popup"></a>
-              </span>
-            </figcaption>
-          </figure>
-
-          <figure class="element photo" data-category="photography">
-            <div><img src="imgs/portfolio/beb/beb_thumb.webp" alt="B&amp;B"></div>
+            <div><img width="100%" height="100%" src="assets/images/portfolio/beb/beb_thumb.webp" alt="B&amp;B"></div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>B&amp;B</h3>
                 <span>Interior Photography</span>
-                <a href="imgs/portfolio/beb/beb_01.webp" rel="prettyPhoto[B&amp;B interior photography]"
+                <a href="assets/images/portfolio/beb/beb_01.webp" rel="prettyPhoto[B&amp;B interior photography]"
                   title="B&amp;B interior photography" class="popup">Gallery</a>
-                <a href="imgs/portfolio/beb/beb_02.webp" rel="prettyPhoto[B&amp;B interior photography]"
-                  title="B&amp;B interior photography" class="hidden popup"></a>
-                <a href="imgs/portfolio/beb/beb_03.webp" rel="prettyPhoto[B&amp;B interior photography]"
-                  title="B&amp;B interior photography" class="hidden popup"></a>
-                <a href="imgs/portfolio/beb/beb_04.webp" rel="prettyPhoto[B&amp;B interior photography]"
-                  title="B&amp;B interior photography" class="hidden popup"></a>
-                <a href="imgs/portfolio/beb/beb_05.webp" rel="prettyPhoto[B&amp;B interior photography]"
-                  title="B&amp;B interior photography" class="hidden popup"></a>
-                <a href="imgs/portfolio/beb/beb_06.webp" rel="prettyPhoto[B&amp;B interior photography]"
-                  title="B&amp;B interior photography" class="hidden popup"></a>
-                <a href="imgs/portfolio/beb/beb_07.webp" rel="prettyPhoto[B&amp;B interior photography]"
-                  title="B&amp;B interior photography" class="hidden popup"></a>
-                <a href="imgs/portfolio/beb/beb_08.webp" rel="prettyPhoto[B&amp;B interior photography]"
-                  title="B&amp;B interior photography" class="hidden popup"></a>
-                <a href="imgs/portfolio/beb/beb_09.webp" rel="prettyPhoto[B&amp;B interior photography]"
-                  title="B&amp;B interior photography" class="hidden popup"></a>
-                <a href="imgs/portfolio/beb/beb_10.webp" rel="prettyPhoto[B&amp;B interior photography]"
-                  title="B&amp;B interior photography" class="hidden popup"></a>
-                <a href="imgs/portfolio/beb/beb_11.webp" rel="prettyPhoto[B&amp;B interior photography]"
-                  title="B&amp;B interior photography" class="hidden popup"></a>
-                <a href="imgs/portfolio/beb/beb_12.webp" rel="prettyPhoto[B&amp;B interior photography]"
-                  title="B&amp;B interior photography" class="hidden popup"></a>
-                <a href="imgs/portfolio/beb/beb_13.webp" rel="prettyPhoto[B&amp;B interior photography]"
-                  title="B&amp;B interior photography" class="hidden popup"></a>
-                <a href="imgs/portfolio/beb/beb_14.webp" rel="prettyPhoto[B&amp;B interior photography]"
-                  title="B&amp;B interior photography" class="hidden popup"></a>
+                <a href="assets/images/portfolio/beb/beb_02.webp" rel="prettyPhoto[B&amp;B interior photography]"
+                  title="B&amp;B interior photography" class="no-show popup"></a>
+                <a href="assets/images/portfolio/beb/beb_03.webp" rel="prettyPhoto[B&amp;B interior photography]"
+                  title="B&amp;B interior photography" class="no-show popup"></a>
+                <a href="assets/images/portfolio/beb/beb_04.webp" rel="prettyPhoto[B&amp;B interior photography]"
+                  title="B&amp;B interior photography" class="no-show popup"></a>
+                <a href="assets/images/portfolio/beb/beb_05.webp" rel="prettyPhoto[B&amp;B interior photography]"
+                  title="B&amp;B interior photography" class="no-show popup"></a>
+                <a href="assets/images/portfolio/beb/beb_06.webp" rel="prettyPhoto[B&amp;B interior photography]"
+                  title="B&amp;B interior photography" class="no-show popup"></a>
+                <a href="assets/images/portfolio/beb/beb_07.webp" rel="prettyPhoto[B&amp;B interior photography]"
+                  title="B&amp;B interior photography" class="no-show popup"></a>
+                <a href="assets/images/portfolio/beb/beb_08.webp" rel="prettyPhoto[B&amp;B interior photography]"
+                  title="B&amp;B interior photography" class="no-show popup"></a>
+                <a href="assets/images/portfolio/beb/beb_09.webp" rel="prettyPhoto[B&amp;B interior photography]"
+                  title="B&amp;B interior photography" class="no-show popup"></a>
+                <a href="assets/images/portfolio/beb/beb_10.webp" rel="prettyPhoto[B&amp;B interior photography]"
+                  title="B&amp;B interior photography" class="no-show popup"></a>
+                <a href="assets/images/portfolio/beb/beb_11.webp" rel="prettyPhoto[B&amp;B interior photography]"
+                  title="B&amp;B interior photography" class="no-show popup"></a>
+                <a href="assets/images/portfolio/beb/beb_12.webp" rel="prettyPhoto[B&amp;B interior photography]"
+                  title="B&amp;B interior photography" class="no-show popup"></a>
+                <a href="assets/images/portfolio/beb/beb_13.webp" rel="prettyPhoto[B&amp;B interior photography]"
+                  title="B&amp;B interior photography" class="no-show popup"></a>
+                <a href="assets/images/portfolio/beb/beb_14.webp" rel="prettyPhoto[B&amp;B interior photography]"
+                  title="B&amp;B interior photography" class="no-show popup"></a>
               </span>
             </figcaption>
           </figure>
 
           <figure class="element web wordpress" data-category="wordpress">
-            <div><img src="imgs/portfolio/defenx/defenx_thumb.webp" alt="Defenx"></div>
+            <div><img width="100%" height="100%" src="assets/images/portfolio/defenx/defenx_thumb.webp" alt="Defenx">
+            </div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>Defenx website</h3>
                 <span>UX/UI design &amp; wordpress</span>
-                <a title="Defenx website" target="_blank" class="no-more">Website no more online</a>
-                <a href="imgs/portfolio/defenx/defenx_01.webp" rel="prettyPhoto[Defenx website]" title="Defenx website"
-                  class="popup">Desktop Mockup</a>
-                <a href="imgs/portfolio/defenx/defenx_02.webp" rel="prettyPhoto[Defenx website]" title="Defenx website"
-                  class="hidden popup"></a>
-                <a href="imgs/portfolio/defenx/defenx_03.webp" rel="prettyPhoto[Defenx website]" title="Defenx website"
-                  class="hidden popup"></a>
-                <a href="imgs/portfolio/defenx/defenx_04.webp" rel="prettyPhoto[Defenx website]" title="Defenx website"
-                  class="hidden popup"></a>
+                <a title="Defenx website" target="_blank" class="no-more" tabindex="-1">Website no more online</a>
+                <a href="https://www.figma.com/proto/a8cECADY5i2Aaiuu2sANJs/Cherryweb-portfolio?type=design&node-id=14-135&t=XcQJQPMq2hNueywW-1&scaling=scale-down&page-id=14%3A35&starting-point-node-id=14%3A135&mode=design"
+                  target="_blank" title="Defenx website">Desktop Mockup</a>
               </span>
             </figcaption>
           </figure>
 
-
           <figure class="element web" data-category="web">
-            <div><img src="imgs/portfolio/voverc/voverc_thumb_1.webp" alt="Voverc"></div>
+            <div><img width="100%" height="100%" src="assets/images/portfolio/voverc/voverc_thumb_1.webp" alt="Voverc">
+            </div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>Voverc marketing</h3>
                 <span>UX/UI design &amp; HTML5/CSS coding</span>
-                <a href="imgs/portfolio/voverc/white-label.webp" rel="prettyPhoto[Voverc white label]"
-                  title="Voverc white label" class="popup">White label</a>
-                <a href="imgs/portfolio/voverc/landing_1.webp" rel="prettyPhoto[Voverc landing page]"
-                  title="Voverc landing page" class="popup">Landing page</a>
-                <a href="imgs/portfolio/voverc/landing_2.webp" rel="prettyPhoto[Voverc landing page]"
-                  title="Voverc landing page" class="hidden popup"></a>
-                <a href="imgs/portfolio/voverc/landing_3.webp" rel="prettyPhoto[Voverc landing page]"
-                  title="Voverc landing page" class="hidden popup"></a>
+                <a href="https://www.figma.com/proto/a8cECADY5i2Aaiuu2sANJs/Voverc?type=design&node-id=6-21&t=EE56yfUzNRqUKTD9-1&scaling=min-zoom&page-id=6%3A11&starting-point-node-id=6%3A21&mode=design"
+                  title="Voverc landing page" target="_blank">Landing pages</a>
               </span>
             </figcaption>
           </figure>
 
           <figure class="element web" data-category="web">
-            <div><img src="imgs/portfolio/voverc/voverc_thumb.webp" alt="Voverc"></div>
+            <div><img width="100%" height="100%" src="assets/images/portfolio/voverc/voverc_thumb.webp" alt="Voverc">
+            </div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>Voverc website</h3>
                 <span>UX/UI design &amp; HTML5/CSS coding</span>
-                <a target="_blank" class="no-more">Website no more online</a>
-                <a title="Voverc onboarding" target="_blank" class="no-more">Onboarding no more online</a>
-                <a title="Voverc Admin Area" class="no-more">Admin
+                <a target="_blank" class="no-more" tabindex="-1">Website no more online</a>
+                <a title="Voverc onboarding" target="_blank" class="no-more" tabindex="-1">Onboarding no more online</a>
+                <a title="Voverc Admin Area" class="no-more" tabindex="-1">Admin
                   Area no more online</a>
-                <a href="imgs/portfolio/voverc/voverc_homepage.webp" rel="prettyPhoto[Voverc website]"
-                  title="Voverc website" class="popup">Desktop Mockup</a>
-                <a href="imgs/portfolio/voverc/voverc_prices.webp" rel="prettyPhoto[Voverc website]"
-                  title="Voverc website" class="hidden popup"></a>
-                <a href="imgs/portfolio/voverc/voverc_features.webp" rel="prettyPhoto[Voverc website]"
-                  title="Voverc website" class="hidden popup"></a>
-                <a href="imgs/portfolio/voverc/voverc_activation.webp" rel="prettyPhoto[Voverc website]"
-                  title="Voverc website" class="hidden popup"></a>
+                <a href="https://www.figma.com/proto/a8cECADY5i2Aaiuu2sANJs/Voverc-website?type=design&node-id=2-7&t=XTpwYUuZZC6HAWCr-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A5&mode=design"
+                  title="Voverc website" target="_blank">Desktop Mockup</a>
               </span>
             </figcaption>
           </figure>
 
           <figure class="element logo wordpress" data-category="logo">
-            <div><img src="imgs/portfolio/lele-beb/lele-beb_thumb.webp" alt="Lele b&b"></div>
+            <div><img width="100%" height="100%" src="assets/images/portfolio/lele-beb/lele-beb_thumb.webp"
+                alt="Lele b&b"></div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>Lele b&amp;b</h3>
                 <span>Logo design &amp; wordpress</span>
                 <a href="http://www.beb-lele.com/" title="Lele b&b" target="_blank">Website</a>
-                <a href="imgs/portfolio/lele-beb/lele-beb_logo.webp" rel="prettyPhoto[Lele b&b]" title="Lele b&b LOGO"
-                  class="popup">Logo</a>
-                <a href="imgs/portfolio/lele-beb/DESKTOP_home.webp" rel="prettyPhoto[Lele b&b]" title="Lele b&b HOME"
-                  class="popup">Desktop Mockup</a>
-                <a href="imgs/portfolio/lele-beb/DESKTOP_fruizione_aperto.webp" rel="prettyPhoto[Lele b&b]"
-                  title="Lele b&b" class="hidden popup"></a>
-                <a href="imgs/portfolio/lele-beb/DESKTOP_fruizione_chiuso.webp" rel="prettyPhoto[Lele b&b]"
-                  title="Lele b&b" class="hidden popup"></a>
-                <a href="imgs/portfolio/lele-beb/DESKTOP_news_singola.webp" rel="prettyPhoto[Lele b&b]" title="Lele b&b"
-                  class="hidden popup"></a>
-                <a href="imgs/portfolio/lele-beb/DESKTOP_TW-tracker.webp" rel="prettyPhoto[Lele b&b]" title="Lele b&b"
-                  class="hidden popup"></a>
-
+                <a href="assets/images/portfolio/lele-beb/lele-beb_logo.webp" rel="prettyPhoto[Lele b&b]"
+                  title="Lele b&b LOGO" class="popup">Logo</a>
               </span>
             </figcaption>
           </figure>
 
-
-
           <figure class="element web" data-category="web">
-            <div><img src="imgs/portfolio/sanremo_2016/sanremo_thumb.webp" alt="Sanremo 2016"></div>
+            <div><img width="100%" height="100%" src="assets/images/portfolio/sanremo_2016/sanremo_thumb.webp"
+                alt="Sanremo 2016"></div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>Sanremo 2016</h3>
                 <span>UX/UI design</span>
-                <a class="no-more">Website no more online</a>
-                <a href="imgs/portfolio/sanremo_2016/DESKTOP_home.webp" rel="prettyPhoto[Sanremo 2016]"
-                  title="Sanremo 2016 HOME" class="popup">Desktop Mockup</a>
-                <a href="imgs/portfolio/sanremo_2016/DESKTOP_fruizione_aperto.webp" rel="prettyPhoto[Sanremo 2016]"
-                  title="Sanremo 2016 VIDEO" class="hidden popup"></a>
-                <a href="imgs/portfolio/sanremo_2016/DESKTOP_fruizione_chiuso.webp" rel="prettyPhoto[Sanremo 2016]"
-                  title="Sanremo 2016 VIDEO" class="hidden popup"></a>
-                <a href="imgs/portfolio/sanremo_2016/DESKTOP_news_singola.webp" rel="prettyPhoto[Sanremo 2016]"
-                  title="Sanremo 2016 SINGLE ARTICLE" class="hidden popup"></a>
-                <a href="imgs/portfolio/sanremo_2016/DESKTOP_TW-tracker.webp" rel="prettyPhoto[Sanremo 2016]"
-                  title="Sanremo 2016 TWITTER TRACKER" class="hidden popup"></a>
-                <a href="imgs/portfolio/sanremo_2016/01_mobile_home.webp" rel="prettyPhoto[Sanremo 2016]"
-                  title="Sanremo 2016 HOME" class="popup">Mobile Mockup</a>
-                <a href="imgs/portfolio/sanremo_2016/02_mobile_cantanti-big.webp" rel="prettyPhoto[Sanremo 2016]"
-                  title="Sanremo 2016 SINGERS" class="hidden popup">Mobile Mockup</a>
-                <a href="imgs/portfolio/sanremo_2016/03_mobile_singolo-cantante.webp" rel="prettyPhoto[Sanremo 2016]"
-                  title="Sanremo 2016 SINGLE SINGER" class="hidden popup">Mobile Mockup</a>
-                <a href="imgs/portfolio/sanremo_2016/04_mobile_fruizione-video.webp" rel="prettyPhoto[Sanremo 2016]"
-                  title="Sanremo 2016 VIDEO FLOW" class="hidden popup">Mobile Mockup</a>
-                <a href="imgs/portfolio/sanremo_2016/05_mobile_elenco news.webp" rel="prettyPhoto[Sanremo 2016]"
-                  title="Sanremo 2016 NEWS ARCHIVE" class="hidden popup">Mobile Mockup</a>
-
+                <a class="no-more" tabindex="-1">Website no more online</a>
+                <a href="https://www.figma.com/proto/a8cECADY5i2Aaiuu2sANJs/Cherryweb-portfolio?type=design&node-id=14-51&t=77hWAimZTX1JqdjL-1&scaling=scale-down&page-id=14%3A31&starting-point-node-id=14%3A51&mode=design"
+                  title="Sanremo 2016 HOME" target="_blank">Desktop Mockup</a>
+                <a href="https://www.figma.com/proto/a8cECADY5i2Aaiuu2sANJs/Cherryweb-portfolio?type=design&node-id=14-101&t=eee4XcIpWDyXuhO7-1&scaling=scale-down&page-id=14%3A32&starting-point-node-id=14%3A101&mode=design"
+                  title="Sanremo 2016 HOME" target="_blank">Mobile Mockup</a>
               </span>
             </figcaption>
           </figure>
 
-          <figure class="element web" data-category="web">
-            <div><img src="imgs/portfolio/thevoice/thevoice_thumb.webp" alt="The Voice of Italy"></div>
+          <figure class="element old" data-category="old">
+            <div><img width="100%" height="100%" src="assets/images/portfolio/thevoice/thevoice_thumb.webp"
+                alt="The Voice of Italy"></div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>The Voice of Italy 2016</h3>
                 <span>UX/UI design</span>
-                <a class="no-more">Website no more online</a>
-                <a href="imgs/portfolio/thevoice/DESKTOP_home_E.webp" rel="prettyPhoto[The Voice of Italy]"
-                  title="The Voice of Italy HOME" class="popup">Desktop Mockup</a>
-                <a href="imgs/portfolio/thevoice/DESKTOP_coach.webp" rel="prettyPhoto[The Voice of Italy]"
-                  title="The Voice of Italy COACHES" class="hidden popup"></a>
-                <a href="imgs/portfolio/thevoice/DESKTOP_singolo-coach.webp" rel="prettyPhoto[The Voice of Italy]"
-                  title="The Voice of Italy COACH" class="hidden popup"></a>
-                <a href="imgs/portfolio/thevoice/DESKTOP_fruzione-video.webp" rel="prettyPhoto[The Voice of Italy]"
-                  title="The Voice of Italy VIDEO" class="hidden popup"></a>
-                <a href="imgs/portfolio/thevoice/DESKTOP_singolo-articolo.webp" rel="prettyPhoto[The Voice of Italy]"
-                  title="The Voice of Italy ARTICLE" class="hidden popup"></a>
+                <a class="no-more" tabindex="-1">Website no more online</a>
+                <a href="https://www.figma.com/proto/a8cECADY5i2Aaiuu2sANJs/Cherryweb-portfolio?type=design&node-id=14-246&t=AMLqeEVcAIHgQ6kW-1&scaling=scale-down&page-id=14%3A36&starting-point-node-id=14%3A246&mode=design"
+                  target="_blank" title="The Voice of Italy HOME">Desktop Mockup</a>
               </span>
             </figcaption>
           </figure>
 
-
-          <figure class="element web" data-category="web">
-            <div><img src="imgs/portfolio/osa/osa_thumb.webp" alt="OnStage awards"></div>
+          <figure class="element old" data-category="old">
+            <div><img width="100%" height="100%" src="assets/images/portfolio/osa/osa_thumb.webp" alt="OnStage awards">
+            </div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>OnStage Awards 2016</h3>
                 <span>UX/UI design</span>
                 <a href="http://www.rai.it/dl/siti/Page-06a615f2-2139-499d-831e-6a157a683346.html"
                   title="OnStage awards" target="_blank">Website</a>
-                <a href="imgs/portfolio/osa/OSA-home_07_B_noADV.webp" rel="prettyPhoto[OnStage awards]"
-                  title="OnStage awards HOME" class="popup">Desktop Mockup</a>
-                <a href="imgs/portfolio/osa/OSA-elencomedia_01.webp" rel="prettyPhoto[OnStage awards]"
-                  title="OnStage awards Media Archive" class="hidden popup"></a>
-                <a href="imgs/portfolio/osa/OSA-fruizione_01.webp" rel="prettyPhoto[OnStage awards]"
-                  title="OnStage awards Video" class="hidden popup"></a>
-                <a href="imgs/portfolio/osa/OSA-fruizione-audio_01.webp" rel="prettyPhoto[OnStage awards]"
-                  title="OnStage awards Audio" class="hidden popup"></a>
+                <a href="14-479&t=OT3nOlCsXkKPQwSh-1&scaling=scale-down&page-id=14%3A390&starting-point-node-id=14%3A479&mode=design"
+                  target="_blank" title="OnStage awards HOME">Desktop Mockup</a>
               </span>
             </figcaption>
           </figure>
 
-          <figure class="element app" data-category="app">
-            <div><img src="imgs/portfolio/ray_app/rayapp_thumb.webp" alt="RAY app"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <h3>RAY app</h3>
-                <span>App design</span> <a title="RAY app" target="_blank" class="no-more">App no more in store</a> <a
-                  href="imgs/portfolio/ray_app/01_android_login.webp" rel="prettyPhoto[RAY app]"
-                  title="RAY app: Login page" class="popup">Mockup</a> <a
-                  href="imgs/portfolio/ray_app/02_android_pw01.webp" rel="prettyPhoto[RAY app]" title="RAY app: Password"
-                  class="hidden popup"></a> <a href="imgs/portfolio/ray_app/03_android_registrazione.webp"
-                  rel="prettyPhoto[RAY app]" title="RAY app: Registration" class="hidden popup"></a> <a
-                  href="imgs/portfolio/ray_app/04_android_dati.webp" rel="prettyPhoto[RAY app]"
-                  title="RAY app: More datas" class="hidden popup"></a> <a
-                  href="imgs/portfolio/ray_app/07_android_condividi.webp" rel="prettyPhoto[RAY app]"
-                  title="RAY app: Share" class="hidden popup"></a> <a href="imgs/portfolio/ray_app/08_android_foto.webp"
-                  rel="prettyPhoto[RAY app]" title="RAY app: Send pic" class="hidden popup"></a>
-              </span>
-            </figcaption>
-          </figure>
-
-          <figure class="element web" data-category="web">
-            <div><img src="imgs/portfolio/rai_corporate/raicorporate_thumb.webp" alt="RAI corporate rai.it"></div>
+          <figure class="element old" data-category="old">
+            <div><img width="100%" height="100%" src="assets/images/portfolio/rai_corporate/raicorporate_thumb.webp"
+                alt="RAI corporate rai.it">
+            </div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>RAI.it</h3>
                 <span>Webdesign</span>
-                <a class="no-more">Website no more online</a>
-                <a href="imgs/portfolio/rai_corporate/web_raicorporate_01.webp" rel="prettyPhoto[RAI corporate rai.it]"
-                  title="RAI.it: Home page">Mockup</a>
-                <a href="imgs/portfolio/rai_corporate/web_raicorporate_02.webp" rel="prettyPhoto[RAI corporate rai.it]"
-                  title="RAI.it: Company" class="hidden popup"></a>
-                <a href="imgs/portfolio/rai_corporate/web_raicorporate_03.webp" rel="prettyPhoto[RAI corporate rai.it]"
-                  title="RAI.it: Mission" class="hidden popup"></a>
-                <a href="imgs/portfolio/rai_corporate/web_raicorporate_04.webp" rel="prettyPhoto[RAI corporate rai.it]"
-                  title="RAI.it: Internal page" class="hidden popup"></a>
-                <a href="imgs/portfolio/rai_corporate/web_raicorporate_05.webp" rel="prettyPhoto[RAI corporate rai.it]"
-                  title="RAI.it: Article" class="hidden popup"></a>
+                <a class="no-more" tabindex="-1">Website no more online</a>
+                <a href="https://www.figma.com/proto/a8cECADY5i2Aaiuu2sANJs/Cherryweb-portfolio?type=design&node-id=79-103&t=KG2b4wQMfPFNvIMs-1&scaling=scale-down&page-id=79%3A97&starting-point-node-id=79%3A103&mode=design"
+                  target="_blank" title="RAI.it: Home page">Mockup</a>
+              </span>
+            </figcaption>
+          </figure>
+
+          <figure class="element old" data-category="old">
+            <div><img width="100%" height="100%" src="assets/images/portfolio/hellolen_2015/hellolen2015_thumb.webp"
+                alt="HelloLen cosplay"></div>
+            <figcaption> <span class="figcaption-wrap">
+                <h3>HelloLen* cosplay</h3>
+                <span>Webdesign &amp; HTML+CSS</span> <a href="http://www.hellolen.com" title="HelloLen* cosplay"
+                  target="_blank">Website</a> <a
+                  href="https://www.figma.com/proto/a8cECADY5i2Aaiuu2sANJs/Cherryweb-portfolio?type=design&node-id=79-158&t=ESyW0k0AGXC6xugf-1&scaling=scale-down&page-id=79%3A153&starting-point-node-id=79%3A158&mode=design"
+                  target="_blank" title="HelloLen cosplay: Home page">Desktop
+                  Mockup</a>
+                <a href="https://www.figma.com/proto/a8cECADY5i2Aaiuu2sANJs/Cherryweb-portfolio?type=design&node-id=86-175&t=G84CY2WZsB9EYHlI-1&scaling=scale-down&page-id=79%3A154&starting-point-node-id=86%3A175&mode=design"
+                  target="_blank" title="HelloLen cosplay: Home page">Mobile
+                  Mockup</a>
+              </span>
+            </figcaption>
+          </figure>
+
+          <figure class="element old" data-category="old">
+            <div><img width="100%" height="100%" src="assets/images/portfolio/sanremo/sanremo_thumb.webp"
+                alt="Sanremo2015 for RAI"></div>
+            <figcaption> <span class="figcaption-wrap">
+                <h3>Sanremo2015</h3>
+                <span>Webdesign</span> <a class="no-more" tabindex="-1">Website no more online</a> <a
+                  href="https://www.figma.com/proto/a8cECADY5i2Aaiuu2sANJs/Cherryweb-portfolio?type=design&node-id=66-74&t=JoicZOqJsIEJfTf9-1&scaling=scale-down&page-id=14%3A33&starting-point-node-id=66%3A74&show-proto-sidebar=1&mode=design"
+                  target="_blank" title="Website layout: Home page">Desktop Mockup</a>
+                <a href="https://www.figma.com/proto/a8cECADY5i2Aaiuu2sANJs/Cherryweb-portfolio?type=design&node-id=66-171&t=UUR8CIHMR4WWMKz3-1&scaling=scale-down&page-id=14%3A34&starting-point-node-id=66%3A171&mode=design"
+                  target="_blank" title="Website layout: Home page">Mobile
+                  Mockup</a>
+              </span>
+            </figcaption>
+          </figure>
+
+          <figure class="element old" data-category="old">
+            <div><img width="100%" height="100%" src="assets/images/portfolio/ballaro/ballaro_thumb.webp"
+                alt="Ballar&ograve; blog"></div>
+            <figcaption> <span class="figcaption-wrap">
+                <h3>Ballar&ograve; blog</h3>
+                <span>Webdesign</span> <a title="Ballar&ograve; blog" target="_blank" class="no-more" tabindex="-1">Website no more
+                  online</a> <a
+                  href="https://www.figma.com/proto/a8cECADY5i2Aaiuu2sANJs/Cherryweb-portfolio?type=design&node-id=92-236&t=VNzfIBvU8SXXL1uW-1&scaling=scale-down&page-id=92%3A233&starting-point-node-id=92%3A236&mode=design"
+                  target="_blank" title="Ballar&ograve; blog: Home page">Mockup</a>
               </span>
             </figcaption>
           </figure>
 
           <figure class="element web" data-category="web">
-            <div><img src="imgs/portfolio/hellolen_2015/hellolen2015_thumb.webp" alt="HelloLen cosplay"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <h3>HelloLen* cosplay</h3>
-                <span>Webdesign &amp; HTML+CSS</span> <a href="http://www.hellolen.com" title="HelloLen* cosplay"
-                  target="_blank">Website</a> <a href="imgs/portfolio/hellolen_2015/web_hellolen2015_01.webp"
-                  rel="prettyPhoto[HelloLen cosplay 2015]" title="HelloLen cosplay: Home page" class="popup">Desktop
-                  Mockup</a> <a href="imgs/portfolio/hellolen_2015/web_hellolen2015_02.webp"
-                  rel="prettyPhoto[HelloLen cosplay 2015]" title="HelloLen cosplay: Internal page"
-                  class="hidden popup"></a> <a href="imgs/portfolio/hellolen_2015/web_hellolen2015_03.webp"
-                  rel="prettyPhoto[HelloLen cosplay 2015]" title="HelloLen cosplay: Gallery page"
-                  class="hidden popup"></a>
-                <a href="imgs/portfolio/hellolen_2015/web_hellolen2015_mobile_01.webp"
-                  rel="prettyPhoto[HelloLen cosplay 2015]" title="HelloLen cosplay: Home page" class="popup">Mobile
-                  Mockup</a> <a href="imgs/portfolio/hellolen_2015/web_hellolen2015_mobile_02.webp"
-                  rel="prettyPhoto[HelloLen cosplay 2015]" title="HelloLen cosplay: Gallery page"
-                  class="hidden popup"></a>
-                <a href="imgs/portfolio/hellolen_2015/web_hellolen2015_mobile_03.webp"
-                  rel="prettyPhoto[HelloLen cosplay 2015]" title="HelloLen cosplay: Home page" class="hidden popup"></a>
-                <a href="imgs/portfolio/hellolen_2015/web_hellolen2015_mobile_04.webp"
-                  rel="prettyPhoto[HelloLen cosplay 2015]" title="HelloLen cosplay: Gallery page"
-                  class="hidden popup"></a>
-              </span>
-            </figcaption>
-          </figure>
-          <figure class="element web" data-category="web">
-            <div><img src="imgs/portfolio/sanremo/sanremo_thumb.webp" alt="Sanremo2015 for RAI"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <h3>Sanremo2015</h3>
-                <span>Webdesign</span> <a class="no-more">Website no more online</a> <a
-                  href="imgs/portfolio/sanremo/sanremo-desktop_home_SCENARIO1_BIS.webp" rel="prettyPhoto[Sanremo2015]"
-                  title="Website layout: Home page" class="popup">Desktop Mockup</a> <a
-                  href="imgs/portfolio/sanremo/sanremo-desktop_video_02.webp" rel="prettyPhoto[Sanremo2015]"
-                  title="Website layout: Video page" class="hidden popup"></a> <a
-                  href="imgs/portfolio/sanremo/sanremo-desktop_sondaggio-risultati_02.webp"
-                  rel="prettyPhoto[Sanremo2015]" title="Website layout: Pool page" class="hidden popup"></a> <a
-                  href="imgs/portfolio/sanremo/desktop_twitter_REV01.webp" rel="prettyPhoto[Sanremo2015]"
-                  title="Website layout: Twitter page" class="hidden popup"></a> <a
-                  href="imgs/portfolio/sanremo/desktop_news-elenco_01.webp" rel="prettyPhoto[Sanremo2015]"
-                  title="Website layout: News" class="hidden popup"></a> <a
-                  href="imgs/portfolio/sanremo/desktop_news-singola.webp" rel="prettyPhoto[Sanremo2015]"
-                  title="Website layout: Single news" class="hidden popup"></a> <a
-                  href="imgs/portfolio/sanremo/sanremo-desktop_home_NOSIDEBAR-NEW.webp" rel="prettyPhoto[Sanremo2015]"
-                  title="Discarded design" class="hidden popup"></a> <a
-                  href="imgs/portfolio/sanremo/mobile_home_menuchiuso.webp" rel="prettyPhoto[Sanremo2015 mobile]"
-                  title="Website layout: Home page" class="popup">Mobile Mockup</a>
-                <a href="imgs/portfolio/sanremo/mobile_home_menuaperto.webp" rel="prettyPhoto[Sanremo2015 mobile]"
-                  title="Website layout: Home page" class="hidden popup"></a> <a
-                  href="imgs/portfolio/sanremo/mobile_video.webp" rel="prettyPhoto[Sanremo2015 mobile]"
-                  title="Website layout: Video" class="hidden popup"></a> <a
-                  href="imgs/portfolio/sanremo/mobile_news.webp" rel="prettyPhoto[Sanremo2015 mobile]"
-                  title="Website layout: News" class="hidden popup"></a> <a
-                  href="imgs/portfolio/sanremo/mobile_single-news.webp" rel="prettyPhoto[Sanremo2015 mobile]"
-                  title="Website layout: Single news" class="hidden popup"></a>
-              </span>
-            </figcaption>
-          </figure>
-          <figure class="element web" data-category="web">
-            <div><img src="imgs/portfolio/ballaro/ballaro_thumb.webp" alt="Ballar&ograve; blog"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <h3>Ballar&ograve; blog</h3>
-                <span>Webdesign</span> <a title="Ballar&ograve; blog" target="_blank" class="no-more">Website no more
-                  online</a> <a href="imgs/portfolio/ballaro/hathor-home.webp" rel="prettyPhoto[Ballar&ograve; blog]"
-                  title="Ballar&ograve; blog: Home page" class="popup">Mockup</a>
-                <a href="imgs/portfolio/ballaro/hathor-interna.webp" rel="prettyPhoto[Ballar&ograve; blog]"
-                  title="Ballar&ograve; blog: Internal page" class="hidden popup"></a>
-              </span>
-            </figcaption>
-          </figure>
-          <figure class="element web" data-category="web">
-            <div><img src="imgs/portfolio/pechino/pechino_thumb.webp" alt="Pechinoexpress for RAI"></div>
+            <div><img width="100%" height="100%" src="assets/images/portfolio/pechino/pechino_thumb.webp"
+                alt="Pechinoexpress for RAI"></div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>Pechinoexpress 2014</h3>
-                <span>Webdesign</span> <a class="no-more">Website no more online</a> <a
-                  href="imgs/portfolio/pechino/pechino_C.webp" rel="prettyPhoto[Pechino Express]" title="Website layout"
-                  class="popup">Mockup</a> <a href="imgs/portfolio/pechino/pechino_C_conduttore_01.webp"
-                  rel="prettyPhoto[Pechino Express]" title="Website layout: Anchorman" class="hidden popup"></a> <a
-                  href="imgs/portfolio/pechino/pechino_C_coppie.webp" rel="prettyPhoto[Pechino Express]"
-                  title="Website layout: Competitors page" class="hidden popup"></a> <a
-                  href="imgs/portfolio/pechino/pechino_C_coppie_biografia.webp" rel="prettyPhoto[Pechino Express]"
-                  title="Website layout: Single competitor couple" class="hidden popup"></a> <a
-                  href="imgs/portfolio/pechino/pechino_C_blog-home_tagliata.webp" rel="prettyPhoto[Pechino Express]"
-                  title="Website layout: Blog" class="hidden popup"></a> <a
-                  href="imgs/portfolio/pechino/pechino_C_blog-interna.webp" rel="prettyPhoto[Pechino Express]"
-                  title="Website layout: Blog article" class="hidden popup"></a> </figcaption>
-            </span>
+                <span>Webdesign</span> <a class="no-more" tabindex="-1">Website no more online</a> <a
+                  href="https://www.figma.com/proto/a8cECADY5i2Aaiuu2sANJs/Cherryweb-portfolio?type=design&node-id=92-192&t=fiwYeO9CmfmuRTB5-1&scaling=scale-down&page-id=87%3A181&starting-point-node-id=92%3A192&mode=design"
+                  target="_blank" title="Website layout">Mockup</a>
+                </span>
+            </figcaption>
           </figure>
-          <figure class="element web wordpress" data-category="web">
-            <div><img src="imgs/portfolio/mfse_thumb.webp" alt="M&amp;F - Management & financial services"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <h3>M&amp;F - Management &amp; financial services</h3>
-                <span>Webdesign &amp; wordpress</span> <a target="_blank" class="no-more">Website no more online</a> <a
-                  href="imgs/portfolio/web_mfse.webp" rel="prettyPhoto[M&amp;F - Management & financial services]"
-                  title="Website layout: home page" class="popup">Mockup</a> <a href="imgs/portfolio/mf_layout_B.webp"
-                  rel="prettyPhoto[M&amp;F - Management & financial services]" title="Website layout: home page"
-                  class="hidden popup"></a> <a href="imgs/portfolio/mf_layout-interna_B.webp"
-                  rel="prettyPhoto[M&amp;F - Management & financial services]" title="Website layout: internal page"
-                  class="hidden popup"></a> </figcaption>
-            </span>
-          </figure>
-          <figure class="element web" data-category="web">
-            <div><img src="imgs/portfolio/corteeventi_thumb.webp" alt="Corte degli Eventi"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <h3>Corte degli Eventi</h3>
-                <span>Coding HTML+CSS</span> <a href="http://www.lacortedeglieventi.it" target="_blank">Website</a> <a
-                  href="imgs/portfolio/web_corteeventi_01.webp" rel="prettyPhoto[Corte degli Eventi]"
-                  title="Website layout" class="popup">Mockup</a> </figcaption>
-            </span>
-          </figure>
+
           <figure class="element logo" data-category="logo">
-            <div><img src="imgs/portfolio/cosplayplanet_thumb.webp" alt="Cosplay Planet"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <h3>Cosplay Planet</h3>
-                <span>Logo design</span> <a href="imgs/portfolio/graphic_cosplayplanet_01.webp"
-                  rel="prettyPhoto[Cosplay Planet]" title="Logo" class="popup">Logo</a> </figcaption>
-            </span>
-          </figure>
-          <figure class="element logo web" data-category="web">
-            <div><img src="imgs/portfolio/segway_thumb.webp" alt="Segway Roma"></div>
+            <div><img width="100%" height="100%" src="assets/images/portfolio/segway_thumb.webp" alt="Segway Roma">
+            </div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>Segway Roma</h3>
                 <span>Logo &amp; Webdesign</span> <a href="http://www.segwayroma.net" target="_blank">Website</a> <a
-                  href="imgs/portfolio/graphic_segway_01.webp" rel="prettyPhoto[Segway Roma]" title="Logo"
-                  class="popup">Logo</a> <a href="imgs/portfolio/web_segway_01.webp" rel="prettyPhoto[Segway Roma]"
-                  title="Website layout: Home page" class="popup">Mockup</a> <a href="imgs/portfolio/web_segway_02.webp"
-                  rel="prettyPhoto[Segway Roma]" class="hidden popup" title="Website layout: Internal page"></a>
-            </figcaption>
+                  href="assets/images/portfolio/graphic_segway_01.webp" rel="prettyPhoto[Segway Roma]" title="Logo"
+                  class="popup">Logo</a>
             </span>
+          </figcaption>
           </figure>
+
           <figure class="element logo" data-category="logo">
-            <div><img src="imgs/portfolio/turchia_thumb.webp" alt="Turchia Oggi"></div>
+            <div><img width="100%" height="100%" src="assets/images/portfolio/turchia_thumb.webp" alt="Turchia Oggi">
+            </div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>Turchia Oggi</h3>
-                <span>Logo design</span> <a target="_blank" class="no-more">Website no more online</a> <a
-                  href="imgs/portfolio/graphic_turchia_01.webp" rel="prettyPhoto[Turchia Oggi]" title="Logo"
-                  class="popup">Logo</a> </figcaption>
+                <span>Logo design</span> <a target="_blank" class="no-more" tabindex="-1">Website no more online</a> <a
+                  href="assets/images/portfolio/graphic_turchia_01.webp" rel="prettyPhoto[Turchia Oggi]" title="Logo"
+                  class="popup">Logo</a> 
             </span>
+          </figcaption>
           </figure>
-          <figure class="element logo web" data-category="logo">
-            <div><img src="imgs/portfolio/osservatorio_thumb.webp" alt="Osservatorio Artigianato"></div>
+
+          <figure class="element logo" data-category="logo">
+            <div><img width="100%" height="100%" src="assets/images/portfolio/osservatorio_thumb.webp"
+                alt="Osservatorio Artigianato"></div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>Osservatorio Artigianato</h3>
-                <span>Logo &amp; Webdesign</span> <a class="no-more">Website no more online</a> <a
-                  href="imgs/portfolio/graphic_osservatorio_01.webp" rel="prettyPhoto[Osservatorio Artigianato]"
-                  title="Logo" class="popup">Logo</a> <a href="imgs/portfolio/web_osservatorio_01.webp"
-                  rel="prettyPhoto[Osservatorio Artigianato]" title="Website layout" class="popup">Mockup</a>
+                <span>Logo &amp; Webdesign</span>
+                <a class="no-more" tabindex="-1">Website no more online</a>
+                <a href="assets/images/portfolio/graphic_osservatorio_01.webp"
+                  rel="prettyPhoto[Osservatorio Artigianato]" title="Logo" class="popup">Logo</a>
+                </span>
             </figcaption>
-            </span>
           </figure>
-          <figure class="element web" data-category="web">
-            <div><img src="imgs/portfolio/domiziano_thumb.webp" alt="Stadio Domiziano"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <h3>Stadio Domiziano</h3>
-                <span>Webdesign &amp; HTML+CSS</span> <a class="no-more">Website no more online</a> <a
-                  href="imgs/portfolio/web_domiziano_01.webp" rel="prettyPhoto[Stadio Domiziano]"
-                  title="Website layout: Home page" class="popup">Mockup</a> <a
-                  href="imgs/portfolio/web_domiziano_02.webp" rel="prettyPhoto[Stadio Domiziano]"
-                  title="Website layout: internal page" class="hidden popup"></a> </figcaption>
-            </span>
-          </figure>
-          <figure class="element logo web" data-category="web">
-            <div><img src="imgs/portfolio/transmovie_thumb.webp" alt="Transmovie"></div>
-            <figcaption> <span class="figcaption-wrap">
+
+          <figure class="element logo" data-category="logo">
+            <div><img width="100%" height="100%" src="assets/images/portfolio/transmovie_thumb.webp" alt="Transmovie">
+            </div>
+            <figcaption>
+              <span class="figcaption-wrap">
                 <h3>Transmovie</h3>
-                <span>Logo &amp; Webdesign</span> <a class="no-more">Website no more online</a> <a
-                  href="imgs/portfolio/graphic_transmovie_01.webp" rel="prettyPhoto[Transmovie]" title="Logo"
-                  class="popup">Logo</a> <a href="imgs/portfolio/web_transmovie_01.webp" rel="prettyPhoto[Transmovie]"
-                  title="Website layout" class="popup">Mockup</a> </figcaption>
-            </span>
+                <span>Logo &amp; Webdesign</span> <a class="no-more" tabindex="-1">Website no more online</a> <a
+                  href="assets/images/portfolio/graphic_transmovie_01.webp" rel="prettyPhoto[Transmovie]" title="Logo"
+                  class="popup">Logo</a> <a href="https://www.figma.com/proto/a8cECADY5i2Aaiuu2sANJs/Cherryweb-portfolio?type=design&node-id=106-247&t=gs5O5kzGVzcq2EA3-1&scaling=scale-down&page-id=106%3A245&mode=design"
+                  target="_blank" title="Website layout" >Mockup</a>
+              </span>
+            </figcaption>
           </figure>
-          <figure class="element vector" data-category="vector">
-            <div><img src="imgs/portfolio/altran/altran_thumb.webp" alt="Transmovie"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <h3>Altran</h3>
-                <span>Graphic design</span> <a href="imgs/portfolio/altran/vector_altran_01.webp"
-                  rel="prettyPhoto[Altran]" title="Calendar" class="popup">Vectors</a> <a
-                  href="imgs/portfolio/altran/vector_altran_02.webp" rel="prettyPhoto[Altran]" title="Map of Rome"
-                  class="hidden popup"></a> </figcaption>
-            </span>
-          </figure>
-          <figure class="element web graphic" data-category="web">
-            <div><img src="imgs/portfolio/barilla/barilla_thumb.webp" alt="Barilla"></div>
-            <figcaption> <span class="figcaption-wrap">
+
+          <figure class="element graphic" data-category="graphic">
+            <div><img width="100%" height="100%" src="assets/images/portfolio/barilla/barilla_thumb.webp" alt="Barilla">
+            </div>
+            <figcaption>
+              <span class="figcaption-wrap">
                 <h3>Barilla</h3>
-                <span>Website &amp; vectors</span> <a target="_blank" class="no-more">Website no more online</a> <a
-                  href="imgs/portfolio/barilla/web_barilla_01.webp" rel="prettyPhoto[Barilla]"
-                  title="Barilla Infographic" class="popup">Mockup</a> <a
-                  href="imgs/portfolio/barilla/graphic_barilla_01.webp" rel="prettyPhoto[Barilla]"
-                  title="Barilla Dish export PDF" class="popup">Vectors</a> <a
-                  href="imgs/portfolio/barilla/graphic_barilla_02.webp" rel="prettyPhoto[Barilla]"
-                  title="Barilla Dish export PDF" class="hidden popup"></a> </figcaption>
-            </span>
+                <span>Website &amp; graphics</span> <a target="_blank" class="no-more" tabindex="-1">Website no more online</a> <a
+                  href="assets/images/portfolio/barilla/web_barilla_01.webp" rel="prettyPhoto[Barilla]"
+                  title="Barilla Infographic" class="popup">Infographic</a>
+                  <a
+                  href="assets/images/portfolio/barilla/graphic_barilla_01.webp" rel="prettyPhoto[Barilla]"
+                  title="Barilla Pdf" class="popup">Graphic</a>
+                  <a
+                  href="assets/images/portfolio/barilla/graphic_barilla_02.webp" rel="prettyPhoto[Barilla]"
+                  title="Barilla Pdf" class="no-show popup"></a>
+              </span>
+            </figcaption>
           </figure>
-          <figure class="element web" data-category="web">
-            <div><img src="imgs/portfolio/LCE_thumb.webp" alt="LCE portal"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <h3>LCE portal</h3>
-                <span>Webdesign &amp; HTML+CSS</span> <a class="no-more">Website no more online</a> <a
-                  href="imgs/portfolio/web_LCE_01.webp" rel="prettyPhoto[LCE portal]" title="LCE portal"
-                  class="popup">Mockup</a> </figcaption>
-            </span>
-          </figure>
-          <figure class="element vector graphic" data-category="vector">
-            <div><img src="imgs/portfolio/merk/merck_thumb.webp" alt="LCE portal"></div>
-            <figcaption> <span class="figcaption-wrap">
+
+          <figure class="element graphic" data-category="graphic">
+            <div>
+              <img width="100%" height="100%" src="assets/images/portfolio/merk/merck_thumb.webp" alt="Merck Serono">
+            </div>
+            <figcaption>
+              <span class="figcaption-wrap">
                 <h3>Merck Serono</h3>
-                <span>Graphics &amp; vectors</span> <a href="imgs/portfolio/merk/graphic_merck_01.webp"
-                  rel="prettyPhoto[Merck01]" title="Poster for Merck Serono" class="popup">Graphics</a> <a
-                  href="imgs/portfolio/merk/vector_merck_01.webp" rel="prettyPhoto[Merck01]"
-                  title="Brochure for Merck Serono" class="popup">Vectors</a> <a
-                  href="imgs/portfolio/merk/vector_merck_02.webp" rel="prettyPhoto[Merck01]"
-                  title="Brochure for Merck Serono" class="hidden popup"></a> </figcaption>
-            </span>
+                <span>Graphic design</span> <a href="assets/images/portfolio/merk/graphic_merck_01.webp"
+                  rel="prettyPhoto[Merck Serono]" title="Poster for Merck Serono" class="popup">Graphics</a> <a
+                  href="assets/images/portfolio/merk/print_merck_01.webp" rel="prettyPhoto[Merck Serono]"
+                  title="Brochure for Merck Serono" class="popup">Prints</a> <a
+                  href="assets/images/portfolio/merk/print_merck_02.webp" rel="prettyPhoto[Merck Serono]"
+                  title="Brochure for Merck Serono" class="no-show popup"></a>
+              </span>
+            </figcaption>
           </figure>
-          <figure class="element web" data-category="web">
-            <div><img src="imgs/portfolio/clangroup_thumb.webp" alt="Clan Group presentation"></div>
-            <figcaption> <span class="figcaption-wrap">
+
+          <figure class="element old" data-category="old">
+            <div><img width="100%" height="100%" src="assets/images/portfolio/clangroup_thumb.webp"
+                alt="Clan Group presentation"></div>
+            <figcaption> 
+              <span class="figcaption-wrap">
                 <h3>ClanGroup presentation</h3>
                 <span>Webdesign &amp; HTML+CSS</span> <a href="http://www.clan-group.com/presentazioni/CLANgroup/"
-                  target="_blank">Website</a> <a href="imgs/portfolio/web_clangroup_01.webp"
-                  rel="prettyPhoto[ClanGroup presentation]" title="Website layout: Home page" class="popup">Mockup</a>
+                  target="_blank">Website</a>
+              </span>
             </figcaption>
-            </span>
           </figure>
-          <figure class="element web wordpress graphic" data-category="web">
-            <div><img src="imgs/portfolio/caravel/caravel_thumb.webp" alt="Caravel Hotel"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <h3>Caravel Hotel</h3>
-                <span>Webdesign, Wordpress &amp; Graphics</span> <a class="no-more">Website no more online</a> <a
-                  href="imgs/portfolio/caravel/web_caravel_01.webp" rel="prettyPhoto[Caravel]"
-                  title="Website layout: Home page" class="popup">Mockup</a> <a
-                  href="imgs/portfolio/caravel/web_caravel_02.webp" rel="prettyPhoto[Caravel]"
-                  title="Website layout: Internal page" class="hidden popup"></a> <a
-                  href="imgs/portfolio/caravel/graphic_caravel_03.webp" rel="prettyPhoto[Caravel]"
-                  title="Corporate identity proposal for Hotel Caravel" class="popup">Graphics</a> <a
-                  href="imgs/portfolio/caravel/graphic_caravel_02.webp" rel="prettyPhoto[Caravel]"
-                  title="Corporate identity proposal for Hotel Caravel" class="hidden popup"></a> <a
-                  href="imgs/portfolio/caravel/graphic_caravel_01.webp" rel="prettyPhoto[Caravel]"
-                  title="Corporate identity proposal for Hotel Caravel, accepted layout" class="hidden popup">Hotel
-                  Caravel corporate</a> </figcaption>
-            </span>
-          </figure>
-          <figure class="element web" data-category="web">
-            <div><img src="imgs/portfolio/lifegate_thumb.webp" alt="LCE portal"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <h3>Stay for the planet</h3>
-                <span>Webdesign &amp; HTML+CSS</span> <a class="no-more">Website no more online</a> <a
-                  href="imgs/portfolio/web_lifegate_01.webp" rel="prettyPhoto[Stay for the planet]"
-                  title="Stay for the planet: Home page" class="popup">Mockup</a> <a
-                  href="imgs/portfolio/web_lifegate_02.webp" rel="prettyPhoto[Stay for the planet]"
-                  title="Stay for the planet: Internal page" class="hidden popup"></a> </figcaption>
-            </span>
-          </figure>
-          <figure class="element web wordpress" data-category="web">
-            <div><img src="imgs/portfolio/lorenzotucci_thumb.webp" alt="Lorenzo Tucci"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <h3>Lorenzo Tucci</h3>
-                <span>Webdesign &amp; Wordpress</span> <a class="no-more">Website no more online</a> <a
-                  href="imgs/portfolio/web_lorenzotucci_01.webp" rel="prettyPhoto[Lorenzo Tucci]"
-                  title="Lorenzo Tucci: Home page" class="popup">Mockup</a> <a
-                  href="imgs/portfolio/web_lorenzotucci_02.webp" rel="prettyPhoto[Lorenzo Tucci]"
-                  title="Lorenzo Tucci: Internal page" class="hidden popup"></a> </figcaption>
-            </span>
-          </figure>
-          <figure class="element vector graphic" data-category="vector">
-            <div><img src="imgs/portfolio/ricicliamoci_thumb.webp" alt="Ricicliamoci Panels"></div>
+
+          <figure class="element graphic" data-category="graphic">
+            <div><img width="100%" height="100%" src="assets/images/portfolio/ricicliamoci_thumb.webp"
+                alt="Ricicliamoci Panels"></div>
             <figcaption> <span class="figcaption-wrap">
                 <h3>Ricicliamoci for Clan Group</h3>
-                <span>Graphics &amp; vectors</span> <a href="imgs/portfolio/vector_ricicliamoci_01.webp"
+                <span>Graphic design</span> <a href="assets/images/portfolio/print_ricicliamoci_01.webp"
                   rel="prettyPhoto[Merck01]" title="Ricicliamoci Panels" class="popup">Graphics</a> <a
-                  href="imgs/portfolio/vector_ricicliamoci_02.webp" rel="prettyPhoto[Merck01]"
-                  title="Ricicliamoci Panels" class="hidden popup"></a> <a
-                  href="imgs/portfolio/vector_ricicliamoci_03.webp" rel="prettyPhoto[Merck01]"
-                  title="Ricicliamoci Panels" class="hidden popup"></a> </figcaption>
+                  href="assets/images/portfolio/print_ricicliamoci_02.webp" rel="prettyPhoto[Merck01]"
+                  title="Ricicliamoci Panels" class="no-show popup"></a> <a
+                  href="assets/images/portfolio/print_ricicliamoci_03.webp" rel="prettyPhoto[Merck01]"
+                  title="Ricicliamoci Panels" class="no-show popup"></a> 
             </span>
+          </figcaption>
           </figure>
         </div>
         <!-- #container -->
 
       </div>
     </section>
+    <section id="hobbies" data-full="true" class="slide" name="hobbies">
+      <div class="container">
+        <h1>I have <span>Hobbies</span> too!</span></h1>
+        <h3>I genuinely enjoy my job, no doubt about it! <br>However, in my free time, I like to engage in various
+          activities. <br>While I can't share pictures of my workouts or TV show/movie binges, I'd love to present you
+          with a curated collection of my top travel and urbex photos!</h3>
+      </div>
+      <div id="container" class="clearfix flex grid hobbiesGallery">
+        <figure class="element ">
+          <div><img width="100%" height="100%" src="assets/images/portfolio/newyork/2022/newyork_thumb.webp"
+              alt="New York"></div>
+          <figcaption> <span class="figcaption-wrap">
+              <h3>New York</h3>
+              <span>Travel Photography</span>
+              <a href="assets/images/portfolio/newyork/2022/newyork_01.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="popup">Gallery<img title="New York Travel Report 2022" class="no-show"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_02.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_03.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_04.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_05.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_06.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_07.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_08.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_09.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_10.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_11.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_12.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_13.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_14.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_15.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_16.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_17.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_18.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_19.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_20.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_21.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_22.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_23.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_24.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_25.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_26.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_27.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_28.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_29.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_30.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_31.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_32.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_33.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_34.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_35.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_36.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_37.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2022/newyork_38.webp" rel="prettyPhoto[New York Travel Report 2022]"
+                title="New York Travel Report 2022" class="no-show popup"></a>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="element ">
+          <div><img width="100%" height="100%" src="assets/images/portfolio/miami/miami_thumb.webp" alt="Miami"></div>
+          <figcaption> <span class="figcaption-wrap">
+              <h3>Miami</h3>
+              <span>Travel Photography</span>
+              <a href="assets/images/portfolio/miami/miami_01.webp" rel="prettyPhoto[Miami Travel Report]"
+                title="Miami Travel Report" class="popup">Gallery<img title="Miami Travel Report" class="no-show"></a>
+              <a href="assets/images/portfolio/miami/miami_02.webp" rel="prettyPhoto[Miami Travel Report]"
+                title="Miami Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/miami/miami_03.webp" rel="prettyPhoto[Miami Travel Report]"
+                title="Miami Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/miami/miami_04.webp" rel="prettyPhoto[Miami Travel Report]"
+                title="Miami Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/miami/miami_05.webp" rel="prettyPhoto[Miami Travel Report]"
+                title="Miami Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/miami/miami_06.webp" rel="prettyPhoto[Miami Travel Report]"
+                title="Miami Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/miami/miami_07.webp" rel="prettyPhoto[Miami Travel Report]"
+                title="Miami Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/miami/miami_08.webp" rel="prettyPhoto[Miami Travel Report]"
+                title="Miami Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/miami/miami_09.webp" rel="prettyPhoto[Miami Travel Report]"
+                title="Miami Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/miami/miami_10.webp" rel="prettyPhoto[Miami Travel Report]"
+                title="Miami Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/miami/miami_11.webp" rel="prettyPhoto[Miami Travel Report]"
+                title="Miami Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/miami/miami_12.webp" rel="prettyPhoto[Miami Travel Report]"
+                title="Miami Travel Report" class="no-show popup"></a>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="element ">
+          <div><img width="100%" height="100%" src="assets/images/portfolio/london/london_thumb.webp" alt="London">
+          </div>
+          <figcaption> <span class="figcaption-wrap">
+              <h3>London</h3>
+              <span>Travel Photography</span>
+              <a href="assets/images/portfolio/london/london_01.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="popup">Gallery<img title="London Travel Report" class="no-show"></a>
+              <a href="assets/images/portfolio/london/london_02.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_03.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_04.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_05.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_06.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_07.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_08.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_09.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_10.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_11.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_12.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_13.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_14.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_15.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_16.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_17.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_18.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_19.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_20.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_21.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_22.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_23.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_24.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_26.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_26.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_27.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_28.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_29.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_30.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_31.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/london/london_32.webp" rel="prettyPhoto[London Travel Report]"
+                title="London Travel Report" class="no-show popup"></a>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="element ">
+          <div><img width="100%" height="100%" src="assets/images/portfolio/thailand/thailand_thumb.webp"
+              alt="Thailand"></div>
+          <figcaption> <span class="figcaption-wrap">
+              <h3>Thailand</h3>
+              <span>Travel Photography</span>
+              <a href="assets/images/portfolio/thailand/thailand_01.webp" rel="prettyPhoto[Thailand Travel Report]"
+                title="Thailand Travel Report" class="popup">Gallery<img title="Thailand Travel Report" class="no-show"></a>
+              <a href="assets/images/portfolio/thailand/thailand_02.webp" rel="prettyPhoto[Thailand Travel Report]"
+                title="Thailand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/thailand/thailand_03.webp" rel="prettyPhoto[Thailand Travel Report]"
+                title="Thailand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/thailand/thailand_04.webp" rel="prettyPhoto[Thailand Travel Report]"
+                title="Thailand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/thailand/thailand_05.webp" rel="prettyPhoto[Thailand Travel Report]"
+                title="Thailand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/thailand/thailand_06.webp" rel="prettyPhoto[Thailand Travel Report]"
+                title="Thailand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/thailand/thailand_07.webp" rel="prettyPhoto[Thailand Travel Report]"
+                title="Thailand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/thailand/thailand_08.webp" rel="prettyPhoto[Thailand Travel Report]"
+                title="Thailand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/thailand/thailand_09.webp" rel="prettyPhoto[Thailand Travel Report]"
+                title="Thailand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/thailand/thailand_10.webp" rel="prettyPhoto[Thailand Travel Report]"
+                title="Thailand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/thailand/thailand_11.webp" rel="prettyPhoto[Thailand Travel Report]"
+                title="Thailand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/thailand/thailand_12.webp" rel="prettyPhoto[Thailand Travel Report]"
+                title="Thailand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/thailand/thailand_13.webp" rel="prettyPhoto[Thailand Travel Report]"
+                title="Thailand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/thailand/thailand_14.webp" rel="prettyPhoto[Thailand Travel Report]"
+                title="Thailand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/thailand/thailand_15.webp" rel="prettyPhoto[Thailand Travel Report]"
+                title="Thailand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/thailand/thailand_16.webp" rel="prettyPhoto[Thailand Travel Report]"
+                title="Thailand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/thailand/thailand_17.webp" rel="prettyPhoto[Thailand Travel Report]"
+                title="Thailand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/thailand/thailand_18.webp" rel="prettyPhoto[Thailand Travel Report]"
+                title="Thailand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/thailand/thailand_19.webp" rel="prettyPhoto[Thailand Travel Report]"
+                title="Thailand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/thailand/thailand_20.webp" rel="prettyPhoto[Thailand Travel Report]"
+                title="Thailand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/thailand/thailand_21.webp" rel="prettyPhoto[Thailand Travel Report]"
+                title="Thailand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/thailand/thailand_22.webp" rel="prettyPhoto[Thailand Travel Report]"
+                title="Thailand Travel Report" class="no-show popup"></a>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="element ">
+          <div><img width="100%" height="100%" src="assets/images/portfolio/urbex/urbex_thumb.webp" alt="Urbex"></div>
+          <figcaption> <span class="figcaption-wrap">
+              <h3>Urbex</h3>
+              <span>Travel Photography</span>
+              <a href="assets/images/portfolio/urbex/urbex_01.webp" rel="prettyPhoto[Urbex Travel Report]"
+                title="Urbex Travel Report" class="popup">Gallery<img title="Urbex Travel Report" class="no-show"></a>
+              <a href="assets/images/portfolio/urbex/urbex_02.webp" rel="prettyPhoto[Urbex Travel Report]"
+                title="Urbex Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/urbex/urbex_03.webp" rel="prettyPhoto[Urbex Travel Report]"
+                title="Urbex Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/urbex/urbex_04.webp" rel="prettyPhoto[Urbex Travel Report]"
+                title="Urbex Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/urbex/urbex_05.webp" rel="prettyPhoto[Urbex Travel Report]"
+                title="Urbex Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/urbex/urbex_06.webp" rel="prettyPhoto[Urbex Travel Report]"
+                title="Urbex Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/urbex/urbex_07.webp" rel="prettyPhoto[Urbex Travel Report]"
+                title="Urbex Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/urbex/urbex_08.webp" rel="prettyPhoto[Urbex Travel Report]"
+                title="Urbex Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/urbex/urbex_09.webp" rel="prettyPhoto[Urbex Travel Report]"
+                title="Urbex Travel Report" class="no-show popup"></a>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="element ">
+          <div><img width="100%" height="100%" src="assets/images/portfolio/newyork/2019/new-york_thumb.webp"
+              alt="New York"></div>
+          <figcaption> <span class="figcaption-wrap">
+              <h3>New York</h3>
+              <span>Travel Photography</span>
+              <a href="assets/images/portfolio/newyork/2019/new-york_01.webp" rel="prettyPhoto[New York Travel Report]"
+                title="New York Travel Report" class="popup">Gallery<img title="New York Travel Report" class="no-show"></a>
+              <a href="assets/images/portfolio/newyork/2019/new-york_02.webp" rel="prettyPhoto[New York Travel Report]"
+                title="New York Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2019/new-york_03.webp" rel="prettyPhoto[New York Travel Report]"
+                title="New York Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2019/new-york_04.webp" rel="prettyPhoto[New York Travel Report]"
+                title="New York Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2019/new-york_05.webp" rel="prettyPhoto[New York Travel Report]"
+                title="New York Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2019/new-york_06.webp" rel="prettyPhoto[New York Travel Report]"
+                title="New York Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2019/new-york_07.webp" rel="prettyPhoto[New York Travel Report]"
+                title="New York Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2019/new-york_08.webp" rel="prettyPhoto[New York Travel Report]"
+                title="New York Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2019/new-york_09.webp" rel="prettyPhoto[New York Travel Report]"
+                title="New York Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2019/new-york_10.webp" rel="prettyPhoto[New York Travel Report]"
+                title="New York Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2019/new-york_11.webp" rel="prettyPhoto[New York Travel Report]"
+                title="New York Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2019/new-york_12.webp" rel="prettyPhoto[New York Travel Report]"
+                title="New York Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newyork/2019/new-york_13.webp" rel="prettyPhoto[New York Travel Report]"
+                title="New York Travel Report" class="no-show popup"></a>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="element ">
+          <div><img width="100%" height="100%" src="assets/images/portfolio/japan/japan-thumb.webp" alt="Japan"></div>
+          <figcaption> <span class="figcaption-wrap">
+              <h3>Japan</h3>
+              <span>Travel Photography</span>
+              <a href="assets/images/portfolio/japan/japan_01.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="popup">Gallery<img title="Japan Travel Report" class="no-show"></a>
+              <a href="assets/images/portfolio/japan/japan_02.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_03.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_04.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_05.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_06.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_07.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_08.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_09.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_10.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_11.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_12.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_13.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_14.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_15.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_16.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_17.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_18.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_19.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_20.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_21.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_22.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_23.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_24.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_25.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_26.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_27.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_27.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_28.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_30.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_30.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/japan/japan_31.webp" rel="prettyPhoto[Japan Travel Report]"
+                title="Japan Travel Report" class="no-show popup"></a>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="element ">
+          <div><img width="100%" height="100%" src="assets/images/portfolio/australia/australia_thumb.webp"
+              alt="Australia"></div>
+          <figcaption> <span class="figcaption-wrap">
+              <h3>Australia</h3>
+              <span>Travel Photography</span>
+              <a href="assets/images/portfolio/australia/australia_01.webp" rel="prettyPhoto[Australia Travel Report]"
+                title="Australia Travel Report" class="popup">Gallery <img title="Australia Travel Report" class="no-show"></a>
+              <a href="assets/images/portfolio/australia/australia_02.webp" rel="prettyPhoto[Australia Travel Report]"
+                title="Australia Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/australia/australia_03.webp" rel="prettyPhoto[Australia Travel Report]"
+                title="Australia Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/australia/australia_04.webp" rel="prettyPhoto[Australia Travel Report]"
+                title="Australia Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/australia/australia_05.webp" rel="prettyPhoto[Australia Travel Report]"
+                title="Australia Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/australia/australia_06.webp" rel="prettyPhoto[Australia Travel Report]"
+                title="Australia Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/australia/australia_07.webp" rel="prettyPhoto[Australia Travel Report]"
+                title="Australia Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/australia/australia_08.webp" rel="prettyPhoto[Australia Travel Report]"
+                title="Australia Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/australia/australia_09.webp" rel="prettyPhoto[Australia Travel Report]"
+                title="Australia Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/australia/australia_10.webp" rel="prettyPhoto[Australia Travel Report]"
+                title="Australia Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/australia/australia_11.webp" rel="prettyPhoto[Australia Travel Report]"
+                title="Australia Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/australia/australia_12.webp" rel="prettyPhoto[Australia Travel Report]"
+                title="Australia Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/australia/australia_13.webp" rel="prettyPhoto[Australia Travel Report]"
+                title="Australia Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/australia/australia_14.webp" rel="prettyPhoto[Australia Travel Report]"
+                title="Australia Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/australia/australia_15.webp" rel="prettyPhoto[Australia Travel Report]"
+                title="Australia Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/australia/australia_16.webp" rel="prettyPhoto[Australia Travel Report]"
+                title="Australia Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/australia/australia_17.webp" rel="prettyPhoto[Australia Travel Report]"
+                title="Australia Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/australia/australia_18.webp" rel="prettyPhoto[Australia Travel Report]"
+                title="Australia Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/australia/australia_19.webp" rel="prettyPhoto[Australia Travel Report]"
+                title="Australia Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/australia/australia_20.webp" rel="prettyPhoto[Australia Travel Report]"
+                title="Australia Travel Report" class="no-show popup"></a>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="element ">
+          <div><img width="100%" height="100%" src="assets/images/portfolio/newzealand/newzealand_thumb.webp"
+              alt="New Zealand"></div>
+          <figcaption> <span class="figcaption-wrap">
+              <h3>New Zealand</h3>
+              <span>Travel Photography</span>
+              <a href="assets/images/portfolio/newzealand/new-zealand_01.webp"
+                rel="prettyPhoto[New Zealand Travel Report]" title="New Zealand Travel Report" class="popup">Gallery</a>
+              <a href="assets/images/portfolio/newzealand/new-zealand_02.webp"
+                rel="prettyPhoto[New Zealand Travel Report]" title="New Zealand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newzealand/new-zealand_03.webp"
+                rel="prettyPhoto[New Zealand Travel Report]" title="New Zealand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newzealand/new-zealand_04.webp"
+                rel="prettyPhoto[New Zealand Travel Report]" title="New Zealand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newzealand/new-zealand_05.webp"
+                rel="prettyPhoto[New Zealand Travel Report]" title="New Zealand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newzealand/new-zealand_06.webp"
+                rel="prettyPhoto[New Zealand Travel Report]" title="New Zealand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newzealand/new-zealand_07.webp"
+                rel="prettyPhoto[New Zealand Travel Report]" title="New Zealand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newzealand/new-zealand_08.webp"
+                rel="prettyPhoto[New Zealand Travel Report]" title="New Zealand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newzealand/new-zealand_09.webp"
+                rel="prettyPhoto[New Zealand Travel Report]" title="New Zealand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newzealand/new-zealand_10.webp"
+                rel="prettyPhoto[New Zealand Travel Report]" title="New Zealand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newzealand/new-zealand_11.webp"
+                rel="prettyPhoto[New Zealand Travel Report]" title="New Zealand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newzealand/new-zealand_12.webp"
+                rel="prettyPhoto[New Zealand Travel Report]" title="New Zealand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newzealand/new-zealand_13.webp"
+                rel="prettyPhoto[New Zealand Travel Report]" title="New Zealand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newzealand/new-zealand_14.webp"
+                rel="prettyPhoto[New Zealand Travel Report]" title="New Zealand Travel Report" class="no-show popup"></a>
+              <a href="assets/images/portfolio/newzealand/new-zealand_15.webp"
+                rel="prettyPhoto[New Zealand Travel Report]" title="New Zealand Travel Report" class="no-show popup"></a>
+            </span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <section id="contacts" data-full="true" class="slide">
+      <div class="container contacts">
+        <h1>Contact me!</h1>
+        <p>I am a strong candidate for the UX/UI designer role at your agency due to my diverse skill set. <br>With
+          experience in <strong>prototyping</strong>, <strong>Figma</strong>, <strong>Adobe CC</strong>,
+          <strong>HTML5/SCSS coding</strong>, <strong>teamwork</strong>, and <strong>problem-solving</strong>
+          capabilities, I can create user-friendly designs, bring ideas to life with interactive prototypes, and
+          seamlessly merge design and functionality. My collaborative nature ensures effective teamwork, while my knack
+          for problem-solving drives innovative design strategies. <br>I am ready to contribute to your agency's success
+          by delivering impactful and visually appealing design solutions.</p>
+        <p>If you find my profile and skill set interesting, lease contact me through my <a
+            href="https://www.linkedin.com/in/alessandramineo/" target="_blank">Linkedin profile</a> or
+          <a href="mailto:alessandra.cherryweb@gmail.com" target="_self"> send me a mail</a> to arrange an interview.
+          <br> I'll follow up as soon as I can.</p>
+
+      </div>
+    </section>
     <footer id="footer">
-      <section id="contacts" data-full="true" class="slide">
-        <div id="contacts-form">
-          <h2>Contact me!</h2>
-          <p>To ask me a free quote, or advices for the restyling of your website, logo or corporate, please contact me
-            through my <a href="https://www.linkedin.com/in/alessandramineo/" target="_blank">Linkedin profile</a> or
-            send me a mail with all the infos and requests. <br> I'll follow up as soon as I can. <br />
-            <br /> Send any enquiry to <a href="mailto:alessandra.cherryweb@gmail.com"
-              target="_self">alessandra.cherryweb@gmail.com</a></p>
-          <!-- <form method="post" action="https://submit-form.com/voMmyVL8hUTtrp8TE4kcD" target="_self" id="contact-form" name="contact-form">
-            <fieldset id="contact-info">
-              <label id="name_label">
-            <input name="name" id="name" type="text" placeholder="name and surname">
-          </label>
-              <label id="mail_label">
-            <input name="mail" id="mail" type="text" placeholder="e-mail">
-          </label>
-              <label id="subject_label">
-            <input name="subject" id="subject" type="text" placeholder="subject">
-          </label>
-            </fieldset>
-            <fieldset id="contact-comment">
-              <label id="comment_label">
-            <textarea name="question" id="question" cols="" rows=""  placeholder="write here your request"></textarea>
-          </label>
-            </fieldset>
-            <p> All the fields are required. <br /> Please read the <a href="privacy-policy.html" title="Privacy Policy" target="_blank">Privacy Policy</a>              before sending this form.<br />
-            </p>
-            <input type="submit" name="submit" id="submit" value="Send" class="button" >
-          </form> -->
-          <div id="risposta"> </div>
-        </div>
-      </section>
-      <section id="curiosities">
+      <div id="curiosities">
         <ul id="footer-container">
           <li>
             <h3>On air</h3>
-            <ul>
-              <li><strong>Green Day</strong> - Give me novocaine</li>
+            <p>To find inspiration, help the mood or just entertain my brain, here's some of my fav
+              tunes. <br>Check <a href="https://open.spotify.com/playlist/5l8NKHQjdoOQt0tyCr1tVy?si=a2c8cb3824844e2d"
+                target="_blank">my playlist</a> on Spotify</p>
+            <ul class="dot dot-music">
               <li><strong>Evanescence</strong> - Forgive me</li>
               <li><strong>Blink 182</strong> - Adam's song</li>
               <li><strong>Fun</strong> - We are young</li>
               <li><strong>Maroon 5</strong> - One more night</li>
+              <li><strong>Green Day</strong> - Give me novocaine</li>
               <li><strong>Kè</strong> - Strange world</li>
               <li><strong>Serj Tankian</strong> - Lie Lie Lie</li>
               <li><strong>Alter bridge</strong> - Broken wings</li>
               <li><strong>Avril Lavigne</strong> - Wish you were here</li>
               <li><strong>Hozier</strong> - Take me to church</li>
               <li><strong>Imagine Dragons</strong> - Believer</li>
+              <li><strong>Simon & Garfunkel</strong> - Flowers Never Bend With the Rainfall</li>
+              <li><strong>Blonde Redhead</strong> - For the Damaged Coda</li>
+              <li><strong>Sia</strong> - Unstoppable</li>
+              <li><strong>Britney Spears</strong> - Shadow</li>
             </ul>
           </li>
           <li>
-            <h3>I've been to:</h3>
-            <ul class="dot">
+            <h3>TV Show</h3>
+            <p>When I'm not working, exercising or traveling, I love to relax watching some good shows!<br>Check <a
+                href="https://www.tvtime.com/en/user/65870169/profile" target="_blank">my lists</a> on TV Time</p>
+            <ul class="dot dot-show">
+              <li>2 Broke girls</li>
+              <li>Boris</li>
+              <li>CSI Las Vegas</li>
+              <li>Dexter</li>
+              <li>Fringe</li>
+              <li>Good Omen</li>
+              <li>The Handmaid's tale</li>
+              <li>Loki</li>
+              <li>The Marvelous Mrs. Maisel</li>
+              <li>Penny Dreadful</li>
+              <li>Silicon Valley</li>
+              <li>Spartacus</li>
+              <li>The Strain</li>
+              <LI>UnREAL</LI>
+              <li>Vikings</li>
+              <li>Zerocalcare Netflix</li>
+            </ul>
+          </li>
+          <li>
+            <h3>I've been to</h3>
+            <p>I love to spend my time with my reflex, I am very committed in becoming a good photographer!<br>Check
+              <a href="https://gurushots.com/hellolen/photos" target="_blank">my pictures</a> on Gurushot!</p>
+            <ul class="dot dot-world">
               <li>Australia</li>
               <li>Austria</li>
               <li>China</li>
               <li>Croatia</li>
               <li>Egypt</li>
+              <li>France</li>
               <li>Greece</li>
+              <li>Italy</li>
               <li>Japan</li>
               <li>Maldives</li>
               <li>New Zealand</li>
+              <li>Spain</li>
               <li>Sweden</li>
               <li>Thailand</li>
-              <li>USA</li>
               <li>UK</li>
+              <li>USA</li>
             </ul>
           </li>
           <li>
             <h3>My bookmarks</h3>
-            <ul>
-              <li><a href="https://gurushots.com/hellolen/photos" target="_blank">GuruShots</a>.com</li>
+            <p>Whenever a website grabs my attention, I add it to my bookmarks folder.<br>Here's some of them!</p>
+            <ul class="dot dot-url">
+              <li><a href="https://gurushots.com/hellolen/photos" target="_blank"><strong>GuruShots</strong>.com</a>
+              </li>
+              <li><a href="https://www.locationscout.net" target="_blank"><strong>LocationScout</strong>.net</a></li>
               <li><a href="http://www.getbootstrap.com" target="_blank"><strong>Bootstrap</strong>.com</a></li>
               <li><a href="http://www.dribbble.com" target="_blank"><strong>Dribbble</strong>.com</a></li>
               <li><a href="http://www.smashingmagazine.com" target="_blank"><strong>Smashingmagazine</strong>.com</a>
@@ -1357,91 +1264,34 @@
               <li><a href="http://clientsfromhell.net/" target="_blank"><strong>Clientsfromhell</strong>.net</a></li>
             </ul>
           </li>
-          <li>
-            <h3>Hire me</h3>
-            Did you like my portfolio?<br /> Want to meet me and start a collaboration?<br /> Please drop me a line to
-            schedule
-            an interview!<br />
-            <a href="mailto:alessandra.cherryweb@gmailcom" target="_self">alessandra.cherryweb@gmailcom</a>
-          </li>
         </ul>
-        <p id="credits">&copy; Copyright 2018 - Graphic &amp; coding by Alessandra Mineo | all rights reserved<br />
-          Made on a pc, using
-          Photoshop CC &amp; Visual Studio Code</p>
+        <p id="credits">&copy; Copyright 2023 - Graphic &amp; coding by Alessandra Mineo | all rights reserved<br />
+          Made on a pc, using Figma &amp; Visual Studio Code</p>
+      </div>
     </footer>
-    </section>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script type="text/javascript" src="js/jquery.hoverdir.js"></script>
-  <script src="js/easing.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="assets/js/easing.js" type="text/javascript"></script>
   <!--scrolling easing-->
 
-  <script src="js/jquery.isotope.min.js"></script>
-  <script src="js/toucheffects.js"></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N60C9LLSTZ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+  <script type="text/javascript" src="assets/js/jquery.hoverdir.js"></script>
+  <script src="node_modules/readmore-js/readmore.min.js"></script>
+  
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="assets/js/jquery_main.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/andreknieriem/simplelightbox@master/dist/simple-lightbox.min.js?v2.13.0"></script>
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-N60C9LLSTZ');
-  </script>
-  <script type="text/javascript" src="js/jquery.cookiesdirective.js"></script>
-  <script src="js/jquery-rebox.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/jquery.circliful.min.js"></script>
+  
   <script>
     $(document).ready(function () {
       $(' .grid > figure ').each(function () {
         $(this).hoverdir();
       });
-      $('.figcaption-wrap').rebox({
-        selector: 'a.popup'
-      });
 
-
-
-      var w = $('#wrapper').width();
-      console.log('width: ', w);
-
-      if (w > 1520) {
-
-        $('.myStat').circliful(
-
-          $.extend({
-            width: 40,
-            dimension: 230
-          }))
-
-
-      } else if (w < 1520 && w > 1220) {
-
-        $('.myStat').circliful(
-
-          $.extend({
-            width: 25,
-            dimension: 130
-          }))
-
-
-      } else if (w < 1219) {
-
-        $('.myStat').circliful(
-
-          $.extend({
-            width: 05,
-            dimension: 30
-          }))
-
-      }
-
+      var lightbox = new SimpleLightbox('.figcaption-wrap a', { captions:true, captionPosition:'bottom', scrollZoom:false, captionsData:'title', captionSelector:'self' });
     });
+    
   </script>
-  <script src="js/jquery_main.js"></script>
-  <div id="eantics"></div>
 </body>
 
 </html>
