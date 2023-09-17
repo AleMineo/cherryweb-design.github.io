@@ -44,7 +44,7 @@ $(document).ready(function() {
   //****************************
   // Isotope Load more button
   //****************************
-  var initShow = 3; //number of items loaded on init & onclick load more button
+  var initShow = 6; //number of items loaded on init & onclick load more button
   var counter = initShow; //counter for load more button
   var iso = $container.data('isotope'); // get Isotope instance
 
@@ -69,7 +69,7 @@ $(document).ready(function() {
   }
 
   //append load more button
-  $container.after('<button id="load-more"> Load More</button>');
+  $container.after('<a id="load-more" class="button btn btn-primary ease-scroll hover-effect load-more">Load More</a>');
 
   //when load more button clicked
   $("#load-more").click(function() {
