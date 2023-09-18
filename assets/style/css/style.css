@@ -644,6 +644,7 @@ header #header li#description .social a:hover {
   gap: 25px;
   display: flex;
   overflow-x: auto;
+  padding-bottom: 10px;
 }
 #skills ul li {
   border-radius: 12px;
@@ -864,7 +865,6 @@ header #header li#description .social a:hover {
 .element {
   width: 300px;
   height: 300px;
-  display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
@@ -1253,7 +1253,14 @@ ul.dot.dot-url li:before {
 #portfolio .hobbiesGallery,
 #hobbies .hobbiesGallery,
 #footer-container .hobbiesGallery {
-  max-height: 300px;
+  max-height: 600px;
+}
+@media (min-width: 960px) {
+  #portfolio .hobbiesGallery,
+#hobbies .hobbiesGallery,
+#footer-container .hobbiesGallery {
+    max-height: 300px;
+  }
 }
 
 @keyframes bounceIn {
