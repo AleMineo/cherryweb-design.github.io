@@ -128,13 +128,9 @@ video {
     vertical-align: baseline;
 }
 
-article,
-aside,
-details,
 figure,
 footer,
 header,
-hgroup,
 menu,
 nav,
 section {
@@ -217,24 +213,6 @@ ul {
     }
 }
 
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
 caption,
 th,
 td {
@@ -308,62 +286,6 @@ h3 {
 
 a:focus {
     outline: thin dotted;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section {
-    display: block;
-}
-
-audio,
-canvas,
-video {
-    display: inline-block;
-}
-
-audio:not([controls]) {
-    display: none;
-}
-
-del {
-    color: #333;
-}
-
-ins {
-    background: #fff9c0;
-    text-decoration: none;
-}
-
-hr {
-    background-color: #ccc;
-    border: 0;
-    height: 1px;
-    margin: 24px;
-    margin-bottom: 1.714285714rem;
-}
-
-sub,
-sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-}
-
-sup {
-    top: -0.5em;
-}
-
-sub {
-    bottom: -0.25em;
 }
 
 small {
@@ -926,10 +848,6 @@ header {
 
 /* End: Recommended Isotope styles */
 
-/**** Isotope styles ****/
-
-/* required for containers to inherit vertical size from window */
-
 #options {
     li {
         a {
@@ -953,6 +871,7 @@ header {
     position: relative;
     padding: 4px;
     float: left;
+    @extend .transition-base;
 
     &>div {
         border-radius: $border-radius_base;
@@ -1201,7 +1120,7 @@ header {
         width: 100%;
         max-width: 1200px;
         clear: both;
-        font-family: Anton, Arial, sans-serif;
+        font-family: Antonio, Arial, sans-serif;
         font-weight: 400;
         font-size: 1rem;
 
@@ -1225,7 +1144,6 @@ ul {
             background-color: transparent;
             border-top: rgba(255, 255, 255, .2) solid 1px;
             margin-top: 15px;
-            margin-bottom: 25px;
             color: $primary;
             display: block;
         }
