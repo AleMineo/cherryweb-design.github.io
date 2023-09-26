@@ -790,6 +790,7 @@ header #header li#description .social a:hover {
   position: relative;
   padding: 4px;
   float: left;
+  background: #fafafa url(../../images/layout/loader.gif) center center no-repeat;
 }
 .element > div {
   border-radius: 12px;
