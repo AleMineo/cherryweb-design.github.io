@@ -871,11 +871,10 @@ header {
     position: relative;
     padding: 4px;
     float: left;
-    background: url(../../images/layout/loader.gif) center center no-repeat;
-    background-size: 14%;
 
     &>div {
         border-radius: $border-radius_base;
+        background: #dadada url(../../images/layout/loader.gif) center center/14% no-repeat;
     }
 
     a:hover {

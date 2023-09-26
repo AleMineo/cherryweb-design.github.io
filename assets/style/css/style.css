@@ -790,11 +790,10 @@ header #header li#description .social a:hover {
   position: relative;
   padding: 4px;
   float: left;
-  background: url(../../images/layout/loader.gif) center center no-repeat;
-  background-size: 14%;
 }
 .element > div {
   border-radius: 12px;
+  background: #dadada url(../../images/layout/loader.gif) center center/14% no-repeat;
 }
 .element a:hover {
   opacity: 0.7;
