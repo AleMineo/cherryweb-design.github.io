@@ -871,7 +871,6 @@ header {
     position: relative;
     padding: 4px;
     float: left;
-    @extend .transition-base;
 
     &>div {
         border-radius: $border-radius_base;
