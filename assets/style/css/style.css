@@ -406,6 +406,7 @@ header #header li#animation {
 }
 header #header li#animation img {
   max-height: 250px;
+  width: auto;
   margin: 0 auto;
   filter: invert(1);
 }
