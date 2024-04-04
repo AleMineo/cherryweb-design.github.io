@@ -1081,6 +1081,7 @@ header {
             color: $fake-white;
             font-size: 1rem;
             line-height: 2em;
+            padding-bottom: 50px;
             @extend .transition-base;
 
             @media (min-width: 500px) {
@@ -1088,7 +1089,8 @@ header {
             }
 
             @media (min-width: 902px) {
-                flex-basis: 22%;
+                flex-basis: 22%;                
+                padding-bottom:0px;
             }
 
             p {
@@ -1123,7 +1125,6 @@ header {
         width: 100%;
         max-width: 1200px;
         clear: both;
-        font-family: Antonio, Arial, sans-serif;
         font-weight: 400;
         font-size: 1rem;
 
