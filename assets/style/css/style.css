@@ -978,6 +978,7 @@ header #header li#description .social a:hover {
   color: #fafafa;
   font-size: 1rem;
   line-height: 2em;
+  padding-bottom: 50px;
 }
 @media (min-width: 500px) {
   #footer #footer-container > li {
@@ -987,6 +988,7 @@ header #header li#description .social a:hover {
 @media (min-width: 902px) {
   #footer #footer-container > li {
     flex-basis: 22%;
+    padding-bottom: 0px;
   }
 }
 #footer #footer-container > li p {
@@ -1014,7 +1016,6 @@ header #header li#description .social a:hover {
   width: 100%;
   max-width: 1200px;
   clear: both;
-  font-family: Antonio, Arial, sans-serif;
   font-weight: 400;
   font-size: 1rem;
 }
