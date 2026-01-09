@@ -2426,7 +2426,6 @@ button:disabled,
 #header {
   transition: background-color 0.2s ease-in-out;
   background-color: rgba(61.1032787796, 45.1563066038, 129.1436933962, 0.95);
-  height: 3.5em;
   left: 0;
   line-height: 3.5em;
   padding: 0 1.25em;
@@ -2450,6 +2449,11 @@ button:disabled,
   display: block;
   width: 100%;
 }
+@media screen and (max-width: 736px) {
+  #header .logo img {
+    max-height: 50px;
+  }
+}
 #header #contact-link {
   top: 0;
   margin: 0 auto;
@@ -2461,6 +2465,7 @@ button:disabled,
   list-style: none;
   gap: 35px;
   margin: 0 auto;
+  justify-content: center;
 }
 #header #contact-link .contact-link li {
   margin: 0;
@@ -2476,10 +2481,27 @@ button:disabled,
   padding: 8px 12px;
   border-radius: 5px;
   background-color: transparent;
-  transition: transform 0.3s ease, background-color 0.3s ease; /* smooth transition */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  /* smooth transition */
 }
 #header #contact-link .contact-link li a:hover {
-  background-color: rgba(255, 255, 255, 0.15); /* slightly brighter bg */
+  background-color: rgba(255, 255, 255, 0.15);
+  /* slightly brighter bg */
+}
+@media screen and (max-width: 736px) {
+  #header #contact-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #222;
+  }
+  #header #contact-link .contact-link {
+    gap: initial;
+  }
+  #header #contact-link .contact-link li {
+    font-size: small;
+  }
 }
 #header h1 {
   transition: opacity 0.2s ease-in-out, visibility 0.2s;
@@ -2544,16 +2566,23 @@ button:disabled,
 #header.alt {
   background-color: rgba(61.1032787796, 45.1563066038, 129.1436933962, 0.45);
 }
+@media screen and (max-width: 980px) {
+  #header nav a {
+    display: flex;
+    align-items: center;
+  }
+  #header nav a:before {
+    margin-left: 0;
+  }
+  #header nav a span {
+    display: none;
+  }
+}
 @media screen and (max-width: 736px) {
   #header {
-    height: 2.75em;
+    height: 6.75em;
     line-height: 2.75em;
-  }
-  #header nav {
-    top: 0;
-    right: 0;
-    height: inherit;
-    line-height: inherit;
+    padding-top: 3em;
   }
   #header nav a {
     height: inherit;
@@ -2749,8 +2778,6 @@ body.is-menu-visible #menu .inner {
 @media screen and (max-width: 1280px) {
   #banner {
     padding: 7em 0 8.25em 0;
-    background-color: #372877;
-    background-image: linear-gradient(to top, rgba(55, 40, 119, 0.8), rgba(55, 40, 119, 0.8)), url("../../images/bg.jpg");
     background-size: auto, cover;
     background-position: center, center;
     margin-bottom: -6.5em;
@@ -3141,26 +3168,27 @@ body.is-preload #banner p {
   }
 }
 .wrapper .partners-logos {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 24px;
   list-style: none;
-  gap: 35px;
-  margin: 0;
   padding: 0;
-  flex-wrap: wrap;
+  margin: 0;
 }
 .wrapper .partners-logos li {
-  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px;
   border-radius: 8px;
   overflow: hidden;
   background-color: white;
-  max-height: 120px;
 }
 .wrapper .partners-logos li img {
+  max-width: 100%;
+  height: auto;
+  display: block;
   max-height: 100px;
-  width: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
