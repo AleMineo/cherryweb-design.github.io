@@ -302,29 +302,30 @@
 			}
 		}
 
-		.partners-logos{
-			
+		.partners-logos{				
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+			gap: 24px;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			li {
 				display: flex;
 				align-items: center;
-				justify-content: space-between;
-				list-style: none;
-				gap: 35px;
-				margin: 0;
-				padding: 0;
-				flex-wrap: wrap;
-				li{
-					margin: 0;
-					padding: 10px;
-						border-radius: 8px;
-						overflow: hidden;
-						background-color: white;
-						max-height: 120px;
-					img{
-						max-height: 100px;
-						width: auto;
-						object-fit: cover;
-					}
+				justify-content: center;
+				
+    padding: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+				img {
+				max-width: 100%;
+				height: auto;
+				display: block;
+				max-height: 100px;
+				object-fit: cover;
 				}
+			}
 			
 		}
 	}
