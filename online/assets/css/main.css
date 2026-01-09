@@ -99,6 +99,9 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after {
   animation: none !important;
   transition: none !important;
 }
+body.talents {
+  background-image: linear-gradient(to top, rgba(55, 40, 119, 0.8), rgba(55, 40, 119, 0.8)), url("../images/manu.jpg");
+}
 
 /* Type */
 body, input, select, textarea {
@@ -3169,7 +3172,7 @@ body.is-preload #banner p {
 }
 .wrapper .partners-logos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 24px;
   list-style: none;
   padding: 0;
@@ -3179,10 +3182,18 @@ body.is-preload #banner p {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  color: #372877;
   padding: 10px;
   border-radius: 8px;
   overflow: hidden;
   background-color: white;
+}
+.wrapper .partners-logos li span {
+  display: block;
+  padding-top: 10px;
+  font-size: 0.85em;
+  text-align: center;
 }
 .wrapper .partners-logos li img {
   max-width: 100%;
