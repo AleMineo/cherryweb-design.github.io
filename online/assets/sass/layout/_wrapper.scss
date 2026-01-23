@@ -24,6 +24,10 @@
 	}
 }
 
+.mb-4{
+	margin-bottom: 3rem !important
+}
+
 #wrapper {
 	>header {
 		@include padding(7.5em, 0, (3.5em, 0, _size(wrapper-edges, large) * -0.5, 0));
@@ -53,11 +57,6 @@
 	@include breakpoint('<=large') {
 		>header {
 			@include padding(5em, 0, (4em, 0, _size(wrapper-edges, large) * 0.5, 0));
-
-			background-color: _palette(bg);
-
-			background-image: linear-gradient(to top, transparentize(_palette(bg), 0.2), transparentize(_palette(bg), 0.2)),
-				url('../../images/bg.jpg');
 
 			background-size: auto,
 				cover;
@@ -89,7 +88,7 @@
 
 	@include breakpoint('<=small') {
 		>header {
-			@include padding(3.75em, 2em, (2.75em, 0, _size(wrapper-edges, small) * 0.5, 0));
+			@include padding(7.75em, 2em, (2.75em, 0, _size(wrapper-edges, small) * 0.5, 0));
 
 			background-size: auto,
 				125%;
@@ -326,19 +325,40 @@
 			overflow: hidden;
 			background-color: white;
 
-			span{
+			span {
 				display: block;
 				padding-top: 10px;
-				font-size: 0.85em;
+				font-size: 0.75em;
 				text-align: center;
 			}
 
 			img {
 				max-width: 100%;
+				width: 100%;
 				height: auto;
 				display: block;
 				max-height: 100px;
+				object-fit: contain;
+			}
+		}
+			
+		&.talents {
+			li {
+				padding: 0;
+				padding-bottom: 10px;
+			justify-content: start;
+
+				img {
+					border-radius: 0;
+					aspect-ratio: 1 / 1.1;
+					max-height: 100%;					
+				object-position: top;
 				object-fit: cover;
+				}
+
+				span{
+					margin: 0 10px;
+				}
 			}
 		}
 

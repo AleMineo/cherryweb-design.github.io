@@ -2797,7 +2797,7 @@ body.is-menu-visible #menu .inner {
 }
 @media screen and (max-width: 736px) {
   #banner {
-    padding: 5em 2em 4.25em 2em;
+    padding: 10em 2em 9.25em 2em;
     margin-bottom: -2.5em;
   }
   #banner .logo {
@@ -2833,6 +2833,10 @@ body.is-preload #banner p {
 }
 
 /* Wrapper */
+.mb-4 {
+  margin-bottom: 3rem !important;
+}
+
 #wrapper > header {
   padding: 11em 0 2.25em 0;
 }
@@ -2857,8 +2861,6 @@ body.is-preload #banner p {
 @media screen and (max-width: 1280px) {
   #wrapper > header {
     padding: 9em 0 6.25em 0;
-    background-color: #372877;
-    background-image: linear-gradient(to top, rgba(55, 40, 119, 0.8), rgba(55, 40, 119, 0.8)), url("../../images/bg.jpg");
     background-size: auto, cover;
     background-position: center, 0% 30%;
     margin-bottom: -6.5em;
@@ -2877,7 +2879,7 @@ body.is-preload #banner p {
 }
 @media screen and (max-width: 736px) {
   #wrapper > header {
-    padding: 6.5em 2em 3em 2em;
+    padding: 10.5em 2em 7em 2em;
     background-size: auto, 125%;
     margin-bottom: -2.5em;
   }
@@ -3192,16 +3194,34 @@ body.is-preload #banner p {
 .wrapper .partners-logos li span {
   display: block;
   padding-top: 10px;
-  font-size: 0.85em;
+  font-size: 0.75em;
   text-align: center;
 }
 .wrapper .partners-logos li img {
   max-width: 100%;
+  width: 100%;
   height: auto;
   display: block;
   max-height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.wrapper .partners-logos.talents li {
+  padding: 0;
+  padding-bottom: 10px;
+  justify-content: start;
+}
+.wrapper .partners-logos.talents li img {
+  border-radius: 0;
+  aspect-ratio: 1/1.1;
+  max-height: 100%;
+  -o-object-position: top;
+     object-position: top;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.wrapper .partners-logos.talents li span {
+  margin: 0 10px;
 }
 
 /* Footer */

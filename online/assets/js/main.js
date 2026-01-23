@@ -42,6 +42,13 @@
 
 		}
 
+		$window.on('scroll', function () {
+	if ($window.scrollTop() > 0)
+		$header.removeClass('alt');
+	else
+		$header.addClass('alt');
+});
+
 	// Menu.
 		var $menu = $('#menu');
 
