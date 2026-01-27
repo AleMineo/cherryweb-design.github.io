@@ -308,7 +308,7 @@
 
 	.partners-logos {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
+		grid-template-columns: repeat(auto-fill, minmax(180px, 2fr));
 		gap: 24px;
 		list-style: none;
 		padding: 0;
@@ -328,7 +328,7 @@
 			span {
 				display: block;
 				padding-top: 10px;
-				font-size: 0.75em;
+				font-size: 0.85em;
 				text-align: center;
 			}
 
@@ -343,10 +343,11 @@
 		}
 			
 		&.talents {
+			
 			li {
 				padding: 0;
 				padding-bottom: 10px;
-			justify-content: start;
+				justify-content: start;
 
 				img {
 					border-radius: 0;
@@ -358,6 +359,13 @@
 
 				span{
 					margin: 0 10px;
+					font-weight: bold;
+				}
+
+				p{
+					font-size: small;
+					margin: 0 10px;
+					text-align: center;
 				}
 			}
 		}
