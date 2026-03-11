@@ -156,6 +156,11 @@ body#portfolio-item {
 body#portfolio-item::after {
   display: none;
 }
+@media (max-width: 660px) {
+  body#portfolio-item #wrapper {
+    margin-top: 60px;
+  }
+}
 
 p {
   font-size: 16px;
@@ -577,7 +582,7 @@ header #header li#description .social a:hover {
   overflow-x: auto;
   padding-bottom: 10px;
   flex: 1 1 0;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 #skills ul li {
@@ -585,8 +590,8 @@ header #header li#description .social a:hover {
   overflow: hidden;
   position: relative;
   padding: 35px;
-  flex-basis: 276px;
-  min-width: 276px;
+  flex-basis: 350px;
+  min-width: 350px;
 }
 #skills ul li h2 {
   margin-bottom: 15px;
@@ -1463,10 +1468,12 @@ ul.dot.dot-url li:before {
 .project-navigation .older {
   text-align: right;
   padding-right: 2rem;
+  padding-left: 10px;
 }
 .project-navigation .newer {
   text-align: left;
   padding-left: 2rem;
+  padding-right: 10px;
   border-right: solid 1px #D3D3D3;
 }
 

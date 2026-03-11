@@ -166,10 +166,17 @@ body {
         z-index: -1;
     }
 
-    &#portfolio-item{
+    &#portfolio-item {
         background: $fake-white;
-        &::after{
+
+        &::after {
             display: none;
+        }
+
+        @media (max-width: 660px) {
+            #wrapper {
+                margin-top: 60px;
+            }
         }
     }
 }
@@ -623,7 +630,7 @@ header {
         overflow-x: auto;
         padding-bottom: 10px;
         flex: 1 1 0;
-        max-width: 1200px;
+        max-width: 1400px;
         margin: 0 auto;
 
         li {
@@ -631,8 +638,8 @@ header {
             overflow: hidden;
             position: relative;
             padding: 35px;
-            flex-basis: 276px;
-            min-width: 276px;
+            flex-basis: 350px;
+            min-width: 350px;
 
             h2 {
                 margin-bottom: 15px;
@@ -668,7 +675,7 @@ header {
 
                     svg {
                         width: 20px;
-                        height:20px;
+                        height: 20px;
                         fill: #EA1C8B;
                     }
                 }
@@ -723,8 +730,8 @@ header {
                         border-radius: 50px;
                         white-space: nowrap;
                         font-weight: 500;
-                            font-size: 100%;
-                            color: $primary;
+                        font-size: 100%;
+                        color: $primary;
                     }
                 }
             }
@@ -1652,11 +1659,13 @@ ul {
     .older {
         text-align: right;
         padding-right: 2rem;
+        padding-left: 10px;
     }
 
     .newer {
         text-align: left;
         padding-left: 2rem;
+        padding-right: 10px;
         border-right: solid 1px $light-grey;
     }
 }
