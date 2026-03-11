@@ -1,0 +1,12 @@
+baseURL = "http://www.cherryweb-design.com/"
+languageCode = "en-us"
+title = "Cherry Web Design"
+relativeURLs = true
+canonifyURLs = false
+[taxonomies]
+  category = ""
+  tag = ""
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  

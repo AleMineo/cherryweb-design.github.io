@@ -1,0 +1,126 @@
+{{ define "main" }}
+
+<section class="archive-page">
+    <div class="project-hero container">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+
+    </div>
+
+    <div class="archive-grid project-content container">
+
+        {{ range where .Site.RegularPages "Section" "archive" }}
+
+        <div class="archive-item">
+
+            <!-- THUMB -->
+            {{ with .Params.thumb }}
+            <div class="image-wrapper">
+                <img src="{{ . }}" alt="{{ $.Title }}">
+            </div>
+            {{ end }}
+
+            <!-- CONTENT -->
+            <div class="archive-content_wrapper">
+
+                <div class="archive-title">
+
+                    <h3>
+                        {{ .Title }}
+                    </h3>
+
+                    {{ with .Params.role }}
+                    <span>
+                        {{ . }}
+                    </span>
+                    {{ end }}
+
+                </div>
+
+                <!-- TAGS (optional) -->
+                {{ with .Params.tools }}
+                <div class="archive-tags">
+                    {{ range . }}
+                    <span>
+                        {{ . }}
+                    </span>
+                    {{ end }}
+                </div>
+                {{ end }}
+
+                {{ with .Params.description }}
+                <p>{{ . | safeHTML }}</p>
+                {{ end }}
+
+                <div class="buttons">
+                    {{ with .Params.buttons }}
+                    {{ range $index, $button := . }}
+                    {{ $buttonID := printf "%s-%d" $.File.BaseFileName $index }}
+
+                    {{/* ===== PROTOTYPE / WEBSITE ===== */}}
+                    {{ if or (eq $button.type "prototype") (eq $button.type "website") }}
+                    <a href="{{ $button.url }}" target="_blank" rel="noopener noreferrer" class="hover-effect">
+                        {{ if eq $button.type "prototype" }}
+                        <!-- Figma Icon -->
+                        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" />
+                            <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" />
+                            <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z" />
+                            <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z" />
+                            <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z" />
+                        </svg>
+                        {{ end }}
+
+                        {{ if eq $button.type "website" }}
+                        <!-- Globe Icon -->
+                        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                            <path d="M2 12h20" />
+                        </svg>
+                        {{ end }}
+
+                        {{ $button.label }}
+                    </a>
+                    {{ end }}
+
+                    {{/* ===== GALLERY ===== */}}
+                        {{ if eq $button.type "gallery" }}
+      <div class="gallery-button" data-lightbox-gallery="{{ $buttonID }}">
+        {{/* Hidden links for extra images */}}
+        {{ range $imgIndex, $img := $button.images }}
+          {{ if gt $imgIndex 0 }}
+            <a href="{{ $img }}" class="popup" style="display:none;" title="{{ $button.label }}"></a>
+          {{ end }}
+        {{ end }}
+
+        {{/* Visible first image as button */}}
+        {{ $firstImage := index $button.images 0 }}
+        <a href="{{ $firstImage }}" class="popup hover-effect" title="{{ $button.label }}">
+          <!-- Image icon -->
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect width="16" height="16" x="6" y="2" rx="2" />
+            <circle cx="12" cy="8" r="2" />
+            <path d="m22 13-1.296-1.296a2.41 2.41 0 0 0-3.408 0L11 18" />
+            <path d="M18 22H4a2 2 0 0 1-2-2V6" />
+          </svg>
+          {{ $button.label }}
+        </a>
+      </div>
+    {{ end }}
+
+                    {{ end }}
+                    {{ end }}
+                </div>
+
+            </div>
+
+        </div>
+
+
+        {{ end }}
+
+    </div>
+</section>
+
+{{ end }}

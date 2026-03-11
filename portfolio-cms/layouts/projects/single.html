@@ -1,0 +1,135 @@
+{{ define "main" }}
+
+<div class="project-hero-image">
+  {{ with .Params.cover }}
+  <img src="{{ . }}" alt="{{ $.Title }}">
+  {{ end }}
+</div>
+
+<div class="project-hero container">
+  <h1><small>{{ .Params.category }}</small>{{ .Title }}</h1>
+  {{ with .Params.overview }}
+  <h3>{{ . | safeHTML }}</h3>
+  {{ end }}
+
+  <div class="buttons">
+
+    <!-- WEBSITE BUTTON -->
+    {{ with .Params.website }}
+      {{ if $.Params.website_active }}
+        <a href="{{ . }}" target="_blank" rel="noopener" class="button btn btn-primary hover-effect">
+          Visit Website
+        </a>
+      {{ else }}
+        <a class="button btn btn-primary hover-effect no-more">
+          Website Offline
+        </a>
+      {{ end }}
+    {{ end }}
+
+<!-- FIGMA PROTOTYPES -->
+{{ $figma := .Params.figma }}
+
+{{ if $figma }}
+  {{ $figmaArray := slice }}
+
+  {{/* If $figma is a string, wrap it */}}
+  {{ if eq (printf "%T" $figma) "string" }}
+    {{ $figmaArray = slice (dict "url" $figma "label" "View Figma Prototype") }}
+  {{ else }}
+    {{ $figmaArray = $figma }}
+  {{ end }}
+
+  {{ range $figmaArray }}
+    {{ if .url }}
+      <a href="{{ .url }}" target="_blank" rel="noopener" class="button btn btn-primary hover-effect">
+        {{ .label }}
+      </a>
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+    <!-- MULTIPLE GALLERIES -->
+{{ with .Params.galleries }}
+  {{ range $galleryIndex, $gallery := . }}
+    {{ $groupID := printf "gallery-%d" $galleryIndex }}
+    <div class="gallery-button" data-lightbox-gallery="{{ $groupID }}">
+      {{ range $imgIndex, $img := $gallery.images }}
+        {{ if gt $imgIndex 0 }}
+          <a href="{{ $img }}" style="display:none;"></a>
+        {{ end }}
+      {{ end }}
+      {{ with index $gallery.images 0 }}
+        <a href="{{ . }}" class="popup button btn btn-primary hover-effect">
+          {{ $gallery.title }}
+        </a>
+      {{ end }}
+    </div>
+  {{ end }}
+{{ end }}
+
+  </div>
+
+  <div class="info">
+    {{ with .Params.role }}
+    <div>
+      <h4>Role</h4>
+      <p>{{ . }}</p>
+    </div>
+    {{ end }}
+
+    {{ with .Params.client }}
+    <div>
+      <h4>Client</h4>
+      <p>{{ . }}</p>
+    </div>
+    {{ end }}
+
+    {{ with .Params.tools }}
+    <div>
+      <h4>Tools</h4>
+      <p class="tools">
+        {{ range . }}
+        <span class="tool">{{ . }}</span>
+        {{ end }}
+      </p>
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+<div class="project-content container">
+  {{ .Content }}
+    <div class="buttons">
+      <a href="/index.html#contacts" class="button btn btn-primary hover-effect">Interested? Let's talk<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right w-4 h-4"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+    </div>
+</div>
+
+
+<div class="project-navigation">
+  <div class="navigation">
+
+    {{ with .Next }}
+    <a href="{{ .RelPermalink }}" class="newer">
+      &larr; NEWER WORK <br><strong>{{ .Title }}</strong>
+    </a>
+    {{ else }}
+    <a class="newer disabled">
+      &larr; NO NEWER WORK
+    </a>
+    {{ end }}
+
+    {{ with .Prev }}
+    <a href="{{ .RelPermalink }}" class="older">
+      OLDER WORK &rarr; <br><strong>{{ .Title }}</strong>
+    </a>
+    {{ else }}
+    <a class="older disabled">
+      NO OLDER WORK &rarr;
+    </a>
+    {{ end }}
+
+  </div>
+</div>
+
+{{ end }}
