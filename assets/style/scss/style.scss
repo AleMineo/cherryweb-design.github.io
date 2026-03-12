@@ -169,8 +169,13 @@ body {
     &#portfolio-item {
         background: $fake-white;
 
-        #wrapper section{
-                padding: 5rem 0 2rem;
+        #wrapper section {
+
+            padding: 5rem 0 2rem;
+
+            @media (min-width: 600px) {
+                padding: 2rem 0 2rem;
+            }
         }
 
         &::after {
