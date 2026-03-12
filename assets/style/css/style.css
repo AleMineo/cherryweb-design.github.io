@@ -153,6 +153,9 @@ body::after {
 body#portfolio-item {
   background: #fafafa;
 }
+body#portfolio-item #wrapper section {
+  padding: 5rem 0 2rem;
+}
 body#portfolio-item::after {
   display: none;
 }
