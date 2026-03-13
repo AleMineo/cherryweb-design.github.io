@@ -7,7 +7,7 @@ category: "UX/UI design - HTML/SCSS - Logo design"
 role: "UX/UI Designer"
 year: "2024"
 tools: ["Photoshop", "InVision", "HTML", "CSS", "VS Code"]
-cover: "/assets/images/portfolio/libes-cover.png"
+cover: "/assets/images/portfolio/libes-cover.webp"
 overview: "Libes is a platform born from the idea of sharing geographic and cultural knowledge as an alternative to traditional social networks.  Its goal was to engage travelers and explorers, offering insights into both iconic destinations and hidden gems, powered by a responsible and active community."
 website_active: false
 website: "https://www.libes.com/"
@@ -24,66 +24,38 @@ galleries:
 ---
 
 <div class="description">
-<h4>01 — Project Vision & Strategy</h4>
-
-The vision for Libes was to create a social platform that inspires discovery while fostering user-generated content and community participation.<br>
-The strategic focus was to offer a space where users could share travel experiences, enrich the knowledge base, and explore new destinations in an engaging and responsible way.
-
-Key objectives included:
-
-<ul>
-<li>Enable ambassadors to create thematic pages for points of interest (POIs)</li>
-<li>Visualize POIs globally through an interactive homepage map</li>
-<li>Encourage responsible community contributions to highlight authentic travel insights</li>
-</ul>
+<div class="description">
+  <h4>01 - Product Vision & Strategy</h4>
+  <p>Libes is a travel social platform built around user-generated content and community discovery - enabling ambassadors to create POI pages, explore destinations on an interactive global map, and share authentic travel insights.</p>
 </div>
 
 <div class="description">
-<h4>02 — UX Research & Concept Development</h4>
-
-I conducted wireframing and concept design to define user flows for content creation, map interaction, and social engagement.<br>
-Early research focused on understanding what motivates travelers to share and explore, identifying the features most likely to drive community participation.
-
-Focus areas included:
-
-<ul>
-<li>Designing intuitive ways for users to add POIs and thematic pages</li>
-<li>Mapping user journeys for content exploration and discovery</li>
-<li>Creating a social experience that balances contribution with moderation and quality control</li>
-</ul>
+  <h4>02 - UX Research & Concept Development</h4>
+  <p>Wireframed user flows for content creation, map interaction, and social engagement - focusing on what motivates travelers to share, and how to balance open contribution with quality control.</p>
 </div>
 
 <div class="description">
-<h4>03 — Design Process & Prototyping</h4>
-
-I created high-fidelity mockups and interactive prototypes to validate the platform’s core features, from homepage maps to individual travel galleries.<br>
-The platform evolved to include personal spaces where users could:
-
-<ul>
-<li>Upload and geolocate their photos on a global map</li>
-<li>Create travel blogs, itineraries, and recommendations</li>
-<li>Engage with the community while maintaining a curated personal collection</li>
-</ul>
+  <h4>03 - Design Process & Prototyping</h4>
+  <p>Built high-fidelity mockups and interactive prototypes for core platform features, including personal spaces where users could:</p>
+  <ul>
+    <li>Upload and geolocate photos on a global map</li>
+    <li>Create travel blogs, itineraries, and recommendations</li>
+    <li>Engage with the community while maintaining a curated personal collection</li>
+  </ul>
 </div>
 
 <div class="description">
-<h4>04 — Monetization & Future Features</h4>
-
-The monetization strategy was envisioned around integrating travel services such as Booking.com and Skyscanner, as well as commercial pages for agencies, accommodations, and cruise operators.<br>
-These features aimed to create a sustainable ecosystem for both users and partners while maintaining the platform’s focus on discovery and authentic experiences.
+  <h4>04 - Monetization & Future Features</h4>
+  <p>Designed around a monetization strategy integrating travel services (Booking.com, Skyscanner) and commercial pages for agencies, accommodations, and cruise operators - building a sustainable ecosystem without compromising the discovery experience.</p>
 </div>
 
 <div class="description">
-<h4>05 — My Role</h4>
-
-I was responsible for:
-
-<ul>
-<li>Wireframing and defining user flows for content creation and map interactions</li>
-<li>Designing high-fidelity mockups and interactive prototypes</li>
-<li>Validating core functionalities and user experience before development</li>
-<li>Collaborating with developers to ensure accurate implementation of features</li>
-</ul>
-
-My work helped shape Libes into a platform that balances exploration, community contribution, and usability, offering an alternative social experience centered on travel and discovery.
+  <h4>05 - My Role</h4>
+  <p>Led UX/UI design end-to-end, including:</p>
+  <ul>
+    <li>Wireframing user flows for content creation and map interactions</li>
+    <li>High-fidelity mockups and interactive prototyping</li>
+    <li>Feature validation before development handoff</li>
+    <li>Developer collaboration for accurate implementation</li>
+  </ul>
 </div>

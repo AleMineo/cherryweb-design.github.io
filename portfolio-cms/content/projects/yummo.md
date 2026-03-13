@@ -7,7 +7,7 @@ category: "UX/UI design - HTML/SCSS"
 role: "UX/UI Designer"
 year: "2024"
 tools: ["Photoshop", "InVision", ]
-cover: "/assets/images/portfolio/yummo-cover.png"
+cover: "/assets/images/portfolio/yummo-cover.webp"
 overview: "Yummo is a concept platform designed to go beyond traditional food delivery by inspiring users with personalized restaurant recommendations based on cravings and location. The goal was to create a food discovery experience that combines delivery with local dining inspiration."
 
 featured: true
@@ -19,61 +19,21 @@ figma:
 ---
 
 <div class="description">
-<h4>01 — Project Vision & Strategy</h4>
-
-The vision for Yummo was to redefine the food delivery experience by making it more than just ordering—it would guide users toward discovering new restaurants and dishes tailored to their preferences.<br>
-The strategic focus was to combine personalization, location-based suggestions, and user convenience into a seamless experience.
-
-Key objectives included:
-
-<ul>
-<li>Provide personalized restaurant suggestions based on cravings or location</li>
-<li>Blend delivery options with local dining inspiration</li>
-<li>Create a user-friendly interface that engages and guides decision-making</li>
-</ul>
+  <h4>01 - Product Vision & Strategy</h4>
+  <p>Yummo reimagines food delivery as a discovery experience - combining personalized recommendations, location-based suggestions, and delivery options to guide users toward restaurants and dishes that match their tastes.</p>
 </div>
 
 <div class="description">
-<h4>02 — UX Research & Concept Development</h4>
-
-I worked on early-stage wireframing and concept design to define the core flows, including search, recommendations, and notifications.<br>
-Research focused on understanding user behaviors and motivations when deciding where and what to eat.
-
-Focus areas included:
-
-<ul>
-<li>Mapping user journeys from search to discovery</li>
-<li>Designing location-aware recommendations</li>
-<li>Exploring notification strategies for nearby offers and restaurants</li>
-</ul>
+  <h4>02 - UX Research & Concept Development</h4>
+  <p>Defined core flows through early-stage wireframing - search, recommendations, and notifications - grounded in research on how users decide where and what to eat, and how location-aware prompts can support that decision.</p>
 </div>
 
 <div class="description">
-<h4>03 — Design Process & Prototyping</h4>
-
-I developed a basic interactive prototype to validate the concept and demonstrate potential user flows.<br>
-The prototype illustrated how the platform could guide users toward options that match their tastes and location.
-
-The prototype included:
-
-<ul>
-<li>Search and recommendation screens</li>
-<li>Location-based suggestions and alerts</li>
-<li>Basic navigation and interaction flows</li>
-</ul>
+  <h4>03 - Design Process & Prototyping</h4>
+  <p>Built a basic interactive prototype to validate the concept, covering search and recommendation screens, location-based suggestions, and core navigation flows.</p>
 </div>
 
 <div class="description">
-<h4>04 — My Role</h4>
-
-I was responsible for:
-
-<ul>
-<li>Wireframing the initial concept and defining core flows</li>
-<li>Creating mockups and a basic interactive prototype</li>
-<li>Validating the concept before potential development</li>
-<li>Exploring UX strategies for personalization and location-based engagement</li>
-</ul>
-
-My work helped shape Yummo as a concept that combines food delivery with inspiration, setting the foundation for further development into a full platform.
+  <h4>04 - My Role</h4>
+  <p>Led concept design end-to-end - wireframing core flows, creating mockups, and building an interactive prototype to validate the idea before potential development.</p>
 </div>

@@ -7,7 +7,7 @@ category: "Logo design"
 role: "Graphic Designer"
 year: "2024"
 tools: ["Illustrator"]
-cover: "/assets/images/portfolio/wall-of-fame-cover.png"
+cover: "/assets/images/portfolio/wall-of-fame-cover.webp"
 overview: "Wall of Fame Memorabilia was conceived as an e-commerce platform dedicated to authenticated autographed collectibles and original celebrity items.  Although the platform was never launched, the logo design remains a strong conceptual branding exercise focused on cinematic and celebrity culture."
 website_active: false
 website: ""
@@ -20,38 +20,21 @@ galleries:
 ---
 
 <div class="description">
-<h4>01 — Brand Concept & Inspiration</h4>
-
-The visual identity draws direct inspiration from American cinema culture and celebrity symbolism.<br>
-The “Wall of Fame” lettering intentionally echoes the iconic Hollywood sign aesthetic, immediately evoking the world of movies, stars, and entertainment heritage.
-
-The goal was to create an instant association with:
-
-<ul>
-<li>American pop culture</li>
-<li>Cinema and celebrity mythology</li>
-<li>Prestige and collectability</li>
-</ul>
+  <h4>01 - Brand Concept & Inspiration</h4>
+  <p>The identity draws directly from American cinema culture - the "Wall of Fame" lettering echoes the Hollywood sign aesthetic to evoke instant associations with celebrity mythology, prestige, and collectability.</p>
 </div>
 
 <div class="description">
-<h4>02 — Typography & Symbolism</h4>
-
-The logo combines two distinct typographic languages:
-
-<ul>
-<li><strong>“Wall of Fame”</strong> uses a bold cinematic style reminiscent of the famous Hollywood lettering, reinforcing the connection to the entertainment industry</li>
-<li><strong>“Memorabilia”</strong> is rendered in a handwritten script to symbolize autographs and personal signatures</li>
-</ul>
-
-The contrast between monumental typography and personal handwriting visually represents the core concept of the brand: iconic celebrities and their authentic signed objects.
+  <h4>02 - Typography & Symbolism</h4>
+  <p>The logo contrasts two deliberate typographic voices:</p>
+  <ul>
+    <li><strong>"Wall of Fame"</strong> - bold cinematic lettering referencing Hollywood, reinforcing the entertainment industry connection</li>
+    <li><strong>"Memorabilia"</strong> - handwritten script evoking autographs and personal signatures</li>
+  </ul>
+  <p>Together they represent the brand's core concept: iconic celebrities and their authenticated signed objects.</p>
 </div>
 
 <div class="description">
-<h4>03 — Design Approach</h4>
-
-The focus was on creating a recognizable and emotionally evocative mark that could work effectively across digital platforms, packaging, and promotional materials.<br>
-Balance, spacing, and typographic contrast were carefully refined to maintain clarity while preserving the cinematic atmosphere.
-
-Although the e-commerce platform was not ultimately developed, the logo stands as a strong example of concept-driven brand identity design.
+  <h4>03 - Design Approach</h4>
+  <p>Refined balance, spacing, and typographic contrast to create a mark that works across digital, packaging, and print - cinematic in atmosphere, clear at any scale. The e-commerce platform was not ultimately built, but the logo stands as a strong concept-driven identity exercise.</p>
 </div>

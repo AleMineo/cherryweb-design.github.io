@@ -7,8 +7,8 @@ category: "UX/UI design - HTML/SCSS - GIT"
 role: "UX/UI Designer, Graphic Designer"
 year: "2024"
 tools: ["Photoshop", "InVision", "GIT", "HTML/CSS", "VS Code"]
-cover: "/assets/images/portfolio/voverc-cover.png"
-overview: "Voverc — later acquired and rebranded as Voxloud — was a cloud-based telephony platform offering virtual PBX solutions for businesses. The project involved the design of the corporate website and the UI design and front-end development of the cloud phone system administration panel."
+cover: "/assets/images/portfolio/voverc-cover.webp"
+overview: "Voverc - later acquired and rebranded as Voxloud - was a cloud-based telephony platform offering virtual PBX solutions for businesses. The project involved the design of the corporate website and the UI design and front-end development of the cloud phone system administration panel."
 website_active: false
 website: "https://www.voverc.it/"
 
@@ -28,62 +28,27 @@ figma:
 ---
 
 <div class="description">
-<h4>01 — Project Vision & Strategy</h4>
-
-The objective was to position Voverc as a modern, reliable cloud telephony provider while ensuring that its digital ecosystem reflected simplicity and technological efficiency.<br>
-Particular attention was given to translating complex telecommunication functionalities into an accessible and intuitive user experience.
-
-Key goals included:
-
-<ul>
-<li>Design a clear and conversion-oriented corporate website</li>
-<li>Create an intuitive administration panel for managing cloud PBX features</li>
-<li>Ensure visual and functional consistency across marketing and product interfaces</li>
-</ul>
+  <h4>01 - Project Vision & Strategy</h4>
+  <p>Designed Voverc's digital ecosystem - a corporate website and a cloud PBX admin panel - translating complex telephony functionality into a clear, accessible experience consistent across marketing and product.</p>
 </div>
 
 <div class="description">
-<h4>02 — UX & Interface Design</h4>
-
-I designed the information architecture and UI components for both the website and the cloud PBX administration panel.<br>
-The admin interface required a strong focus on usability, given the technical nature of telephony configuration, call routing, user management, and system settings.
-
-Focus areas included:
-
-<ul>
-<li>Simplifying complex configuration flows</li>
-<li>Designing structured dashboards and control panels</li>
-<li>Creating reusable UI components for scalability</li>
-</ul>
+  <h4>02 - UX & Interface Design</h4>
+  <p>Defined information architecture and UI components for both products - with particular focus on simplifying technical configuration flows (call routing, user management, system settings) into structured, usable dashboards.</p>
 </div>
 
 <div class="description">
-<h4>03 — Design & Front-End Development</h4>
-
-Alongside React developers, I contributed to the HTML/CSS implementation of the cloud PBX administration panel, ensuring that the design system was correctly translated into functional UI components.<br>
-The corporate website was designed to communicate innovation and clarity, reinforcing the company’s technological positioning.
-
-Key outcomes included:
-
-<ul>
-<li>Corporate website UI design</li>
-<li>Admin panel UI design for cloud telephony management</li>
-<li>HTML/CSS front-end development in collaboration with React developers</li>
-<li>Responsive layouts and interface optimization</li>
-</ul>
+  <h4>03 - Design & Front-End Development</h4>
+  <p>Designed the corporate website UI and the admin panel, then contributed to HTML/CSS implementation alongside the React development team to ensure the design system translated accurately into functional components.</p>
 </div>
 
 <div class="description">
-<h4>04 — My Role</h4>
-
-I was responsible for:
-
-<ul>
-<li>Corporate website design</li>
-<li>UX and UI design of the cloud PBX administration panel</li>
-<li>HTML/CSS development in collaboration with the React development team</li>
-<li>Ensuring visual consistency between marketing and product environments</li>
-</ul>
-
-My contribution helped translate a technically complex telephony product into a structured, intuitive, and visually coherent digital experience.
+  <h4>04 - My Role</h4>
+  <p>Owned design and front-end contribution across both products, including:</p>
+  <ul>
+    <li>Corporate website UI design</li>
+    <li>Cloud PBX admin panel UX/UI design</li>
+    <li>HTML/CSS development in collaboration with React developers</li>
+    <li>Visual consistency across marketing and product environments</li>
+  </ul>
 </div>
