@@ -1387,8 +1387,8 @@ ul.dot.dot-url li:before {
   padding-bottom: 0.125rem;
   padding-left: 0.625rem;
   padding-right: 0.625rem;
-  background: #ffffff;
-  color: #B04DBA;
+  background-color: #FBECFC;
+  color: #EA1C8B;
   border-radius: 50px;
   display: inline-flex;
   align-items: center;
