@@ -1541,7 +1541,7 @@ ul.dot.dot-url li:before {
   align-items: center;
   justify-content: space-between;
 }
-@media (min-width: 600px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .archive-item .archive-content_wrapper .archive-title {
     flex-direction: column-reverse;
     align-items: flex-start;
