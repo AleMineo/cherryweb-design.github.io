@@ -1,10 +1,10 @@
 {{ define "main" }}
 
-<div class="project-hero-image">
+<section class="project-hero-image">
   {{ with .Params.cover }}
   <img src="{{ . }}" alt="{{ $.Title }}">
   {{ end }}
-</div>
+</section>
 
 <div class="project-hero container">
   <h1><small>{{ .Params.category }}</small>{{ .Title }}</h1>

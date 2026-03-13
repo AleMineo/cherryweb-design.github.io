@@ -7,8 +7,8 @@ category: "UX/UI design - HTML/SCSS"
 role: "UX/UI Designer"
 year: "2024"
 tools: ["Photoshop", "InVision", "HTML", "CSS", "VS Code", "GIT"]
-cover: "/assets/images/portfolio/fuix-cover.png"
-overview: "FUIX is a high-end e-commerce platform for luxury brands, designed to combine elegance with usability.   The goal was to create a seamless shopping experience, ensuring that every step—from browsing to checkout—is intuitive, visually compelling, and consistent with the brand’s premium identity."
+cover: "/assets/images/portfolio/fuix-cover.webp"
+overview: "FUIX is a high-end e-commerce platform for luxury brands, designed to combine elegance with usability.   The goal was to create a seamless shopping experience, ensuring that every step-from browsing to checkout-is intuitive, visually compelling, and consistent with the brand’s premium identity."
 website_active: true
 website: "https://www.fuix.com/"
 featured: true
@@ -21,61 +21,27 @@ figma:
 ---
 
 <div class="description">
-<h4>01 — Project Vision & Strategy</h4>
-
-FUIX is a high-end e-commerce platform designed to showcase luxury brands while providing an intuitive and seamless shopping experience.<br>
-The project aimed to combine elegance, brand identity, and functional clarity to ensure that users could navigate and purchase products effortlessly.
-
-The strategic objectives were:
-
-<ul>
-<li>Create a visually luxurious yet user-friendly experience</li>
-<li>Ensure smooth and intuitive user journeys across all purchase stages</li>
-<li>Collaborate closely with the development team to align design and implementation</li>
-</ul>
+  <h4>01 - Project Vision & Strategy</h4>
+  <p>FUIX is a high-end e-commerce platform for luxury brands - the design goal was pairing visual elegance with frictionless shopping flows, from product discovery through to checkout.</p>
 </div>
 
 <div class="description">
-<h4>02 — UX Research & Concept Development</h4>
-
-I started by defining wireframes for all key flows, from browsing products to checkout.<br>
-The wireframes served as the foundation for mockups, which were then assembled in InVision to create an interactive prototype.
-
-Focus areas included:
-
-<ul>
-<li>Mapping user journeys for browsing, product discovery, and checkout</li>
-<li>Defining clear hierarchies and navigation paths</li>
-<li>Ensuring all interactions were predictable and intuitive</li>
-</ul>
+  <h4>02 - UX Research & Concept Development</h4>
+  <p>Defined wireframes for all key flows - browsing, product discovery, and checkout - establishing clear hierarchies and navigation paths before moving into high-fidelity mockups.</p>
 </div>
 
 <div class="description">
-<h4>03 — Design Process & Prototyping</h4>
-
-High-fidelity mockups were refined and translated into an interactive prototype in InVision.<br>
-Each step of the shopping experience, from homepage to purchase confirmation, was rendered and tested before passing to the development team.
-
-The prototype ensured:
-
-<ul>
-<li>All stages of purchase were fully visualized and validated</li>
-<li>Designs were consistent with the luxury branding</li>
-<li>Responsive layout considerations for mobile, tablet, and desktop</li>
-</ul>
+  <h4>03 - Design Process & Prototyping</h4>
+  <p>Built a full interactive prototype in InVision covering every purchase stage, validated for consistency with the luxury brand identity and responsive across mobile, tablet, and desktop.</p>
 </div>
 
 <div class="description">
-<h4>04 — My Role</h4>
-
-I was responsible for:
-
-<ul>
-<li>Wireframing all key user flows and interactions</li>
-<li>Creating high-fidelity mockups and interactive prototypes in InVision</li>
-<li>Refining CSS to support design consistency across devices</li>
-<li>Collaborating with the development team to ensure correct implementation</li>
-</ul>
-
-My contribution ensured that FUIX delivered a seamless, high-end e-commerce experience while bridging the gap between design and development.
+  <h4>04 - My Role</h4>
+  <p>Owned design end-to-end, including:</p>
+  <ul>
+    <li>Wireframing all key user flows and interactions</li>
+    <li>High-fidelity mockups and interactive prototyping in InVision</li>
+    <li>CSS refinement for cross-device design consistency</li>
+    <li>Developer collaboration to ensure accurate implementation</li>
+  </ul>
 </div>
