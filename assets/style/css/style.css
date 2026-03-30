@@ -1409,7 +1409,7 @@ ul.dot.dot-url li:before {
   margin-top: 35px;
   flex-direction: column;
 }
-@media (min-width: 992px) {
+@media (min-width: 600px) {
   .buttons {
     flex-direction: row;
     align-items: center;
