@@ -231,7 +231,7 @@ h6 {
 
 h1 {
   font-family: Anton, Arial, sans serif;
-  font-size: 2.65rem;
+  font-size: 2rem;
   color: #444;
   text-align: center;
   margin-bottom: 15px;
@@ -245,7 +245,7 @@ h1 span {
   color: #EA1C8B;
 }
 h1 + h3 {
-  line-height: 36px !important;
+  line-height: 30px !important;
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
@@ -256,6 +256,7 @@ h1 + h3 {
 @media (min-width: 992px) {
   h1 + h3 {
     padding: 0 15px;
+    line-height: 36px !important;
   }
 }
 
@@ -273,12 +274,17 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: normal;
   font-family: "League Spartan", sans-serif;
   padding: 0 0 20px 0;
   margin: 0;
   font-weight: 300;
+}
+@media (min-width: 992px) {
+  h3 {
+    font-size: 1.45rem;
+  }
 }
 
 a:focus {
@@ -1398,10 +1404,17 @@ ul.dot.dot-url li:before {
 .buttons {
   height: auto;
   display: flex;
-  align-items: center;
   justify-content: start;
-  gap: 25px;
+  gap: 15px;
   margin-top: 35px;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  .buttons {
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+  }
 }
 .buttons .btn {
   /* display: inline-block; */
@@ -1417,6 +1430,7 @@ ul.dot.dot-url li:before {
   margin: 0;
   margin-bottom: 10px;
   font-weight: 300;
+  font-size: 1.25rem;
 }
 .project-content .description p {
   margin-bottom: 15px;
