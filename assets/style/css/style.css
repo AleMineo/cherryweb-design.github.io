@@ -145,7 +145,7 @@ body#portfolio-item {
 body#portfolio-item #wrapper section {
   padding: 5rem 0 2rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   body#portfolio-item #wrapper section {
     padding: 2rem 0 2rem;
   }
@@ -1434,7 +1434,7 @@ ul.dot.dot-url li:before {
 }
 .project-navigation .navigation {
   max-width: 1200px;
-  width: 96%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin: 0 auto;
@@ -1464,37 +1464,41 @@ ul.dot.dot-url li:before {
 }
 .project-navigation .older {
   text-align: right;
-  padding-right: 2rem;
   padding-left: 10px;
 }
 .project-navigation .newer {
   text-align: left;
-  padding-left: 2rem;
   padding-right: 10px;
   border-right: solid 1px #D3D3D3;
 }
 
 .back-to-previous {
-  width: 100%;
-  backdrop-filter: blur(24px);
-  position: fixed;
-  z-index: 999;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: solid 1px #D3D3D3;
+  display: none;
 }
-.back-to-previous .back-link {
-  font-size: 1rem;
-  color: #444;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: none;
-}
-.back-to-previous .back-link svg {
-  width: 16px;
+@media (min-width: 661px) {
+  .back-to-previous {
+    display: block;
+    width: 100%;
+    backdrop-filter: blur(24px);
+    position: fixed;
+    z-index: 999;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: solid 1px #D3D3D3;
+  }
+  .back-to-previous .back-link {
+    font-size: 1rem;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+  }
+  .back-to-previous .back-link svg {
+    width: 16px;
+  }
 }
 
 .archive-item:first-of-type {
