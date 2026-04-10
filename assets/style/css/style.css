@@ -1434,7 +1434,7 @@ ul.dot.dot-url li:before {
 }
 .project-navigation .navigation {
   max-width: 1200px;
-  width: 96%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin: 0 auto;
@@ -1464,12 +1464,10 @@ ul.dot.dot-url li:before {
 }
 .project-navigation .older {
   text-align: right;
-  padding-right: 2rem;
   padding-left: 10px;
 }
 .project-navigation .newer {
   text-align: left;
-  padding-left: 2rem;
   padding-right: 10px;
   border-right: solid 1px #D3D3D3;
 }
