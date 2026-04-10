@@ -145,7 +145,7 @@ body#portfolio-item {
 body#portfolio-item #wrapper section {
   padding: 5rem 0 2rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   body#portfolio-item #wrapper section {
     padding: 2rem 0 2rem;
   }
@@ -1474,8 +1474,12 @@ ul.dot.dot-url li:before {
   border-right: solid 1px #D3D3D3;
 }
 
+.back-to-previous {
+  display: none;
+}
 @media (min-width: 661px) {
   .back-to-previous {
+    display: block;
     width: 100%;
     backdrop-filter: blur(24px);
     position: fixed;
