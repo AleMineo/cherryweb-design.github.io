@@ -1238,17 +1238,6 @@ ul.dot.dot-url li:before {
   cursor: pointer;
 }
 
-.button-63:active,
-.button-63:hover {
-  outline: 0;
-}
-
-@media (min-width: 768px) {
-  .button-63 {
-    font-size: 24px;
-    min-width: 196px;
-  }
-}
 .glow-on-hover {
   transition: all ease-in-out 0.1s;
   border: none;
@@ -1397,17 +1386,19 @@ ul.dot.dot-url li:before {
   gap: 15px;
   margin-top: 35px;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 @media (min-width: 600px) {
   .buttons {
     flex-direction: row;
     align-items: center;
-    gap: 25px;
+    gap: 15px;
   }
 }
 .buttons .btn {
   /* display: inline-block; */
   width: auto;
+  white-space: nowrap;
 }
 
 .project-content .description {
