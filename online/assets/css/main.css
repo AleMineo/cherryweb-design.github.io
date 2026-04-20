@@ -102,6 +102,9 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 body.talents {
   background-image: linear-gradient(to top, rgba(55, 40, 119, 0.8), rgba(55, 40, 119, 0.8)), url("../images/manu.jpg");
 }
+body.services {
+  background-image: linear-gradient(to top, rgba(55, 40, 119, 0.8), rgba(55, 40, 119, 0.8)), url("../images/connor-gan-bAvxyfH-WuY-unsplash.jpg");
+}
 
 /* Type */
 html {
@@ -128,14 +131,6 @@ a:hover {
 }
 a.special:not(.button) {
   text-decoration: none;
-  border-bottom: 0;
-  display: block;
-  font-family: Raleway, Helvetica, sans-serif;
-  font-size: 0.8em;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  margin: 0 0 2em 0;
-  text-transform: uppercase;
 }
 a.special:not(.button):before {
   -moz-osx-font-smoothing: grayscale;
@@ -148,6 +143,16 @@ a.special:not(.button):before {
   text-transform: none !important;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+}
+a.special:not(.button) {
+  border-bottom: 0;
+  display: block;
+  font-family: Raleway, Helvetica, sans-serif;
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin: 0 0 2em 0;
+  text-transform: uppercase;
 }
 a.special:not(.button):before {
   transition: background-color 0.2s ease-in-out;
@@ -1743,17 +1748,6 @@ input[type=radio] {
 input[type=checkbox] + label,
 input[type=radio] + label {
   text-decoration: none;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 1em;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  text-transform: none;
-  letter-spacing: 0;
-  font-weight: 300;
-  padding-left: 2.4em;
-  padding-right: 0.75em;
-  position: relative;
 }
 input[type=checkbox] + label:before,
 input[type=radio] + label:before {
@@ -1767,6 +1761,20 @@ input[type=radio] + label:before {
   text-transform: none !important;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+}
+input[type=checkbox] + label,
+input[type=radio] + label {
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 300;
+  padding-left: 2.4em;
+  padding-right: 0.75em;
+  position: relative;
 }
 input[type=checkbox] + label:before,
 input[type=radio] + label:before {
@@ -1845,8 +1853,6 @@ input[type=radio] + label:before {
 /* Icon */
 .icon {
   text-decoration: none;
-  border-bottom: none;
-  position: relative;
 }
 .icon:before {
   -moz-osx-font-smoothing: grayscale;
@@ -1859,6 +1865,10 @@ input[type=radio] + label:before {
   text-transform: none !important;
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
+}
+.icon {
+  border-bottom: none;
+  position: relative;
 }
 .icon > .label {
   display: none;
@@ -2075,9 +2085,6 @@ ul.contact {
 }
 ul.contact li {
   text-decoration: none;
-  margin: 2.5em 0 0 0;
-  padding: 0 0 0 3.25em;
-  position: relative;
 }
 ul.contact li:before {
   -moz-osx-font-smoothing: grayscale;
@@ -2090,6 +2097,11 @@ ul.contact li:before {
   text-transform: none !important;
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
+}
+ul.contact li {
+  margin: 2.5em 0 0 0;
+  padding: 0 0 0 3.25em;
+  position: relative;
 }
 ul.contact li:before {
   border-radius: 100%;
@@ -2518,10 +2530,6 @@ button:disabled,
 }
 #header nav a[href="#menu"] {
   text-decoration: none;
-  transition: background-color 0.2s ease-in-out;
-  border-radius: 5px;
-  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
-  padding: 0 1.35em;
 }
 #header nav a[href="#menu"]:before {
   -moz-osx-font-smoothing: grayscale;
@@ -2534,6 +2542,12 @@ button:disabled,
   text-transform: none !important;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+}
+#header nav a[href="#menu"] {
+  transition: background-color 0.2s ease-in-out;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
+  padding: 0 1.35em;
 }
 #header nav a[href="#menu"]:before {
   content: "\f0c9";
@@ -2973,9 +2987,6 @@ body.is-preload #banner p {
 .wrapper.style6:after {
   box-shadow: inset 0 -1px 0 0 rgb(86.9398749104, 68.0765330189, 167.4234669811), 0 1px 0 0 rgb(86.9398749104, 68.0765330189, 167.4234669811);
 }
-.wrapper.spotlight {
-  background-color: #7d8cc4;
-}
 .wrapper.spotlight:before, .wrapper.spotlight:after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%237d8cc4%3B' /%3E%3C/svg%3E");
 }
@@ -2984,6 +2995,9 @@ body.is-preload #banner p {
 }
 .wrapper.spotlight:after {
   box-shadow: inset 0 -1px 0 0 #7d8cc4, 0 1px 0 0 #7d8cc4;
+}
+.wrapper.spotlight {
+  background-color: #7d8cc4;
 }
 .wrapper.spotlight .inner {
   display: -moz-flex;
@@ -3185,6 +3199,11 @@ body.is-preload #banner p {
   -o-object-fit: contain;
      object-fit: contain;
 }
+@media screen and (max-width: 480px) {
+  .wrapper .partners-logos.talents {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
+  }
+}
 .wrapper .partners-logos.talents li {
   padding: 0;
   padding-bottom: 10px;
@@ -3207,6 +3226,32 @@ body.is-preload #banner p {
   font-size: small;
   margin: 0 10px;
   text-align: center;
+}
+
+.services .inner {
+  padding-left: 1.54em;
+  padding-right: 1.5em;
+}
+.services #wrapper header {
+  padding: 11em 0 12.25em 0;
+}
+.services .wrapper {
+  margin: 0em 0;
+}
+.services .wrapper .inner {
+  padding: 3em 1.5em 4em 1.5em;
+  text-align: left !important;
+}
+@media screen and (min-width: 737px) {
+  .services .wrapper .inner {
+    padding: 3em 1.5em 6em 1.5em;
+  }
+}
+.services .wrapper#three .inner {
+  padding: 3em 1.5em 4em 1.5em;
+}
+.services #footer .inner {
+  padding: 12em 1.5em 0.1em 1.5em;
 }
 
 /* Footer */
@@ -3237,6 +3282,7 @@ body.is-preload #banner p {
   margin: 4em 0 2em 0;
   padding: 2em 0 0 0;
   width: 100%;
+  text-align: center;
 }
 #footer .inner .copyright li {
   border-left: solid 2px rgba(255, 255, 255, 0.125);
@@ -3252,6 +3298,14 @@ body.is-preload #banner p {
   border-left: 0;
   margin-left: 0;
   padding-left: 0;
+}
+#footer .inner .copyright li:last-child {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: block;
+  text-align: center;
+  margin-top: 8px;
 }
 #footer .inner .copyright li a {
   color: inherit;
