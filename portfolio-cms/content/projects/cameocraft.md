@@ -9,14 +9,13 @@ year: "2024"
 tools: ["Illustrator", "Figma", "VS Code", "HTML", "SCSS"]
 cover: "/assets/images/portfolio/cameocraft-cover.webp"
 overview: "Cameocraft is a talent agency specialized in managing celebrity appearances at comic conventions worldwide.  The project included both logo design and website creation, with the goal of building a bold and recognizable identity aligned with pop culture, entertainment, and the international convention scene."
-website_active: false
-website: ""
+website_active: true
+website: "https://www.cameocraftinc.com/"
 featured: true
-
 galleries:
   - title: "Logo"
     images:
-      - "assets/images/portfolio/cameocraft_logo.webp"
+      - "/assets/images/portfolio/cameocraft_logo.webp" 
 ---
 
 <div class="description">
