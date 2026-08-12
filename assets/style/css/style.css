@@ -3,6 +3,7 @@
 /* -----------------------------------VARIABLES-----------------------------------*/
 /* ------------------------------------------------------------------------------*/
 .shadow-base, .grid figure img, .hover-effect:hover {
+  -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -754,10 +755,18 @@ header #header li#description .social a:hover {
 /**** Isotope CSS3 transitions ****/
 .isotope,
 .isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
   transition-duration: 0.8s;
 }
 
 .isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
   transition-property: height, width;
 }
 .isotope:after {
@@ -766,6 +775,10 @@ header #header li#description .social a:hover {
   clear: both;
 }
 .isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
   transition-property: transform, opacity;
 }
 
@@ -773,6 +786,10 @@ header #header li#description .social a:hover {
 .isotope.no-transition,
 .isotope.no-transition .isotope-item,
 .isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -ms-transition-duration: 0s;
+  -o-transition-duration: 0s;
   transition-duration: 0s;
 }
 
@@ -824,6 +841,10 @@ header #header li#description .social a:hover {
 
 /* disable CSS transitions for containers with infinite scrolling*/
 .isotope.infinite-scrolling {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
   transition: none;
 }
 
@@ -1193,27 +1214,34 @@ ul.dot.dot-url li:before {
 
 @keyframes bounceIn {
   0%, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   0% {
     opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
     transform: scale3d(0.3, 0.3, 0.3);
   }
   20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
     transform: scale3d(1.1, 1.1, 1.1);
   }
   40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
     transform: scale3d(0.9, 0.9, 0.9);
   }
   60% {
     opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
     transform: scale3d(1.03, 1.03, 1.03);
   }
   80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
     transform: scale3d(0.97, 0.97, 0.97);
   }
   to {
     opacity: 1;
+    -webkit-transform: scaleX(1);
     transform: scaleX(1);
   }
 }
@@ -1230,8 +1258,7 @@ ul.dot.dot-url li:before {
   max-width: 100%;
   min-width: 140px;
   text-decoration: none;
-  -moz-user-select: none;
-       user-select: none;
+  user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
@@ -1501,10 +1528,10 @@ ul.dot.dot-url li:before {
   }
 }
 
-.archive-item:first-of-type {
-  border-top: solid 1px #D3D3D3;
-  margin-top: 2rem;
+.archive-page {
+  padding-top: 6rem !important;
 }
+
 .archive-item {
   border-bottom: solid 1px #D3D3D3;
   padding: 2rem 0;
@@ -1512,6 +1539,10 @@ ul.dot.dot-url li:before {
   gap: 25px;
   align-items: start;
   flex-direction: column;
+}
+.archive-item:first-of-type {
+  border-top: solid 1px #D3D3D3;
+  margin-top: 2rem;
 }
 @media (min-width: 600px) {
   .archive-item {
@@ -1603,4 +1634,6 @@ ul.dot.dot-url li:before {
   background-color: #ddd;
   border-radius: 6px;
   color: #222222;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
