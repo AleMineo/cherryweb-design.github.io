@@ -402,6 +402,9 @@ header #header {
     align-items: center;
   }
 }
+header #header li {
+  display: none;
+}
 header #header li#animation {
   text-align: center;
   opacity: 0;
@@ -437,7 +440,7 @@ header #header li#description {
 @media (min-width: 920px) {
   header #header li#description {
     margin-right: 100px;
-    margin-left: 300px;
+    margin-left: 100px;
   }
 }
 header #header li#description h1,
@@ -630,7 +633,18 @@ header #header li#description .social a:hover {
   transition: all ease-in-out 0.2s;
   opacity: 0;
   transform: scale(0.5);
-  display: none;
+}
+#skills ul li.animation.active {
+  animation-duration: 1s;
+  transition-delay: 0.2s;
+  transform: scale(1);
+  opacity: 1;
+}
+#skills ul li.animation.active:first-child {
+  transition-delay: 0s;
+}
+#skills ul li.animation.active:last-child {
+  transition-delay: 0.4s;
 }
 @media (min-width: 920px) {
   #skills ul li {
