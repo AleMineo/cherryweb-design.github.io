@@ -190,7 +190,7 @@ header nav {
 }
 
 #top {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1473,7 +1473,6 @@ header {
   transition: height 0.35s ease, background 0.35s ease;
 }
 header.menu-open {
-  height: 100vh;
   height: 100dvh;
   background: #eef1f5;
 }
