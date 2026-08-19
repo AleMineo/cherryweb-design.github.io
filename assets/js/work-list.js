@@ -247,7 +247,7 @@ if (filterBar) {
   archiveLink.target = "_self";
   archiveLink.rel = "noreferrer";
   archiveLink.className = "filter-btn archive mono";
-  archiveLink.textContent = "{ archive }";
+  archiveLink.textContent = "{ archive ↗ }";
   archiveLink.setAttribute("data-hover", "");
   filterBar.appendChild(archiveLink);
 }
