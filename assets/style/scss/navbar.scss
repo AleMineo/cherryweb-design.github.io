@@ -61,7 +61,6 @@ header{
   transition: height .35s ease, background .35s ease;
 
   &.menu-open{
-    height: 100vh;
     height: 100dvh; // accounts for mobile browser chrome (address bar etc.)
     background: $background;
   }
