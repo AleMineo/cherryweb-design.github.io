@@ -1,0 +1,97 @@
+// ==========================================================================
+// nav-toggle.scss
+// Self-contained styles for the mobile hamburger menu toggle.
+//
+// Depends on 3 variables only — adjust the @use path below to match
+// wherever your variables partial actually lives:
+//   $foreground   — hamburger bar color
+//   $background   — solid color the header expands into
+//   $bp-sm        — mobile breakpoint (e.g. 640px)
+//
+// Does NOT define: base header positioning, base .navlinks desktop layout,
+// logo styles, scroll-shadow behavior, or anything else — those are assumed
+// to already exist elsewhere in your stylesheets. This file only adds the
+// hamburger button and the open/close behavior on top of them.
+//
+// Include from your main stylesheet with:
+//   @use "nav-toggle";
+// or @forward it if you're re-exporting through an index/manifest file.
+// ==========================================================================
+
+@use "variables" as *;
+
+// ---- hamburger button ----
+.menu-toggle{
+  display: none; // shown only below $bp-sm, see media query
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 60;
+
+  span{
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: $foreground;
+    transition: transform .3s ease, opacity .3s ease;
+  }
+
+  // icon morphs into an X — driven by JS adding/removing "open"
+  &.open{
+    span:nth-child(1){ transform: translateY(6.5px) rotate(45deg); }
+    span:nth-child(2){ opacity: 0; }
+    span:nth-child(3){ transform: translateY(-6.5px) rotate(-45deg); }
+  }
+}
+
+// ---- header expansion ----
+// The header itself grows to full viewport height while the menu is open.
+// This is the single source of truth for "is the menu open" on the CSS
+// side — everything else (nav list visibility) keys off header.menu-open,
+// not off a class on the list itself, so it can't be silently overridden
+// by an unrelated .navlinks{} rule defined elsewhere in your partials.
+header{
+  overflow: hidden;
+  height: auto;
+  transition: height .35s ease, background .35s ease;
+
+  &.menu-open{
+    height: 100vh;
+    height: 100dvh; // accounts for mobile browser chrome (address bar etc.)
+    background: $background;
+  }
+}
+
+// ---- mobile nav list behavior ----
+@media (max-width: $bp-sm - 1px){
+  .menu-toggle{ display: flex; }
+
+  // hidden by default, fills the (currently small) header
+  .navlinks{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    font-size: 1.1rem;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-12px);
+    transition: opacity .3s ease, transform .3s ease;
+  }
+
+  // becomes visible only once the header itself is expanded
+  header.menu-open .navlinks{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}

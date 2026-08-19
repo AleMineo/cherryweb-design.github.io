@@ -6,7 +6,7 @@
   {{ end }}
 </section>
 
-<div class="project-hero container">
+<div class="project-hero wrap">
   <h1><small>{{ .Params.category }}</small>{{ .Title }}</h1>
   {{ with .Params.overview }}
   <h3>{{ . | safeHTML }}</h3>
@@ -98,7 +98,7 @@
   </div>
 </div>
 
-<div class="project-content container">
+<div class="project-content wrap">
   {{ .Content }}
     <div class="buttons">
       <a href="/index.html#contacts" class="button btn btn-primary hover-effect">Interested? Let's talk<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right w-4 h-4"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>

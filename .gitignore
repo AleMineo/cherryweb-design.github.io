@@ -1,3 +1,6 @@
+node_modules/
+.sass-cache/
+.DS_Store
+Thumbs.db
 portfolio-cms/resources/
 portfolio-cms/public/
-node_modules/

@@ -1,0 +1,27 @@
+@use "variables" as *;
+
+#hobbies-scroll {
+  display: flex;
+  gap: 1.5rem;
+
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding-bottom: 1rem;
+
+  scrollbar-width: auto;
+
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #999;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #eee
+  }
+}

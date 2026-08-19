@@ -1,773 +1,227 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>&laquo; Cherry UX/UI design &raquo; Alessandra :: UX/UI designer :: graphic designer :: illustrator</title>
-  <meta name='description' property="og:description"
-    content='I am a UX/UI designer who loves blending creativity with user-centered design. I create seamless digital experiences, from wireframes to captivating interfaces, to HTML/Scss coding, all while keeping empathy in mind.' />
-  <meta name="author" property="og:author" content="Alessandra">
+  <title>cherry.web — UX/UI Design &amp; Front-end</title>
+  <meta name="description"
+    content="Alessandra Mineo — UX/UI Designer & Front-end Developer. Turning ideas into interfaces people enjoy using.">
+
+  <link rel="stylesheet" href="assets/style/css/style.css">
+  <link rel="icon" href="/favicon.png" type="image/png">
   <meta name="image" property="og:image" content="https://www.cherryweb-design.com/social-card.png">
   <meta name="title" property="og:title" content="Alessandra :: UX/UI designer :: graphic designer">
-
-<meta property="og:description" content="I am a UX/UI designer who loves blending creativity with user-centered design. I create seamless digital experiences, from wireframes to captivating interfaces, to HTML/Scss coding, all while keeping empathy in mind.">
-<meta property="og:image" content="https://www.cherryweb-design.com/social-card.jpg">
-<meta property="og:url" content="https://www.cherryweb-design.com/">
-<meta property="og:type" content="website">
-
-  <link rel="icon" href="favicon.png" type="image/png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Anton&family=League+Spartan:wght@200;300;400;500;600;700&display=swap"
-    rel="stylesheet">
-  <link rel="preload"
-    href="https://cdn.jsdelivr.net/gh/andreknieriem/simplelightbox@master/dist/simple-lightbox.min.css?v2.13.0"
-    as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/andreknieriem/simplelightbox@master/dist/simple-lightbox.min.css?v2.13.0">
-  </noscript>
-  <script>
-    document.createElement('header');
-    document.createElement('footer');
-    document.createElement('section');
-    document.createElement('aside');
-    document.createElement('nav');
-    document.createElement('article');
-  </script>
-  <script src="assets/js/modernizr.custom.js"></script>
-  <link href="assets/style/css/style.css" rel="stylesheet" type="text/css" media="screen" />
-
-  <link rel="preload" href="assets/style/css/style_hover_portfolio.css" as="style"
-    onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" type="text/css" href="assets/style/css/style_hover_portfolio.css" />
-  </noscript>
-
-  <!--[if IE]>
-<link href="css/ie.css" rel="stylesheet" type="text/css" media="screen" />
-<![endif]-->
+  <script src="assets/js/header-shadow.js"></script>
 </head>
 
-<body id="top">
-  <nav>
-    <ul id="nav">
-      <li><a href="#top" id="nav_about" class="about active ease-scroll"><svg xmlns="http://www.w3.org/2000/svg"
-            width="30" height="30" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-            <path
-              d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
-          </svg> About</a></li>
-      <li><a href="#skills" id="nav_skills" class="skills ease-scroll"><svg xmlns="http://www.w3.org/2000/svg"
-            width="30" height="30" fill="currentColor" class="bi bi-tools" viewBox="0 0 16 16">
-            <path
-              d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0Zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708ZM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11Z" />
-          </svg>Skills</a></li>
-      <li><a href="#portfolio" id="nav_portfolio" class="portfolio ease-scroll"><svg xmlns="http://www.w3.org/2000/svg"
-            width="30" height="30" fill="currentColor" class="bi bi-file-richtext" viewBox="0 0 16 16">
-            <path
-              d="M7 4.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0zm-.861 1.542 1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V7.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V7s1.54-1.274 1.639-1.208zM5 9a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1H5z" />
-            <path
-              d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z" />
-          </svg>Portfolio</a></li>
-      <li><a href="#hobbies" id="nav_hobbies" class="hobbies ease-scroll"><svg xmlns="http://www.w3.org/2000/svg"
-            width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-            <path
-              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-          </svg>Hobbies</a></li>
-      <li><a href="#contacts" id="nav_contacts" class="contacts ease-scroll"><svg xmlns="http://www.w3.org/2000/svg"
-            width="30" height="30" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-            <path
-              d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
-          </svg>Contacts</a></li>
-    </ul>
-  </nav>
-  <div id="wrapper">
-    <header id="top">
-      <ul id="header">
-        <li id="animation"><img width="100%" height="100%" loading="lazy"
-            src="assets/images/layout/icon_alessandra_trasp.gif" alt="Cherry UI design" /></li>
-        <li id="description">
-          <h1>Hi, I'm <span>Alessandra</span>!</h1>
-          <h3>I'm a <strong>UX/UI designer</strong> who loves blending creativity with user-centered design.
-            <br>I create seamless <strong>digital experiences</strong>, from <strong>wireframes</strong> to captivating
-            <strong>interfaces</strong>, to <strong>HTML/Scss coding</strong>, all while keeping empathy in mind.
+<body>
 
+  <div id="cursor-dot"></div>
 
-            <span class="social"> Find me on socials:
-              <a href="https://www.linkedin.com/in/alessandramineo/" target="_blank" title="LinkedIn profile"
-                alt="LinkedIn profile" class="is-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                  fill="#EA1C8B" class="bi bi-linkedin" viewBox="0 0 16 16">
-                  <path
-                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-                </svg></a>
-              <a href="https://www.instagram.com/hellolen" target="_blank" title="Instagram profile"
-                alt="Instagram profile" class="is-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                  fill="#EA1C8B" class="bi bi-instagram" viewBox="0 0 16 16">
-                  <path
-                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-                </svg></a>
-            </span>
-          </h3>
-          <a id="myButton" class="button btn btn-primary hover-effect glow-on-hover"><span class="hide">Put colors in my
-              life!</span><span class="show">Go back to basic!</span></a>
-          <a class="button btn btn-primary ease-scroll hover-effect" href="#portfolio">Check my works</a>
-        </li>
+  <header>
+    <nav>
+      <a href="#top" class="logo serif" data-hover>cherry<span class="primary">.</span>web</a>
+      <ul class="navlinks mono" id="navlinks">
+        <li><a href="#work" data-hover>Work</a></li>
+        <li><a href="#skills" data-hover>Skills</a></li>
+        <li><a href="#hobbies" data-hover>Hobbies</a></li>
+        <li><a href="#contact" data-hover>Contact</a></li>
+        <li><a href="#contact" class="talk-btn" data-hover>Let's talk</a></li>
       </ul>
-    </header>
-    <section id="about" data-full="true" class="slide" name="about">
-      <div id="skills" class="clearfix">
-        <ul>
-          <li class="animation">
-            <h2>Hard Skills</h2>
-            <div class="pills">
-              <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M64 183.4C44.9 172.4 32 151.7 32 128C32 92.7 60.7 64 96 64C119.7 64 140.4 76.9 151.4 96L488.5 96C499.6 76.9 520.2 64 543.9 64C579.2 64 607.9 92.7 607.9 128C607.9 151.7 595 172.4 575.9 183.4L575.9 456.5C595 467.6 607.9 488.2 607.9 511.9C607.9 547.2 579.2 575.9 543.9 575.9C520.2 575.9 499.5 563 488.5 543.9L151.4 543.9C140.3 563 119.7 575.9 96 575.9C60.7 575.9 32 547.2 32 511.9C32 488.2 44.9 467.5 64 456.5L64 183.4zM512 183.4C502.3 177.8 494.2 169.7 488.6 160L151.4 160C145.8 169.7 137.7 177.8 128 183.4L128 456.5C137.7 462.1 145.8 470.2 151.4 479.9L488.5 479.9C494.1 470.2 502.2 462.1 511.9 456.5L511.9 183.4zM176 240C176 222.3 190.3 208 208 208L320 208C337.7 208 352 222.3 352 240L352 304C352 321.7 337.7 336 320 336L208 336C190.3 336 176 321.7 176 304L176 240zM288 384L320 384C364.2 384 400 348.2 400 304L432 304C449.7 304 464 318.3 464 336L464 400C464 417.7 449.7 432 432 432L320 432C302.3 432 288 417.7 288 400L288 384z"/></svg>UX/UI</span>
-              <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M576 160C576 210.2 516.9 285.1 491.4 315C487.6 319.4 482 321.1 476.9 320L384 320C366.3 320 352 334.3 352 352C352 369.7 366.3 384 384 384L480 384C533 384 576 427 576 480C576 533 533 576 480 576L203.6 576C212.3 566.1 222.9 553.4 233.6 539.2C239.9 530.8 246.4 521.6 252.6 512L480 512C497.7 512 512 497.7 512 480C512 462.3 497.7 448 480 448L384 448C331 448 288 405 288 352C288 299 331 256 384 256L423.8 256C402.8 224.5 384 188.3 384 160C384 107 427 64 480 64C533 64 576 107 576 160zM181.1 553.1C177.3 557.4 173.9 561.2 171 564.4L169.2 566.4L169 566.2C163 570.8 154.4 570.2 149 564.4C123.8 537 64 466.5 64 416C64 363 107 320 160 320C213 320 256 363 256 416C256 446 234.9 483 212.5 513.9C201.8 528.6 190.8 541.9 181.7 552.4L181.1 553.1zM192 416C192 398.3 177.7 384 160 384C142.3 384 128 398.3 128 416C128 433.7 142.3 448 160 448C177.7 448 192 433.7 192 416zM480 192C497.7 192 512 177.7 512 160C512 142.3 497.7 128 480 128C462.3 128 448 142.3 448 160C448 177.7 462.3 192 480 192z"/></svg>User Flow</span>
-                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M64 144C64 117.5 85.5 96 112 96L208 96C234.5 96 256 117.5 256 144L256 160L384 160L384 144C384 117.5 405.5 96 432 96L528 96C554.5 96 576 117.5 576 144L576 240C576 266.5 554.5 288 528 288L432 288C405.5 288 384 266.5 384 240L384 224L256 224L256 240C256 247.3 254.3 254.3 251.4 260.5L320 352L400 352C426.5 352 448 373.5 448 400L448 496C448 522.5 426.5 544 400 544L304 544C277.5 544 256 522.5 256 496L256 400C256 392.7 257.7 385.7 260.6 379.5L192 288L112 288C85.5 288 64 266.5 64 240L64 144z"/></svg>Prototyping</span>
-                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M480 160L480 288L352 288L352 160L480 160zM480 352L480 480L352 480L352 352L480 352zM288 288L160 288L160 160L288 160L288 288zM160 352L288 352L288 480L160 480L160 352zM160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96z"/></svg>Wireframing</span>
-                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M256 128C256 110.3 270.3 96 288 96L352 96C369.7 96 384 110.3 384 128L384 192C384 209.7 369.7 224 352 224L344 224L344 288L464 288C503.8 288 536 320.2 536 360L536 416L544 416C561.7 416 576 430.3 576 448L576 512C576 529.7 561.7 544 544 544L480 544C462.3 544 448 529.7 448 512L448 448C448 430.3 462.3 416 480 416L488 416L488 360C488 346.7 477.3 336 464 336L344 336L344 416L352 416C369.7 416 384 430.3 384 448L384 512C384 529.7 369.7 544 352 544L288 544C270.3 544 256 529.7 256 512L256 448C256 430.3 270.3 416 288 416L296 416L296 336L176 336C162.7 336 152 346.7 152 360L152 416L160 416C177.7 416 192 430.3 192 448L192 512C192 529.7 177.7 544 160 544L96 544C78.3 544 64 529.7 64 512L64 448C64 430.3 78.3 416 96 416L104 416L104 360C104 320.2 136.2 288 176 288L296 288L296 224L288 224C270.3 224 256 209.7 256 192L256 128z"/></svg>Information Architecture</span>
-                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M392.8 65.2C375.8 60.3 358.1 70.2 353.2 87.2L225.2 535.2C220.3 552.2 230.2 569.9 247.2 574.8C264.2 579.7 281.9 569.8 286.8 552.8L414.8 104.8C419.7 87.8 409.8 70.1 392.8 65.2zM457.4 201.3C444.9 213.8 444.9 234.1 457.4 246.6L530.8 320L457.4 393.4C444.9 405.9 444.9 426.2 457.4 438.7C469.9 451.2 490.2 451.2 502.7 438.7L598.7 342.7C611.2 330.2 611.2 309.9 598.7 297.4L502.7 201.4C490.2 188.9 469.9 188.9 457.4 201.4zM182.7 201.3C170.2 188.8 149.9 188.8 137.4 201.3L41.4 297.3C28.9 309.8 28.9 330.1 41.4 342.6L137.4 438.6C149.9 451.1 170.2 451.1 182.7 438.6C195.2 426.1 195.2 405.8 182.7 393.3L109.3 320L182.6 246.6C195.1 234.1 195.1 213.8 182.6 201.3z"/></svg>HTML5/Scss coding</span>
-                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M259.1 73.5C262.1 58.7 275.2 48 290.4 48L350.2 48C365.4 48 378.5 58.7 381.5 73.5L396 143.5C410.1 149.5 423.3 157.2 435.3 166.3L503.1 143.8C517.5 139 533.3 145 540.9 158.2L570.8 210C578.4 223.2 575.7 239.8 564.3 249.9L511 297.3C511.9 304.7 512.3 312.3 512.3 320C512.3 327.7 511.8 335.3 511 342.7L564.4 390.2C575.8 400.3 578.4 417 570.9 430.1L541 481.9C533.4 495 517.6 501.1 503.2 496.3L435.4 473.8C423.3 482.9 410.1 490.5 396.1 496.6L381.7 566.5C378.6 581.4 365.5 592 350.4 592L290.6 592C275.4 592 262.3 581.3 259.3 566.5L244.9 496.6C230.8 490.6 217.7 482.9 205.6 473.8L137.5 496.3C123.1 501.1 107.3 495.1 99.7 481.9L69.8 430.1C62.2 416.9 64.9 400.3 76.3 390.2L129.7 342.7C128.8 335.3 128.4 327.7 128.4 320C128.4 312.3 128.9 304.7 129.7 297.3L76.3 249.8C64.9 239.7 62.3 223 69.8 209.9L99.7 158.1C107.3 144.9 123.1 138.9 137.5 143.7L205.3 166.2C217.4 157.1 230.6 149.5 244.6 143.4L259.1 73.5zM320.3 400C364.5 399.8 400.2 363.9 400 319.7C399.8 275.5 363.9 239.8 319.7 240C275.5 240.2 239.8 276.1 240 320.3C240.2 364.5 276.1 400.2 320.3 400z"/></svg>CMSs</span>
-                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M512.5 74.3L291.1 222C262 241.4 243.5 272.9 240.5 307.3C302.8 320.1 351.9 369.2 364.8 431.6C399.3 428.6 430.7 410.1 450.1 381L597.7 159.5C604.4 149.4 608 137.6 608 125.4C608 91.5 580.5 64 546.6 64C534.5 64 522.6 67.6 512.5 74.3zM320 464C320 402.1 269.9 352 208 352C146.1 352 96 402.1 96 464C96 467.9 96.2 471.8 96.6 475.6C98.4 493.1 86.4 512 68.8 512L64 512C46.3 512 32 526.3 32 544C32 561.7 46.3 576 64 576L208 576C269.9 576 320 525.9 320 464z"/></svg>Visual Design</span>
-                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M213.1 128.8L202.7 160L128 160C92.7 160 64 188.7 64 224L64 480C64 515.3 92.7 544 128 544L512 544C547.3 544 576 515.3 576 480L576 224C576 188.7 547.3 160 512 160L437.3 160L426.9 128.8C420.4 109.2 402.1 96 381.4 96L258.6 96C237.9 96 219.6 109.2 213.1 128.8zM320 256C373 256 416 299 416 352C416 405 373 448 320 448C267 448 224 405 224 352C224 299 267 256 320 256z"/></svg>Photography</span>
-              </div>
-          </li>
-          <li class="animation">
-            <h2>Soft Skills</h2>
-            <div class="pills">
-  <span>
-    <!-- Team Work -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M320 80C377.4 80 424 126.6 424 184C424 241.4 377.4 288 320 288C262.6 288 216 241.4 216 184C216 126.6 262.6 80 320 80zM96 152C135.8 152 168 184.2 168 224C168 263.8 135.8 296 96 296C56.2 296 24 263.8 24 224C24 184.2 56.2 152 96 152zM0 480C0 409.3 57.3 352 128 352C140.8 352 153.2 353.9 164.9 357.4C132 394.2 112 442.8 112 496L112 512C112 523.4 114.4 534.2 118.7 544L32 544C14.3 544 0 529.7 0 512L0 480zM521.3 544C525.6 534.2 528 523.4 528 512L528 496C528 442.8 508 394.2 475.1 357.4C486.8 353.9 499.2 352 512 352C582.7 352 640 409.3 640 480L640 512C640 529.7 625.7 544 608 544L521.3 544zM472 224C472 184.2 504.2 152 544 152C583.8 152 616 184.2 616 224C616 263.8 583.8 296 544 296C504.2 296 472 263.8 472 224zM160 496C160 407.6 231.6 336 320 336C408.4 336 480 407.6 480 496L480 512C480 529.7 465.7 544 448 544L192 544C174.3 544 160 529.7 160 512L160 496z"/></svg>
-    Team Work
-  </span>
 
-  <span>
-    <!-- Problem Solving -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M288 64C323.3 64 352 85.5 352 112C352 122.4 347.6 132 340 139.9C333.4 146.8 328 155.2 328 164.8C328 179.8 340.2 192 355.2 192L400 192C426.5 192 448 213.5 448 240L448 284.8C448 299.8 460.2 312 475.2 312C484.7 312 493.2 306.6 500.1 300C508 292.5 517.6 288 528 288C554.5 288 576 316.7 576 352C576 387.3 554.5 416 528 416C517.6 416 507.9 411.6 500.1 404C493.2 397.4 484.8 392 475.2 392C460.2 392 448 404.2 448 419.2L448 528C448 554.5 426.5 576 400 576L343.2 576C330.4 576 320 565.6 320 552.8C320 543.6 325.8 535.5 333.2 530C344.8 521.3 352 509.3 352 496C352 469.5 323.3 448 288 448C252.7 448 224 469.5 224 496C224 509.3 231.2 521.3 242.8 530C250.2 535.5 256 543.5 256 552.8C256 565.6 245.6 576 232.8 576L112 576C85.5 576 64 554.5 64 528L64 407.2C64 394.4 74.4 384 87.2 384C96.4 384 104.5 389.8 110 397.2C118.7 408.8 130.7 416 144 416C170.5 416 192 387.3 192 352C192 316.7 170.5 288 144 288C130.7 288 118.7 295.2 110 306.8C104.5 314.2 96.5 320 87.2 320C74.4 320 64 309.6 64 296.8L64 240C64 213.5 85.5 192 112 192L220.8 192C235.8 192 248 179.8 248 164.8C248 155.3 242.6 146.8 236 139.9C228.5 132 224 122.4 224 112C224 85.5 252.7 64 288 64z"/></svg>
-    Problem Solving
-  </span>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false"
+        aria-controls="navlinks">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
 
-  <span>
-    <!-- Time Management -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64zM296 184L296 320C296 328 300 335.5 306.7 340L402.7 404C413.7 411.4 428.6 408.4 436 397.3C443.4 386.2 440.4 371.4 429.3 364L344 307.2L344 184C344 170.7 333.3 160 320 160C306.7 160 296 170.7 296 184z"/></svg>
-    Time Management
-  </span>
+  <main>
 
-  <span>
-    <!-- Flexibility -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M534.6 182.6C547.1 170.1 547.1 149.8 534.6 137.3L470.6 73.3C461.4 64.1 447.7 61.4 435.7 66.4C423.7 71.4 416 83.1 416 96L416 128L256 128C150 128 64 214 64 320C64 337.7 78.3 352 96 352C113.7 352 128 337.7 128 320C128 249.3 185.3 192 256 192L416 192L416 224C416 236.9 423.8 248.6 435.8 253.6C447.8 258.6 461.5 255.8 470.7 246.7L534.7 182.7zM105.4 457.4C92.9 469.9 92.9 490.2 105.4 502.7L169.4 566.7C178.6 575.9 192.3 578.6 204.3 573.6C216.3 568.6 224 556.9 224 544L224 512L384 512C490 512 576 426 576 320C576 302.3 561.7 288 544 288C526.3 288 512 302.3 512 320C512 390.7 454.7 448 384 448L224 448L224 416C224 403.1 216.2 391.4 204.2 386.4C192.2 381.4 178.5 384.2 169.3 393.3L105.3 457.3z"/></svg>
-    Flexibility
-  </span>
-
-  <span>
-    <!-- Communication -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M416 208C416 305.2 330 384 224 384C197.3 384 171.9 379 148.8 370L67.2 413.2C57.9 418.1 46.5 416.4 39 409C31.5 401.6 29.8 390.1 34.8 380.8L70.4 313.6C46.3 284.2 32 247.6 32 208C32 110.8 118 32 224 32C330 32 416 110.8 416 208zM416 576C321.9 576 243.6 513.9 227.2 432C347.2 430.5 451.5 345.1 463 229.3C546.3 248.5 608 317.6 608 400C608 439.6 593.7 476.2 569.6 505.6L605.2 572.8C610.1 582.1 608.4 593.5 601 601C593.6 608.5 582.1 610.2 572.8 605.2L491.2 562C468.1 571 442.7 576 416 576z"/></svg>
-    Communication
-  </span>
-
-  <span>
-    <!-- Proactivity -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M128 320L156.5 92C158.5 76 172.1 64 188.3 64L356.9 64C371.9 64 384 76.1 384 91.1C384 94.3 383.4 97.6 382.3 100.6L336 224L475.3 224C495.5 224 512 240.4 512 260.7C512 268.1 509.8 275.3 505.6 281.4L313.4 562.4C307.5 571 297.8 576.1 287.5 576.1L284.6 576.1C268.9 576.1 256.1 563.3 256.1 547.6C256.1 545.3 256.4 543 257 540.7L304 352L160 352C142.3 352 128 337.7 128 320z"/></svg>
-    Proactivity
-  </span>
-
-  <span>
-    <!-- Creativity -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M420.9 448C428.2 425.7 442.8 405.5 459.3 388.1C492 353.7 512 307.2 512 256C512 150 426 64 320 64C214 64 128 150 128 256C128 307.2 148 353.7 180.7 388.1C197.2 405.5 211.9 425.7 219.1 448L420.8 448zM416 496L224 496L224 512C224 556.2 259.8 592 304 592L336 592C380.2 592 416 556.2 416 512L416 496zM312 176C272.2 176 240 208.2 240 248C240 261.3 229.3 272 216 272C202.7 272 192 261.3 192 248C192 181.7 245.7 128 312 128C325.3 128 336 138.7 336 152C336 165.3 325.3 176 312 176z"/></svg>
-    Creative Thinking
-  </span>
-
-  <span>
-    <!-- Agile / Scrum -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M545.7 304.1C528.1 302.9 512.8 316.1 511.5 333.8C508.2 380.8 487.9 423.2 456.7 454.8L425 423C418.1 416.1 407.8 414.1 398.8 417.8C389.8 421.5 384 430.3 384 440L384 552C384 565.3 394.7 576 408 576L520 576C529.7 576 538.5 570.2 542.2 561.2C545.9 552.2 543.9 541.9 537 535L502 500C543.7 457.8 570.9 401.2 575.4 338.2C576.6 320.6 563.4 305.3 545.7 304zM103 105L138 140C96.3 182.2 69.1 238.8 64.6 301.8C63.4 319.4 76.6 334.7 94.3 336C112 337.3 127.2 324 128.5 306.3C131.8 259.3 152.1 216.9 183.3 185.3L215 217C221.9 223.9 232.2 225.9 241.2 222.2C250.2 218.5 256 209.7 256 200L256 88C256 74.7 245.3 64 232 64L120 64C110.3 64 101.5 69.8 97.8 78.8C94.1 87.8 96.2 98.1 103 105zM304 94.3C302.8 111.9 316 127.2 333.7 128.5C380.7 131.8 423.1 152.1 454.7 183.3L423 215C416.1 221.9 414.1 232.2 417.8 241.2C421.5 250.2 430.3 256 440 256L552 256C565.3 256 576 245.3 576 232L576 120C576 110.3 570.2 101.5 561.2 97.8C552.2 94.1 541.9 96.2 535 103L500 138C457.8 96.3 401.2 69.1 338.2 64.6C320.6 63.4 305.3 76.6 304 94.3zM105 537L140 502C182.2 543.7 238.8 570.9 301.8 575.4C319.4 576.6 334.7 563.4 336 545.7C337.3 528 324 512.8 306.3 511.5C259.3 508.2 216.9 487.9 185.3 456.7L217 425C223.9 418.1 225.9 407.8 222.2 398.8C218.5 389.8 209.7 384 200 384L88 384C74.7 384 64 394.7 64 408L64 520C64 529.7 69.8 538.5 78.8 542.2C87.8 545.9 98.1 543.8 105 537z"/></svg>
-    Agile / Scrum
-  </span>
-            </div>
-
-          </li>
-          <li class="animation">
-            <h2>Tools</h2>
-            <div class="pills"><span>Adobe CC suite</span><span>Figma</span><span>VS
-                Code</span><span>Claude.ai</span><span>Lovable</span><span>Google Workspace</span><span>Hugo</span><span>Jira</span><span>Git</span><span>Miro</span><span>Strapi</span><span>Wordpress</span><span>Office
-                365</span><span>Freehand drawing</span><span>GA4 / Looker studio</span><span>Nikon D7500</span></div>
-          </li>
-        </ul>
+    <section id="top" class="wrap">
+      <div class="eyebrow-row mono">
+        <span>Portfolio / 2026</span>
+        <span class="mid">Based in Italy — Working worldwide</span>
+        <span>Available for projects</span>
       </div>
-    </section>
-    <section id="portfolio" data-full="true" class="slide" name="portfolio">
-      <div id="sortable-portfolio">
-        <div id="options" class="clearfix text-center">
-          <h1><span>My</span> Portfolio</h1>
-          <h3>I have worked in various environments, both large companies and small startups, gaining a significant
-            amount of experience and constantly learning something new! I have consistently aimed to stay updated,
-            acquiring new skills whenever I found them valuable or it was required. <br>Here's a curated selection of my latest work</h3>
 
-          <ul id="filters" class="option-set clearfix portfolio-list button-group">
-            <li><a href="#filter" class="selected button" data-filter=".web">{ UX/UI design }</a></li>
-            <li><a href="#filter" class="button" data-filter=".app">{ app & webapp }</a></li>
-            <li><a href="#filter" class="button" data-filter=".logo">{ logo design }</a></li>
-            <li><a href="/archive" class="button no-filter">{ archive <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                  height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                </svg> }</a></li>
-          </ul>
-        </div>
-        <!-- #options -->
+      <div>
+        <h1 class="hero-title serif" data-reveal>
+          Turning ideas<br>
+          into <span class="italic primary">interfaces</span><br>
+          people <span class="italic primary">enjoy</span>.
+        </h1>
 
-
-
-        <div id="container" class="clearfix grid isotope portfolio">
-          <figure class="element logo " data-category="logo">
-            <a href="projects/cameocraft/" class="card-link"></a>
-            <div><img width="100%" height="100%" loading="lazy" src="assets/images/portfolio/cameocraft_thumb.webp"
-                alt="CameoCraft - Talent Agency"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <span>Logo design &amp; HTML5/SCSS coding</span>
-                <h3>CameoCraft - Talent Agency</h3>
-              </span>
-            </figcaption>
-          </figure>
-          <figure class="element app web" data-category="web">
-            <a href="projects/dusk/" class="card-link"></a>
-            <div><img width="100%" height="100%" loading="lazy" src="assets/images/portfolio/dusk_thumb.webp"
-                alt="Dusk trade - Crypto trade platform"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <span>UX/UI design</span>
-                <h3>Dusk trade - Crypto trade platform</h3>
-              </span>
-            </figcaption>
-          </figure>
-          <figure class="element web app" data-category="app">
-            <a href="projects/walltips/" class="card-link"></a>
-            <div><img width="100%" height="100%" loading="lazy" src="assets/images/portfolio/walltips_thumb.webp"
-                alt="Walltips"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <span>WebApp UX/UI design</span>
-                <h3>Walltips</h3>
-              </span>
-            </figcaption>
-          </figure>
-          <figure class="element web app" data-category="app">
-            <a href="projects/brainsigns/" class="card-link"></a>
-            <div><img width="100%" height="100%" loading="lazy" src="assets/images/portfolio/brainsigns.webp"
-                alt="Brainsings"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <span>App design for tablets</span>
-                <h3>Mindtooth</h3>
-              </span>
-            </figcaption>
-          </figure>
-          <figure class="element logo" data-category="logo">
-            <a href="projects/wall-of-fame/" class="card-link"></a>
-            <div><img width="100%" height="100%" loading="lazy"
-                src="assets/images/portfolio/wall-of-fame_logo_thumb.webp" alt="Wall of Fame - Memorabilia"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <span>Logo design</span>
-                <h3>Wall of Fame - Memorabilia</h3>
-              </span>
-            </figcaption>
-          </figure>
-          <figure class="element logo" data-category="logo">
-            <a href="projects/furio-divino/" class="card-link"></a>
-            <div><img width="100%" height="100%" loading="lazy" src="assets/images/portfolio/furio-divino_thumb.webp"
-                alt="Furio DiVino"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <span>Logo design</span>
-                <h3>Furio diVino</h3>
-              </span>
-            </figcaption>
-          </figure>
-          <figure class="element web app" data-category="web">
-            <a href="projects/econeth/" class="card-link"></a>
-            <div><img width="100%" height="100%" loading="lazy" src="assets/images/portfolio/econeth_thumb.webp"
-                alt="Econeth">
-            </div>
-            <figcaption> <span class="figcaption-wrap">
-                <span>UX/UI design &amp; HTML5/SCSS coding</span>
-                <h3>Econeth - crowdfunding platform</h3>
-              </span>
-            </figcaption>
-          </figure>
-
-          <figure class="element web" data-category="web">
-            <a href="projects/fuix/" class="card-link"></a>
-            <div><img width="100%" height="100%" loading="lazy" src="assets/images/portfolio/fuix_thumb.webp"
-                alt="Fuix"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <span>UX/UI design &amp; HTML5/SCSS coding</span>
-                <h3>Fuix</h3>
-              </span>
-            </figcaption>
-          </figure>
-
-          <figure class="element web" data-category="web">
-            <a href="projects/adalot/" class="card-link"></a>
-            <div><img width="100%" height="100%" loading="lazy" src="assets/images/portfolio/adalot_thumb.webp"
-                alt="Adalot">
-            </div>
-            <figcaption> <span class="figcaption-wrap">
-                <span>UX/UI design &amp; HTML5/SCSS coding</span>
-                <h3>Adalot</h3>
-              </span>
-            </figcaption>
-          </figure>
-
-          <figure class="element web logo" data-category="web">
-            <a href="projects/libes/" class="card-link"></a>
-            <div><img width="100%" height="100%" loading="lazy" src="assets/images/portfolio/libes/libes_thumb.webp"
-                alt="Libes"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <span>UX/UI design &amp; HTML5/SCSS coding</span>
-                <h3>Libes</h3>
-              </span>
-            </figcaption>
-          </figure>
-
-          <figure class="element web" data-category="web">
-            <a href="projects/yummo/" class="card-link"></a>
-            <div><img width="100%" height="100%" loading="lazy" src="assets/images/portfolio/yummo_thumb.webp"
-                alt="Yummo food delivery concept"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <span>UX/UI design</span>
-                <h3>Yummo food delivery</h3>
-              </span>
-            </figcaption>
-          </figure>
-
-          <figure class="element web logo" data-category="web">
-            <a href="projects/mioassicuratore/" class="card-link"></a>
-            <div><img width="auto" height="auto"
-                src="assets/images/portfolio/mioassicuratore/mioassicuratore_thumb.webp" alt="Mio Assicuratore">
-            </div>
-            <figcaption> <span class="figcaption-wrap">
-                <span>UX/UI design &amp; HTML5/SCSS & PHP coding</span>
-                <h3>MioAssicuratore</h3>
-              </span>
-            </figcaption>
-          </figure>
-
-          <figure class="element web " data-category="web">
-            <a href="projects/defenx/" class="card-link"></a>
-            <div><img width="100%" height="100%" loading="lazy" src="assets/images/portfolio/defenx_thumb.webp"
-                alt="Defenx">
-            </div>
-            <figcaption> <span class="figcaption-wrap">
-                <span>UX/UI design &amp; Wordpress</span>
-                <h3>Defenx</h3>
-              </span>
-            </figcaption>
-          </figure>
-
-          <figure class="element web" data-category="web">
-            <a href="projects/voverc/" class="card-link"></a>
-            <div><img width="100%" height="100%" loading="lazy" src="assets/images/portfolio/voverc/voverc_thumb.webp"
-                alt="Voverc">
-            </div>
-            <figcaption> <span class="figcaption-wrap">
-                <span>UX/UI design &amp; HTML5/CSS coding</span>
-                <h3>Voverc </h3>
-              </span>
-            </figcaption>
-          </figure>
-
-          <figure class="element logo wordpress" data-category="logo">
-            <a href="projects/lele-beb/" class="card-link"></a>
-            <div><img width="100%" height="100%" loading="lazy"
-                src="assets/images/portfolio/lele-beb/lele-beb_thumb.webp" alt="Lele b&b"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <span>Logo design &amp; Wordpress</span>
-                <h3>Lele b&amp;b</h3>
-              </span>
-            </figcaption>
-          </figure>
-
-          <figure class="element web" data-category="web">
-            <a href="projects/hellolen/" class="card-link"></a>
-            <div><img width="100%" height="100%" loading="lazy"
-                src="assets/images/portfolio/hellolen_2015/hellolen2015_thumb.webp" alt="HelloLen cosplay"></div>
-            <figcaption> <span class="figcaption-wrap">
-                <span>UI design &amp; HTML+CSS</span>
-                <h3>HelloLen* cosplay</h3>
-              </span>
-            </figcaption>
-          </figure>
-          <!-- #container -->
-
-        </div>
-    </section>
-    <section id="hobbies" data-full="true" class="slide" name="hobbies">
-      <div class="container">
-        <h1>I have <span>Hobbies</span> too!</span></h1>
-        <h3>I genuinely enjoy my job, no doubt about it! <br>However, in my free time, I like to engage in various
-          activities. <br>While I can't share pictures of my workouts or TV show/movie binges, I'd love to present you
-          with a curated collection of my top travel and urbex photos!</h3>
-      </div>
-      <div id="container" class="clearfix flex grid hobbiesGallery">
-        <figure class="element " data-total="32" data-rel="USA On the road - 2024 Travel Report"  data-prefixes='["SF_","sequoia_","LV_","bryce_","antelope_"]' 
-        data-rel="USA On the road - 2024 Travel Report">
-          <a href="assets/images/portfolio/USA_on-the-road_2024/SF_01.webp" title="USA On the road - 2024 Travel Report"
-            class="popup card-link"></a>
-          <div><img width="100%" height="100%" loading="lazy"
-              src="assets/images/portfolio/USA_on-the-road_2024/USA-on-the-road_2024_thumb.webp"
-              alt="USA On the road 2024"></div>
-          <figcaption> <span class="figcaption-wrap">
-              <span>Travel Photography</span>
-              <h3>USA On the road - 2024</h3>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/SF_02.webp"
-                title="USA On the road - 2024 Travel Report: San Francisco" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/SF_03.webp"
-                title="USA On the road - 2024 Travel Report: San Francisco" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/SF_04.webp"
-                title="USA On the road - 2024 Travel Report: San Francisco" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/sequoia_01.webp"
-                title="USA On the road - 2024 Travel Report: Sequoia Park" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/sequoia_02.webp"
-                title="USA On the road - 2024 Travel Report: Sequoia Park" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/LV_01.webp"
-                title="USA On the road - 2024 Travel Report: Las Vegas" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/LV_02.webp"
-                title="USA On the road - 2024 Travel Report: Las Vegas" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/LV_03.webp"
-                title="USA On the road - 2024 Travel Report: Las Vegas" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/bryce_01.webp"
-                title="USA On the road - 2024 Travel Report: Bryce Canyon" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/bryce_02.webp"
-                title="USA On the road - 2024 Travel Report: Bryce Canyon" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/bryce_03.webp"
-                title="USA On the road - 2024 Travel Report: Bryce Canyon" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/antelope_01.webp"
-                title="USA On the road - 2024 Travel Report: Antelope Canyon" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/antelope_02.webp"
-                title="USA On the road - 2024 Travel Report: Antelope Canyon" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/antelope_03.webp"
-                title="USA On the road - 2024 Travel Report: Antelope Canyon" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/horseshoe-bend.webp"
-                title="USA On the road - 2024 Travel Report: Horseshoe bend" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/monument_01.webp"
-                title="USA On the road - 2024 Travel Report: Monument Valley" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/monument_02.webp"
-                title="USA On the road - 2024 Travel Report: Monument Valley" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/monument_03.webp"
-                title="USA On the road - 2024 Travel Report: Monument Valley" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/monument_04.webp"
-                title="USA On the road - 2024 Travel Report: Monument Valley" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/grand-canyon_01.webp"
-                title="USA On the road - 2024 Travel Report: Grand Canyon" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/grand-canyon_02.webp"
-                title="USA On the road - 2024 Travel Report: Grand Canyon" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/grand-canyon_03.webp"
-                title="USA On the road - 2024 Travel Report: Grand Canyon" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/route-66_01.webp"
-                title="USA On the road - 2024 Travel Report: Route 66" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/route-66_02.webp"
-                title="USA On the road - 2024 Travel Report: Route 66" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/route-66_03.webp"
-                title="USA On the road - 2024 Travel Report: Route 66" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/LA_01.webp"
-                title="USA On the road - 2024 Travel Report: Los Angeles" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/LA_02.webp"
-                title="USA On the road - 2024 Travel Report: Los Angeles" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/LA_03.webp"
-                title="USA On the road - 2024 Travel Report: Los Angeles" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/LA_04.webp"
-                title="USA On the road - 2024 Travel Report: Los Angeles" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/LA_05.webp"
-                title="USA On the road - 2024 Travel Report: Los Angeles" class="no-show popup"></a>
-              <a href="assets/images/portfolio/USA_on-the-road_2024/LA_06.webp"
-                title="USA On the road - 2024 Travel Report: Los Angeles" class="no-show popup"></a>
-            </span>
-          </figcaption>
-        </figure>
-        <figure class="element " data-folder="assets/images/portfolio/newyork/2023" data-prefix="new-york_"
-          data-total="12" data-rel="New York Travel Report">
-          <a href="assets/images/portfolio/newyork/2023/new-york_01.webp" title="New York Travel Report" data-lightbox="gallery-1"
-            class="popup"></a>
-          <div><img width="100%" height="100%" loading="lazy"
-              src="assets/images/portfolio/newyork/2023/new-york_thumb.webp" alt="New York"></div>
-          <figcaption> <span class="figcaption-wrap">
-              <span>Travel Photography</span>
-              <h3>New York 2023</h3>
-            </span>
-          </figcaption>
-        </figure>
-
-        <figure class="element " data-folder="assets/images/portfolio/spain" data-prefix="spain_" data-total="11"
-          data-rel="Spain Travel Report">
-          <a href="assets/images/portfolio/spain/spain_01.webp" title="Spain Travel Report" class="popup" data-lightbox="gallery-2"></a>
-          <div><img width="100%" height="100%" loading="lazy" src="assets/images/portfolio/spain/spain_thumb.webp"
-              alt="Spain"></div>
-          <figcaption> <span class="figcaption-wrap">
-              <span>Travel Photography</span>
-              <h3>Spain</h3>
-            </span>
-          </figcaption>
-        </figure>
-
-        <figure class="element " data-folder="assets/images/portfolio/rome" data-prefix="rome_" data-total="12"
-          data-rel="Rome Travel Report">
-
-          <a href="assets/images/portfolio/rome/rome_01.webp" title="Rome Travel Report" class="popup" data-lightbox="gallery-2"></a>
-          <div><img width="100%" height="100%" loading="lazy" src="assets/images/portfolio/rome/rome_thumb.webp"
-              alt="Rome"></div>
-          <figcaption> <span class="figcaption-wrap">
-              <span>Travel Photography</span>
-              <h3>Rome</h3>
-            </span>
-          </figcaption>
-        </figure>
-
-        <figure class="element " data-folder="assets/images/portfolio/newyork/2022" data-prefix="newyork_"
-          data-total="38" data-rel="New York Travel Report 2022">
-          <a href="assets/images/portfolio/newyork/2022/newyork_01.webp" title="New York Travel Report 2022" data-lightbox="gallery-4"
-            class="popup"></a>
-          <div><img width="100%" height="100%" loading="lazy"
-              src="assets/images/portfolio/newyork/2022/newyork_thumb.webp" alt="New York"></div>
-          <figcaption> <span class="figcaption-wrap">
-              <span>Travel Photography</span>
-              <h3>New York 2022</h3>
-            </span>
-          </figcaption>
-        </figure>
-
-        <figure class="element " data-folder="assets/images/portfolio/miami" data-prefix="miami_" data-total="12"
-          data-rel="Miami Travel Report">
-          <a href="assets/images/portfolio/miami/miami_01.webp" title="Miami Travel Report" class="popup" data-lightbox="gallery-5"></a>
-          <div><img width="100%" height="100%" loading="lazy" src="assets/images/portfolio/miami/miami_thumb.webp"
-              alt="Miami"></div>
-          <figcaption> <span class="figcaption-wrap">
-              <span>Travel Photography</span>
-              <h3>Miami</h3>
-            </span>
-          </figcaption>
-        </figure>
-
-        <figure class="element " data-folder="assets/images/portfolio/london" data-prefix="london_" data-total="32"
-          data-rel="London Travel Report">
-          <a href="assets/images/portfolio/london/london_01.webp" title="London Travel Report" class="popup" data-lightbox="gallery-6"></a>
-          <div><img width="100%" height="100%" loading="lazy" src="assets/images/portfolio/london/london_thumb.webp"
-              alt="London">
+        <div class="currently-row" data-reveal>
+          <div class="currently-line"></div>
+          <div>
+            <div class="currently-label mono">Currently</div>
+            <div id="currently-word" class="serif"></div>
           </div>
-          <figcaption> <span class="figcaption-wrap">
-              <span>Travel Photography</span>
-              <h3>London</h3>
-            </span>
-          </figcaption>
-        </figure>
-
-        <figure class="element " data-folder="assets/images/portfolio/thailand" data-prefix="thailand_" data-total="22"
-          data-rel="Thailand Travel Report">
-          <a href="assets/images/portfolio/thailand/thailand_01.webp" title="Thailand Travel Report" class="popup" data-lightbox="gallery-7"></a>
-          <div><img width="100%" height="100%" loading="lazy" src="assets/images/portfolio/thailand/thailand_thumb.webp"
-              alt="Thailand"></div>
-          <figcaption> <span class="figcaption-wrap">
-              <span>Travel Photography</span>
-              <h3>Thailand</h3>
-            </span>
-          </figcaption>
-        </figure>
-
-        <figure class="element " data-folder="assets/images/portfolio/urbex" data-prefix="urbex_" data-total="9"
-          data-rel="Urbex Travel Report">
-          <a href="assets/images/portfolio/urbex/urbex_01.webp" title="Urbex Travel Report" class="popup" data-lightbox="gallery-8"></a>
-          <div><img width="100%" height="100%" loading="lazy" src="assets/images/portfolio/urbex/urbex_thumb.webp"
-              alt="Urbex"></div>
-          <figcaption> <span class="figcaption-wrap">
-              <span>Travel Photography</span>
-              <h3>Urbex</h3>
-            </span>
-          </figcaption>
-        </figure>
-
-        <figure class="element " data-folder="assets/images/portfolio/newyork/2019" data-prefix="new-york_"
-          data-total="13" data-rel="New York Travel Report">
-          <a href="assets/images/portfolio/newyork/2019/new-york_01.webp" title="New York Travel Report" data-lightbox="gallery-9"
-            class="popup"></a>
-          <div><img width="100%" height="100%" loading="lazy"
-              src="assets/images/portfolio/newyork/2019/new-york_thumb.webp" alt="New York"></div>
-          <figcaption> <span class="figcaption-wrap">
-              <span>Travel Photography</span>
-              <h3>New York 2019</h3>
-            </span>
-          </figcaption>
-        </figure>
-
-        <figure class="element " data-folder="assets/images/portfolio/japan" data-prefix="japan_" data-total="31"
-          data-rel="Japan Travel Report">
-          <a href="assets/images/portfolio/japan/japan_01.webp" title="Japan Travel Report" class="popup" data-lightbox="gallery-10"></a>
-          <div><img width="100%" height="100%" loading="lazy" src="assets/images/portfolio/japan/japan-thumb.webp"
-              alt="Japan"></div>
-          <figcaption> <span class="figcaption-wrap">
-              <span>Travel Photography</span>
-              <h3>Japan</h3>
-            </span>
-          </figcaption>
-        </figure>
-
-        <figure class="element " data-folder="assets/images/portfolio/australia" data-prefix="australia_"
-          data-total="20" data-rel="Australia Travel Report">
-          <a href="assets/images/portfolio/australia/australia_01.webp" title="Australia Travel Report" data-lightbox="gallery-11"
-            class="popup"></a>
-          <div><img width="100%" height="100%" loading="lazy"
-              src="assets/images/portfolio/australia/australia_thumb.webp" alt="Australia"></div>
-          <figcaption> <span class="figcaption-wrap">
-              <span>Travel Photography</span>
-              <h3>Australia</h3>
-            </span>
-          </figcaption>
-        </figure>
-
-        <figure class="element " data-folder="assets/images/portfolio/newzealand" data-prefix="new-zealand_"
-          data-total="15" data-rel="New Zealand Travel Report">
-          <a href="assets/images/portfolio/newzealand/new-zealand_01.webp" title="New Zealand Travel Report" data-lightbox="gallery-12"
-            class="popup"></a>
-          <div><img width="100%" height="100%" loading="lazy"
-              src="assets/images/portfolio/newzealand/newzealand_thumb.webp" alt="New Zealand"></div>
-          <figcaption> <span class="figcaption-wrap">
-              <span>Travel Photography</span>
-              <h3>New Zealand</h3>
-            </span>
-          </figcaption>
-        </figure>
+        </div>
       </div>
-    </section>
-    <section id="contacts" data-full="true" class="slide">
-      <div class="container contacts">
-        <h1>Contact <span>me</span>!</h1>
-        <p>I'm a UX/UI designer who loves turning <strong>ideas</strong> into <strong>interfaces</strong> people actually enjoy using — from early wireframes to polished, coded front-ends. <br>Whether you're looking to bring a designer onto your team or need a hand with a specific project, I bring solid experience in prototyping, Figma, Adobe CC, and HTML5/SCSS, along with the collaborative mindset and problem-solving instincts that come from working across startups and larger companies alike.
-<br>
-If that sounds like a fit, I'd love to hear from you — reach out via <a
-            href="https://www.linkedin.com/in/alessandramineo/" target="_blank">Linkedin </a>  or <a href="mailto:alessandra.cherryweb@gmail.com" target="_self"> mail</a> and let's talk.
-        </p>
 
+      <div class="hero-bottom" data-reveal>
+        <a href="#work" class="scroll-link mono" data-hover>
+          <span class="scroll-circle">↓</span>
+          Scroll
+        </a>
 
       </div>
     </section>
-    <footer id="footer">
-      <div id="curiosities">
-        <ul id="footer-container">
-          <li>
-            <h3>On air</h3>
-            <p>To find inspiration, help the mood or just entertain my brain, here's some of my fav
-              tunes. <br>Check <a href="https://open.spotify.com/playlist/5l8NKHQjdoOQt0tyCr1tVy?si=a2c8cb3824844e2d"
-                target="_blank">my playlist</a> on Spotify</p>
-            <ul class="dot dot-music">
-              <li><strong>Evanescence</strong> - Forgive me</li>
-              <li><strong>Blink 182</strong> - Adam's song</li>
-              <li><strong>Fun</strong> - We are young</li>
-              <li><strong>Maroon 5</strong> - One more night</li>
-              <li><strong>Green Day</strong> - Give me novocaine</li>
-              <li><strong>Kè</strong> - Strange world</li>
-              <li><strong>Serj Tankian</strong> - Lie Lie Lie</li>
-              <li><strong>Alter bridge</strong> - Broken wings</li>
-              <li><strong>Avril Lavigne</strong> - Wish you were here</li>
-              <li><strong>Hozier</strong> - Take me to church</li>
-              <li><strong>Imagine Dragons</strong> - Believer</li>
-              <li><strong>Simon & Garfunkel</strong> - Flowers Never Bend With the Rainfall</li>
-              <li><strong>Blonde Redhead</strong> - For the Damaged Coda</li>
-              <li><strong>Sia</strong> - Unstoppable</li>
-              <li><strong>Britney Spears</strong> - Shadow</li>
-            </ul>
-          </li>
-          <li>
-            <h3>TV Show</h3>
-            <p>When I'm not working, exercising or traveling, I love to relax watching some good shows!<br>Check <a
-                href="https://www.tvtime.com/en/user/65870169/profile" target="_blank">my lists</a> on TV Time</p>
-            <ul class="dot dot-show">
-              <li>2 Broke girls</li>
-              <li>Boris</li>
-              <li>CSI Las Vegas</li>
-              <li>Dexter</li>
-              <li>Fringe</li>
-              <li>Good Omen</li>
-              <li>The Handmaid's tale</li>
-              <li>Loki</li>
-              <li>The Marvelous Mrs. Maisel</li>
-              <li>Penny Dreadful</li>
-              <li>Silicon Valley</li>
-              <li>Spartacus</li>
-              <li>The Strain</li>
-              <LI>UnREAL</LI>
-              <li>Vikings</li>
-              <li>Zerocalcare Netflix</li>
-            </ul>
-          </li>
-          <li>
-            <h3>I've been to</h3>
-            <p>I love to spend my time with my reflex, I am very committed in becoming a good photographer!<br>Check
-              <a href="https://gurushots.com/hellolen/photos" target="_blank">my pictures</a> on Gurushot!
-            </p>
-            <ul class="dot dot-world">
-              <li>Australia</li>
-              <li>Austria</li>
-              <li>China</li>
-              <li>Croatia</li>
-              <li>Egypt</li>
-              <li>France</li>
-              <li>Greece</li>
-              <li>Italy</li>
-              <li>Japan</li>
-              <li>Maldives</li>
-              <li>New Zealand</li>
-              <li>Spain</li>
-              <li>Sweden</li>
-              <li>Thailand</li>
-              <li>UK</li>
-              <li>USA</li>
-            </ul>
-          </li>
-          <li>
-            <h3>My bookmarks</h3>
-            <p>Whenever a website grabs my attention, I add it to my bookmarks folder.<br>Here's some of them!</p>
-            <ul class="dot dot-url">
-              <li><a href="https://gurushots.com/hellolen/photos" target="_blank"><strong>GuruShots</strong>.com</a>
-              </li>
-              <li><a href="https://www.locationscout.net" target="_blank"><strong>LocationScout</strong>.net</a></li>
-              <li><a href="http://www.getbootstrap.com" target="_blank"><strong>Bootstrap</strong>.com</a></li>
-              <li><a href="http://www.dribbble.com" target="_blank"><strong>Dribbble</strong>.com</a></li>
-              <li><a href="http://www.smashingmagazine.com" target="_blank"><strong>Smashingmagazine</strong>.com</a>
-              </li>
-              <li><a href="https://fonts.google.com/" target="_blank"><strong>GoogleFonts</strong>.com</a></li>
-              <li><a href="http://www.speckyboy.com" target="_blank"><strong>Speckyboy</strong>.com</a></li>
-              <li><a href="https://incrediblethings.com/unique-gifts/"
-                  target="_blank"><strong>Incrediblethings</strong>.com</a></li>
-              <li><a href="http://clientsfromhell.net/" target="_blank"><strong>Clientsfromhell</strong>.net</a></li>
-            </ul>
-          </li>
-        </ul>
-        <p id="credits">&copy; Copyright 2026 - Graphic &amp; coding by Alessandra Mineo | all rights reserved<br />
-          Made on a pc, using Figma, VS Code  &amp;  Hugo</p>
+
+    <section id="work" class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow mono">(01)</span>
+          <h2 class="serif">Selected <span class="italic primary">work</span></h2>
+          <p class="caption mono">I have worked in various environments, both large companies and small startups,
+            gaining a significant amount of experience and constantly learning something new! <br>I have consistently
+            aimed to stay updated, acquiring new skills whenever I found them valuable or it was required.
+            <br>Here's a curated selection of my latest work
+          </p>
+        </div>
       </div>
-    </footer>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="assets/js/easing.js" type="text/javascript"></script>
-  <!--scrolling easing-->
 
-  <script defer type="text/javascript" src="assets/js/jquery.hoverdir.js"></script>
-  <script src="assets/js/readmore.min.js"></script>
+      <div class="filter-bar" id="filter-bar"></div>
 
-  <script defer src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-  <script src="assets/js/jquery_main.js"></script>
-  <script defer
-    src="https://cdn.jsdelivr.net/gh/andreknieriem/simplelightbox@master/dist/simple-lightbox.min.js?v2.13.0"></script>
+      <div class="work-list" id="work-list"></div>
 
-  <script>
-    $(document).ready(function () {
-      var lightbox = new SimpleLightbox('.popup', {
-        captions: true,
-        captionPosition: 'bottom',
-        scrollZoom: false,
-        captionsData: 'title',
-        captionSelector: 'self'
-      });
-    });
-  </script>
+      <div class="work-tooltip" id="work-tooltip"><img src="" alt=""></div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <span class="eyebrow mono primary">(02)</span>
+        <h2 class="serif">Skills &amp; <span class="italic primary">tools</span></h2>
+        <p class="caption mono">Constantly learning — acquiring new skills whenever they're valuable</p>
+      </div>
+
+      <div class="marquee-mask">
+        <div style="height:24px;"></div>
+        <div class="marquee-track left" id="marquee-1"></div>
+      </div>
+      <div style="height:24px;"></div>
+      <div class="marquee-mask">
+        <div class="marquee-track right" id="marquee-2"></div>
+      </div>
+      <!-- Static tools -->
+      <div class=" tools-list">
+
+        <div class="tools-items">
+          <span>Adobe CC</span> /
+          <span>Figma</span> /
+          <span>VS Code</span> /
+          <span>Claude.ai</span> /
+          <span>Lovable</span> /
+          <span>Google Workspace</span> /
+          <span>Hugo</span> /
+          <span>Jira</span> /
+          <span>Git</span> /
+          <span>Miro</span> /
+          <span>Strapi</span> /
+          <span>WordPress</span> /
+          <span>Office 365</span> /
+          <span>Freehand drawing</span> /
+          <span>GA4 / Looker Studio</span> /
+          <span>Nikon D7500</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="hobbies">
+      <div class="wrap hobbies-head">
+        <div class="contact-top">
+          <span class="eyebrow mono primary">(03)</span>
+          <div class="drag-hint mono">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 3 4 7l4 4"></path>
+              <path d="M4 7h16"></path>
+              <path d="m16 21 4-4-4-4"></path>
+              <path d="M20 17H4"></path>
+            </svg>
+            drag / scroll
+          </div>
+        </div>
+
+        <h2 class="serif">Hobbies <span class="italic primary">too</span></h2>
+        <p class="caption mono">I genuinely enjoy my job, no doubt about it!<br>
+          However, in my free time, I like to engage in various activities.<br>
+          While I can't share pictures of my workouts or TV show/movie binges, I'd love to present you with a curated
+          collection of my top travel and urbex photos!</p>
+
+
+      </div>
+
+      <div class="hobbies-scroll" id="hobbies-scroll"></div>
+    </section>
+
+    <section id="contact" class="wrap">
+      <div class="contact-top">
+        <span class="eyebrow mono">(04)</span>
+        <span class="label mono">Let's talk</span>
+      </div>
+      <p class="reach" data-reveal>Reach out </p>
+      <a href="mailto:alessandra.cherryweb@gmail.com" class="say-hello" data-hover data-reveal>
+        Say <span class="italic primary">hello</span><svg xmlns="http://www.w3.org/2000/svg" width="0.7em"
+          height="0.7em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M7 7h10v10"></path>
+          <path d="M7 17 17 7"></path>
+        </svg>
+      </a>
+
+      <div class="contact-links" data-reveal>
+        <p class="caption mono">I'm a UX/UI designer who loves turning ideas into interfaces people actually enjoy using
+          — from early wireframes to polished, coded front-ends.<br>
+          Whether you're looking to bring a designer onto your team or need a hand with a specific project, I bring
+          solid experience in prototyping, Figma, Adobe CC, and HTML5/SCSS, along with the collaborative mindset and
+          problem-solving instincts that come from working across startups and larger companies alike.</p>
+
+        <a href="mailto:alessandra.cherryweb@gmail.com" class="contact-pill" data-hover>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+          alessandra.cherryweb@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/alessandramineo/" target="_blank" rel="noreferrer" class="contact-pill"
+          data-hover>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect width="4" height="12" x="2" y="9"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+          LinkedIn
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 7h10v10"></path>
+            <path d="M7 17 17 7"></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="footer-logo">cherry<span class="primary">.</span>web</div>
+      <div class="mono">© 2026 Alessandra Mineo</div>
+      <div class="mono">Designed &amp; coded with care</div>
+    </div>
+  </footer>
+
+
+
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/travel.js"></script>
+  <script src="assets/js/travel-gallery.js"></script>
+  <script src="assets/js/navbar.js"></script>
 </body>
-
 
 </html>

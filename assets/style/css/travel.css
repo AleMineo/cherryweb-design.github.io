@@ -1,0 +1,20 @@
+#hobbies-scroll {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 1rem;
+  scrollbar-width: auto;
+}
+#hobbies-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+#hobbies-scroll::-webkit-scrollbar-thumb {
+  background: #999;
+}
+#hobbies-scroll::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+/*# sourceMappingURL=travel.css.map */
