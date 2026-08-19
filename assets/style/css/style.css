@@ -512,6 +512,12 @@ section {
   margin-top: 8px;
 }
 
+.load-more__wrapper {
+  width: 100%;
+  margin: 40px 25px;
+  text-align: right;
+}
+
 .work-tooltip {
   position: fixed;
   top: 0;
