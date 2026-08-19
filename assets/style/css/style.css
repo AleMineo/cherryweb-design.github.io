@@ -1033,42 +1033,42 @@ body.lightbox-open {
 
 @font-face {
   font-family: "Instrument Serif";
-  src: url("../../fonts/Instrument_Serif/InstrumentSerif-Regular.ttf") format("truetype");
+  src: url("../../fonts/Instrument_Serif/InstrumentSerif-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Instrument Serif";
-  src: url("../../fonts/Instrument_Serif/InstrumentSerif-Italic.ttf") format("truetype");
+  src: url("../../fonts/Instrument_Serif/InstrumentSerif-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../../fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  src: url("../../fonts/Inter/Inter-VariableFont_opsz,wght.woff2") format("woff2");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../../fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf") format("truetype");
+  src: url("../../fonts/Inter/Inter-Italic-VariableFont_opsz,wght.woff2") format("woff2");
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "JetBrains Mono";
-  src: url("../../fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+  src: url("../../fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.woff2") format("woff2");
   font-weight: 100 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "JetBrains Mono";
-  src: url("../../fonts/JetBrains_Mono/JetBrainsMono-Italic-VariableFont_wght.ttf") format("truetype");
+  src: url("../../fonts/JetBrains_Mono/JetBrainsMono-Italic-VariableFont_wght.woff2") format("woff2");
   font-weight: 100 800;
   font-style: italic;
   font-display: swap;
@@ -1473,6 +1473,7 @@ header {
   transition: height 0.35s ease, background 0.35s ease;
 }
 header.menu-open {
+  height: 100vh;
   height: 100dvh;
   background: #eef1f5;
 }
