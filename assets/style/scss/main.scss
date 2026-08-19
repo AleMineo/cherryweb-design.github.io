@@ -492,7 +492,7 @@ section {
 .work-row-inner {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 14px;
   padding: 0 8px;
 
   @media (min-width: $bp-md) {
@@ -504,7 +504,7 @@ section {
   font-family: $font-mono;
   font-size: .7rem;
   color: $muted-foreground;
-  width: 40px;
+  width: 20px;
   align-self: flex-start;
   padding-top: 10px;
 }
