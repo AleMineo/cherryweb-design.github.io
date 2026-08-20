@@ -248,7 +248,7 @@ header {
 .hero__lede{
       max-width: 34rem;
     margin-top: 2rem;
-    font-size: clamp(0.84rem, 0.7rem + 0.5vw, 1.125rem);
+    font-size: clamp(1rem, 0.7rem + 0.5vw, 1.125rem);
     line-height: 1.6;
 }
 
@@ -798,16 +798,15 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+    font-size: clamp(1rem, 0.4vw, 1.25rem);
 
   .name {
     font-family: $font-serif;
-    font-size: clamp(0.94rem, 0.4vw, 1.25rem);
     letter-spacing: 0;
   }
 
   .year {
     font-family: $font-mono;
-    font-size: clamp(0.6rem, 0.13vw, 0.7rem);
     color: $muted-foreground;
   }
 }
