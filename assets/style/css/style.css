@@ -282,7 +282,7 @@ header nav {
 .hero__lede {
   max-width: 34rem;
   margin-top: 2rem;
-  font-size: clamp(1rem, 0.7rem + 0.5vw, 1.125rem);
+  font-size: clamp(1.1rem, 0.7rem + 0.5vw, 1.25rem);
   line-height: 1.6;
 }
 
@@ -323,9 +323,9 @@ header nav {
 }
 
 #currently-word {
-  font-size: clamp(1.125rem, 0.49vw, 1.5rem);
+  font-size: clamp(2rem, 0.49vw, 1.5rem);
   letter-spacing: 0;
-  height: 1.75rem;
+  height: 2.5rem;
   overflow: hidden;
   position: relative;
   width: 250px;
@@ -417,7 +417,7 @@ section {
 }
 
 .caption {
-  font-size: clamp(1rem, 0.33vw, 1.25rem);
+  font-size: clamp(1.1rem, 0.7rem + 0.5vw, 1.25rem);
   color: #343a40;
   line-height: 30px;
 }
@@ -1108,10 +1108,8 @@ body#portfolio-item #wrapper section {
   margin: 0;
   margin-bottom: 10px;
   max-width: 100%;
-  line-height: 30px;
   font-family: "JetBrains Mono", monospace;
   font-weight: 300;
-  font-size: clamp(0.86rem, 0.38vw, 1.15rem);
 }
 .project-hero .info {
   gap: 1.5rem;
@@ -1162,7 +1160,7 @@ body#portfolio-item #wrapper section {
   color: #fafafa;
   outline: none !important;
   background: #EA1C8B;
-  font-size: clamp(0.72rem, 0.17vw, 0.85rem);
+  font-size: clamp(0.95rem, 0.7rem + 0.5vw, 1rem);
 }
 .btn:hover {
   background: #fafafa;
@@ -1208,7 +1206,7 @@ body#portfolio-item #wrapper section {
   margin: 0;
   margin-bottom: 10px;
   font-weight: 300;
-  font-size: clamp(0.94rem, 0.4vw, 1.25rem);
+  font-size: clamp(1.1rem, 0.7rem + 0.5vw, 1.25rem);
 }
 .project-content .description p {
   margin-bottom: 15px;

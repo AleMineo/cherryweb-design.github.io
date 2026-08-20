@@ -64,10 +64,8 @@ body {
         margin: 0;
         margin-bottom: 10px;
         max-width: 100%;
-        line-height: 30px;
         font-family: $font-mono;
         font-weight: 300;
-        font-size: clamp(0.86rem, 0.38vw, 1.15rem);
     }
 
     .info {
@@ -124,7 +122,7 @@ body {
     color: #fafafa;
     outline: none !important;
     background: #EA1C8B;
-    font-size: clamp(0.72rem, 0.17vw, 0.85rem);
+    font-size: clamp(0.95rem, 0.7rem + 0.5vw, 1rem);
 
     &:hover {
         background: #fafafa;
@@ -178,7 +176,7 @@ body {
             margin: 0;
             margin-bottom: 10px;
             font-weight: 300;
-            font-size: clamp(0.94rem, 0.4vw, 1.25rem);
+            font-size: clamp(1.1rem, 0.7rem + 0.5vw, 1.25rem);
         }
 
         p {

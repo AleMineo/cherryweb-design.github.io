@@ -9,7 +9,7 @@
 <div class="project-hero wrap">
   <h1><small>{{ .Params.category }}</small>{{ .Title }}</h1>
   {{ with .Params.overview }}
-  <h3>{{ . | safeHTML }}</h3>
+  <h3 class="caption">{{ . | safeHTML }}</h3>
   {{ end }}
 
   <div class="buttons">

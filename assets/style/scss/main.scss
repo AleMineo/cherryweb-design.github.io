@@ -248,7 +248,7 @@ header {
 .hero__lede{
       max-width: 34rem;
     margin-top: 2rem;
-    font-size: clamp(1rem, 0.7rem + 0.5vw, 1.125rem);
+    font-size: clamp(1.1rem, 0.7rem + 0.5vw, 1.25rem);
     line-height: 1.6;
 }
 
@@ -292,9 +292,9 @@ header {
 }
 
 #currently-word {
-  font-size: clamp(1.125rem, 0.49vw, 1.5rem);
+  font-size: clamp(2rem, 0.49vw, 1.5rem);
   letter-spacing: 0;
-  height: 1.75rem;
+  height: 2.5rem;
   overflow: hidden;
   position: relative;
   width: 250px;
@@ -392,7 +392,7 @@ section {
 }
 
 .caption {
-  font-size: clamp(1rem, 0.33vw, 1.25rem);
+  font-size: clamp(1.1rem, 0.7rem + 0.5vw, 1.25rem);
   color: $dark-grey;
   line-height: 30px;
 }
