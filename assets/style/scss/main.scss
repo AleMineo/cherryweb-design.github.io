@@ -248,7 +248,7 @@ header {
 .hero__lede{
       max-width: 34rem;
     margin-top: 2rem;
-    font-size: clamp(0.84rem, 0.37vw, 1.125rem);
+    font-size: clamp(1rem, 0.7rem + 0.5vw, 1.125rem);
     line-height: 1.6;
 }
 
@@ -372,9 +372,11 @@ section {
 
 .section-head {
   display: flex;
+  flex-direction: column;
   align-items: baseline;
   justify-content: space-between;
   margin-bottom: 48px;
+  gap: 15px;
 
   .count {
     font-size: clamp(0.6rem, 0.13vw, 0.7rem);
@@ -796,16 +798,15 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+    font-size: clamp(1rem, 0.4vw, 1.25rem);
 
   .name {
     font-family: $font-serif;
-    font-size: clamp(0.94rem, 0.4vw, 1.25rem);
     letter-spacing: 0;
   }
 
   .year {
     font-family: $font-mono;
-    font-size: clamp(0.6rem, 0.13vw, 0.7rem);
     color: $muted-foreground;
   }
 }
@@ -843,10 +844,7 @@ section {
 }
 
 .say-hello {
-  display: block;
-  font-family: $font-serif;
   font-size: clamp(2rem, 4.57vw, 5.5rem);
-  line-height: .95;
   letter-spacing: -0.01em;
   transition: color .3s;
 
