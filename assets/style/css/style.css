@@ -695,7 +695,7 @@ section {
 }
 .marquee-item .word {
   font-family: "Instrument Serif", serif;
-  font-size: clamp(1.5rem, 2.94vw, 3.75rem);
+  font-size: clamp(1.5rem, 2.94vw, 2.75rem);
   white-space: nowrap;
 }
 .marquee-item .star {
