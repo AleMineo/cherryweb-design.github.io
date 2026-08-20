@@ -215,7 +215,7 @@ header nav {
 }
 
 .logo {
-  font-size: clamp(1.125rem, 0.49vw, 1.5rem);
+  font-size: clamp(1.55rem, 0.49vw, 1.55rem);
   letter-spacing: 0;
 }
 
@@ -295,8 +295,8 @@ header nav {
 }
 
 .hero__hello {
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
-  margin: 0 0 1rem;
+  font-size: clamp(1.85rem, 3vw, 2.25rem);
+  margin: 0 0 1.5rem;
 }
 
 .hero__lede {
@@ -307,7 +307,7 @@ header nav {
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 11vw, 8rem);
+  font-size: clamp(2.5rem, 0.56rem + 8.27vw, 8rem);
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 0.95;
@@ -335,7 +335,7 @@ header nav {
 }
 
 .currently-label {
-  font-size: clamp(0.6rem, 0.13vw, 0.7rem);
+  font-size: clamp(0.6rem, 0.56rem + 0.15vw, 0.7rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: #7a7672;
@@ -343,7 +343,7 @@ header nav {
 }
 
 #currently-word {
-  font-size: clamp(2rem, 0.49vw, 1.5rem);
+  font-size: clamp(1.55rem, 1.66rem + 0.38vw, 2rem);
   letter-spacing: 0;
   height: 2.5rem;
   overflow: hidden;
