@@ -280,7 +280,7 @@ header nav {
 }
 
 .hero__lede {
-  max-width: 34rem;
+  max-width: 44rem;
   margin-top: 2rem;
   font-size: clamp(1.1rem, 0.7rem + 0.5vw, 1.25rem);
   line-height: 1.6;
