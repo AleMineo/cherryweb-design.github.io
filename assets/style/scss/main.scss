@@ -246,7 +246,7 @@ header {
 }
 
 .hero__lede{
-      max-width: 34rem;
+      max-width: 44rem;
     margin-top: 2rem;
     font-size: clamp(1.1rem, 0.7rem + 0.5vw, 1.25rem);
     line-height: 1.6;
@@ -516,7 +516,7 @@ section {
 
 .work-name {
   font-family: $font-serif;
-  font-size: clamp(1.8rem, 2.22vw, 3.5rem);
+  font-size: clamp(1.8rem, 2.22vw, 2.8rem);
   transition: color .3s, font-style .3s;
 }
 
@@ -700,7 +700,7 @@ section {
 
   .word {
     font-family: $font-serif;
-    font-size: clamp(1.5rem, 2.94vw, 3.75rem);
+    font-size: clamp(1.5rem, 2.94vw, 2.75rem);
     white-space: nowrap;
   }
 
