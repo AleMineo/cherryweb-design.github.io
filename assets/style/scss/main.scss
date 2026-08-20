@@ -94,6 +94,58 @@ h6 {
   color: $primary;
 }
 
+main{
+  &::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  height: 200%;
+
+background:
+    // hot pink
+    radial-gradient(
+      circle at 100% 78%,
+      rgba(255, 33, 203, 0.72) 0%,
+      rgba(255, 33, 203, 0.45) 18%,
+      rgba(255, 33, 203, 0) 42%
+    ),
+
+    // warm peach
+    radial-gradient(
+      circle at 98% 50%,
+      rgba(255, 194, 116, 0.65) 0%,
+      rgba(255, 194, 116, 0.35) 20%,
+      rgba(255, 194, 116, 0) 43%
+    ),
+
+    // lavender / purple
+    radial-gradient(
+      circle at 80% 65%,
+      rgba(153, 96, 243, 1) 0%,
+      rgba(153, 96, 243, 0.5) 18%,
+      rgba(153, 96, 243, 0.3) 30%,
+      rgba(153, 96, 243, 0) 48%
+    ),
+
+    #eef1f5;
+
+  animation: fadeGradient linear both;
+  animation-timeline: scroll();
+  animation-range: 0 500px;
+}
+
+@keyframes fadeGradient {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+}
+
 // ==========================================================================
 // Custom cursor
 // ==========================================================================
