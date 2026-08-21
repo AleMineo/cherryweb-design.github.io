@@ -11,6 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!headerEl) return;
 
   window.addEventListener("scroll", () => {
-    headerEl.style.boxShadow = window.scrollY > 20 ? "0 1px 0 rgba(0,0,0,0.1)" : "none";
+    headerEl.style.boxShadow = window.scrollY > 20
+  ? "0 1px 0 rgba(0,0,0,0.1)"
+  : "none";
+
+headerEl.style.padding = window.scrollY > 20
+  ? "12px 0"
+  : "24px 0";
   });
 });
