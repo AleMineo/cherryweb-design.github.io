@@ -1111,6 +1111,9 @@ body#portfolio-item #wrapper section {
   margin-left: auto !important;
 }
 
+.project-hero-image {
+  padding: 60px 0 10px;
+}
 .project-hero-image img {
   width: 100%;
   max-width: 1400px;
@@ -1189,8 +1192,9 @@ body#portfolio-item #wrapper section {
   text-decoration: none;
   color: #fafafa;
   outline: none !important;
+  transition: all ease-in-out 0.2s;
   background: #EA1C8B;
-  font-size: clamp(0.95rem, 0.7rem + 0.5vw, 1rem);
+  font-size: clamp(0.55rem, 0.7rem + 0.5vw, 0.85rem);
 }
 .btn:hover {
   background: #fafafa;

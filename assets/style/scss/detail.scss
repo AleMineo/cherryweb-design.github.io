@@ -31,7 +31,7 @@ body {
 
 
 .project-hero-image {
-
+     padding: 60px 0 10px;
     img {
         width: 100%;
         max-width: 1400px;
@@ -116,13 +116,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: $font-sans;
+    font-family: "Inter", sans-serif;
     cursor: pointer;
     text-decoration: none;
     color: #fafafa;
     outline: none !important;
+    transition: all ease-in-out .2s;
     background: #EA1C8B;
-    font-size: clamp(0.95rem, 0.7rem + 0.5vw, 1rem);
+    font-size: clamp(0.55rem, 0.7rem + 0.5vw, 0.85rem);
 
     &:hover {
         background: #fafafa;
