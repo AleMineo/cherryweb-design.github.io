@@ -443,7 +443,7 @@ section {
 }
 
 .caption {
-  font-size: clamp(1.1rem, calc(0.7rem + 0.5vw), 1.25rem);
+  font-size: clamp(1rem, calc(0.7rem + 0.5vw), 1.25rem);
   color: $dark-grey;
   line-height: 30px;
 }
