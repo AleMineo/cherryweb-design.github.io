@@ -91,7 +91,7 @@ body {
 
         .tools {
             .tool {
-                font-size: clamp(0.85rem, 0.2vw, 1rem);
+                font-size: clamp(0.85rem, 0.75vw, 1rem);
                 line-height: 1.3rem;
                 padding-top: 0.525rem;
                 padding-bottom: 0.125rem;
@@ -222,7 +222,7 @@ body {
         strong {
             display: block;
             margin-top: 5px;
-            font-size: clamp(1rem, 0.33vw, 1.25rem);
+            font-size: clamp(1rem, 0.75vw, 1.25rem);
             color: $primary;
         }
 
@@ -263,7 +263,7 @@ body {
         border-bottom: solid 1px $light-grey ;
 
         .back-link {
-            font-size: clamp(0.85rem, 0.2vw, 1rem);
+            font-size: clamp(0.85rem, 0.7rem + 0.5vw, 1rem);
             color: $foreground;
             display: flex;
             align-items: center;
@@ -358,7 +358,7 @@ body {
             h3 {
                 padding-bottom: 0;
                 font-weight: 600;
-                font-size: clamp(1.5rem, 0.65vw, 2rem);
+                font-size: clamp(1.5rem, 1rem + 0.75vw, 2rem);
                 font-family: $font-serif;
             }
 
@@ -367,7 +367,7 @@ body {
                 letter-spacing: 0.2em;
                 text-transform: uppercase;
                 font-weight: 500;
-                font-size: clamp(0.53rem, 0.12vw, 0.625rem);
+                font-size: clamp(0.53rem, 0.55vw, 0.625rem);
                 padding-top: 0.25rem;
                 padding-bottom: 0.25rem;
                 padding-left: 0.75rem;
@@ -387,7 +387,7 @@ body {
             justify-content: flex-start;
 
             span {
-                font-size: clamp(0.64rem, 0.14vw, 0.75rem);
+                font-size: clamp(0.64rem, 0.5rem + 0.5vw, 0.75rem);
                 line-height: 1rem;
                 padding-top: 0.25rem;
                 padding-bottom: 0;

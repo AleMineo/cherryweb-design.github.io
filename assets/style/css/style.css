@@ -139,7 +139,7 @@ h6 {
 }
 
 .eyebrow {
-  font-size: clamp(0.6rem, 0.13vw, 0.7rem);
+  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: #eb1e8f;
@@ -197,8 +197,9 @@ header {
   left: 0;
   right: 0;
   z-index: 50;
-  padding: 24px 0;
   backdrop-filter: blur(24px);
+  transition: all ease-in-out 0.2s;
+  padding: 24px 0;
 }
 header nav {
   max-width: 1400px;
@@ -215,7 +216,7 @@ header nav {
 }
 
 .logo {
-  font-size: clamp(1.55rem, 0.49vw, 1.55rem);
+  font-size: clamp(1.125rem, 0.75rem + 0.75vw, 1.5rem);
   letter-spacing: 0;
 }
 
@@ -223,7 +224,7 @@ header nav {
   display: flex;
   align-items: center;
   gap: 24px;
-  font-size: clamp(0.64rem, 0.14vw, 0.75rem);
+  font-size: clamp(0.64rem, 0.5vw + 0.34rem, 0.75rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
   list-style: none;
@@ -249,7 +250,7 @@ header nav {
   border-radius: 999px;
   background: #eb1e8f;
   color: #eef1f5 !important;
-  font-size: clamp(0.6rem, 0.13vw, 0.7rem);
+  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
   transition: background 0.2s, color 0.2s;
 }
 .talk-btn:hover {
@@ -279,7 +280,7 @@ header nav {
 .eyebrow-row {
   display: flex;
   justify-content: space-between;
-  font-size: clamp(0.6rem, 0.13vw, 0.7rem);
+  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: #7a7672;
@@ -375,7 +376,7 @@ header nav {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: clamp(0.72rem, 0.17vw, 0.85rem);
+  font-size: clamp(0.72rem, 0.65vw, 0.85rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
 }
@@ -398,7 +399,7 @@ header nav {
 
 .hero-stats {
   text-align: right;
-  font-size: clamp(0.6rem, 0.13vw, 0.7rem);
+  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: #7a7672;
@@ -424,7 +425,7 @@ section {
   gap: 15px;
 }
 .section-head .count {
-  font-size: clamp(0.6rem, 0.13vw, 0.7rem);
+  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: #7a7672;
@@ -455,7 +456,7 @@ section {
 
 .filter-btn {
   font-family: "JetBrains Mono", monospace;
-  font-size: clamp(0.64rem, 0.14vw, 0.75rem);
+  font-size: clamp(0.64rem, 0.65vw, 0.75rem);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #7a7672;
@@ -534,7 +535,7 @@ section {
 
 .work-num {
   font-family: "JetBrains Mono", monospace;
-  font-size: clamp(0.6rem, 0.13vw, 0.7rem);
+  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
   color: #7a7672;
   width: 20px;
   align-self: flex-start;
@@ -554,7 +555,7 @@ section {
 
 .work-desc {
   margin-top: 4px;
-  font-size: clamp(0.8rem, 0.13vw, 0.9rem);
+  font-size: clamp(0.8rem, 0.65vw, 0.9rem);
   line-height: 1.5;
   color: #7a7672;
   max-width: 90ch;
@@ -574,7 +575,7 @@ section {
 
 .work-year {
   font-family: "JetBrains Mono", monospace;
-  font-size: clamp(0.6rem, 0.13vw, 0.7rem);
+  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
   color: #7a7672;
   width: 48px;
   text-align: right;
@@ -591,7 +592,7 @@ section {
 
 .load-more__wrapper {
   width: 100%;
-  margin: 40px 25px;
+  padding: 40px 0px;
   text-align: right;
 }
 
@@ -648,7 +649,7 @@ section {
   display: flex;
   justify-content: space-between;
   gap: 16px;
-  font-size: clamp(0.75rem, 0.33vw, 1rem);
+  font-size: clamp(0.75rem, 0.75vw, 1rem);
 }
 @media (max-width: 1999px) {
   .tools-list .tools-items {
@@ -676,6 +677,8 @@ section {
 .marquee-track {
   display: flex;
   width: max-content;
+  /* FIX: Ensures the exact same spacing when Group 1 touches Group 2 */
+  gap: 40px;
 }
 .marquee-track.left {
   animation: scroll-left 40s linear infinite;
@@ -683,18 +686,26 @@ section {
 .marquee-track.right {
   animation: scroll-right 46s linear infinite;
 }
+.marquee-track {
+  /* ACCESSIBILITY: Gracefully pauses animation on hover/focus */
+}
+.marquee-track:hover, .marquee-track:focus-within {
+  animation-play-state: paused;
+}
 
 @keyframes scroll-left {
   from {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
+    /* Moves exactly by the width of one group plus half the gap */
+    transform: translateX(calc(-50% - 20px));
   }
 }
 @keyframes scroll-right {
   from {
-    transform: translateX(-50%);
+    /* Starts shifted perfectly by one group plus half the gap */
+    transform: translateX(calc(-50% - 20px));
   }
   to {
     transform: translateX(0);
@@ -704,7 +715,7 @@ section {
   display: flex;
   flex-shrink: 0;
   gap: 40px;
-  padding-right: 40px;
+  /* FIX: Removed padding-right which was breaking the 50% loop reset math */
 }
 
 .marquee-item {
@@ -720,13 +731,13 @@ section {
 }
 .marquee-item .star {
   color: #eb1e8f;
-  font-size: clamp(1.125rem, 0.49vw, 1.5rem);
+  font-size: clamp(1.125rem, 1.1vw, 1.5rem);
 }
 
 .skills-caption {
   text-align: center;
   margin-top: 40px;
-  font-size: clamp(0.72rem, 0.17vw, 0.85rem);
+  font-size: clamp(0.72rem, 0.75vw, 0.85rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: #7a7672;
@@ -745,7 +756,7 @@ section {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: clamp(0.6rem, 0.13vw, 0.7rem);
+  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: #7a7672;
@@ -806,7 +817,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  font-size: clamp(1rem, 0.4vw, 1.25rem);
+  font-size: clamp(1rem, 0.8vw, 1.25rem);
 }
 .hobby-meta .name {
   font-family: "Instrument Serif", serif;
@@ -819,25 +830,25 @@ section {
 
 .contact-top {
   display: flex;
-  align-items: baseline;
+  align-items: start;
   justify-content: space-between;
   width: 100%;
 }
 .contact-top .eyebrow {
-  font-size: clamp(0.6rem, 0.13vw, 0.7rem);
+  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: #eb1e8f;
 }
 .contact-top .label {
-  font-size: clamp(0.6rem, 0.13vw, 0.7rem);
+  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: #7a7672;
 }
 
 .reach {
-  font-size: clamp(0.72rem, 0.17vw, 0.85rem);
+  font-size: clamp(0.72rem, 0.75vw, 0.85rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: #7a7672;
@@ -845,7 +856,6 @@ section {
 }
 
 .say-hello {
-  font-size: clamp(2rem, 4.57vw, 5.5rem);
   letter-spacing: -0.01em;
   transition: color 0.3s;
 }
@@ -876,7 +886,7 @@ section {
   padding: 12px 20px;
   border-radius: 999px;
   border: 1px solid rgba(20, 19, 19, 0.2);
-  font-size: clamp(0.77rem, 0.17vw, 0.9rem);
+  font-size: clamp(0.77rem, 0.75vw, 0.9rem);
   transition: background 0.2s, color 0.2s;
 }
 .contact-pill:hover {
@@ -894,7 +904,7 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  font-size: clamp(0.6rem, 0.13vw, 0.7rem);
+  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: #7a7672;
@@ -910,7 +920,7 @@ footer {
 
 .footer-logo {
   font-family: "Instrument Serif", serif;
-  font-size: clamp(0.85rem, 0.2vw, 1rem);
+  font-size: clamp(0.85rem, 0.75vw, 1rem);
   text-transform: none;
   letter-spacing: normal;
   color: #141313;
@@ -1152,7 +1162,7 @@ body#portfolio-item #wrapper section {
   font-family: "JetBrains Mono", monospace;
 }
 .project-hero .info .tools .tool {
-  font-size: clamp(0.85rem, 0.2vw, 1rem);
+  font-size: clamp(0.85rem, 0.75vw, 1rem);
   line-height: 1.3rem;
   padding-top: 0.525rem;
   padding-bottom: 0.125rem;
@@ -1265,7 +1275,7 @@ body#portfolio-item #wrapper section {
 .project-navigation .newer strong {
   display: block;
   margin-top: 5px;
-  font-size: clamp(1rem, 0.33vw, 1.25rem);
+  font-size: clamp(1rem, 0.75vw, 1.25rem);
   color: #eb1e8f;
 }
 .project-navigation .older:hover,
@@ -1302,7 +1312,7 @@ body#portfolio-item #wrapper section {
     border-bottom: solid 1px #D3D3D3;
   }
   .back-to-previous .back-link {
-    font-size: clamp(0.85rem, 0.2vw, 1rem);
+    font-size: clamp(0.85rem, 0.7rem + 0.5vw, 1rem);
     color: #141313;
     display: flex;
     align-items: center;
@@ -1391,7 +1401,7 @@ body#portfolio-item #wrapper section {
 .archive-item .archive-content_wrapper .archive-title h3 {
   padding-bottom: 0;
   font-weight: 600;
-  font-size: clamp(1.5rem, 0.65vw, 2rem);
+  font-size: clamp(1.5rem, 1rem + 0.75vw, 2rem);
   font-family: "Instrument Serif", serif;
 }
 .archive-item .archive-content_wrapper .archive-title span {
@@ -1399,7 +1409,7 @@ body#portfolio-item #wrapper section {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: clamp(0.53rem, 0.12vw, 0.625rem);
+  font-size: clamp(0.53rem, 0.55vw, 0.625rem);
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.75rem;
@@ -1416,7 +1426,7 @@ body#portfolio-item #wrapper section {
   justify-content: flex-start;
 }
 .archive-item .archive-content_wrapper .archive-tags span {
-  font-size: clamp(0.64rem, 0.14vw, 0.75rem);
+  font-size: clamp(0.64rem, 0.5rem + 0.5vw, 0.75rem);
   line-height: 1rem;
   padding-top: 0.25rem;
   padding-bottom: 0;
