@@ -1111,6 +1111,9 @@ body#portfolio-item #wrapper section {
   margin-left: auto !important;
 }
 
+.project-hero-image {
+  padding: 60px 0 10px;
+}
 .project-hero-image img {
   width: 100%;
   max-width: 1400px;
