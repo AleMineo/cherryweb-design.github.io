@@ -438,7 +438,7 @@ section {
 }
 
 .caption {
-  font-size: clamp(1.1rem, 0.7rem + 0.5vw, 1.25rem);
+  font-size: clamp(1rem, 0.7rem + 0.5vw, 1.25rem);
   color: #343a40;
   line-height: 30px;
 }
