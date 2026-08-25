@@ -40,64 +40,36 @@ const galleryFiles = {
     "SF_04.webp"
   ],
 
-  "New York": [
-    "new-york_01.webp",
-    "new-york_02.webp",
-    "new-york_03.webp",
-    "new-york_04.webp",
-    "new-york_05.webp",
-    "new-york_06.webp",
-    "new-york_07.webp",
-    "new-york_08.webp",
-    "new-york_09.webp",
-    "new-york_10.webp",
-    "new-york_11.webp",
-    "new-york_12.webp"
-  ],
+  "New York 03": Array.from(
+    { length: 12 },
+    (_, i) => `new-york_${String(i + 1).padStart(2, "0")}.webp`
+  ),
 
-  "Spain": [
-    "spain_01.webp",
-    "spain_02.webp",
-    "spain_03.webp",
-    "spain_04.webp",
-    "spain_05.webp",
-    "spain_06.webp",
-    "spain_07.webp",
-    "spain_08.webp",
-    "spain_09.webp",
-    "spain_10.webp",
-    "spain_11.webp"
-  ],
+  "New York 02": Array.from(
+    { length: 38 },
+    (_, i) => `newyork_${String(i + 1).padStart(2, "0")}.webp`
+  ),
 
-  "Rome": [
-    "rome_01.webp",
-    "rome_02.webp",
-    "rome_03.webp",
-    "rome_04.webp",
-    "rome_05.webp",
-    "rome_06.webp",
-    "rome_07.webp",
-    "rome_08.webp",
-    "rome_09.webp",
-    "rome_10.webp",
-    "rome_11.webp",
-    "rome_12.webp"
-  ],
+  "New York 01": Array.from(
+    { length: 13 },
+    (_, i) => `new-york_${String(i + 1).padStart(2, "0")}.webp`
+  ),
 
-  "Miami": [
-    "miami_01.webp",
-    "miami_02.webp",
-    "miami_03.webp",
-    "miami_04.webp",
-    "miami_05.webp",
-    "miami_06.webp",
-    "miami_07.webp",
-    "miami_08.webp",
-    "miami_09.webp",
-    "miami_10.webp",
-    "miami_11.webp",
-    "miami_12.webp"
-  ],
+  "Spain": Array.from(
+    { length: 11 },
+    (_, i) => `spain_${String(i + 1).padStart(2, "0")}.webp`
+  ),
+
+  "Miami": Array.from(
+    { length: 12 },
+    (_, i) => `miami_${String(i + 1).padStart(2, "0")}.webp`
+  ),
+
+
+  "Rome": Array.from(
+    { length: 12 },
+    (_, i) => `rome_${String(i + 1).padStart(2, "0")}.webp`
+  ),
 
 
   "London": Array.from(

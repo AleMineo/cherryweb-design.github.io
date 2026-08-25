@@ -40,22 +40,34 @@ const hobbies = [
     gallery: "assets/images/photos/rome/"
   },
   {
+    name: "New York",
+    year: "2022",
+    img: "assets/images/photos/newyork/2022/newyork_thumb.webp",
+    gallery: "assets/images/photos/newyork/2022/"
+  },
+  {
     name: "Miami",
     year: "2022",
     img: "assets/images/photos/miami/miami_thumb.webp",
     gallery: "assets/images/photos/miami/"
   },
   {
-    name: "Thailand",
-    year: "2020",
-    img: "assets/images/photos/thailand/thailand_thumb.webp",
-    gallery: "assets/images/photos/thailand/"
-  },
-  {
     name: "Urbex",
     year: "2020",
     img: "assets/images/photos/urbex/urbex_thumb.webp",
     gallery: "assets/images/photos/urbex/"
+  },
+  {
+    name: "Thailand",
+    year: "2019",
+    img: "assets/images/photos/thailand/thailand_thumb.webp",
+    gallery: "assets/images/photos/thailand/"
+  },
+  {
+    name: "New York",
+    year: "2019",
+    img: "assets/images/photos/newyork/2019/new-york_thumb.webp",
+    gallery: "assets/images/photos/newyork/2019/"
   },
   {
     name: "Japan",
@@ -65,13 +77,13 @@ const hobbies = [
   },
   {
     name: "Australia",
-    year: "2019",
+    year: "2017",
     img: "assets/images/photos/australia/australia_thumb.webp",
     gallery: "assets/images/photos/australia/"
   },
   {
     name: "New Zealand",
-    year: "2019",
+    year: "2017",
     img: "assets/images/photos/newzealand/newzealand_thumb.webp",
     gallery: "assets/images/photos/newzealand/"
   }
