@@ -4,10 +4,22 @@
 
 const hobbies = [
   {
+    name: "Paris",
+    year: "2026",
+    img: "assets/images/photos/paris/paris_thumb.webp",
+    gallery: "assets/images/photos/paris/"
+  },
+  {
     name: "USA On the road",
     year: "2024",
     img: "assets/images/photos/USA_on-the-road_2024/USA-on-the-road_2024_thumb.webp",
     gallery: "assets/images/photos/USA_on-the-road_2024/"
+  },
+  {
+    name: "London",
+    year: "2024",
+    img: "assets/images/photos/london/london_thumb.webp",
+    gallery: "assets/images/photos/london/"
   },
   {
     name: "New York",
@@ -34,12 +46,6 @@ const hobbies = [
     gallery: "assets/images/photos/miami/"
   },
   {
-    name: "London",
-    year: "2022",
-    img: "assets/images/photos/london/london_thumb.webp",
-    gallery: "assets/images/photos/london/"
-  },
-  {
     name: "Thailand",
     year: "2020",
     img: "assets/images/photos/thailand/thailand_thumb.webp",
@@ -62,6 +68,12 @@ const hobbies = [
     year: "2019",
     img: "assets/images/photos/australia/australia_thumb.webp",
     gallery: "assets/images/photos/australia/"
+  },
+  {
+    name: "New Zealand",
+    year: "2019",
+    img: "assets/images/photos/newzealand/newzealand_thumb.webp",
+    gallery: "assets/images/photos/newzealand/"
   }
 ];
 

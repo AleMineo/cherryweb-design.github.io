@@ -99,9 +99,15 @@ const galleryFiles = {
     "miami_12.webp"
   ],
 
+
   "London": Array.from(
     { length: 32 },
     (_, i) => `london_${String(i + 1).padStart(2, "0")}.webp`
+  ),
+
+    "Paris": Array.from(
+    { length: 14 },
+    (_, i) => `paris_${String(i + 1).padStart(2, "0")}.webp`
   ),
 
   "Thailand": Array.from(
@@ -122,6 +128,11 @@ const galleryFiles = {
   "Australia": Array.from(
     { length: 20 },
     (_, i) => `australia_${String(i + 1).padStart(2, "0")}.webp`
+  ),
+
+  "New Zealand": Array.from(
+    { length: 20 },
+    (_, i) => `newzealand_${String(i + 1).padStart(2, "0")}.webp`
   )
 };
 
