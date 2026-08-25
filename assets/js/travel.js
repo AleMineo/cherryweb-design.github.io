@@ -77,7 +77,7 @@ const hobbies = [
   },
   {
     name: "Australia",
-    year: "2017",
+    year: "2018",
     img: "assets/images/photos/australia/australia_thumb.webp",
     gallery: "assets/images/photos/australia/"
   },

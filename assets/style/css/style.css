@@ -299,6 +299,15 @@ header nav {
   font-size: clamp(1.85rem, 3vw, 2.25rem);
   margin: 0 0 1.5rem;
 }
+.hero__hello span {
+  display: inline-block;
+  width: 65px;
+  height: 65px;
+  background: url(https://media.licdn.com/dms/image/v2/C4D03AQF8OskBlX89HQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1668010987344?e=1788998400&amp;v=beta&amp;t=mBprVJt3znlI1UD6CAMIPaZCwJFqDDEl0nbaknqNFLU) center center;
+  background-size: 100px 100px;
+  border-radius: 150px;
+  border: solid #ffffff 2px;
+}
 
 .hero__lede {
   max-width: 44rem;
