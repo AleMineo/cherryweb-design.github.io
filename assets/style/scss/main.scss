@@ -94,56 +94,50 @@ h6 {
   color: $primary;
 }
 
-main{
+main {
   &::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  height: 200%;
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    height: 200%;
 
-background:
-    // hot pink
-    radial-gradient(
-      circle at 100% 78%,
-      rgba(255, 33, 203, 0.72) 0%,
-      rgba(255, 33, 203, 0.45) 18%,
-      rgba(255, 33, 203, 0) 42%
-    ),
+    background:
+      // hot pink
+      radial-gradient(circle at 100% 78%,
+        rgba(255, 33, 203, 0.72) 0%,
+        rgba(255, 33, 203, 0.45) 18%,
+        rgba(255, 33, 203, 0) 42%),
 
-    // warm peach
-    radial-gradient(
-      circle at 98% 50%,
-      rgba(255, 194, 116, 0.65) 0%,
-      rgba(255, 194, 116, 0.35) 20%,
-      rgba(255, 194, 116, 0) 43%
-    ),
+      // warm peach
+      radial-gradient(circle at 98% 50%,
+        rgba(255, 194, 116, 0.65) 0%,
+        rgba(255, 194, 116, 0.35) 20%,
+        rgba(255, 194, 116, 0) 43%),
 
-    // lavender / purple
-    radial-gradient(
-      circle at 80% 65%,
-      rgba(153, 96, 243, 1) 0%,
-      rgba(153, 96, 243, 0.5) 18%,
-      rgba(153, 96, 243, 0.3) 30%,
-      rgba(153, 96, 243, 0) 48%
-    ),
+      // lavender / purple
+      radial-gradient(circle at 80% 65%,
+        rgba(153, 96, 243, 1) 0%,
+        rgba(153, 96, 243, 0.5) 18%,
+        rgba(153, 96, 243, 0.3) 30%,
+        rgba(153, 96, 243, 0) 48%),
 
-    #eef1f5;
+      #eef1f5;
 
-  animation: fadeGradient linear both;
-  animation-timeline: scroll();
-  animation-range: 0 500px;
-}
-
-@keyframes fadeGradient {
-  from {
-    opacity: 0.7;
+    animation: fadeGradient linear both;
+    animation-timeline: scroll();
+    animation-range: 0 500px;
   }
 
-  to {
-    opacity: 0;
+  @keyframes fadeGradient {
+    from {
+      opacity: 0.7;
+    }
+
+    to {
+      opacity: 0;
+    }
   }
-}
 }
 
 // ==========================================================================
@@ -203,7 +197,7 @@ header {
 }
 
 .logo {
- font-size: clamp(1.125rem, calc(0.75rem + 0.75vw), 1.5rem);
+  font-size: clamp(1.125rem, calc(0.75rem + 0.75vw), 1.5rem);
   letter-spacing: 0;
 }
 
@@ -277,7 +271,7 @@ header {
 .eyebrow-row {
   display: flex;
   justify-content: space-between;
- font-size: clamp(0.6rem, 0.6vw, 0.7rem);
+  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
   text-transform: uppercase;
   letter-spacing: .15em;
   color: $muted-foreground;
@@ -293,23 +287,36 @@ header {
 }
 
 .hero__hello {
-      font-size: clamp(1.85rem, 3vw, 2.25rem);
-          margin: 0 0 1.5rem;
+  font-size: clamp(1.85rem, 3vw, 2.25rem);
+  margin: 0 0 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  span {
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    background: url("./assets/images/layout/alessandra-mineo.jpg") center center;
+    background-size: 100px 100px;
+    border-radius: 150px;
+    border: solid $primary-foreground 2px;
+  }
 
 }
 
-.hero__lede{
-      max-width: 44rem;
-    margin-top: 2rem;
-    font-size: clamp(1.1rem, calc(0.7rem + 0.5vw), 1.25rem);
-    line-height: 1.6;
+.hero__lede {
+  max-width: 44rem;
+  margin-top: 2rem;
+  font-size: clamp(1.1rem, calc(0.7rem + 0.5vw), 1.25rem);
+  line-height: 1.6;
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, calc(0.56rem + 8.27vw), 8rem);
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    line-height: .95;
+  font-size: clamp(2.5rem, calc(0.56rem + 8.27vw), 8rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: .95;
   margin: auto 0 0;
 }
 
@@ -335,7 +342,7 @@ header {
 }
 
 .currently-label {
- font-size: clamp(0.6rem, calc(0.56rem + 0.15vw), 0.7rem);
+  font-size: clamp(0.6rem, calc(0.56rem + 0.15vw), 0.7rem);
   text-transform: uppercase;
   letter-spacing: .15em;
   color: $muted-foreground;
@@ -377,7 +384,7 @@ header {
   display: flex;
   align-items: center;
   gap: 12px;
- font-size: clamp(0.72rem, 0.65vw, 0.85rem);
+  font-size: clamp(0.72rem, 0.65vw, 0.85rem);
   text-transform: uppercase;
   letter-spacing: .15em;
 
@@ -464,7 +471,7 @@ section {
 
 .filter-btn {
   font-family: $font-mono;
- font-size: clamp(0.64rem, 0.65vw, 0.75rem);
+  font-size: clamp(0.64rem, 0.65vw, 0.75rem);
   text-transform: uppercase;
   letter-spacing: .05em;
   color: $muted-foreground;
@@ -647,6 +654,7 @@ section {
     display: none;
   }
 }
+
 // ==========================================================================
 // Skills marquee
 // ==========================================================================
@@ -704,7 +712,7 @@ section {
   display: flex;
   width: max-content;
   /* FIX: Ensures the exact same spacing when Group 1 touches Group 2 */
-  gap: 40px; 
+  gap: 40px;
 
   &.left {
     animation: scroll-left 40s linear infinite;
@@ -713,7 +721,7 @@ section {
   &.right {
     animation: scroll-right 46s linear infinite;
   }
-  
+
   /* ACCESSIBILITY: Gracefully pauses animation on hover/focus */
   &:hover,
   &:focus-within {
@@ -725,6 +733,7 @@ section {
   from {
     transform: translateX(0);
   }
+
   to {
     /* Moves exactly by the width of one group plus half the gap */
     transform: translateX(calc(-50% - 20px));
@@ -736,6 +745,7 @@ section {
     /* Starts shifted perfectly by one group plus half the gap */
     transform: translateX(calc(-50% - 20px));
   }
+
   to {
     transform: translateX(0);
   }
@@ -751,7 +761,7 @@ section {
 .marquee-item {
   display: flex;
   align-items: center;
-  gap: 40px; 
+  gap: 40px;
   color: rgba($foreground, .8);
 
   .word {
@@ -855,7 +865,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-   font-size: clamp(1rem, 0.8vw, 1.25rem);
+  font-size: clamp(1rem, 0.8vw, 1.25rem);
 
   .name {
     font-family: $font-serif;
