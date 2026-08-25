@@ -306,10 +306,10 @@ header nav {
   display: inline-block;
   width: 65px;
   height: 65px;
-  background: url("./assets/images/layout/alessandra-mineo.jpg") center center;
+  background: url("/assets/images/layout/alessandra-mineo.jpg") center center;
   background-size: 100px 100px;
   border-radius: 150px;
-  border: solid #ffffff 2px;
+  border: solid #eb1e8f 2px;
 }
 
 .hero__lede {
