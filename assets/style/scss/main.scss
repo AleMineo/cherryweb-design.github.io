@@ -297,10 +297,10 @@ header {
     display: inline-block;
     width: 65px;
     height: 65px;
-    background: url("./assets/images/layout/alessandra-mineo.jpg") center center;
+    background: url("/assets/images/layout/alessandra-mineo.jpg") center center;
     background-size: 100px 100px;
     border-radius: 150px;
-    border: solid $primary-foreground 2px;
+    border: solid $primary 2px;
   }
 
 }
