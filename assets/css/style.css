@@ -108,7 +108,7 @@ h6 {
 
 .serif {
   font-family: "Instrument Serif", serif;
-  letter-spacing: -0.44px;
+  letter-spacing: -1.44px;
 }
 
 .mono {
@@ -247,7 +247,7 @@ header nav {
 
 .talk-btn {
   padding: 8px 16px;
-  border-radius: 9999px;
+  border-radius: 999px;
   background: #eb1e8f;
   color: #eef1f5 !important;
   font-size: clamp(0.6rem, 0.6vw, 0.7rem);
@@ -306,7 +306,7 @@ header nav {
   display: inline-block;
   width: 65px;
   height: 65px;
-  background: url("../../../assets/images/layout/alessandra-mineo.jpg") center center;
+  background: url("/assets/images/layout/alessandra-mineo.jpg") center center;
   background-size: 100px 100px;
   border-radius: 150px;
   border: solid #eb1e8f 2px;
@@ -456,59 +456,79 @@ section {
 }
 
 #help {
-  padding-top: 5rem;
-  padding-bottom: 6rem;
+  background: #e6e9ee;
+  border-top: 1px solid #dde1e7;
+  border-bottom: 1px solid #dde1e7;
 }
-#help .help-grid {
+#help .help-head {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: end;
+  gap: 48px;
+  margin-bottom: 54px;
+}
+#help .help-head h2 {
+  line-height: 0.98;
+}
+#help .help-head .caption {
+  max-width: 470px;
+  color: #7a7672;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.help-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   border-top: 1px solid #dde1e7;
 }
 @media (max-width: 768px) {
-  #help .help-grid {
+  .help-grid {
     grid-template-columns: 1fr;
   }
 }
-#help .help-grid .help-card {
+
+.help-card {
   min-height: 220px;
   padding: 24px 28px 24px 0;
 }
-#help .help-grid .help-card + .help-card {
+.help-card + .help-card {
   border-left: 1px solid #dde1e7;
   padding-left: 28px;
 }
 @media (max-width: 768px) {
-  #help .help-grid .help-card + .help-card {
+  .help-card + .help-card {
     border-left: 0;
     border-top: 1px solid #dde1e7;
     padding-left: 0;
   }
 }
-#help .help-grid .help-card .help-label {
+.help-card .help-label {
   color: #7a7672;
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
-#help .help-grid .help-card .help-label span {
+.help-card .help-label span {
   color: #eb1e8f;
 }
-#help .help-grid .help-card h3 {
+.help-card h3 {
   font-size: 2rem;
   line-height: 1.05;
   margin: 28px 0 12px;
 }
-#help .help-grid .help-card p {
+.help-card p {
   max-width: 38ch;
-  color: #343a40;
+  color: #7a7672;
+  font-size: 0.9rem;
   line-height: 1.7;
 }
 @media (max-width: 768px) {
-  #help .help-grid .help-card {
+  .help-card {
     min-height: 0;
     padding: 22px 0;
   }
-  #help .help-grid .help-card h3 {
+  .help-card h3 {
     margin: 14px 0 8px;
   }
 }
@@ -693,7 +713,8 @@ section {
 .work-tooltip img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 768px) {
   .work-tooltip {
@@ -752,6 +773,7 @@ section {
 
 .marquee-track {
   display: flex;
+  width: -moz-max-content;
   width: max-content;
   /* FIX: Ensures the exact same spacing when Group 1 touches Group 2 */
   gap: 40px;
@@ -863,7 +885,9 @@ section {
 .hobby-card {
   flex-shrink: 0;
   width: 288px;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 @media (min-width: 768px) {
   .hobby-card {
@@ -884,7 +908,8 @@ section {
 .hobby-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: transform 0.7s;
 }
 
@@ -909,6 +934,12 @@ section {
   align-items: start;
   justify-content: space-between;
   width: 100%;
+}
+.contact-top .eyebrow {
+  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #eb1e8f;
 }
 .contact-top .label {
   font-size: clamp(0.6rem, 0.6vw, 0.7rem);
@@ -954,7 +985,7 @@ section {
   align-items: center;
   gap: 8px;
   padding: 12px 20px;
-  border-radius: 9999px;
+  border-radius: 999px;
   border: 1px solid rgba(20, 19, 19, 0.2);
   font-size: clamp(0.77rem, 0.75vw, 0.9rem);
   transition: background 0.2s, color 0.2s;
@@ -1037,8 +1068,11 @@ footer {
   max-height: calc(100% - 50px);
   width: auto;
   height: auto;
-  object-fit: contain;
-  user-select: none;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .lightbox-caption {
@@ -1172,6 +1206,7 @@ body#portfolio-item #wrapper {
 body#portfolio-item #wrapper section {
   width: 100%;
   text-align: center;
+  padding: 0;
   margin: 0;
   padding: 5rem 0;
   position: relative;
@@ -1191,7 +1226,8 @@ body#portfolio-item #wrapper section {
 
 .project-hero h1 {
   text-align: left;
-  margin: 0 0 10px;
+  margin: 0;
+  margin-bottom: 10px;
   font-family: "Instrument Serif", serif;
   font-size: clamp(2rem, 2.61vw, 4rem);
 }
@@ -1206,7 +1242,8 @@ body#portfolio-item #wrapper section {
 .project-hero h3 {
   text-align: left;
   padding: 0;
-  margin: 0 0 10px;
+  margin: 0;
+  margin-bottom: 10px;
   max-width: 100%;
   font-family: "JetBrains Mono", monospace;
   font-weight: 300;
@@ -1224,8 +1261,9 @@ body#portfolio-item #wrapper section {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .project-hero .info h4 {
-  margin: 0 0 10px;
+  margin: 0;
   padding: 0;
+  margin-bottom: 10px;
   text-transform: uppercase;
   color: #141313;
   font-family: "JetBrains Mono", monospace;
@@ -1239,7 +1277,7 @@ body#portfolio-item #wrapper section {
   padding-right: 0.625rem;
   background-color: #FBECFC;
   color: #eb1e8f;
-  border-radius: 9999px;
+  border-radius: 50px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1247,7 +1285,7 @@ body#portfolio-item #wrapper section {
 
 .btn {
   padding: 17px 20px 14px;
-  border-radius: 9999px;
+  border-radius: 50px;
   text-transform: uppercase;
   font-weight: 500;
   display: flex;
@@ -1268,7 +1306,6 @@ body#portfolio-item #wrapper section {
 }
 
 .hover-effect:hover {
-  -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.1);
   margin-top: -5px;
   margin-bottom: 5px;
@@ -1288,6 +1325,7 @@ body#portfolio-item #wrapper section {
   .buttons {
     flex-direction: row;
     align-items: center;
+    gap: 15px;
   }
 }
 .buttons .btn {
@@ -1302,7 +1340,8 @@ body#portfolio-item #wrapper section {
 .project-content .description h4 {
   text-transform: uppercase;
   color: #eb1e8f;
-  margin: 0 0 10px;
+  margin: 0;
+  margin-bottom: 10px;
   font-weight: 300;
   font-size: clamp(1.1rem, 0.7rem + 0.5vw, 1.25rem);
 }
@@ -1568,6 +1607,4 @@ header.menu-open {
     pointer-events: auto;
     transform: translateY(0);
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

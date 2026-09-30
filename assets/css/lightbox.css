@@ -1,8 +1,3 @@
-// ============================================================
-// TRAVEL LIGHTBOX
-// ============================================================
-@use "variables" as *;
-
 .travel-lightbox {
   position: fixed;
   inset: 0;
@@ -14,29 +9,22 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease;
-  &.is-open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-
-// ============================================================
-// CONTENT
-// ============================================================
+.travel-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
 
 .lightbox-content {
   position: relative;
-  width: min(90vw, $max-w);
+  width: min(90vw, 1400px);
   height: min(88vh, 900px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 
 .lightbox-image {
   display: block;
@@ -44,14 +32,12 @@
   max-height: calc(100% - 50px);
   width: auto;
   height: auto;
-  object-fit: contain;
-  user-select: none;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
-
-
-// ============================================================
-// CAPTION
-// ============================================================
 
 .lightbox-caption {
   position: absolute;
@@ -62,7 +48,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 15px;
-  font-family: $font-mono;
+  font-family: "JetBrains Mono", monospace;
   font-size: 13px;
   color: white;
 }
@@ -74,11 +60,6 @@
 .lightbox-counter {
   opacity: 0.6;
 }
-
-
-// ============================================================
-// CLOSE
-// ============================================================
 
 .lightbox-close {
   position: fixed;
@@ -94,15 +75,10 @@
   cursor: pointer;
   padding: 5px;
   opacity: 0.8;
-  &:hover {
-    opacity: 1;
-  }
 }
-
-
-// ============================================================
-// PREVIOUS / NEXT
-// ============================================================
+.lightbox-close:hover {
+  opacity: 1;
+}
 
 .lightbox-prev,
 .lightbox-next {
@@ -119,9 +95,10 @@
   padding: 20px;
   opacity: 0.65;
   transition: opacity 0.2s ease;
-  &:hover {
-    opacity: 1;
-  }
+}
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  opacity: 1;
 }
 
 .lightbox-prev {
@@ -132,48 +109,32 @@
   right: 15px;
 }
 
-
-// ============================================================
-// PREVENT PAGE SCROLL
-// ============================================================
-
 body.lightbox-open {
   overflow: hidden;
 }
 
-
-// ============================================================
-// MOBILE
-// ============================================================
-
-@media (max-width: $bp-md) {
-
+@media (max-width: 768px) {
   .lightbox-content {
     width: 92vw;
     height: 85vh;
   }
-
   .lightbox-prev,
   .lightbox-next {
     font-size: 30px;
     padding: 10px;
   }
-
   .lightbox-prev {
     left: 0;
   }
-
   .lightbox-next {
     right: 0;
   }
-
   .lightbox-close {
     top: 15px;
     right: 15px;
     font-size: 32px;
   }
-
   .lightbox-caption {
     font-size: 11px;
   }
-}
+}/*# sourceMappingURL=lightbox.css.map */

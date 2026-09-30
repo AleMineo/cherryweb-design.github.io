@@ -15,9 +15,8 @@ body {
             section {
                 width: 100%;
                 text-align: center;
-                padding: 0;
                 margin: 0;
-                padding: 5rem 0;
+                padding: $space-20 0;
                 position: relative;
                 z-index: 1;
                 margin-right: auto !important;
@@ -34,7 +33,7 @@ body {
      padding: 60px 0 10px;
     img {
         width: 100%;
-        max-width: 1400px;
+        max-width: $max-w;
         margin: 0 auto;
     }
 }
@@ -43,8 +42,7 @@ body {
 .project-hero {
     h1 {
         text-align: left;
-        margin: 0;
-        margin-bottom: 10px;
+        margin: 0 0 10px;
         font-family: $font-serif;
         font-size: clamp(2rem, 2.61vw, 4rem);
 
@@ -61,29 +59,27 @@ body {
     h3 {
         text-align: left;
         padding: 0;
-        margin: 0;
-        margin-bottom: 10px;
+        margin: 0 0 10px;
         max-width: 100%;
         font-family: $font-mono;
         font-weight: 300;
     }
 
     .info {
-        gap: 1.5rem;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        margin: 2rem 0;
+        gap: $space-6;
+        padding-top: $space-8;
+        padding-bottom: $space-8;
+        margin: $space-8 0;
         border-color: $light-grey;
-        border-top-width: 1px;
-        border-bottom-width: 1px;
+        border-top-width: $border-width;
+        border-bottom-width: $border-width;
         border-style: solid;
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
 
         h4 {
-            margin: 0;
+            margin: 0 0 10px;
             padding: 0;
-            margin-bottom: 10px;
             text-transform: uppercase;
             color: $foreground;
             font-family: $font-mono;
@@ -91,15 +87,15 @@ body {
 
         .tools {
             .tool {
-                font-size: clamp(0.85rem, 0.75vw, 1rem);
+                font-size: $font-size-body-sm;
                 line-height: 1.3rem;
                 padding-top: 0.525rem;
                 padding-bottom: 0.125rem;
-                padding-left: 0.625rem;
-                padding-right: 0.625rem;
-                background-color: #FBECFC;
+                padding-left: $space-2-5;
+                padding-right: $space-2-5;
+                background-color: $primary-light;
                 color: $primary;
-                border-radius: 50px;
+                border-radius: $radius-pill;
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
@@ -110,24 +106,24 @@ body {
 
 .btn {
     padding: 17px 20px 14px;
-    border-radius: 50px;
+    border-radius: $radius-pill;
     text-transform: uppercase;
     font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Inter", sans-serif;
+    font-family: $font-sans;
     cursor: pointer;
     text-decoration: none;
-    color: #fafafa;
+    color: $off-white;
     outline: none !important;
     transition: all ease-in-out .2s;
-    background: #EA1C8B;
+    background: $primary-detail;
     font-size: clamp(0.55rem, 0.7rem + 0.5vw, 0.85rem);
 
     &:hover {
-        background: #fafafa;
-        color: #EA1C8B;
+        background: $off-white;
+        color: $primary-detail;
     }
 }
 
@@ -154,7 +150,6 @@ body {
     @media (min-width: 600px) {
         flex-direction: row;
         align-items: center;
-        gap: 15px;
     }
 
     .btn {
@@ -174,8 +169,7 @@ body {
         h4 {
             text-transform: uppercase;
             color: $primary;
-            margin: 0;
-            margin-bottom: 10px;
+            margin: 0 0 10px;
             font-weight: 300;
             font-size: clamp(1.1rem, 0.7rem + 0.5vw, 1.25rem);
         }
@@ -200,9 +194,9 @@ body {
     display: flex;
     align-items: center;
     border-color: $light-grey;
-    border-top-width: 1px;
+    border-top-width: $border-width;
     border-style: solid;
-    margin-top: 3rem;
+    margin-top: $space-12;
 
     .navigation {
         max-width: 1200px;
@@ -215,7 +209,7 @@ body {
 
     .older,
     .newer {
-        padding: 3rem 10px;
+        padding: $space-12 10px;
         background: 0;
         color: $dark-grey;
         transition: all ease-in-out 0.2s;
@@ -244,7 +238,7 @@ body {
 
     .newer {
         text-align: left;
-        border-right: solid 1px $light-grey;
+        border-right: solid $border-width $light-grey;
     }
 }
 
@@ -257,11 +251,11 @@ body {
         backdrop-filter: blur(24px);
         position: fixed;
         z-index: 999;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: solid 1px $light-grey ;
+        padding-left: $space-12;
+        padding-right: $space-12;
+        padding-top: $space-4;
+        padding-bottom: $space-4;
+        border-bottom: solid $border-width $light-grey ;
 
         .back-link {
             font-size: clamp(0.85rem, 0.7rem + 0.5vw, 1rem);
@@ -279,17 +273,17 @@ body {
 }
 
 .archive-page {
-    padding-top: 6rem !important;
+    padding-top: $space-24 !important;
 }
 
 .archive-item {
     &:first-of-type {
-        border-top: solid 1px $light-grey;
-        margin-top: 2rem;
+        border-top: solid $border-width $light-grey;
+        margin-top: $space-8;
     }
 
-    border-bottom: solid 1px $light-grey;
-    padding: 2rem 0;
+    border-bottom: solid $border-width $light-grey;
+    padding: $space-8 0;
     display: flex;
     gap: 25px;
     align-items: start;
@@ -305,8 +299,8 @@ body {
         img {
             width: 100%;
             max-width: 300px;
-            margin-bottom: 1rem;
-            border-radius: 8px;
+            margin-bottom: $space-4;
+            border-radius: $radius-card;
         }
 
         @media (min-width: 600px) {
@@ -328,10 +322,10 @@ body {
             a {
                 gap: 8px;
                 border-radius: 25px;
-                padding-top: 0.25rem;
-                padding-bottom: 0.25rem;
-                padding-left: 0.75rem;
-                padding-right: 0.75rem;
+                padding-top: $space-1;
+                padding-bottom: $space-1;
+                padding-left: $space-3;
+                padding-right: $space-3;
                 display: flex;
                 align-items: center;
                 background-color: $primary-foreground;
@@ -369,12 +363,12 @@ body {
                 text-transform: uppercase;
                 font-weight: 500;
                 font-size: clamp(0.53rem, 0.55vw, 0.625rem);
-                padding-top: 0.25rem;
-                padding-bottom: 0.25rem;
-                padding-left: 0.75rem;
-                padding-right: 0.75rem;
+                padding-top: $space-1;
+                padding-bottom: $space-1;
+                padding-left: $space-3;
+                padding-right: $space-3;
                 background-color: $primary-light;
-                border-radius: 9999px;
+                border-radius: $radius-pill;
                 white-space: nowrap;
                 font-family: $font-mono;
 
@@ -390,10 +384,10 @@ body {
             span {
                 font-size: clamp(0.64rem, 0.5rem + 0.5vw, 0.75rem);
                 line-height: 1rem;
-                padding-top: 0.25rem;
+                padding-top: $space-1;
                 padding-bottom: 0;
-                padding-left: 0.625rem;
-                padding-right: 0.625rem;
+                padding-left: $space-2-5;
+                padding-right: $space-2-5;
                 background-color: #ddd;
                 border-radius: 6px;
                 color: #222222;

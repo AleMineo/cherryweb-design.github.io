@@ -57,7 +57,7 @@ h6 {
 // ==========================================================================
 .serif {
   font-family: $font-serif;
-  letter-spacing: -1.44px;
+  letter-spacing: -0.44px;
 }
 
 .mono {
@@ -88,7 +88,7 @@ h6 {
 }
 
 .eyebrow {
-  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
+  font-size: $font-size-xs;
   text-transform: uppercase;
   letter-spacing: .15em;
   color: $primary;
@@ -122,7 +122,7 @@ main {
         rgba(153, 96, 243, 0.3) 30%,
         rgba(153, 96, 243, 0) 48%),
 
-      #eef1f5;
+      $background;
 
     animation: fadeGradient linear both;
     animation-timeline: scroll();
@@ -150,7 +150,7 @@ main {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  border: 1px solid $primary;
+  border: $border-width solid $primary;
   background: $primary;
   pointer-events: none;
   z-index: 9999;
@@ -230,10 +230,10 @@ header {
 
 .talk-btn {
   padding: 8px 16px;
-  border-radius: 999px;
+  border-radius: $radius-pill;
   background: $primary;
   color: $background !important;
-  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
+  font-size: $font-size-xs;
   transition: background .2s, color .2s;
 
   &:hover {
@@ -271,7 +271,7 @@ header {
 .eyebrow-row {
   display: flex;
   justify-content: space-between;
-  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
+  font-size: $font-size-xs;
   text-transform: uppercase;
   letter-spacing: .15em;
   color: $muted-foreground;
@@ -288,7 +288,7 @@ header {
 
 .hero__hello {
   font-size: clamp(1.85rem, 3vw, 2.25rem);
-  margin: 0 0 1.5rem;
+  margin: 0 0 $space-6;
   display: flex;
   align-items: center;
   gap: 15px;
@@ -297,7 +297,7 @@ header {
     display: inline-block;
     width: 65px;
     height: 65px;
-    background: url("/assets/images/layout/alessandra-mineo.jpg") center center;
+    background: url("../../../assets/images/layout/alessandra-mineo.jpg") center center;
     background-size: 100px 100px;
     border-radius: 150px;
     border: solid $primary 2px;
@@ -307,7 +307,7 @@ header {
 
 .hero__lede {
   max-width: 44rem;
-  margin-top: 2rem;
+  margin-top: $space-8;
   font-size: clamp(1.1rem, calc(0.7rem + 0.5vw), 1.25rem);
   line-height: 1.6;
 }
@@ -400,7 +400,7 @@ header {
   height: 40px;
   border-radius: 50%;
   // NOTE: was rgba(20, 19, 19, .3) hardcoded — this is $foreground at 30%.
-  border: 1px solid rgba($foreground, .3);
+  border: $border-width solid rgba($foreground, .3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -409,7 +409,7 @@ header {
 
 .hero-stats {
   text-align: right;
-  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
+  font-size: $font-size-xs;
   text-transform: uppercase;
   letter-spacing: .15em;
   color: $muted-foreground;
@@ -437,7 +437,7 @@ section {
   gap: 15px;
 
   .count {
-    font-size: clamp(0.6rem, 0.6vw, 0.7rem);
+    font-size: $font-size-xs;
     text-transform: uppercase;
     letter-spacing: .15em;
     color: $muted-foreground;
@@ -458,6 +458,76 @@ section {
 // ==========================================================================
 // Work filter bar
 // ==========================================================================
+// Expertise
+#help {
+  padding-top: $space-20;
+  padding-bottom: $space-24;
+
+
+  .help-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: $border-width solid $border;
+
+    @media (max-width: $bp-md) {
+      grid-template-columns: 1fr;
+    }
+  
+
+    .help-card {
+      min-height: 220px;
+      padding: 24px 28px 24px 0;
+
+      & + .help-card {
+        border-left: $border-width solid $border;
+        padding-left: 28px;
+
+        @media (max-width: $bp-md) {
+          border-left: 0;
+          border-top: $border-width solid $border;
+          padding-left: 0;
+        }
+      }
+
+      .help-label {
+        color: $muted-foreground;
+        font-size: .65rem;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        span {
+          color: $primary;
+        }
+      }
+
+      h3 {
+        font-size: 2rem;
+        line-height: 1.05;
+        margin: 28px 0 12px;
+      }
+
+      p {
+        max-width: 38ch;
+        color: $dark-grey;
+        line-height: 1.7;
+      }
+
+      @media (max-width: $bp-md) {
+        min-height: 0;
+        padding: 22px 0;
+        h3 {
+          margin: 14px 0 8px;
+        }
+      }
+    } 
+  }
+}
+@media (max-width: $bp-md) {
+  #help .help-head {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
 #work {
   padding-top: 80px;
 }
@@ -502,7 +572,7 @@ section {
 // Work list
 // ==========================================================================
 .work-list {
-  border-top: 1px solid $border;
+  border-top: $border-width solid $border;
   position: relative;
 
   .work-header {
@@ -520,7 +590,7 @@ section {
 
 .work-row {
   display: block;
-  border-bottom: 1px solid $border;
+  border-bottom: $border-width solid $border;
   padding: 20px 0;
   transition: background .2s;
 
@@ -545,6 +615,7 @@ section {
   &.hidden {
     display: none;
   }
+
 }
 
 .work-row-inner {
@@ -560,7 +631,7 @@ section {
 
 .work-num {
   font-family: $font-mono;
-  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
+  font-size: $font-size-xs;
   color: $muted-foreground;
   width: 20px;
   align-self: flex-start;
@@ -590,7 +661,7 @@ section {
 
     &:first-child {
       text-transform: uppercase;
-      margin-bottom: 0.75rem;
+      margin-bottom: $space-3;
     }
   }
 
@@ -601,7 +672,7 @@ section {
 
 .work-year {
   font-family: $font-mono;
-  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
+  font-size: $font-size-xs;
   color: $muted-foreground;
   width: 48px;
   text-align: right;
@@ -659,15 +730,15 @@ section {
 // Skills marquee
 // ==========================================================================
 #skills {
-  border-top: 1px solid $border;
-  border-bottom: 1px solid $border;
+  border-top: $border-width solid $border;
+  border-bottom: $border-width solid $border;
   background: $secondary;
 }
 
 .tools-list {
   text-align: center;
-  border-top: 1px solid $light-grey;
-  border-bottom: 1px solid $light-grey;
+  border-top: $border-width solid $light-grey;
+  border-bottom: $border-width solid $light-grey;
   padding: 13px 5px 5px;
   margin-top: 35px;
 
@@ -780,7 +851,7 @@ section {
 .skills-caption {
   text-align: center;
   margin-top: 40px;
-  font-size: clamp(0.72rem, 0.75vw, 0.85rem);
+  font-size: $font-size-sm;
   text-transform: uppercase;
   letter-spacing: .15em;
   color: $muted-foreground;
@@ -802,7 +873,7 @@ section {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
+  font-size: $font-size-xs;
   text-transform: uppercase;
   letter-spacing: .15em;
   color: $muted-foreground;
@@ -848,7 +919,7 @@ section {
 .hobby-img {
   width: 100%;
   aspect-ratio: 4 / 3;
-  border-radius: 8px;
+  border-radius: $radius-card;
   overflow: hidden;
   background: $secondary;
 
@@ -887,15 +958,8 @@ section {
   justify-content: space-between;
   width: 100%;
 
-  .eyebrow {
-    font-size: clamp(0.6rem, 0.6vw, 0.7rem);
-    text-transform: uppercase;
-    letter-spacing: .15em;
-    color: $primary;
-  }
-
   .label {
-    font-size: clamp(0.6rem, 0.6vw, 0.7rem);
+    font-size: $font-size-xs;
     text-transform: uppercase;
     letter-spacing: .15em;
     color: $muted-foreground;
@@ -903,7 +967,7 @@ section {
 }
 
 .reach {
-  font-size: clamp(0.72rem, 0.75vw, 0.85rem);
+  font-size: $font-size-sm;
   text-transform: uppercase;
   letter-spacing: .15em;
   color: $muted-foreground;
@@ -942,8 +1006,8 @@ section {
   align-items: center;
   gap: 8px;
   padding: 12px 20px;
-  border-radius: 999px;
-  border: 1px solid rgba($foreground, .2);
+  border-radius: $radius-pill;
+  border: $border-width solid rgba($foreground, .2);
   font-size: clamp(0.77rem, 0.75vw, 0.9rem);
   transition: background .2s, color .2s;
 
@@ -957,7 +1021,7 @@ section {
 // Footer
 // ==========================================================================
 footer {
-  border-top: 1px solid $border;
+  border-top: $border-width solid $border;
   padding: 40px 0;
 }
 
@@ -966,7 +1030,7 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
+  font-size: $font-size-xs;
   text-transform: uppercase;
   letter-spacing: .15em;
   color: $muted-foreground;
@@ -981,7 +1045,7 @@ footer {
 
 .footer-logo {
   font-family: $font-serif;
-  font-size: clamp(0.85rem, 0.75vw, 1rem);
+  font-size: $font-size-body-sm;
   text-transform: none;
   letter-spacing: normal;
   color: $foreground;
