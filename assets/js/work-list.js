@@ -136,6 +136,8 @@ const filterBar = document.getElementById("filter-bar");
 const workList = document.getElementById("work-list");
 const loadMoreBtn = document.getElementById("load-more");
 let activeFilter = "ux-ui";
+let filterTransitionId = 0;
+let filterRowAnimations = [];
  
 const VISIBLE_STEP = 4; // how many rows to show per "page"
 let visibleCount = VISIBLE_STEP;
@@ -180,14 +182,78 @@ function applyVisibility() {
   }
 }
  
-function setFilter(key) {
+async function setFilter(key) {
   if (!filterBar) return;
+
+  const rows = Array.from(workList?.querySelectorAll(".work-row") || []);
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const canAnimate = typeof Element.prototype.animate === "function";
+
+  filterTransitionId++;
+  const transitionId = filterTransitionId;
+  filterRowAnimations.forEach((animation) => animation.cancel());
+  filterRowAnimations = [];
+  if (loadMoreBtn) loadMoreBtn.disabled = false;
+
+  if (key === activeFilter || reduceMotion || !canAnimate || !rows.length) {
+    activeFilter = key;
+    visibleCount = VISIBLE_STEP;
+    filterBar.querySelectorAll(".filter-btn").forEach((button) => {
+      button.classList.toggle("active", button.dataset.key === key);
+    });
+    rows.forEach((row) => {
+      row.style.opacity = "";
+      row.style.transform = "";
+    });
+    applyVisibility();
+    return;
+  }
+
+  const visibleRows = rows.filter((row) => !row.classList.contains("hidden"));
+
   activeFilter = key;
   visibleCount = VISIBLE_STEP; // reset pagination on every filter change
   filterBar.querySelectorAll(".filter-btn").forEach((b) => {
     b.classList.toggle("active", b.dataset.key === key);
   });
+
+  if (loadMoreBtn) loadMoreBtn.disabled = true;
+
+  const exitAnimations = visibleRows.map((row) => row.animate(
+    [
+      { opacity: 1, transform: "translateY(0)" },
+      { opacity: 0, transform: "translateY(-8px)" },
+    ],
+    { duration: 180, easing: "ease-in", fill: "forwards" }
+  ));
+  filterRowAnimations = exitAnimations;
+  await Promise.allSettled(exitAnimations.map((animation) => animation.finished));
+  if (transitionId !== filterTransitionId) return;
+
   applyVisibility();
+  exitAnimations.forEach((animation) => animation.cancel());
+
+  const enteringRows = rows.filter((row) => !row.classList.contains("hidden"));
+  const entranceAnimations = enteringRows.map((row, index) => row.animate(
+    [
+      { opacity: 0, transform: "translateY(10px)" },
+      { opacity: 1, transform: "translateY(0)" },
+    ],
+    {
+      duration: 260,
+      delay: index * 45,
+      easing: "cubic-bezier(.2, .7, .2, 1)",
+      fill: "both",
+    }
+  ));
+  filterRowAnimations = entranceAnimations;
+  await Promise.allSettled(entranceAnimations.map((animation) => animation.finished));
+
+  if (transitionId === filterTransitionId) {
+    entranceAnimations.forEach((animation) => animation.cancel());
+    filterRowAnimations = [];
+    if (loadMoreBtn) loadMoreBtn.disabled = false;
+  }
 }
  
 if (loadMoreBtn) {
@@ -263,9 +329,10 @@ if (workList) {
     row.dataset.thumb = p.thumb;
     row.setAttribute("data-hover", "");
  
+    // Format the item position as a two-digit number (01, 02, ...).
     row.innerHTML = `
       <div class="work-row-inner">
-        <span class="work-num mono">${String(i + 1).padStart(2, "0")}</span>
+        <!-- <span class="work-num mono">${String(i + 1).padStart(2, "0")}</span> -->
         <div class="work-main">
         <div class="work-header">
               <h3 class="work-name">${p.name}</h3>

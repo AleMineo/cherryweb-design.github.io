@@ -2,15 +2,11 @@
 
 #hobbies-scroll {
   display: flex;
-  gap: 1.5rem;
-
+  gap: $space-6;
   width: 100%;
-
   overflow-x: auto;
   overflow-y: hidden;
-
-  padding-bottom: 1rem;
-
+  padding-bottom: $space-4;
   scrollbar-width: auto;
 
   &::-webkit-scrollbar {
