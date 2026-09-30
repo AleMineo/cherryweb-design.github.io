@@ -136,6 +136,7 @@ h6 {
 .wrap h2 {
   font-size: clamp(3rem, 1.96vw, 4.5rem);
   margin-top: 8px;
+  line-height: 1;
 }
 
 .eyebrow {
@@ -323,8 +324,13 @@ header nav {
   font-size: clamp(2.5rem, 0.56rem + 8.27vw, 8rem);
   font-weight: 400;
   letter-spacing: -0.02em;
-  line-height: 0.95;
+  line-height: 1.25;
   margin: auto 0 0;
+}
+@media (min-width: 640px) {
+  .hero-title {
+    line-height: 0.95;
+  }
 }
 
 .currently-row {
