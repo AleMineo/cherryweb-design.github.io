@@ -88,7 +88,7 @@ const galleryFiles = {
   ),
 
   "Urbex": Array.from(
-    { length: 9 },
+    { length: 13 },
     (_, i) => `urbex_${String(i + 1).padStart(2, "0")}.webp`
   ),
 
