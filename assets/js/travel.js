@@ -24,6 +24,7 @@ const hobbies = [
   {
     name: "New York",
     year: "2023",
+  key: "New York 2023",
     img: "assets/images/photos/newyork/2023/new-york_thumb.webp",
     gallery: "assets/images/photos/newyork/2023/"
   },
@@ -42,6 +43,7 @@ const hobbies = [
   {
     name: "New York",
     year: "2022",
+    key: "New York 2022",
     img: "assets/images/photos/newyork/2022/newyork_thumb.webp",
     gallery: "assets/images/photos/newyork/2022/"
   },
@@ -66,6 +68,7 @@ const hobbies = [
   {
     name: "New York",
     year: "2019",
+  key: "New York 2019",
     img: "assets/images/photos/newyork/2019/new-york_thumb.webp",
     gallery: "assets/images/photos/newyork/2019/"
   },
@@ -109,6 +112,7 @@ if (hobbiesScroll) {
     card.dataset.gallery = hobby.gallery;
     card.dataset.name = hobby.name;
     card.dataset.year = hobby.year;
+    card.dataset.key = hobby.key || hobby.name;
 
     card.innerHTML = `
       <div class="hobby-img">

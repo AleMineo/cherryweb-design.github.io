@@ -40,19 +40,19 @@ const galleryFiles = {
     "SF_04.webp"
   ],
 
-  "New York 03": Array.from(
+  "New York 2023": Array.from(
     { length: 12 },
-    (_, i) => `new-york-03_${String(i + 1).padStart(2, "0")}.webp`
+    (_, i) => `new-york_${String(i + 1).padStart(2, "0")}.webp`
   ),
 
-  "New York 02": Array.from(
+  "New York 2022": Array.from(
     { length: 38 },
-    (_, i) => `newyork-02_${String(i + 1).padStart(2, "0")}.webp`
+    (_, i) => `newyork_${String(i + 1).padStart(2, "0")}.webp`
   ),
 
-  "New York 01": Array.from(
+  "New York 2019": Array.from(
     { length: 13 },
-    (_, i) => `new-york-01_${String(i + 1).padStart(2, "0")}.webp`
+    (_, i) => `new-york_${String(i + 1).padStart(2, "0")}.webp`
   ),
 
   "Spain": Array.from(
@@ -77,7 +77,7 @@ const galleryFiles = {
     (_, i) => `london_${String(i + 1).padStart(2, "0")}.webp`
   ),
 
-    "Paris": Array.from(
+  "Paris": Array.from(
     { length: 14 },
     (_, i) => `paris_${String(i + 1).padStart(2, "0")}.webp`
   ),
@@ -180,6 +180,7 @@ function openGallery(card) {
 
   const galleryPath = card.dataset.gallery;
   const galleryName = card.dataset.name;
+  const galleryKey  = card.dataset.key;
 
   console.log("Opening gallery:", galleryName);
 
@@ -189,8 +190,8 @@ function openGallery(card) {
   }
 
   currentGalleryName = galleryName;
-
-  const files = galleryFiles[galleryName];
+  
+  const files = galleryFiles[galleryKey];
 
   if (!files || files.length === 0) {
     console.warn("No gallery images configured for:", galleryName);
