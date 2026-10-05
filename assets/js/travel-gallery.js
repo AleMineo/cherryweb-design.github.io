@@ -42,17 +42,17 @@ const galleryFiles = {
 
   "New York 03": Array.from(
     { length: 12 },
-    (_, i) => `new-york_${String(i + 1).padStart(2, "0")}.webp`
+    (_, i) => `new-york-03_${String(i + 1).padStart(2, "0")}.webp`
   ),
 
   "New York 02": Array.from(
     { length: 38 },
-    (_, i) => `newyork_${String(i + 1).padStart(2, "0")}.webp`
+    (_, i) => `newyork-02_${String(i + 1).padStart(2, "0")}.webp`
   ),
 
   "New York 01": Array.from(
     { length: 13 },
-    (_, i) => `new-york_${String(i + 1).padStart(2, "0")}.webp`
+    (_, i) => `new-york-01_${String(i + 1).padStart(2, "0")}.webp`
   ),
 
   "Spain": Array.from(
