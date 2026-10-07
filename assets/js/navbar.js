@@ -12,11 +12,80 @@
 // ==========================================================================
 
 document.addEventListener("DOMContentLoaded", () => {
+  const scrollProgress = document.createElement("div");
+  scrollProgress.className = "scroll-progress";
+  scrollProgress.setAttribute("aria-hidden", "true");
+  document.body.prepend(scrollProgress);
+
+  let progressFrame = 0;
+  const updateScrollProgress = () => {
+    if (progressFrame) return;
+
+    progressFrame = window.requestAnimationFrame(() => {
+      const scrollableHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const progress =
+        scrollableHeight > 0
+          ? Math.min(Math.max(window.scrollY / scrollableHeight, 0), 1)
+          : 0;
+
+      scrollProgress.style.transform = `scaleX(${progress})`;
+      progressFrame = 0;
+    });
+  };
+
+  window.addEventListener("scroll", updateScrollProgress, { passive: true });
+  window.addEventListener("resize", updateScrollProgress);
+  updateScrollProgress();
+
   const menuToggle = document.getElementById("menu-toggle");
   const navLinks = document.getElementById("navlinks");
   const headerEl = document.querySelector("header");
 
   if (!menuToggle || !navLinks || !headerEl) return;
+
+  const sectionLinks = Array.from(navLinks.querySelectorAll('a[href^="#"]'))
+    .map((link) => ({
+      link,
+      section: document.getElementById(link.hash.slice(1)),
+    }))
+    .filter(({ section }) => section);
+
+  if (sectionLinks.length) {
+    const topSection = document.getElementById("top");
+    const sections = [
+      ...(topSection ? [topSection] : []),
+      ...sectionLinks.map(({ section }) => section),
+    ];
+    let activeSectionFrame = 0;
+
+    const updateActiveSection = () => {
+      if (activeSectionFrame) return;
+
+      activeSectionFrame = window.requestAnimationFrame(() => {
+        const activationPoint = headerEl.getBoundingClientRect().bottom;
+        let activeSection = sections[0];
+
+        sections.forEach((section) => {
+          if (section.getBoundingClientRect().top <= activationPoint) {
+            activeSection = section;
+          }
+        });
+
+        sectionLinks.forEach(({ link, section }) => {
+          const isActive = section === activeSection;
+          link.classList.toggle("active", isActive);
+          if (isActive) link.setAttribute("aria-current", "location");
+          else link.removeAttribute("aria-current");
+        });
+        activeSectionFrame = 0;
+      });
+    };
+
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+    updateActiveSection();
+  }
 
   const closeMenu = () => {
     menuToggle.classList.remove("open");
