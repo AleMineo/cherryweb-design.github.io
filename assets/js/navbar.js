@@ -51,6 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // close if resized back to desktop while open
   window.addEventListener("resize", () => {
-    if (window.innerWidth >= 640) closeMenu();
+    if (window.innerWidth >= 1024) closeMenu();
   });
 });

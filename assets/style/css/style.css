@@ -143,7 +143,7 @@ h6 {
   font-size: clamp(0.6rem, 0.6vw, 0.7rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #eb1e8f;
+  color: #B20B65;
 }
 
 main::after {
@@ -231,7 +231,7 @@ header nav {
   list-style: none;
 }
 .navlinks a {
-  color: #7a7672;
+  color: #66615F;
   transition: color 0.2s;
 }
 .navlinks a:hover {
@@ -284,7 +284,7 @@ header nav {
   font-size: clamp(0.6rem, 0.6vw, 0.7rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #7a7672;
+  color: #66615F;
   margin-bottom: 40px;
 }
 .eyebrow-row span.mid {
@@ -357,7 +357,7 @@ header nav {
   font-size: clamp(0.6rem, 0.56rem + 0.15vw, 0.7rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #7a7672;
+  color: #66615F;
   margin-bottom: 8px;
 }
 
@@ -399,14 +399,14 @@ header nav {
   letter-spacing: 0.15em;
 }
 .scroll-link:hover .scroll-circle {
-  background: #eb1e8f;
-  border-color: #eb1e8f;
+  background: #B20B65;
+  border-color: #B20B65;
   color: #ffffff;
 }
 
 .scroll-circle {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: 1px solid rgba(20, 19, 19, 0.3);
   display: flex;
@@ -420,7 +420,7 @@ header nav {
   font-size: clamp(0.6rem, 0.6vw, 0.7rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #7a7672;
+  color: #66615F;
   display: none;
   line-height: 1.6;
 }
@@ -446,7 +446,7 @@ section {
   font-size: clamp(0.6rem, 0.6vw, 0.7rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #7a7672;
+  color: #66615F;
   display: none;
 }
 @media (min-width: 768px) {
@@ -491,13 +491,13 @@ section {
   }
 }
 #help .help-grid .help-card .help-label {
-  color: #7a7672;
+  color: #66615F;
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 #help .help-grid .help-card .help-label span {
-  color: #eb1e8f;
+  color: #B20B65;
 }
 #help .help-grid .help-card h3 {
   font-size: 2rem;
@@ -529,34 +529,53 @@ section {
   padding-top: 80px;
 }
 
+@media (max-width: 1023px) {
+  section {
+    padding: clamp(64px, 8vw, 80px) 0;
+  }
+  #help {
+    padding-top: clamp(64px, 8vw, 80px);
+    padding-bottom: clamp(64px, 8vw, 80px);
+  }
+  #work {
+    padding-top: clamp(64px, 8vw, 80px);
+  }
+}
 .filter-bar {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 32px;
 }
 
 .filter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
   font-family: "JetBrains Mono", monospace;
   font-size: clamp(0.64rem, 0.65vw, 0.75rem);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #7a7672;
+  color: #66615F;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 6px 2px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border-radius: 9999px;
   transition: color 0.2s;
 }
 .filter-btn:hover {
   color: #141313;
 }
 .filter-btn.active {
-  color: #eb1e8f;
+  color: #B20B65;
 }
 
 .filter-btn.archive {
-  color: #7a7672;
+  color: #66615F;
 }
 .filter-btn.archive:hover {
   color: #141313;
@@ -596,7 +615,7 @@ section {
   font-style: italic;
 }
 .work-row:hover .work-arrow {
-  color: #eb1e8f;
+  color: #B20B65;
   transform: rotate(45deg);
 }
 .work-row.hidden {
@@ -618,7 +637,7 @@ section {
 .work-num {
   font-family: "JetBrains Mono", monospace;
   font-size: clamp(0.6rem, 0.6vw, 0.7rem);
-  color: #7a7672;
+  color: #66615F;
   width: 20px;
   align-self: flex-start;
   padding-top: 10px;
@@ -639,7 +658,7 @@ section {
   margin-top: 4px;
   font-size: clamp(0.8rem, 0.65vw, 0.9rem);
   line-height: 1.5;
-  color: #7a7672;
+  color: #66615F;
   max-width: 90ch;
 }
 .work-desc span {
@@ -658,7 +677,7 @@ section {
 .work-year {
   font-family: "JetBrains Mono", monospace;
   font-size: clamp(0.6rem, 0.6vw, 0.7rem);
-  color: #7a7672;
+  color: #66615F;
   width: 48px;
   text-align: right;
   align-self: flex-start;
@@ -666,7 +685,7 @@ section {
 }
 
 .work-arrow {
-  color: #7a7672;
+  color: #66615F;
   transition: color 0.3s, transform 0.3s;
   align-self: flex-start;
   margin-top: 8px;
@@ -726,7 +745,7 @@ section {
   }
 }
 .tools-list .tools-items {
-  color: #7a7672;
+  color: #66615F;
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
@@ -822,7 +841,7 @@ section {
   font-size: clamp(0.72rem, 0.75vw, 0.85rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #7a7672;
+  color: #66615F;
   padding: 0 24px;
 }
 
@@ -841,7 +860,7 @@ section {
   font-size: clamp(0.6rem, 0.6vw, 0.7rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #7a7672;
+  color: #66615F;
   white-space: nowrap;
 }
 
@@ -907,7 +926,7 @@ section {
 }
 .hobby-meta .year {
   font-family: "JetBrains Mono", monospace;
-  color: #7a7672;
+  color: #66615F;
 }
 
 .contact-top {
@@ -920,14 +939,14 @@ section {
   font-size: clamp(0.6rem, 0.6vw, 0.7rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #7a7672;
+  color: #66615F;
 }
 
 .reach {
   font-size: clamp(0.72rem, 0.75vw, 0.85rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #7a7672;
+  color: #66615F;
   margin-bottom: 24px;
 }
 
@@ -959,6 +978,7 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  min-height: 44px;
   padding: 12px 20px;
   border-radius: 9999px;
   border: 1px solid rgba(20, 19, 19, 0.2);
@@ -983,7 +1003,7 @@ footer {
   font-size: clamp(0.6rem, 0.6vw, 0.7rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #7a7672;
+  color: #66615F;
   text-align: center;
 }
 @media (min-width: 640px) {
@@ -1154,6 +1174,7 @@ body.lightbox-open {
   overflow-y: hidden;
   padding-bottom: 1rem;
   scrollbar-width: auto;
+  touch-action: pan-x;
 }
 #hobbies-scroll::-webkit-scrollbar {
   height: 8px;
@@ -1516,8 +1537,8 @@ body#portfolio-item #wrapper section {
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   background: none;
   border: none;
   cursor: pointer;
@@ -1551,7 +1572,7 @@ header.menu-open {
   background: #eef1f5;
 }
 
-@media (max-width: 639px) {
+@media (max-width: 1023px) {
   .menu-toggle {
     display: flex;
   }
@@ -1568,6 +1589,11 @@ header.menu-open {
     pointer-events: none;
     transform: translateY(-12px);
     transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .navlinks a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
   }
   header.menu-open .navlinks {
     opacity: 1;
