@@ -92,7 +92,7 @@ h6 {
   font-size: $font-size-xs;
   text-transform: uppercase;
   letter-spacing: .15em;
-  color: $primary-strong;
+  color: $primary;
 }
 
 main {
@@ -393,8 +393,8 @@ header {
   letter-spacing: .15em;
 
   &:hover .scroll-circle {
-    background: $primary-strong;
-    border-color: $primary-strong;
+    background: $primary;
+    border-color: $primary;
     color: $primary-foreground;
   }
 }
@@ -499,7 +499,7 @@ section {
         text-transform: uppercase;
         letter-spacing: .1em;
         span {
-          color: $primary-strong;
+          color: $primary;
         }
       }
 
@@ -582,7 +582,7 @@ section {
   }
 
   &.active {
-    color: $primary-strong;
+    color: $primary;
   }
 }
 
@@ -633,7 +633,7 @@ section {
     }
 
     .work-arrow {
-      color: $primary-strong;
+      color: $primary;
       transform: rotate(45deg);
     }
   }

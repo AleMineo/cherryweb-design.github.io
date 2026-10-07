@@ -143,7 +143,7 @@ h6 {
   font-size: clamp(0.6rem, 0.6vw, 0.7rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #B20B65;
+  color: #eb1e8f;
 }
 
 main::after {
@@ -399,8 +399,8 @@ header nav {
   letter-spacing: 0.15em;
 }
 .scroll-link:hover .scroll-circle {
-  background: #B20B65;
-  border-color: #B20B65;
+  background: #eb1e8f;
+  border-color: #eb1e8f;
   color: #ffffff;
 }
 
@@ -497,7 +497,7 @@ section {
   letter-spacing: 0.1em;
 }
 #help .help-grid .help-card .help-label span {
-  color: #B20B65;
+  color: #eb1e8f;
 }
 #help .help-grid .help-card h3 {
   font-size: 2rem;
@@ -571,7 +571,7 @@ section {
   color: #141313;
 }
 .filter-btn.active {
-  color: #B20B65;
+  color: #eb1e8f;
 }
 
 .filter-btn.archive {
@@ -615,7 +615,7 @@ section {
   font-style: italic;
 }
 .work-row:hover .work-arrow {
-  color: #B20B65;
+  color: #eb1e8f;
   transform: rotate(45deg);
 }
 .work-row.hidden {
