@@ -8,6 +8,7 @@
   overflow-y: hidden;
   padding-bottom: $space-4;
   scrollbar-width: auto;
+  touch-action: pan-x;
 
   &::-webkit-scrollbar {
     height: 8px;

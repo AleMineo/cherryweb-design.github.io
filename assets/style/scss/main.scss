@@ -92,7 +92,7 @@ h6 {
   font-size: $font-size-xs;
   text-transform: uppercase;
   letter-spacing: .15em;
-  color: $primary;
+  color: $primary-strong;
 }
 
 main {
@@ -393,15 +393,15 @@ header {
   letter-spacing: .15em;
 
   &:hover .scroll-circle {
-    background: $primary;
-    border-color: $primary;
+    background: $primary-strong;
+    border-color: $primary-strong;
     color: $primary-foreground;
   }
 }
 
 .scroll-circle {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   // NOTE: was rgba(20, 19, 19, .3) hardcoded — this is $foreground at 30%.
   border: $border-width solid rgba($foreground, .3);
@@ -499,7 +499,7 @@ section {
         text-transform: uppercase;
         letter-spacing: .1em;
         span {
-          color: $primary;
+          color: $primary-strong;
         }
       }
 
@@ -536,14 +536,34 @@ section {
   padding-top: 80px;
 }
 
+@media (max-width: $bp-nav - 1px) {
+  section {
+    padding: clamp(64px, 8vw, 80px) 0;
+  }
+
+  #help {
+    padding-top: clamp(64px, 8vw, 80px);
+    padding-bottom: clamp(64px, 8vw, 80px);
+  }
+
+  #work {
+    padding-top: clamp(64px, 8vw, 80px);
+  }
+}
+
 .filter-bar {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 32px;
 }
 
 .filter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
   font-family: $font-mono;
   font-size: clamp(0.64rem, 0.65vw, 0.75rem);
   text-transform: uppercase;
@@ -552,7 +572,9 @@ section {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 6px 2px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border-radius: $radius-pill;
   transition: color .2s;
 
   &:hover {
@@ -560,7 +582,8 @@ section {
   }
 
   &.active {
-    color: $primary;
+    color: $primary-strong;
+    background: $primary-light;
   }
 }
 
@@ -611,7 +634,7 @@ section {
     }
 
     .work-arrow {
-      color: $primary;
+      color: $primary-strong;
       transform: rotate(45deg);
     }
   }
@@ -1009,6 +1032,7 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  min-height: 44px;
   padding: 12px 20px;
   border-radius: $radius-pill;
   border: $border-width solid rgba($foreground, .2);

@@ -24,7 +24,7 @@ const hobbies = [
   {
     name: "New York",
     year: "2023",
-  key: "New York 2023",
+    key: "New York 2023",
     img: "assets/images/photos/newyork/2023/new-york_thumb.webp",
     gallery: "assets/images/photos/newyork/2023/"
   },
@@ -68,7 +68,7 @@ const hobbies = [
   {
     name: "New York",
     year: "2019",
-  key: "New York 2019",
+    key: "New York 2019",
     img: "assets/images/photos/newyork/2019/new-york_thumb.webp",
     gallery: "assets/images/photos/newyork/2019/"
   },
@@ -101,14 +101,12 @@ const hobbiesScroll = document.getElementById("hobbies-scroll");
 
 if (hobbiesScroll) {
 
-  hobbies.forEach((hobby, index) => {
-
+  hobbies.forEach((hobby) => {
     const card = document.createElement("div");
 
     card.className = "hobby-card";
     card.setAttribute("data-hover", "");
 
-    // Store gallery information on the card
     card.dataset.gallery = hobby.gallery;
     card.dataset.name = hobby.name;
     card.dataset.year = hobby.year;
@@ -133,48 +131,54 @@ if (hobbiesScroll) {
     hobbiesScroll.appendChild(card);
   });
 
-
   // ==========================================================
   // DRAG TO SCROLL
   // ==========================================================
 
   let isDown = false;
   let startX = 0;
-  let scrollLeft = 0;
+  let startScrollLeft = 0;
+  let dragFrameId = null;
 
-  hobbiesScroll.addEventListener("mousedown", (e) => {
-
-    isDown = true;
-
-    hobbiesScroll.classList.add("dragging");
-
-    startX = e.pageX - hobbiesScroll.offsetLeft;
-    scrollLeft = hobbiesScroll.scrollLeft;
-
-  });
-
-
-  hobbiesScroll.addEventListener("mousemove", (e) => {
-
-    if (!isDown) return;
-
-    e.preventDefault();
-
-    const x = e.pageX - hobbiesScroll.offsetLeft;
-
-    const walk = (x - startX) * 1.2;
-
-    hobbiesScroll.scrollLeft = scrollLeft - walk;
-
-  });
-
-
-  window.addEventListener("mouseup", () => {
-
+  const stopDragging = () => {
     isDown = false;
-
     hobbiesScroll.classList.remove("dragging");
 
+    if (dragFrameId !== null) {
+      cancelAnimationFrame(dragFrameId);
+      dragFrameId = null;
+    }
+  };
+
+  const updateDragScroll = (clientX) => {
+    if (!isDown) return;
+
+    const deltaX = clientX - startX;
+    const nextScrollLeft = startScrollLeft - deltaX * 1.2;
+
+    if (dragFrameId !== null) return;
+
+    dragFrameId = requestAnimationFrame(() => {
+      hobbiesScroll.scrollLeft = nextScrollLeft;
+      dragFrameId = null;
+    });
+  };
+
+  hobbiesScroll.addEventListener("pointerdown", (event) => {
+    isDown = true;
+    hobbiesScroll.classList.add("dragging");
+    startX = event.clientX;
+    startScrollLeft = hobbiesScroll.scrollLeft;
   });
 
+  hobbiesScroll.addEventListener("pointermove", (event) => {
+    if (!isDown) return;
+    event.preventDefault();
+    updateDragScroll(event.clientX);
+  });
+
+  hobbiesScroll.addEventListener("pointerup", stopDragging);
+  hobbiesScroll.addEventListener("pointerleave", stopDragging);
+  hobbiesScroll.addEventListener("pointercancel", stopDragging);
+  window.addEventListener("pointerup", stopDragging);
 }
