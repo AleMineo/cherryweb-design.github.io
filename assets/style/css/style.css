@@ -106,6 +106,10 @@ h6 {
   font-weight: 500;
 }
 
+h3 {
+  font-size: clamp(1.65rem, 2.4vw, 2rem);
+}
+
 .serif {
   font-family: "Instrument Serif", serif;
   letter-spacing: -0.44px;
@@ -1642,6 +1646,127 @@ header.menu-open {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
+  }
+}
+.work-polaroid #work .work-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  border: 0;
+}
+@media (min-width: 640px) {
+  .work-polaroid #work .work-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+  }
+}
+@media (min-width: 1024px) {
+  .work-polaroid #work .work-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+  }
+}
+.work-polaroid #work .work-row {
+  display: block;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  text-decoration: none;
+}
+.work-polaroid #work .work-row.hidden {
+  display: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .work-polaroid #work .work-row:hover .work-card {
+    transform: translateY(-4px) rotate(-0.35deg);
+    box-shadow: 0 7px 16px rgba(20, 19, 19, 0.08), 0 22px 40px rgba(20, 19, 19, 0.08);
+    border: 1px solid #eb1e8f;
+  }
+  .work-polaroid #work .work-row:hover .work-name {
+    color: #eb1e8f;
+    font-style: italic;
+  }
+  .work-polaroid #work .work-row:hover .work-arrow {
+    color: #eb1e8f;
+    transform: rotate(45deg);
+  }
+}
+.work-polaroid .work-card {
+  height: 100%;
+  padding: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(20, 19, 19, 0.15);
+  box-shadow: 0 3px 10px rgba(20, 19, 19, 0.06), 0 16px 32px rgba(20, 19, 19, 0.05);
+  transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 200ms ease-out, border-color 0.2s ease-in-out;
+}
+.work-polaroid .work-card-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  background: #e6e9ee;
+}
+.work-polaroid .work-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.work-polaroid .work-card-year {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 6px 8px;
+  color: #fff;
+  background: #eb1e8f;
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
+}
+.work-polaroid .work-card-body {
+  padding: 16px;
+}
+.work-polaroid .work-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.work-polaroid .work-name {
+  font-size: clamp(1.65rem, 2.4vw, 2rem);
+  line-height: 1.05;
+  transition: color 180ms ease-out, font-style 180ms ease-out;
+}
+.work-polaroid .work-arrow {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  color: #343a40;
+  transition: color 180ms ease-out, transform 180ms ease-out;
+}
+.work-polaroid .work-role {
+  margin-top: 10px;
+  color: #343a40;
+  font-size: 0.65rem;
+  line-height: 1.55;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+.work-polaroid .work-summary {
+  margin-top: 9px;
+  color: #343a40;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+.work-polaroid .work-tooltip {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .work-polaroid .work-card,
+  .work-polaroid .work-name,
+  .work-polaroid .work-arrow {
+    transition: none;
   }
 }
 
