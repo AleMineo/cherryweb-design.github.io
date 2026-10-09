@@ -109,3 +109,22 @@ const io = new IntersectionObserver(
   { threshold: 0.15 }
 );
 revealEls.forEach((el) => io.observe(el));
+
+// ---------- copy contact email ----------
+document.querySelectorAll("[data-copy-email]").forEach((link) => {
+  link.addEventListener("click", async (event) => {
+    event.preventDefault();
+    try {
+      await navigator.clipboard.writeText("alessandra.cherryweb@gmail.com");
+      link.classList.add("email-copied");
+      const feedback = link.querySelector(".copy-feedback");
+      if (feedback) feedback.textContent = "Copied!";
+      window.setTimeout(() => {
+        link.classList.remove("email-copied");
+        if (feedback) feedback.textContent = "";
+      }, 1600);
+    } catch (error) {
+      console.error("Could not copy the email address.", error);
+    }
+  });
+});

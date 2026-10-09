@@ -1037,6 +1037,12 @@ section {
   color: #eef1f5;
 }
 
+.copy-feedback {
+  margin-left: 0.35rem;
+  color: var(--color-primary);
+  font-size: 0.75em;
+}
+
 footer {
   border-top: 1px solid #dde1e7;
   padding: 40px 0;
