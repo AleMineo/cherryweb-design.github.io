@@ -111,7 +111,7 @@
 
     {{ with .Next }}
     <a href="{{ .RelPermalink }}" class="newer">
-      &larr; NEWER WORK <br><strong>{{ .Title }}</strong>
+      &larr; <small>NEWER WORK</small> <br><strong class="serif">{{ .Title }}</strong>
     </a>
     {{ else }}
     <a class="newer disabled">
@@ -121,7 +121,7 @@
 
     {{ with .Prev }}
     <a href="{{ .RelPermalink }}" class="older">
-      OLDER WORK &rarr; <br><strong>{{ .Title }}</strong>
+      <small>OLDER WORK</small> &rarr; <br><strong class="serif">{{ .Title }}</strong>
     </a>
     {{ else }}
     <a class="older disabled">
