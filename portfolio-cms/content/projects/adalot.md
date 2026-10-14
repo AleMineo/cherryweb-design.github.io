@@ -11,6 +11,11 @@ cover: "/assets/images/portfolio/adalot-cover.webp"
 overview: "Adalot Networks is a corporate website designed to communicate the company’s services, values, and technological expertise in a clear and professional way. The goal was to create a visually appealing and responsive experience across all devices, combining modern aesthetics with smooth, subtle animations to enhance user engagement while maintaining a corporate tone."
 website_active: true
 website: "https://www.adalot.com/"
+
+figma:
+  - url: "https://www.figma.com/proto/a8cECADY5i2Aaiuu2sANJs/Cherryweb-portfolio?node-id=613-183&p=f&t=OrZuwwtpjx78m84m-1&scaling=min-zoom&content-scaling=fixed&page-id=189%3A45&starting-point-node-id=613%3A183"
+    label: "Desktop Prototype"
+
 featured: true
 ---
 
