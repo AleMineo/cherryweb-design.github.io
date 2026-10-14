@@ -14,7 +14,9 @@ website: "https://app.walltips.it/it/discover/?host=the-forest-suites&room=room-
 
 figma:
   - url: "https://www.figma.com/proto/rWcQdomdQxIYo3mPFPHdAv/Walltips---Mockup?node-id=2108-47881&p=f&t=xSb0QaHJBpgvgKIs-1&scaling=scale-down&content-scaling=fixed&page-id=2108%3A46886&starting-point-node-id=2108%3A47881&show-proto-sidebar=1"
-    label: "Mobile Prototype"
+    label: "Mobile Prototype Town"
+  - url: "https://www.figma.com/proto/flVTZGfEJcQQJun5aB01s9/Walltips---Mockup?node-id=826-21802&p=f&t=oEaUo1PHwp3HYlkX-1&scaling=scale-down&content-scaling=fixed&page-id=9%3A3&starting-point-node-id=826%3A21802&show-proto-sidebar=1"
+    label: "Mobile Prototype Hotel"
   - url: "https://www.figma.com/proto/rWcQdomdQxIYo3mPFPHdAv/Walltips---Mockup?node-id=2091-34399&p=f&t=uqpWhbDQFS9a9PmB-1&scaling=scale-down&content-scaling=fixed&page-id=558%3A7102&starting-point-node-id=2091%3A34399&show-proto-sidebar=1"
     label: "Desktop Prototype"
 

@@ -5,7 +5,7 @@ const projects = [
     year: "2026",
     category: ["logo"],
     desc: ["Logo design & HTML5/SCSS", "A talent agency specialized in managing celebrity appearances at comic conventions worldwide."],
-    thumb: "assets/images/portfolio/cameocraft-cover.webp",
+    thumb: "assets/images/portfolio/cameocraft_thumb.webp",
     link: "projects/cameocraft/",
   },
   {
@@ -13,7 +13,7 @@ const projects = [
     year: "2025",
     category: ["ux-ui", "app-webapp"],
     desc: ["UX/UI design & Prototyping", "The project centered on designing a secure, structured, and intuitive interface for a crypto app capable of communicating trust and technological sophistication."],
-    thumb: "assets/images/portfolio/dusk-cover.webp",
+    thumb: "assets/images/portfolio/dusk_thumb.webp",
     link: "projects/dusk/",
   },
   {
@@ -21,7 +21,7 @@ const projects = [
     year: "2025",
     category: ["app-webapp", "ux-ui"],
     desc: ["WebApp UX/UI design & Prototyping", "A lightweight and intuitive mini app designed to act as a digital concierge for guests staying in hotels, B&Bs, and hospitality properties."],
-    thumb: "assets/images/portfolio/walltips-cover.webp",
+    thumb: "assets/images/portfolio/walltips_thumb.webp",
     link: "projects/walltips/",
   },
   {
@@ -29,7 +29,7 @@ const projects = [
     year: "2024",
     category: ["logo"],
     desc: ["Logo design", "A personal brand created for a friend sommelier, designed to express passion, expertise, and a playful yet refined personality within the wine world."],
-    thumb: "assets/images/portfolio/furio-divino-cover.webp",
+    thumb: "assets/images/portfolio/furio-divino_thumb.webp",
     link: "projects/furio-divino/",
   },
   {
@@ -37,7 +37,7 @@ const projects = [
     year: "2024",
     category: ["app-webapp"],
     desc: ["App design for tablets & Prototyping", "Mindtooth is a neurotechnology application developed by Brainsigns for monitoring, reading, and analyzing brainwave recordings"],
-    thumb: "assets/images/portfolio/brainsigns-cover.webp",
+    thumb: "assets/images/portfolio/brainsigns_thumb.webp",
     link: "projects/brainsigns/",
   },
   {
@@ -45,7 +45,7 @@ const projects = [
     year: "2023",
     category: ["logo"],
     desc: ["Logo design", "Conceived as an e-commerce platform dedicated to authenticated autographed collectibles and original celebrity items."],
-    thumb: "assets/images/portfolio/wall-of-fame-cover.webp",
+    thumb: "assets/images/portfolio/wall-of-fame_thumb.webp",
     link: "projects/wall-of-fame/",
   },
   {
@@ -53,7 +53,7 @@ const projects = [
     year: "2023",
     category: ["app-webapp", "ux-ui"],
     desc: ["UX/UI design & HTML5/SCSS & Prototyping", "Econeth is a web platform designed for crowdfunding projects specifically in the gaming universe - from video games themselves to related equipment such as gaming chairs, consoles, and accessories."],
-    thumb: "assets/images/portfolio/econeth-cover.webp",
+    thumb: "assets/images/portfolio/econeth_thumb.webp",
     link: "projects/econeth/",
   },
   {
@@ -61,7 +61,7 @@ const projects = [
     year: "2022",
     category: ["ux-ui"],
     desc: ["UX/UI design & HTML5/SCSS coding", "A high-end e-commerce platform for luxury brands, designed to combine elegance with usability."],
-    thumb: "assets/images/portfolio/fuix-cover.webp",
+    thumb: "assets/images/portfolio/fuix_thumb.webp",
     link: "projects/fuix/",
   },
   {
@@ -69,7 +69,7 @@ const projects = [
     year: "2022",
     category: ["ux-ui"],
     desc: ["UX/UI design & HTML5/SCSS coding", "A corporate website designed to communicate the company’s services, values, and technological expertise in a clear and professional way. "],
-    thumb: "assets/images/portfolio/adalot-cover.webp",
+    thumb: "assets/images/portfolio/adalot_thumb.webp",
     link: "projects/adalot/",
   },
   {
@@ -77,7 +77,7 @@ const projects = [
     year: "2021",
     category: ["ux-ui", "app-webapp", "logo"],
     desc: ["UX/UI design & Logo design & HTML5/SCSS coding", "Libes is a platform born from the idea of sharing geographic and cultural knowledge as an alternative to traditional social networks."],
-    thumb: "assets/images/portfolio/libes-cover.webp",
+    thumb: "assets/images/portfolio/libes_thumb.webp",
     link: "projects/libes/",
   },
   {
@@ -85,7 +85,7 @@ const projects = [
     year: "2021",
     category: ["ux-ui", "app-webapp"],
     desc: ["UX/UI design", "A concept platform designed to go beyond traditional food delivery by inspiring users with personalized restaurant recommendations based on cravings and location."],
-    thumb: "assets/images/portfolio/yummo-cover.webp",
+    thumb: "assets/images/portfolio/yummo_thumb.webp",
     link: "projects/yummo/",
   },
   {
@@ -93,7 +93,7 @@ const projects = [
     year: "2019",
     category: ["ux-ui", "logo"],
     desc: ["UX/UI design & HTML5/SCSS", "Mio Assicuratore is an insurance platform designed to simplify the comparison and management of policies for users."],
-    thumb: "assets/images/portfolio/mioassicuratore-cover.webp",
+    thumb: "assets/images/portfolio/mioassicuratore_thumb.webp",
     link: "projects/mioassicuratore/",
   },
   {
@@ -101,7 +101,7 @@ const projects = [
     year: "2020",
     category: ["ux-ui"],
     desc: ["UX/UI design & HTML5/CSS coding", "Voverc - later acquired and rebranded as Voxloud - was a cloud-based telephony platform offering virtual PBX solutions for businesses."],
-    thumb: "assets/images/portfolio/voverc-cover.webp",
+    thumb: "assets/images/portfolio/voverc_thumb.webp",
     link: "projects/voverc/",
   },
   {
@@ -109,7 +109,7 @@ const projects = [
     year: "2016",
     category: ["logo"],
     desc: ["UX/UI design & HTML5/CSS coding", "A hospitality brand based in Rome. The project focused primarily on the creation of the logo and visual identity, designed to communicate warmth, comfort, and a welcoming atmosphere "],
-    thumb: "assets/images/portfolio/lele-beb-cover.webp",
+    thumb: "assets/images/portfolio/lele-beb_thumb.webp",
     link: "projects/lele-beb/",
   },
   {
@@ -117,7 +117,7 @@ const projects = [
     year: "2015",
     category: ["ux-ui"],
     desc: ["UX/UI design & HTML5/CSS coding", "HelloLen* Cosplay is a personal portfolio website designed to showcase cosplay projects, modeling photography, and artistic collaborations in a visually immersive and responsive experience."],
-    thumb: "assets/images/portfolio/hellolen-cover.webp",
+    thumb: "assets/images/portfolio/hellolen_thumb.webp",
     link: "projects/hellolen/",
   },
 ];
