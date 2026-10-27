@@ -42,3 +42,16 @@ I handled the project end-to-end, from mockups and brand graphics to a fully res
 <li>jQuery animations and custom interactions</li>
 </ul>
 </div>
+
+<div class="description">
+<h4>03 - My role</h4>
+
+Led UX/UI design end-to-end, including:
+
+<ul>
+<li>Wireframing user flows for content creation and map interactions</li>
+<li>High-fidelity mockups and interactive prototyping</li>
+<li>Feature validation before development handoff</li>
+<li>Developer collaboration for accurate implementation</li>
+</ul>
+</div>

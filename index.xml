@@ -2,19 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cherry Web Design</title>
-    <link>http://www.cherryweb-design.com/</link>
+    <link>http://www.cherryweb-design.com/index.html</link>
     <description>Recent content on Cherry Web Design</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 23 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://www.cherryweb-design.com/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://www.cherryweb-design.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>CameoCraft - Talent Agency</title>
-      <link>http://www.cherryweb-design.com/projects/cameocraft/</link>
-      <pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate>
+      <title>Archive</title>
+      <link>http://www.cherryweb-design.com/archive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.cherryweb-design.com/projects/cameocraft/</guid>
-      <description>01 - Brand Concept &amp; PositioningCameocraft needed a brand identity that balances professional credibility with the bold energy of comic and pop culture conventions - positioning them clearly in the celebrity management space.
-02 - Logo &amp; Visual IdentityDeveloped a logo and visual system built for versatility - strong across digital platforms, event materials, and promotional assets - while staying true to the fandom aesthetic the audience expects.</description>
+      <guid>http://www.cherryweb-design.com/archive/</guid>
+      <description>This section collects a selection of earlier projects spanning branding, web design, UI systems, and experimental concepts.
+While not all projects are currently live, they represent key stages of my evolution as a designer — from visual identity to complex digital interfaces.
+View detailed case studies, galleries, and available prototypes through the links below.</description>
+    </item>
+    
+  </channel>
+</rss>
+y - strong across digital platforms, event materials, and promotional assets - while staying true to the fandom aesthetic the audience expects.</description>
     </item>
     
     <item>
