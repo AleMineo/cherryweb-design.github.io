@@ -1,18 +1,98 @@
 // ==========================================================================
-// Variables for Cherry
+// Cherry — variables + light/dark theme
+// Use as your variables partial (or @use it from _variables.scss).
 // ==========================================================================
-$background: #eef1f5;
-$foreground: #141313;
-$dark-grey: #343a40;
-$light-grey: #D3D3D3;
-$muted-foreground: #66615F;
-$border: #dde1e7;
-$secondary: #e6e9ee;
-$primary: #eb1e8f;
-$primary-light: #FBECFC;
-$primary-detail: #EA1C8B;
-$primary-foreground: #ffffff;
-$off-white: #fafafa;
+
+// ---------- Mixin: dark-mode-only rules ------------------------------------
+// Matches OS dark mode (unless the user forced light) OR a manual dark toggle.
+@mixin dark-only {
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) & { @content; }
+  }
+  :root[data-theme="dark"] & { @content; }
+}
+
+// ---------- Theme palettes -------------------------------------------------
+$light-theme: (
+  background:         #eef1f5,
+  foreground:         #141313,
+  dark-grey:          #343a40,
+  light-grey:         #D3D3D3,
+  muted-foreground:   #66615F,
+  border:             #dde1e7,
+  secondary:          #e6e9ee,
+  primary:            #eb1e8f,
+  primary-light:      #FBECFC,
+  primary-detail:     #EA1C8B,
+  primary-foreground: #ffffff,
+  off-white:          #fafafa,
+  card:               #ffffff
+);
+
+$dark-theme: (
+  background:         #161616,
+  foreground:         #eef1f5,
+  dark-grey:          #c9d0d8,   // inverted: now a light grey for text/icons
+  light-grey:         #3a4049,   // inverted: now a dark grey
+  muted-foreground:   #9d9a98,
+  border:             #262b33,
+  secondary:          #1a1f27,
+  primary:            #f03a9f,   // slightly lighter for contrast on dark
+  primary-light:      #2b1226,   // deep plum instead of pale pink
+  primary-detail:     #EA1C8B,
+  primary-foreground: #ffffff,
+  off-white:          #161a21,
+  card:               #171b22
+);
+
+// ---------- Emit custom properties ----------------------------------------
+@mixin theme-tokens($map) {
+  @each $name, $value in $map {
+    --#{$name}: #{$value};
+  }
+}
+
+:root {
+  color-scheme: light;
+  @include theme-tokens($light-theme);
+}
+
+// Follows the OS unless the user forced light
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    @include theme-tokens($dark-theme);
+  }
+}
+
+// Manual toggle: <html data-theme="dark">
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  @include theme-tokens($dark-theme);
+}
+
+// ---------- Colour variables (theme-aware aliases) -------------------------
+// NOTE: Sass colour functions (darken, lighten, rgba($primary, .2)) can't
+// operate on var(). Use color-mix(in srgb, var(--primary) 20%, transparent).
+$background:         var(--background);
+$foreground:         var(--foreground);
+$dark-grey:          var(--dark-grey);
+$light-grey:         var(--light-grey);
+$muted-foreground:   var(--muted-foreground);
+$border:             var(--border);
+$secondary:          var(--secondary);
+$primary:            var(--primary);
+$primary-light:      var(--primary-light);
+$primary-detail:     var(--primary-detail);
+$primary-foreground: var(--primary-foreground);
+$off-white:          var(--off-white);
+$card:               var(--card);
+
+// ---------- Non-colour variables (unchanged) -------------------------------
+$brand-pink: #eb1e8f;
+$brand-light: #eef1f5;   // your light-mode $background, used for the button text
+$brand-ink: #141313;     // your light-mode $foreground
+
 $max-w: 1400px;
 $border-width: 1px;
 
@@ -41,3 +121,81 @@ $bp-sm: 640px;
 $bp-md: 768px;
 $bp-nav: 1024px;
 $bp-xxl: 2000px;
+
+// ---------- Theme toggle button --------------------------------------------
+
+.theme-toggle {
+  position: relative;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  width: 3.25rem;
+  height: 1.75rem;
+  padding: 3px;
+  background: $secondary;
+  border: $border-width solid $border;
+  border-radius: $radius-pill;
+  cursor: pointer;
+  transition: background .2s, border-color .2s;
+
+  &:hover {
+    border-color: $primary;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $primary;
+    outline-offset: 2px;
+  }
+
+  &__knob {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #fff;
+    background: $primary;
+    border-radius: 50%;
+    transition: transform .25s cubic-bezier(.23, 1, .32, 1);
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  // Light mode: moon in the knob, knob on the left
+  .icon-sun  { display: none; }
+  .icon-moon { display: block; }
+
+  // Dark mode: sun in the knob, knob slides right
+  @include dark-only {
+    .theme-toggle__knob { transform: translateX(1.5rem); }
+    .icon-sun  { display: block; }
+    .icon-moon { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &__knob { transition: none; }
+  }
+}
+
+// ---------- Which switch is visible --------------------------------------
+// Desktop: the one inside the menu shows, the hamburger one is hidden
+.theme-toggle--mobile {
+  display: none !important;
+}
+
+// Mobile: the one next to the hamburger shows, the menu one is hidden.
+// Use the SAME breakpoint your menu uses to collapse into the hamburger.
+@media (max-width: #{$bp-nav - 1px}) {
+  .theme-toggle--mobile {
+    display: inline-flex !important;
+  }
+
+  .theme-toggle--desktop,
+  li:has(> .theme-toggle--desktop) {
+    display: none !important;
+  }
+
+}
