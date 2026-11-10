@@ -168,8 +168,11 @@ $bp-xxl: 2000px;
   .icon-sun  { display: none; }
   .icon-moon { display: block; }
 
-  // Dark mode: sun in the knob, knob slides right
+  // Dark mode: sun in the knob, knob slides right, track gets contrast
   @include dark-only {
+    background: color-mix(in srgb, $foreground 6%, transparent);
+    border-color: color-mix(in srgb, $foreground 30%, transparent);
+
     .theme-toggle__knob { transform: translateX(1.5rem); }
     .icon-sun  { display: block; }
     .icon-moon { display: none; }

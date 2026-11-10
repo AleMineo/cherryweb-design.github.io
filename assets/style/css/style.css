@@ -93,6 +93,10 @@
   display: block;
 }
 @media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]) .theme-toggle {
+    background: color-mix(in srgb, var(--foreground) 6%, transparent);
+    border-color: color-mix(in srgb, var(--foreground) 30%, transparent);
+  }
   :root:not([data-theme=light]) .theme-toggle .theme-toggle__knob {
     transform: translateX(1.5rem);
   }
@@ -102,6 +106,10 @@
   :root:not([data-theme=light]) .theme-toggle .icon-moon {
     display: none;
   }
+}
+:root[data-theme=dark] .theme-toggle {
+  background: color-mix(in srgb, var(--foreground) 6%, transparent);
+  border-color: color-mix(in srgb, var(--foreground) 30%, transparent);
 }
 :root[data-theme=dark] .theme-toggle .theme-toggle__knob {
   transform: translateX(1.5rem);
