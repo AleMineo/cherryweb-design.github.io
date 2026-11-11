@@ -433,6 +433,31 @@ header nav {
     transform: none;
   }
 }
+.navlinks a.btn {
+  display: inline-flex;
+  color: #eef1f5;
+}
+.navlinks a.btn:hover {
+  background: #eef1f5;
+  color: #eb1e8f;
+}
+.navlinks a.btn.btn--sm:hover {
+  background: #141313;
+  color: #fff;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]) .navlinks a.btn.btn--sm:hover {
+    background: #eef1f5;
+    color: #141313;
+  }
+}
+:root[data-theme=dark] .navlinks a.btn.btn--sm:hover {
+  background: #eef1f5;
+  color: #141313;
+}
+.navlinks a.btn::after {
+  display: none;
+}
 .navlinks li.only-desktop {
   display: none;
 }
@@ -440,6 +465,49 @@ header nav {
   .navlinks li.only-desktop {
     display: block;
   }
+}
+
+.btn {
+  padding: 17px 20px 14px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  color: #eef1f5;
+  outline: none !important;
+  transition: all ease-in-out 0.2s;
+  background: #eb1e8f;
+  font-size: clamp(0.55rem, 0.7rem + 0.5vw, 0.85rem);
+}
+.btn:hover {
+  background: #eef1f5;
+  color: #eb1e8f;
+}
+.btn:focus-visible {
+  box-shadow: 0 0 0 2px var(--background), 0 0 0 4px #eb1e8f;
+}
+.btn--sm {
+  padding: 8px 16px;
+  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
+}
+.btn--sm:hover {
+  background: #141313;
+  color: #fff;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]) .btn--sm:hover {
+    background: #eef1f5;
+    color: #141313;
+  }
+}
+:root[data-theme=dark] .btn--sm:hover {
+  background: #eef1f5;
+  color: #141313;
 }
 
 .talk-btn {
@@ -1482,28 +1550,6 @@ body#portfolio-item #wrapper section {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-}
-
-.btn {
-  padding: 17px 20px 14px;
-  border-radius: 9999px;
-  text-transform: uppercase;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Inter", sans-serif;
-  cursor: pointer;
-  text-decoration: none;
-  color: var(--off-white);
-  outline: none !important;
-  transition: all ease-in-out 0.2s;
-  background: var(--primary-detail);
-  font-size: clamp(0.55rem, 0.7rem + 0.5vw, 0.85rem);
-}
-.btn:hover {
-  background: var(--off-white);
-  color: var(--primary-detail);
 }
 
 .hover-effect:hover {
