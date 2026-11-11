@@ -103,30 +103,6 @@ body {
     }
 }
 
-.btn {
-    padding: 17px 20px 14px;
-    border-radius: $radius-pill;
-    text-transform: uppercase;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: $font-sans;
-    cursor: pointer;
-    text-decoration: none;
-    color: $off-white;
-    outline: none !important;
-    transition: all ease-in-out .2s;
-    background: $primary-detail;
-    font-size: clamp(0.55rem, 0.7rem + 0.5vw, 0.85rem);
-
-    &:hover {
-        background: $off-white;
-        color: $primary-detail;
-    }
-}
-
-
 .hover-effect {
     &:hover {
         -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.1);

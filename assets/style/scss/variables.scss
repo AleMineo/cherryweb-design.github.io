@@ -202,3 +202,16 @@ $bp-xxl: 2000px;
   }
 
 }
+
+
+// Hover for the small button: near-black in light mode,
+// light pill in dark mode (a near-black pill would vanish on dark)
+@mixin btn-sm-hover {
+  background: $brand-ink;
+  color: #fff;
+
+  @include dark-only {
+    background: $brand-light;
+    color: $brand-ink;
+  }
+}
