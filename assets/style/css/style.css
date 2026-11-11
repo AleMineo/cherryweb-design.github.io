@@ -1546,8 +1546,8 @@ body#portfolio-item #wrapper section {
 .project-hero .info .tools .tool {
   font-size: clamp(0.85rem, 0.75vw, 1rem);
   line-height: 1.3rem;
-  padding-top: 0.525rem;
-  padding-bottom: 0.125rem;
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
   padding-left: 0.625rem;
   padding-right: 0.625rem;
   background-color: var(--primary-light);
