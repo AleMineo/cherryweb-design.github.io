@@ -1,48 +1,56 @@
 // ==========================================================================
-// Cherry — variables + light/dark theme
-// Use as your variables partial (or @use it from _variables.scss).
+// Cherry — variables + light/dark theme + theme switch
 // ==========================================================================
 
 // ---------- Mixin: dark-mode-only rules ------------------------------------
 // Matches OS dark mode (unless the user forced light) OR a manual dark toggle.
 @mixin dark-only {
   @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) & { @content; }
+    :root:not([data-theme="light"]) & {
+      @content;
+    }
   }
-  :root[data-theme="dark"] & { @content; }
+
+  :root[data-theme="dark"] & {
+    @content;
+  }
 }
 
 // ---------- Theme palettes -------------------------------------------------
 $light-theme: (
-  background:         #eef1f5,
-  foreground:         #141313,
-  dark-grey:          #343a40,
-  light-grey:         #D3D3D3,
-  muted-foreground:   #66615F,
-  border:             #dde1e7,
-  secondary:          #e6e9ee,
-  primary:            #eb1e8f,
-  primary-light:      #FBECFC,
-  primary-detail:     #EA1C8B,
+  background: #eef1f5,
+  foreground: #141313,
+  dark-grey: #343a40,
+  light-grey: #D3D3D3,
+  muted-foreground: #66615F,
+  border: #dde1e7,
+  secondary: #e6e9ee,
+  primary: #eb1e8f,
+  primary-light: #FBECFC,
+  primary-detail: #EA1C8B,
   primary-foreground: #ffffff,
-  off-white:          #fafafa,
-  card:               #ffffff
+  off-white: #fafafa,
+  card: #ffffff
 );
 
 $dark-theme: (
-  background:         #161616,
-  foreground:         #eef1f5,
-  dark-grey:          #c9d0d8,   // inverted: now a light grey for text/icons
-  light-grey:         #3a4049,   // inverted: now a dark grey
-  muted-foreground:   #9d9a98,
-  border:             #262b33,
-  secondary:          #1a1f27,
-  primary:            #f03a9f,   // slightly lighter for contrast on dark
-  primary-light:      #2b1226,   // deep plum instead of pale pink
-  primary-detail:     #EA1C8B,
+  background: #0f1217,
+  foreground: #eef1f5,
+  dark-grey: #c9d0d8,
+  // inverted: now a light grey for text/icons
+  light-grey: #3a4049,
+  // inverted: now a dark grey
+  muted-foreground: #9d9a98,
+  border: #262b33,
+  secondary: #1a1f27,
+  primary: #f03a9f,
+  // slightly lighter for contrast on dark
+  primary-light: #2b1226,
+  // deep plum instead of pale pink
+  primary-detail: #EA1C8B,
   primary-foreground: #ffffff,
-  off-white:          #161a21,
-  card:               #171b22
+  off-white: #161a21,
+  card: #171b22
 );
 
 // ---------- Emit custom properties ----------------------------------------
@@ -73,26 +81,27 @@ $dark-theme: (
 
 // ---------- Colour variables (theme-aware aliases) -------------------------
 // NOTE: Sass colour functions (darken, lighten, rgba($primary, .2)) can't
-// operate on var(). Use color-mix(in srgb, var(--primary) 20%, transparent).
-$background:         var(--background);
-$foreground:         var(--foreground);
-$dark-grey:          var(--dark-grey);
-$light-grey:         var(--light-grey);
-$muted-foreground:   var(--muted-foreground);
-$border:             var(--border);
-$secondary:          var(--secondary);
-$primary:            var(--primary);
-$primary-light:      var(--primary-light);
-$primary-detail:     var(--primary-detail);
+// operate on var(). Use color-mix(in srgb, $primary 20%, transparent).
+$background: var(--background);
+$foreground: var(--foreground);
+$dark-grey: var(--dark-grey);
+$light-grey: var(--light-grey);
+$muted-foreground: var(--muted-foreground);
+$border: var(--border);
+$secondary: var(--secondary);
+$primary: var(--primary);
+$primary-light: var(--primary-light);
+$primary-detail: var(--primary-detail);
 $primary-foreground: var(--primary-foreground);
-$off-white:          var(--off-white);
-$card:               var(--card);
+$off-white: var(--off-white);
+$card: var(--card);
+
+// ---------- Fixed brand colours (identical in light and dark) --------------
+$brand-pink: #eb1e8f;
+$brand-light: #eef1f5; // light-mode $background, used for button text
+$brand-ink: #141313; // light-mode $foreground
 
 // ---------- Non-colour variables (unchanged) -------------------------------
-$brand-pink: #eb1e8f;
-$brand-light: #eef1f5;   // your light-mode $background, used for the button text
-$brand-ink: #141313;     // your light-mode $foreground
-
 $max-w: 1400px;
 $border-width: 1px;
 
@@ -122,68 +131,239 @@ $bp-md: 768px;
 $bp-nav: 1024px;
 $bp-xxl: 2000px;
 
-// ---------- Theme toggle button --------------------------------------------
+// ---------- Mixin: small button hover --------------------------------------
+// Near-black in light mode, light pill in dark mode (a near-black pill
+// would vanish on a dark page).
+@mixin btn-sm-hover {
+  background: $brand-ink;
+  color: #fff;
 
-.theme-toggle {
-  position: relative;
-  flex: 0 0 auto;
-  display: inline-flex;
-  align-items: center;
-  width: 3.25rem;
-  height: 1.75rem;
-  padding: 3px;
-  background: $secondary;
-  border: $border-width solid $border;
-  border-radius: $radius-pill;
-  cursor: pointer;
-  transition: background .2s, border-color .2s;
-
-  &:hover {
-    border-color: $primary;
-  }
-
-  &:focus-visible {
-    outline: 2px solid $primary;
-    outline-offset: 2px;
-  }
-
-  &__knob {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 1.25rem;
-    height: 1.25rem;
-    color: #fff;
-    background: $primary;
-    border-radius: 50%;
-    transition: transform .25s cubic-bezier(.23, 1, .32, 1);
-
-    svg {
-      width: 12px;
-      height: 12px;
-    }
-  }
-
-  // Light mode: moon in the knob, knob on the left
-  .icon-sun  { display: none; }
-  .icon-moon { display: block; }
-
-  // Dark mode: sun in the knob, knob slides right, track gets contrast
   @include dark-only {
-    background: color-mix(in srgb, $foreground 6%, transparent);
-    border-color: color-mix(in srgb, $foreground 30%, transparent);
-
-    .theme-toggle__knob { transform: translateX(1.5rem); }
-    .icon-sun  { display: block; }
-    .icon-moon { display: none; }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    &__knob { transition: none; }
+    background: $brand-light;
+    color: $brand-ink;
   }
 }
 
-// ---------- Which switch is visible --------------------------------------
+// ---------- Theme toggle button --------------------------------------------
+
+// Rounded five-point star in hot pink (#eb1e8f = $brand-pink; the hex is
+// written out because Sass can't interpolate into a data URI cleanly)
+$star-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23eb1e8f' stroke='%23eb1e8f' stroke-width='3' stroke-linejoin='round' d='M12 4 14.12 9.09 19.61 9.53 15.42 13.11 16.7 18.47 12 15.6 7.3 18.47 8.58 13.11 4.39 9.53 9.88 9.09Z'/%3E%3C/svg%3E");
+
+.theme-toggle {
+  --w: 52px;
+  --h: 28px;
+  --d: 20px; // sun / moon diameter
+  --gap: 4px; // edge of track to sun / moon
+
+  // Neutral skies + brand accent
+  --accent: #{$brand-pink};
+  --cloud: color-mix(in srgb, var(--accent) 100%, #fff); // pale pink clouds
+  --day-top: #b9c6d8;
+  --day-bottom: #d9e1ec;
+  --night-top: #2a3040;
+  --night-bottom: #434c61;
+  --ring: var(--accent);
+
+  position: relative;
+  flex: 0 0 auto;
+  display: block;
+  width: var(--w);
+  height: var(--h);
+  padding: 0;
+  border: 1px solid var(--ring);
+  border-radius: $radius-pill;
+  background: linear-gradient(180deg, var(--day-top) 0%, var(--day-bottom) 100%);
+  background-clip: padding-box;
+  cursor: pointer;
+  overflow: hidden;
+  isolation: isolate;
+  transition: filter .2s, border-color .3s ease;
+
+  // Night sky: crossfades over the day sky
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(180deg, var(--night-top) 0%, var(--night-bottom) 100%);
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+
+  // Clouds (light mode only): two small clouds, built from circles + a flat base
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background:
+      // smaller cloud, upper right
+      radial-gradient(circle 2.5px at 36px 9px, var(--cloud) 97%, transparent 100%),
+      radial-gradient(circle 3.3px at 40.5px 7px, var(--cloud) 97%, transparent 100%),
+      radial-gradient(circle 2.2px at 45px 9.5px, var(--cloud) 97%, transparent 100%),
+      radial-gradient(ellipse 6.8px 2.4px at 41px 11px, var(--cloud) 97%, transparent 100%),
+
+      // smaller cloud, lower middle
+      radial-gradient(circle 1.8px at 28px 19px, color-mix(in srgb, var(--cloud) 80%, transparent) 97%, transparent 100%),
+      radial-gradient(circle 2.2px at 31.5px 18px, color-mix(in srgb, var(--cloud) 80%, transparent) 97%, transparent 100%),
+      radial-gradient(ellipse 4.5px 1.5px at 30px 20.5px, color-mix(in srgb, var(--cloud) 80%, transparent) 97%, transparent 100%);
+    opacity: 1;
+    transform: none;
+    transition: opacity .25s ease .1s, transform .35s ease .1s; // reappear after the sun settles
+  }
+
+  &:hover {
+    filter: brightness(1.05);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $foreground;
+    outline-offset: 2px;
+  }
+
+  // ----- Sun and moon (shared) -----------------------------------------
+  &__sun,
+  &__moon {
+    position: absolute;
+    top: calc((var(--h) - var(--d)) / 2 - 1px); // −1px for the border
+    width: var(--d);
+    height: var(--d);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: opacity .3s ease, transform .35s cubic-bezier(.23, 1, .32, 1);
+  }
+
+  // ----- Sun (core + 8 rays) -------------------------------------------
+  &__sun {
+    --core: 12px; // centre disc; rays fill the rest of --d
+    left: var(--gap);
+    background: transparent;
+    opacity: 1;
+    transform: none;
+
+    // Core
+    &::before {
+      content: "";
+      position: absolute;
+      inset: calc((var(--d) - var(--core)) / 2);
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    // Rays: 8 thin wedges, masked to a ring around the core
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: repeating-conic-gradient(from -6deg,
+          var(--accent) 0 12deg,
+          transparent 12deg 45deg);
+      -webkit-mask: radial-gradient(circle,
+          transparent calc(var(--core) / 2 + 1.5px),
+          #000 calc(var(--core) / 2 + 2px),
+          #000 calc(var(--d) / 2),
+          transparent calc(var(--d) / 2 + .5px));
+      mask: radial-gradient(circle,
+          transparent calc(var(--core) / 2 + 1.5px),
+          #000 calc(var(--core) / 2 + 2px),
+          #000 calc(var(--d) / 2),
+          transparent calc(var(--d) / 2 + .5px));
+    }
+  }
+
+  // ----- Moon (crescent opening towards the upper left) -----------------
+  &__moon {
+    right: var(--gap);
+    background: transparent;
+    box-shadow: inset -8px -3px 0 0 var(--accent);
+    opacity: 0;
+    transform: translateX(-14px) rotate(-30deg);
+  }
+
+  // ----- Stars ----------------------------------------------------------
+  &__stars {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(.6);
+    transform-origin: 30% 50%;
+    transition: opacity .15s ease, transform .15s ease; // leave first on the way back
+    background:
+ radial-gradient(circle at 48% 24%, var(--accent) 0 1px, transparent 1.6px),
+  radial-gradient(circle at 18% 66%, var(--accent) 0 .9px, transparent 1.5px);
+
+    // Two rounded stars
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background: $star-svg center / contain no-repeat;
+    }
+
+
+    &::before {
+      left: 10%;
+      top: 10%;
+      width: 12px;
+      height: 12px;
+    }
+
+    &::after {
+      left: 30%;
+      top: 56%;
+      width: 9px;
+      height: 9px;
+    }
+  }
+
+  // ----- Dark mode ------------------------------------------------------
+  @include dark-only {
+    &::before {
+      opacity: 1;
+    }
+
+    // Clouds drift right as they fade
+    &::after {
+      opacity: 0;
+      transform: translateX(10px);
+      transition-delay: 0s;
+    }
+
+    .theme-toggle__sun {
+      opacity: 0;
+      transform: translateX(14px) rotate(90deg);
+    }
+
+    .theme-toggle__moon {
+      opacity: 1;
+      transform: none;
+    }
+
+    .theme-toggle__stars {
+      opacity: 1;
+      transform: none;
+      transition-delay: .2s; // pop in after the moon arrives
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+
+    &,
+    &::before,
+    &::after,
+    &__sun,
+    &__moon,
+    &__stars {
+      transition: none !important;
+    }
+  }
+}
+
+// ---------- Which switch is visible ----------------------------------------
 // Desktop: the one inside the menu shows, the hamburger one is hidden
 .theme-toggle--mobile {
   display: none !important;
@@ -193,7 +373,7 @@ $bp-xxl: 2000px;
 // Use the SAME breakpoint your menu uses to collapse into the hamburger.
 @media (max-width: #{$bp-nav - 1px}) {
   .theme-toggle--mobile {
-    display: inline-flex !important;
+    display: block !important;
   }
 
   .theme-toggle--desktop,
@@ -201,17 +381,9 @@ $bp-xxl: 2000px;
     display: none !important;
   }
 
-}
-
-
-// Hover for the small button: near-black in light mode,
-// light pill in dark mode (a near-black pill would vanish on dark)
-@mixin btn-sm-hover {
-  background: $brand-ink;
-  color: #fff;
-
-  @include dark-only {
-    background: $brand-light;
-    color: $brand-ink;
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: $space-3;
   }
 }

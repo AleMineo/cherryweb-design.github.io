@@ -254,6 +254,11 @@ header {
   letter-spacing: .15em;
   list-style: none;
 
+    li:has(> .theme-toggle--desktop) {
+    display: flex;
+    align-items: center;
+  }
+
   a {
     position: relative;
     display: inline-block;
