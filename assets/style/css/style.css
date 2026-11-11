@@ -18,7 +18,7 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme=light]) {
     color-scheme: dark;
-    --background: #161616;
+    --background: #0f1217;
     --foreground: #eef1f5;
     --dark-grey: #c9d0d8;
     --light-grey: #3a4049;
@@ -35,7 +35,7 @@
 }
 :root[data-theme=dark] {
   color-scheme: dark;
-  --background: #161616;
+  --background: #0f1217;
   --foreground: #eef1f5;
   --dark-grey: #c9d0d8;
   --light-grey: #3a4049;
@@ -51,78 +51,172 @@
 }
 
 .theme-toggle {
+  --w: 52px;
+  --h: 28px;
+  --d: 20px;
+  --gap: 4px;
+  --accent: #eb1e8f;
+  --cloud: color-mix(in srgb, var(--accent) 100%, #fff);
+  --day-top: #b9c6d8;
+  --day-bottom: #d9e1ec;
+  --night-top: #2a3040;
+  --night-bottom: #434c61;
+  --ring: var(--accent);
   position: relative;
   flex: 0 0 auto;
-  display: inline-flex;
-  align-items: center;
-  width: 3.25rem;
-  height: 1.75rem;
-  padding: 3px;
-  background: var(--secondary);
-  border: 1px solid var(--border);
+  display: block;
+  width: var(--w);
+  height: var(--h);
+  padding: 0;
+  border: 1px solid var(--ring);
   border-radius: 9999px;
+  background: linear-gradient(180deg, var(--day-top) 0%, var(--day-bottom) 100%);
+  background-clip: padding-box;
   cursor: pointer;
-  transition: background 0.2s, border-color 0.2s;
+  overflow: hidden;
+  isolation: isolate;
+  transition: filter 0.2s, border-color 0.3s ease;
+}
+.theme-toggle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(180deg, var(--night-top) 0%, var(--night-bottom) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.theme-toggle::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(circle 2.5px at 36px 9px, var(--cloud) 97%, transparent 100%), radial-gradient(circle 3.3px at 40.5px 7px, var(--cloud) 97%, transparent 100%), radial-gradient(circle 2.2px at 45px 9.5px, var(--cloud) 97%, transparent 100%), radial-gradient(ellipse 6.8px 2.4px at 41px 11px, var(--cloud) 97%, transparent 100%), radial-gradient(circle 1.8px at 28px 19px, color-mix(in srgb, var(--cloud) 80%, transparent) 97%, transparent 100%), radial-gradient(circle 2.2px at 31.5px 18px, color-mix(in srgb, var(--cloud) 80%, transparent) 97%, transparent 100%), radial-gradient(ellipse 4.5px 1.5px at 30px 20.5px, color-mix(in srgb, var(--cloud) 80%, transparent) 97%, transparent 100%);
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.25s ease 0.1s, transform 0.35s ease 0.1s;
 }
 .theme-toggle:hover {
-  border-color: var(--primary);
+  filter: brightness(1.05);
 }
 .theme-toggle:focus-visible {
-  outline: 2px solid var(--primary);
+  outline: 2px solid var(--foreground);
   outline-offset: 2px;
 }
-.theme-toggle__knob {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.25rem;
-  height: 1.25rem;
-  color: #fff;
-  background: var(--primary);
+.theme-toggle__sun, .theme-toggle__moon {
+  position: absolute;
+  top: calc((var(--h) - var(--d)) / 2 - 1px);
+  width: var(--d);
+  height: var(--d);
   border-radius: 50%;
-  transition: transform 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
 }
-.theme-toggle__knob svg {
+.theme-toggle__sun {
+  --core: 12px;
+  left: var(--gap);
+  background: transparent;
+  opacity: 1;
+  transform: none;
+}
+.theme-toggle__sun::before {
+  content: "";
+  position: absolute;
+  inset: calc((var(--d) - var(--core)) / 2);
+  border-radius: 50%;
+  background: var(--accent);
+}
+.theme-toggle__sun::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-conic-gradient(from -6deg, var(--accent) 0 12deg, transparent 12deg 45deg);
+  -webkit-mask: radial-gradient(circle, transparent calc(var(--core) / 2 + 1.5px), #000 calc(var(--core) / 2 + 2px), #000 calc(var(--d) / 2), transparent calc(var(--d) / 2 + 0.5px));
+  mask: radial-gradient(circle, transparent calc(var(--core) / 2 + 1.5px), #000 calc(var(--core) / 2 + 2px), #000 calc(var(--d) / 2), transparent calc(var(--d) / 2 + 0.5px));
+}
+.theme-toggle__moon {
+  right: var(--gap);
+  background: transparent;
+  box-shadow: inset -8px -3px 0 0 var(--accent);
+  opacity: 0;
+  transform: translateX(-14px) rotate(-30deg);
+}
+.theme-toggle__stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.6);
+  transform-origin: 30% 50%;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  background: radial-gradient(circle at 48% 24%, var(--accent) 0 1px, transparent 1.6px), radial-gradient(circle at 18% 66%, var(--accent) 0 0.9px, transparent 1.5px);
+}
+.theme-toggle__stars::before, .theme-toggle__stars::after {
+  content: "";
+  position: absolute;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23eb1e8f' stroke='%23eb1e8f' stroke-width='3' stroke-linejoin='round' d='M12 4 14.12 9.09 19.61 9.53 15.42 13.11 16.7 18.47 12 15.6 7.3 18.47 8.58 13.11 4.39 9.53 9.88 9.09Z'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+.theme-toggle__stars::before {
+  left: 10%;
+  top: 10%;
   width: 12px;
   height: 12px;
 }
-.theme-toggle .icon-sun {
-  display: none;
-}
-.theme-toggle .icon-moon {
-  display: block;
+.theme-toggle__stars::after {
+  left: 30%;
+  top: 56%;
+  width: 9px;
+  height: 9px;
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]) .theme-toggle {
-    background: color-mix(in srgb, var(--foreground) 6%, transparent);
-    border-color: color-mix(in srgb, var(--foreground) 30%, transparent);
+  :root:not([data-theme=light]) .theme-toggle::before {
+    opacity: 1;
   }
-  :root:not([data-theme=light]) .theme-toggle .theme-toggle__knob {
-    transform: translateX(1.5rem);
+  :root:not([data-theme=light]) .theme-toggle::after {
+    opacity: 0;
+    transform: translateX(10px);
+    transition-delay: 0s;
   }
-  :root:not([data-theme=light]) .theme-toggle .icon-sun {
-    display: block;
+  :root:not([data-theme=light]) .theme-toggle .theme-toggle__sun {
+    opacity: 0;
+    transform: translateX(14px) rotate(90deg);
   }
-  :root:not([data-theme=light]) .theme-toggle .icon-moon {
-    display: none;
+  :root:not([data-theme=light]) .theme-toggle .theme-toggle__moon {
+    opacity: 1;
+    transform: none;
+  }
+  :root:not([data-theme=light]) .theme-toggle .theme-toggle__stars {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0.2s;
   }
 }
-:root[data-theme=dark] .theme-toggle {
-  background: color-mix(in srgb, var(--foreground) 6%, transparent);
-  border-color: color-mix(in srgb, var(--foreground) 30%, transparent);
+:root[data-theme=dark] .theme-toggle::before {
+  opacity: 1;
 }
-:root[data-theme=dark] .theme-toggle .theme-toggle__knob {
-  transform: translateX(1.5rem);
+:root[data-theme=dark] .theme-toggle::after {
+  opacity: 0;
+  transform: translateX(10px);
+  transition-delay: 0s;
 }
-:root[data-theme=dark] .theme-toggle .icon-sun {
-  display: block;
+:root[data-theme=dark] .theme-toggle .theme-toggle__sun {
+  opacity: 0;
+  transform: translateX(14px) rotate(90deg);
 }
-:root[data-theme=dark] .theme-toggle .icon-moon {
-  display: none;
+:root[data-theme=dark] .theme-toggle .theme-toggle__moon {
+  opacity: 1;
+  transform: none;
+}
+:root[data-theme=dark] .theme-toggle .theme-toggle__stars {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.2s;
 }
 @media (prefers-reduced-motion: reduce) {
-  .theme-toggle__knob {
-    transition: none;
+  .theme-toggle, .theme-toggle::before, .theme-toggle::after, .theme-toggle__sun, .theme-toggle__moon, .theme-toggle__stars {
+    transition: none !important;
   }
 }
 
@@ -132,11 +226,16 @@
 
 @media (max-width: 1023px) {
   .theme-toggle--mobile {
-    display: inline-flex !important;
+    display: block !important;
   }
   .theme-toggle--desktop,
   li:has(> .theme-toggle--desktop) {
     display: none !important;
+  }
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
   }
 }
 @font-face {
@@ -395,6 +494,10 @@ header nav {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   list-style: none;
+}
+.navlinks li:has(> .theme-toggle--desktop) {
+  display: flex;
+  align-items: center;
 }
 .navlinks a {
   position: relative;
