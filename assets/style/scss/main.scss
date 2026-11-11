@@ -132,9 +132,8 @@ main {
     animation: fadeGradient linear both;
     animation-timeline: scroll();
     animation-range: 0 500px;
-  }
 
-  @include dark-only {
+    @include dark-only {
   background:
     // hot pink (softer)
     radial-gradient(circle at 100% 78%,
@@ -157,6 +156,9 @@ main {
 
     $background;
 }
+  }
+
+  
 
   @keyframes fadeGradient {
     from {

@@ -303,11 +303,11 @@ main::after {
   animation-range: 0 500px;
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]) main {
+  :root:not([data-theme=light]) main::after {
     background: radial-gradient(circle at 100% 78%, rgba(235, 30, 143, 0.55) 0%, rgba(235, 30, 143, 0.3) 18%, rgba(235, 30, 143, 0) 42%), radial-gradient(circle at 98% 50%, rgba(190, 40, 120, 0.45) 0%, rgba(190, 40, 120, 0.22) 20%, rgba(190, 40, 120, 0) 43%), radial-gradient(circle at 80% 65%, rgba(110, 60, 210, 0.75) 0%, rgba(110, 60, 210, 0.35) 18%, rgba(110, 60, 210, 0.2) 30%, rgba(110, 60, 210, 0) 48%), var(--background);
   }
 }
-:root[data-theme=dark] main {
+:root[data-theme=dark] main::after {
   background: radial-gradient(circle at 100% 78%, rgba(235, 30, 143, 0.55) 0%, rgba(235, 30, 143, 0.3) 18%, rgba(235, 30, 143, 0) 42%), radial-gradient(circle at 98% 50%, rgba(190, 40, 120, 0.45) 0%, rgba(190, 40, 120, 0.22) 20%, rgba(190, 40, 120, 0) 43%), radial-gradient(circle at 80% 65%, rgba(110, 60, 210, 0.75) 0%, rgba(110, 60, 210, 0.35) 18%, rgba(110, 60, 210, 0.2) 30%, rgba(110, 60, 210, 0) 48%), var(--background);
 }
 @keyframes fadeGradient {
