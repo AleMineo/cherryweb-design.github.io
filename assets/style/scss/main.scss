@@ -132,7 +132,33 @@ main {
     animation: fadeGradient linear both;
     animation-timeline: scroll();
     animation-range: 0 500px;
+
+    @include dark-only {
+  background:
+    // hot pink (softer)
+    radial-gradient(circle at 100% 78%,
+      rgba(235, 30, 143, 0.55) 0%,
+      rgba(235, 30, 143, 0.30) 18%,
+      rgba(235, 30, 143, 0) 42%),
+
+    // deep rose (replaces the peach)
+    radial-gradient(circle at 98% 50%,
+      rgba(190, 40, 120, 0.45) 0%,
+      rgba(190, 40, 120, 0.22) 20%,
+      rgba(190, 40, 120, 0) 43%),
+
+    // violet (deeper, less opaque)
+    radial-gradient(circle at 80% 65%,
+      rgba(110, 60, 210, 0.75) 0%,
+      rgba(110, 60, 210, 0.35) 18%,
+      rgba(110, 60, 210, 0.20) 30%,
+      rgba(110, 60, 210, 0) 48%),
+
+    $background;
+}
   }
+
+  
 
   @keyframes fadeGradient {
     from {
@@ -216,7 +242,7 @@ header {
 
 .logo {
   font-size: clamp(1.35rem, calc(0.75rem + 0.75vw), 1.5rem);
-  letter-spacing: 0;
+  letter-spacing: 0; 
 }
 
 .navlinks {

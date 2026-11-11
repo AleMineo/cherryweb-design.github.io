@@ -302,6 +302,14 @@ main::after {
   animation-timeline: scroll();
   animation-range: 0 500px;
 }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]) main::after {
+    background: radial-gradient(circle at 100% 78%, rgba(235, 30, 143, 0.55) 0%, rgba(235, 30, 143, 0.3) 18%, rgba(235, 30, 143, 0) 42%), radial-gradient(circle at 98% 50%, rgba(190, 40, 120, 0.45) 0%, rgba(190, 40, 120, 0.22) 20%, rgba(190, 40, 120, 0) 43%), radial-gradient(circle at 80% 65%, rgba(110, 60, 210, 0.75) 0%, rgba(110, 60, 210, 0.35) 18%, rgba(110, 60, 210, 0.2) 30%, rgba(110, 60, 210, 0) 48%), var(--background);
+  }
+}
+:root[data-theme=dark] main::after {
+  background: radial-gradient(circle at 100% 78%, rgba(235, 30, 143, 0.55) 0%, rgba(235, 30, 143, 0.3) 18%, rgba(235, 30, 143, 0) 42%), radial-gradient(circle at 98% 50%, rgba(190, 40, 120, 0.45) 0%, rgba(190, 40, 120, 0.22) 20%, rgba(190, 40, 120, 0) 43%), radial-gradient(circle at 80% 65%, rgba(110, 60, 210, 0.75) 0%, rgba(110, 60, 210, 0.35) 18%, rgba(110, 60, 210, 0.2) 30%, rgba(110, 60, 210, 0) 48%), var(--background);
+}
 @keyframes fadeGradient {
   from {
     opacity: 0.7;
@@ -1412,7 +1420,7 @@ body#portfolio-item #wrapper section {
 }
 
 .project-hero-image {
-  padding: 60px 0 10px;
+  padding: 80px 0 10px;
 }
 .project-hero-image img {
   width: 100%;
