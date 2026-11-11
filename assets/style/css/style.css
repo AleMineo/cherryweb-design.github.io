@@ -1528,7 +1528,13 @@ body#portfolio-item #wrapper section {
   border-bottom-width: 1px;
   border-style: solid;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  .project-hero .info {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 .project-hero .info h4 {
   margin: 0 0 10px;
@@ -1546,10 +1552,21 @@ body#portfolio-item #wrapper section {
   padding-right: 0.625rem;
   background-color: var(--primary-light);
   color: var(--primary);
+  border: 1px solid transparent;
   border-radius: 9999px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]) .project-hero .info .tools .tool {
+    background-color: color-mix(in srgb, var(--primary) 18%, var(--background));
+    border-color: color-mix(in srgb, var(--primary) 45%, transparent);
+  }
+}
+:root[data-theme=dark] .project-hero .info .tools .tool {
+  background-color: color-mix(in srgb, var(--primary) 18%, var(--background));
+  border-color: color-mix(in srgb, var(--primary) 45%, transparent);
 }
 
 .hover-effect:hover {
