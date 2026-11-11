@@ -29,7 +29,8 @@ body {
 }
 
 .project-hero-image {
-     padding: 80px 0 10px;
+    padding: 80px 0 10px;
+
     img {
         width: 100%;
         max-width: $max-w;
@@ -74,7 +75,12 @@ body {
         border-bottom-width: $border-width;
         border-style: solid;
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: minmax(0, 1fr); // 1 column on small devices
+        gap: 24px;
+
+        @media (min-width: $bp-md) {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
 
         h4 {
             margin: 0 0 10px;
@@ -94,10 +100,16 @@ body {
                 padding-right: $space-2-5;
                 background-color: $primary-light;
                 color: $primary;
+                border: $border-width solid transparent; // reserves space so dark mode doesn't shift the layout
                 border-radius: $radius-pill;
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
+
+                @include dark-only {
+                    background-color: color-mix(in srgb, $primary 18%, $background);
+                    border-color: color-mix(in srgb, $primary 45%, transparent);
+                }
             }
         }
     }
