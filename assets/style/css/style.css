@@ -1107,6 +1107,7 @@ section {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   background: var(--secondary);
+  margin-bottom: 96px;
 }
 
 .tools-list {
@@ -1131,7 +1132,7 @@ section {
 }
 @media (max-width: 1999px) {
   .tools-list .tools-items {
-    justify-content: flex-start;
+    justify-content: space-between;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x proximity;
@@ -1344,7 +1345,6 @@ section {
 }
 
 .contact-links {
-  margin-bottom: 60px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
